@@ -1,0 +1,18 @@
+.root {
+    /* Style Color in FX
+    Hex Values
+    or Colors
+    */
+    -fx-background-color: Indigo;
+}
+.label{
+    -fx-font-size: 30;
+    -fx-font-family: Papyrus;
+    -fx-text-fill: Black;
+    -fx-alignment: center;
+}
+.button{
+    -fx-background-color: LightGrey;
+    -fx-text-fill:Black;
+    -fx-font-size: 15;
+}
