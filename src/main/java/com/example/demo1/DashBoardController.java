@@ -47,8 +47,8 @@ public class DashBoardController {
             stage.setScene(scene);
             stage.show();
         }
-    public void displayName(String username){
+        public void displayName(String username){
         nameLabel.setText("Welcome to your Dashboard: " + username + "!" );
-    }
+         }
     }
 
