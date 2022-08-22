@@ -8,7 +8,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -39,7 +38,7 @@ public class SignupPageController {
         stage.show();
     }
     @FXML
-    protected void LoginPage(ActionEvent event) throws IOException {
+    protected void Signup(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);

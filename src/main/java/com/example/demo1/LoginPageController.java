@@ -60,7 +60,7 @@ public class LoginPageController {
     }
 
     @FXML
-    protected void Dashboard(ActionEvent event) throws IOException {
+    protected void Login(ActionEvent event) throws IOException {
         //Store text from the text field as string variables username and password
         String username = nameTextField.getText();
         String password = passwordTextField.getText();
@@ -68,6 +68,13 @@ public class LoginPageController {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("LandingPage.fxml"));
         //set root =to loader and load it.
         root = loader.load();
+
+        //Create instance of the next scene's controller
+        DashBoardController landingController = loader.getController();
+
+        //Use scenecontroller variable to call methods within controller class
+        landingController.displayName(username);
+
         //root = FXMLLoader.load(getClass().getResource("LandingPage.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
