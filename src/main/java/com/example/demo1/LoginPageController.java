@@ -13,6 +13,10 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class LoginPageController {
     @FXML
@@ -71,4 +75,21 @@ public class LoginPageController {
         stage.show();
 
     }
+      public void loginButtonOnAction(ActionEvent e) throws SQLException {
+        if(nameTextField.getText().isBlank()==false && passwordTextField.getText().isBlank()==false){
+            validateLogin();
+        }
+        else {
+
+        }
+    }
+
+
+      public void validateLogin() throws SQLException {
+        Connectivity connectivity = new Connectivity();
+          Connection  connection = connectivity.getConnection();
+          String query = "select count(1) from  CustomerInfo where username =" + nameTextField.getText() +" and"+ "password="+passwordTextField.getText();
+          Statement statement = connection.createStatement();
+          ResultSet  resultSet = statement.executeQuery(query);
+      }
 }
