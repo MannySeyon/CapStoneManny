@@ -9,6 +9,6 @@
    <Label fx:id="welcomeLabel" layoutX="20.0" layoutY="69.0" prefHeight="98.0" prefWidth="825.0" text="Welcome to Summit Financial Corporation!" />
     <Button fx:id="Home" layoutX="31.0" layoutY="494.0" mnemonicParsing="false" onAction="#Home" prefHeight="42.0" prefWidth="95.0" text="Back Home" />
    <Label layoutX="338.0" layoutY="193.0" prefHeight="90.0" prefWidth="214.0" text="Dashboard" />
-   <Label fx:id="nameLabel" layoutX="181.0" layoutY="433.0" prefHeight="61.0" prefWidth="530.0" text="di" />
+   <Label fx:id="nameLabel" layoutX="8.0" layoutY="393.0" prefHeight="61.0" prefWidth="848.0" text="di" />
 
 </AnchorPane>

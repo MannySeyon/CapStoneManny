@@ -59,6 +59,7 @@ public class LoginPageController {
     protected void Dashboard(ActionEvent event) throws IOException {
         //Store text from the text field as string variables username and password
         String username = nameTextField.getText();
+        String password = passwordTextField.getText();
         // Fxml loader instance
         FXMLLoader loader = new FXMLLoader(getClass().getResource("LandingPage.fxml"));
 
