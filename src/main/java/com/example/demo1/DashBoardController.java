@@ -15,32 +15,28 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class DashBoardController {
+
         private Stage stage;
         private Scene scene;
         private Parent root;
-
+        @FXML
+         Label nameLabel;
         @FXML
         private Button Home;
-
-
         @FXML
         private Label welcomeLabel;
-
         @FXML
         private AnchorPane anchorPane;
-
+        @FXML
+        private Button Logout;
 
         @FXML
         protected void Home(ActionEvent event) throws IOException {
             root = FXMLLoader.load(getClass().getResource("main.fxml"));
-            //get Source cast to a node //Pass node to Stage
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            //Pass the new fxml path to scene variable
             scene = new Scene(root);
-            //pass scene to stage
             stage.setScene(scene);
             stage.show();
-
 
         }
         @FXML
@@ -51,5 +47,8 @@ public class DashBoardController {
             stage.setScene(scene);
             stage.show();
         }
+    public void displayName(String username){
+        nameLabel.setText("Welcome to your Dashboard: " + username + "!" );
+    }
     }
 

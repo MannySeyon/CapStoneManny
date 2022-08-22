@@ -16,21 +16,22 @@ import java.io.IOException;
 
 public class LoginPageController {
     @FXML
-    public TextField Username;
+    private Label UserLabel;
     @FXML
-    public TextField Password;
+    TextField nameTextField;
+    @FXML
+    private Label passwordLabel;
+    @FXML
+    public TextField passwordTextField;
+
     @FXML
     private Button Home;
-
     @FXML
     private Button SignupButton;
-
     @FXML
     private Button loginButton;
-
     @FXML
     private Label welcomeLabel;
-
     @FXML
     private AnchorPane anchorPane;
     private Stage stage;
@@ -53,9 +54,17 @@ public class LoginPageController {
         stage.setScene(scene);
         stage.show();
     }
+
     @FXML
     protected void Dashboard(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("LandingPage.fxml"));
+        //Store text from the text field as string variables username and password
+        String username = nameTextField.getText();
+        String password = passwordTextField.getText();
+        // Fxml loader instance
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("LandingPage.fxml"));
+        //set root =to loader and load it.
+        root = loader.load();
+        //root = FXMLLoader.load(getClass().getResource("LandingPage.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

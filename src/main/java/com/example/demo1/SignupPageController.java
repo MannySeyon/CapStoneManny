@@ -18,8 +18,6 @@ public class SignupPageController {
     private Stage stage;
     private Scene scene;
     private Parent root;
-
-
     @FXML
     private Button Home;
 

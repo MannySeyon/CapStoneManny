@@ -4,10 +4,11 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="566.0" prefWidth="864.0"
-            stylesheets="@Landing.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.DashBoardController">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="566.0" prefWidth="864.0" stylesheets="@Landing.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.DashBoardController">
     <Button fx:id="Logout" layoutX="389.0" layoutY="314.0" mnemonicParsing="false" onAction="#LoginPage" prefHeight="58.0" prefWidth="113.0" text="Logout" />
    <Label fx:id="welcomeLabel" layoutX="20.0" layoutY="69.0" prefHeight="98.0" prefWidth="825.0" text="Welcome to Summit Financial Corporation!" />
     <Button fx:id="Home" layoutX="31.0" layoutY="494.0" mnemonicParsing="false" onAction="#Home" prefHeight="42.0" prefWidth="95.0" text="Back Home" />
    <Label layoutX="338.0" layoutY="193.0" prefHeight="90.0" prefWidth="214.0" text="Dashboard" />
+   <Label fx:id="nameLabel" layoutX="181.0" layoutY="433.0" prefHeight="61.0" prefWidth="530.0" text="Label" />
+
 </AnchorPane>
