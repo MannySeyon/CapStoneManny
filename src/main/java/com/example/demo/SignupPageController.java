@@ -20,6 +20,8 @@ import java.time.LocalDate;
 @SuppressWarnings("ALL")
 public class SignupPageController {
     @FXML
+    private Label ageLabel;
+    @FXML
     private  TextField SocialSecurityF;
     @FXML
     private  TextField UsernameF;
