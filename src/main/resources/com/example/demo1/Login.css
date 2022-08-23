@@ -3,16 +3,41 @@
     Hex Values
     or Colors
     */
-    -fx-background-color: Orange;
+    -fx-background-color: LightGrey;
+}
+#phoneLabel, #emailLabel{
+    -fx-text-fill: Black;
 }
 .label{
-    -fx-font-size: 20;
+    -fx-font-size: 30;
     -fx-font-family: Papyrus;
-    -fx-text-fill: Black;
+    -fx-text-fill: White;
     -fx-alignment: center;
 }
 .button{
-    -fx-background-color: LightGrey;
+    -fx-background-color: white;
     -fx-text-fill:Black;
     -fx-font-size: 15;
+}
+.login_container {
+    -fx-background-color: BLACK;
+}
+
+.left_login_container {
+    -fx-background-image: Bankgif;
+
+}
+
+.login_logo_container {
+    -fx-backgraound-color: #000000;
+    -fx-alignment: CENTER;
+}
+
+.login_logo_container Text {
+    -fx-font-size: 2;
+    -fx-fill: #FFFFFF ;
+}
+
+.login_logo_container FontAwesomeIconView {
+
 }

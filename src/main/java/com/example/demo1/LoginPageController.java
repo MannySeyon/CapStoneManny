@@ -23,7 +23,11 @@ import java.sql.Statement;
 
 public class LoginPageController {
 
-    //Add gif from david
+    @FXML
+    private Label phoneLabel;
+    @FXML
+    private  Label emailLabel;
+
     @FXML
     ImageView BanklogoGif;
     @FXML
@@ -48,7 +52,10 @@ public class LoginPageController {
     private Stage stage;
     private Scene scene;
     private Parent root;
-
+    @FXML
+    String username;
+    @FXML
+    String password;
     @FXML
     protected void SignUpPage(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("SignUpPage.fxml"));
@@ -66,65 +73,39 @@ public class LoginPageController {
         stage.show();
     }
 
-//    @FXML
-//    protected void Login(ActionEvent event) throws IOException {
-//        //Store text from the text field as string variables username and password
-//        String username = nameTextField.getText();
-//        String password = passwordField.getText();
-//
-//
-//        // Fxml loader instance
-//        FXMLLoader loader = new FXMLLoader(getClass().getResource("LandingPage.fxml"));
-//        //set root =to loader and load it.
-//        root = loader.load();
-//
-//        //Create instance of the next scene's controller
-//        DashBoardController landingController = loader.getController();
-//
-//        //Use scenecontroller variable to call methods within controller class
-//        landingController.displayName(username);
-//
-//        //root = FXMLLoader.load(getClass().getResource("LandingPage.fxml"));
-//        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-//        scene = new Scene(root);
-//        stage.setScene(scene);
-//        stage.show();
-//
-//    }
-
 @FXML
-      public void validateLogin(ActionEvent e) throws SQLException, IOException {
-
+      public void validateLogin(ActionEvent event) throws SQLException, IOException {
+    try {
+        username = nameTextField.getText();
+        password = passwordField.getText();
 //        if(nameTextField.getText().isBlank()==false && passwordField.getText().isBlank()==false){
 //            Connectivity connectivity = new Connectivity();
 //            Connection  connection = connectivity.getConnection();
-//            String query = "select count(1) from  CustomerInfo where username =" + nameTextField.getText() +" and"+ "password="+ passwordField.getText();
+//            String query = "select count(1) from  CustomerInfo where username =" + username +" and"+ "password="+ password;
 //            Statement statement = connection.createStatement();
 //            ResultSet  resultSet = statement.executeQuery(query);
 
-            String username = nameTextField.getText();
-            String password = passwordField.getText();
+        // Fxml loader instance
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("LandingPage.fxml"));
+        //set root =to loader and load it.
+        root = loader.load();
 
+        //Create instance of the next scene's controller
+        DashBoardController landingController = loader.getController();
 
-            // Fxml loader instance
-             FXMLLoader loader = new FXMLLoader(getClass().getResource("LandingPage.fxml"));
-            //set root =to loader and load it.
-            root = loader.load();
+        //Use scenecontroller variable to call methods within controller class
+        landingController.displayName(username);
 
-            //Create instance of the next scene's controller
-            DashBoardController landingController = loader.getController();
+        //root = FXMLLoader.load(getClass().getResource("LandingPage.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
 
-            //Use scenecontroller variable to call methods within controller class
-            landingController.displayName(username);
-
-            //root = FXMLLoader.load(getClass().getResource("LandingPage.fxml"));
-            stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-            scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-
-        }
+    } catch (Exception e){
+        System.out.println(e);
+    }
 //        else {}
 //}
-
+}
 }
