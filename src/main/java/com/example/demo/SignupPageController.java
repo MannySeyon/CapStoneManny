@@ -50,10 +50,6 @@ public class SignupPageController {
     @FXML
     private Label Email;
     @FXML
-    private Button CheckAgeButton;
-    @FXML
-    private Label ageLable;
-    @FXML
     private Label SignupLabel;
     private Stage stage;
     private Scene scene;
@@ -62,8 +58,6 @@ public class SignupPageController {
     private Button Home;
     @FXML
     private Button SignupButton;
-    @FXML
-    private Label welcomeLabel;
     @FXML
     private DatePicker datePicker;
     @FXML
