@@ -16,21 +16,21 @@
    <Label fx:id="SignupLabel" layoutX="163.0" layoutY="125.0" prefHeight="64.0" prefWidth="849.0" text="Label" />
    <Label fx:id="ageLable" layoutX="395.0" layoutY="358.0" prefHeight="42.0" prefWidth="127.0" text="Age" />
    <Button fx:id="SignupButton" layoutX="489.0" layoutY="690.0" mnemonicParsing="false" onAction="#Signup" prefHeight="47.0" prefWidth="156.0" text="Signup" />
-   <Label fx:id="ageLable1" layoutX="386.0" layoutY="240.0" prefHeight="42.0" prefWidth="149.0" text="First Name" />
-   <Label fx:id="ageLable11" layoutX="386.0" layoutY="324.0" prefHeight="42.0" prefWidth="149.0" text="Last Name" />
-   <Label fx:id="ageLable111" layoutX="386.0" layoutY="419.0" text="Social Security " />
-   <Label fx:id="ageLable1111" layoutX="400.0" layoutY="282.0" text="Middle Name" />
-   <Label fx:id="ageLable11111" layoutX="416.0" layoutY="458.0" text="Username" />
+   <Label fx:id="firstName" layoutX="386.0" layoutY="240.0" prefHeight="42.0" prefWidth="149.0" text="First Name" />
+   <Label fx:id="LastName" layoutX="386.0" layoutY="324.0" prefHeight="42.0" prefWidth="149.0" text="Last Name" />
+   <Label fx:id="SocialSecurity" layoutX="386.0" layoutY="419.0" text="Social Security " />
+   <Label fx:id="MiddleName" layoutX="400.0" layoutY="282.0" text="Middle Name" />
+   <Label fx:id="Username" layoutX="416.0" layoutY="458.0" text="Username" />
    <DatePicker fx:id="datePicker" layoutX="542.0" layoutY="380.0" onAction="#getDate" promptText="Enter a Date" />
-   <Label fx:id="ageLable111111" layoutX="415.0" layoutY="507.0" text="Password " />
-   <Label fx:id="ageLable1111111" layoutX="391.0" layoutY="564.0" text="Phone Number " />
-   <Label fx:id="ageLable11111111" layoutX="414.0" layoutY="619.0" prefHeight="42.0" prefWidth="71.0" text="Email" />
-   <TextField fx:id="ageTextField1111" layoutX="542.0" layoutY="427.0" prefHeight="25.0" prefWidth="174.0" />
-   <TextField fx:id="ageTextField11112" layoutX="542.0" layoutY="482.0" prefHeight="25.0" prefWidth="174.0" />
-   <TextField fx:id="ageTextField111121" layoutX="542.0" layoutY="524.0" prefHeight="25.0" prefWidth="174.0" />
-   <TextField fx:id="ageTextField1111211" layoutX="542.0" layoutY="585.0" prefHeight="25.0" prefWidth="174.0" />
-   <TextField fx:id="ageTextField11112111" layoutX="542.0" layoutY="628.0" prefHeight="25.0" prefWidth="174.0" />
-   <TextField fx:id="ageTextField11111" layoutX="542.0" layoutY="333.0" prefHeight="25.0" prefWidth="174.0" />
-   <TextField fx:id="ageTextField111111" layoutX="542.0" layoutY="299.0" prefHeight="25.0" prefWidth="174.0" />
-   <TextField fx:id="ageTextField1111111" layoutX="549.0" layoutY="249.0" prefHeight="25.0" prefWidth="174.0" />
+   <Label fx:id="Password" layoutX="415.0" layoutY="507.0" text="Password" />
+   <Label fx:id="PhoneNumber" layoutX="391.0" layoutY="564.0" text="Phone Number" />
+   <Label fx:id="Email" layoutX="414.0" layoutY="619.0" prefHeight="42.0" prefWidth="71.0" text="Email" />
+   <TextField fx:id="SocialSecurityF" layoutX="542.0" layoutY="427.0" prefHeight="25.0" prefWidth="174.0" />
+   <TextField fx:id="UsernameF" layoutX="542.0" layoutY="482.0" prefHeight="25.0" prefWidth="174.0" />
+   <TextField fx:id="PasswordF" layoutX="542.0" layoutY="524.0" prefHeight="25.0" prefWidth="174.0" />
+   <TextField fx:id="PhoneNumberF" layoutX="542.0" layoutY="585.0" prefHeight="25.0" prefWidth="174.0" />
+   <TextField fx:id="EmailF" layoutX="542.0" layoutY="628.0" prefHeight="25.0" prefWidth="174.0" />
+   <TextField fx:id="LastNameF" layoutX="542.0" layoutY="333.0" prefHeight="25.0" prefWidth="174.0" />
+   <TextField fx:id="MiddleNameF" layoutX="542.0" layoutY="299.0" prefHeight="25.0" prefWidth="174.0" />
+   <TextField fx:id="FirstName" layoutX="549.0" layoutY="249.0" prefHeight="25.0" prefWidth="174.0" />
 </AnchorPane>

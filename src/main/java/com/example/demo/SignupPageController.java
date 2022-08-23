@@ -19,7 +19,38 @@ import java.time.LocalDate;
 
 @SuppressWarnings("ALL")
 public class SignupPageController {
-
+    @FXML
+    private  TextField SocialSecurityF;
+    @FXML
+    private  TextField UsernameF;
+    @FXML
+    private TextField PasswordF;
+    @FXML
+    private TextField PhoneNumberF;
+    @FXML
+    private  TextField EmailF;
+    @FXML
+    private TextField LastNameF;
+    @FXML
+    private TextField MiddleNameF;
+    @FXML
+    private  TextField FirstName;
+    @FXML
+    private Label firstName;
+    @FXML
+    private Label LastName;
+    @FXML
+    private Label MiddleName;
+    @FXML
+    private Label SocialSecurity;
+    @FXML
+    private Label Username;
+    @FXML
+    private Label Password;
+    @FXML
+    private Label PhoneNumber;
+    @FXML
+    private Label Email;
     @FXML
     private Button CheckAgeButton;
     @FXML
@@ -31,29 +62,19 @@ public class SignupPageController {
     private Parent root;
     @FXML
     private Button Home;
-
     @FXML
     private Button SignupButton;
     @FXML
     private Label welcomeLabel;
-
     @FXML
     private DatePicker datePicker;
     @FXML
-    private Label label;
-
-    @FXML
     private AnchorPane anchorPane;
-
-    @FXML
-    TextField ageTextField;
-
     @FXML
         int age;
     @FXML
     public void getDate(ActionEvent event) {
         LocalDate date = datePicker.getValue();
-        label.setText(date.toString());
     }
     @FXML
     protected void Home(ActionEvent event) throws IOException {
@@ -70,24 +91,6 @@ public class SignupPageController {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-    }
-    @FXML
-    public void Submit(ActionEvent event){
-        try {
-            //turn string entered into an int variable
-            age = Integer.parseInt(ageTextField.getText());
-            if (age >= 16)
-            {
-                SignupLabel.setText("You are Eligible for a Basic Account");
-
-            } else
-            {
-                SignupLabel.setText("Must be 16+ to Create basic Account. Please create a Co-owned Account");
-            }
-
-        } catch (Exception e){
-            System.out.println(e);
-        }
     }
 
 }
