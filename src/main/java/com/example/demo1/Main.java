@@ -1,7 +1,6 @@
 package com.example.demo1;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -20,8 +19,6 @@ public class Main extends Application {
                 primaryStage.setScene(new Scene(root));
                 primaryStage.setTitle("Summit Financial Corporation");
                 Image bankLogo = new Image("Summit Fin Corp.png");
-
-
                 primaryStage.getIcons().add(bankLogo);
                 //Al-F4 also closes application with Exit method
                 // when you click x on window
