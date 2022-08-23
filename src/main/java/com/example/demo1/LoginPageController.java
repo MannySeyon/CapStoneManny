@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -26,7 +27,7 @@ public class LoginPageController {
     @FXML
     private Label passwordLabel;
     @FXML
-    public TextField passwordTextField;
+    public PasswordField passwordField;
 
     @FXML
     private Button Home;
@@ -63,7 +64,7 @@ public class LoginPageController {
     protected void Login(ActionEvent event) throws IOException {
         //Store text from the text field as string variables username and password
         String username = nameTextField.getText();
-        String password = passwordTextField.getText();
+        String password = passwordField.getText();
         // Fxml loader instance
         FXMLLoader loader = new FXMLLoader(getClass().getResource("LandingPage.fxml"));
         //set root =to loader and load it.
@@ -83,7 +84,7 @@ public class LoginPageController {
 
     }
       public void loginButtonOnAction(ActionEvent e) throws SQLException {
-        if(nameTextField.getText().isBlank()==false && passwordTextField.getText().isBlank()==false){
+        if(nameTextField.getText().isBlank()==false && passwordField.getText().isBlank()==false){
             validateLogin();
         }
         else {
@@ -95,7 +96,7 @@ public class LoginPageController {
       public void validateLogin() throws SQLException {
         Connectivity connectivity = new Connectivity();
           Connection  connection = connectivity.getConnection();
-          String query = "select count(1) from  CustomerInfo where username =" + nameTextField.getText() +" and"+ "password="+passwordTextField.getText();
+          String query = "select count(1) from  CustomerInfo where username =" + nameTextField.getText() +" and"+ "password="+ passwordField.getText();
           Statement statement = connection.createStatement();
           ResultSet  resultSet = statement.executeQuery(query);
       }

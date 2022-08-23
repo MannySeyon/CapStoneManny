@@ -55,6 +55,8 @@ public class DashBoardController {
             stage.show();
         }
     }
+
+    //Save any progress and close stage
     @FXML
     public void Exit(ActionEvent event) {
         //Create Alert box-Confirmation type
@@ -62,8 +64,8 @@ public class DashBoardController {
         alert.setTitle("Exit");
         alert.setHeaderText("You Are About To Quit");
         alert.setContentText("Do you want to Quit?");
-        if(alert.showAndWait().get() == ButtonType.OK) {
 
+        if(alert.showAndWait().get() == ButtonType.OK) {
         //set stage =to the current working stage
         stage = (Stage) anchorPane.getScene().getWindow();
         System.out.println("You've successfully Quit!");
