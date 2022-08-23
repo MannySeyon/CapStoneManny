@@ -23,16 +23,26 @@ import java.time.LocalDate;
 
 @SuppressWarnings("ALL")
 public class SignupPageController {
-    public Label firstName;
-    public TextField SocialSecurityF;
-    public TextField UsernameF;
-    public TextField PasswordF;
-    public TextField PhoneNumberF;
-    public TextField EmailF;
-    public TextField LastNameF;
-    public TextField FirstNameF;
-    public TextField SuffixLabel;
-    public TextField MiddleNameF;
+    @FXML
+    private Label firstName;
+    @FXML
+    private TextField SocialSecurityF;
+    @FXML
+    private TextField UsernameF;
+    @FXML
+    private TextField PasswordF;
+    @FXML
+    private TextField PhoneNumberF;
+    @FXML
+    private TextField EmailF;
+    @FXML
+    private TextField LastNameF;
+    @FXML
+    private TextField FirstNameF;
+    @FXML
+    private TextField SuffixLabel;
+    @FXML
+    private TextField MiddleNameF;
     @FXML
     private Label DOBLabel;
     @FXML
@@ -105,7 +115,5 @@ public class SignupPageController {
         PreparedStatement preparedStatement = (PreparedStatement) connection;
 
    }
-
-
 
 }
