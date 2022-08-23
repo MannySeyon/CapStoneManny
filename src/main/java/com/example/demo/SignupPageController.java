@@ -23,28 +23,18 @@ import java.time.LocalDate;
 
 @SuppressWarnings("ALL")
 public class SignupPageController {
+    public Label firstName;
+    public TextField SocialSecurityF;
+    public TextField UsernameF;
+    public TextField PasswordF;
+    public TextField PhoneNumberF;
+    public TextField EmailF;
+    public TextField LastNameF;
+    public TextField FirstNameF;
+    public TextField SuffixLabel;
+    public TextField MiddleNameF;
     @FXML
-    private Label ageLabel;
-    @FXML
-    private  TextField ssn;
-    @FXML
-    private  TextField username;
-    @FXML
-    private TextField password;
-    @FXML
-    private TextField phonenumber;
-    @FXML
-    private  TextField email;
-    @FXML
-    private TextField lastname;
-    @FXML
-    private TextField middlename;
-    @FXML
-    private  TextField firstname;
-    @FXML
-    private TextField dob;
-    @FXML
-    private Label FirstName;
+    private Label DOBLabel;
     @FXML
     private Label LastName;
     @FXML
@@ -108,15 +98,15 @@ public class SignupPageController {
         Connectivity connectivity = new Connectivity();
         Connection connection = connectivity.getConnection();
 
-        Customer customer = new Customer(firstname.getText(),
-                lastname.getText(),
-                middlename.getText(),
+        Customer customer = new Customer(FirstNameF.getText(),
+                LastNameF.getText(),
+                MiddleNameF.getText(),
                 LocalDate.of(datePicker.getValue().getYear(),datePicker.getValue().getMonth(),datePicker.getValue().getDayOfMonth()),
-                ssn.getText(),
-                phonenumber.getText(),
-                email.getText(),
-                username.getText(),
-                password.getText());
+                SocialSecurityF.getText(),
+                PhoneNumberF.getText(),
+                EmailF.getText(),
+                UsernameF.getText(),
+                PasswordF.getText());
         String query = "Insert into customer_personal_info ";
         PreparedStatement preparedStatement = (PreparedStatement) connection;
 
