@@ -72,7 +72,7 @@ public class LoginPageController {
 
 @SuppressWarnings("ThrowablePrintedToSystemOut")
 
-
+@FXML
     public void loginButtonOnAction(ActionEvent event) throws SQLException, IOException {
         if(nameTextField.getText().isBlank()==false && passwordField.getText().isBlank()==false){
             validateLogin(event);
