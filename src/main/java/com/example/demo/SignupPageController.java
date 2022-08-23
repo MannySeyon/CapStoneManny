@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import com.example.demo.customer.Customer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -18,7 +19,10 @@ import java.time.LocalDate;
 
 
 @SuppressWarnings("ALL")
-public class SignupPageController {
+public class SignupPageController extends Customer {
+    public SignupPageController(String firstName, String lastName, String middleName, LocalDate dateOfBirth, String SSN, String phoneNumber, String email, String username, String password) {
+        super(firstName, lastName, middleName, dateOfBirth, SSN, phoneNumber, email, username, password);
+    }
     @FXML
     private Label ageLabel;
     @FXML
@@ -53,6 +57,8 @@ public class SignupPageController {
     private Label PhoneNumber;
     @FXML
     private Label Email;
+
+
     @FXML
     private Button CheckAgeButton;
     @FXML
