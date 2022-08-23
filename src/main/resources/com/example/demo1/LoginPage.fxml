@@ -31,8 +31,8 @@
 <center>
     <AnchorPane fx:id="anchorPane" prefHeight="798.0" prefWidth="729.0" style="-fx-background-color: black;" stylesheets="@Login.css" BorderPane.alignment="CENTER">
         <children>
-                <Button fx:id="loginButton" layoutX="491.0" layoutY="504.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="92.0" style="-fx-background-color: #cfb53b;" text="Login" textFill="#fafafa" />
-                <Button fx:id="SignupButton" alignment="CENTER" contentDisplay="CENTER" layoutX="357.0" layoutY="604.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="116.0" style="-fx-background-color: #cfb53b;" text="Sign up" textFill="WHITE" />
+                <Button fx:id="loginButton" layoutX="491.0" layoutY="504.0" mnemonicParsing="false" onAction="#validateLogin" prefHeight="49.0" prefWidth="92.0" style="-fx-background-color: #cfb53b;" text="Login" textFill="#fafafa" />
+                <Button fx:id="SignupButton" alignment="CENTER" contentDisplay="CENTER" layoutX="357.0" layoutY="604.0" mnemonicParsing="false" onAction="#SignUpPage" prefHeight="49.0" prefWidth="116.0" style="-fx-background-color: #cfb53b;" text="Sign up" textFill="WHITE" />
                 <TextField fx:id="nameTextField" layoutX="391.0" layoutY="384.0" prefHeight="33.0" prefWidth="292.0" text="Username" />
                 <PasswordField fx:id="passwordField" layoutX="389.0" layoutY="437.0" prefHeight="37.0" prefWidth="294.0" text="passwordField" />
                 <Label fx:id="passwordLabel" alignment="CENTER_LEFT" layoutX="179.0" layoutY="425.0" prefHeight="42.0" prefWidth="187.0" text="Password" textFill="WHITE" />
