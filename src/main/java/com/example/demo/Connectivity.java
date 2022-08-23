@@ -11,7 +11,7 @@ public class Connectivity {
 
    public Connection getConnection() {
         try {
-            connection = DriverManager.getConnection("jdbc:mysql://34.68.83.162/SummitFinancialCorp", "root", "1558");
+            connection = DriverManager.getConnection("jdbc:mysql://34.68.83.162/bs_db1", "root", "1558");
 
         } catch (SQLException e) {
             throw new RuntimeException(e);

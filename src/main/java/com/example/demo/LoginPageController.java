@@ -15,7 +15,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.sql.SQLException;
+import java.sql.*;
 
 @SuppressWarnings("ALL")
 public class LoginPageController {
@@ -34,7 +34,7 @@ public class LoginPageController {
     @FXML
     private Label passwordLabel;
     @FXML
-    public PasswordField passwordField;
+    private PasswordField passwordField;
 
     @FXML
     private Button Home;
@@ -71,39 +71,47 @@ public class LoginPageController {
     }
 
 @SuppressWarnings("ThrowablePrintedToSystemOut")
-@FXML
-      public void validateLogin(ActionEvent event) throws SQLException, IOException {
-    try {
-        username = nameTextField.getText();
-        password = passwordField.getText();
-//        if(nameTextField.getText().isBlank()==false && passwordField.getText().isBlank()==false){
-//            Connectivity connectivity = new Connectivity();
-//            Connection  connection = connectivity.getConnection();
-//            String query = "select count(1) from  CustomerInfo where username =" + username +" and"+ "password="+ password;
-//            Statement statement = connection.createStatement();
-//            ResultSet  resultSet = statement.executeQuery(query);
 
-        // Fxml loader instance
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("LandingPage.fxml"));
-        //set root =to loader and load it.
-        root = loader.load();
 
-        //Create instance of the next scene's controller
-        DashBoardController landingController = loader.getController();
+    public void loginButtonOnAction(ActionEvent event) throws SQLException, IOException {
+        if(nameTextField.getText().isBlank()==false && passwordField.getText().isBlank()==false){
+            validateLogin(event);
 
-        //Use scenecontroller variable to call methods within controller class
-        landingController.displayName(username);
 
-        //root = FXMLLoader.load(getClass().getResource("LandingPage.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        }
+        else {
 
-    } catch (Exception e){
-        System.out.println(e);
+        }
     }
-//        else {}
-//}
-}
+
+
+    public void validateLogin(ActionEvent event ) throws SQLException, IOException {
+        Connectivity connectivity = new Connectivity();
+        Connection connection = connectivity.getConnection();
+        String query = "select count(1) from  customer_personal_info where username = ' " + nameTextField.getText() + "' and password= '" + passwordField.getText()+"'";
+        Statement statement = connection.createStatement();
+        ResultSet resultSet = statement.executeQuery(query);
+        while (resultSet.next()) {
+            System.out.println(resultSet.getInt(1));
+            if (resultSet.getInt(1) == 1) {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("LandingPage.fxml"));
+                //set root =to loader and load it.
+                root = loader.load();
+
+                //Create instance of the next scene's controller
+                DashBoardController landingController = loader.getController();
+
+                //Use scenecontroller variable to call methods within controller class
+                landingController.displayName(username);
+
+                //root = FXMLLoader.load(getClass().getResource("LandingPage.fxml"));
+                stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                scene = new Scene(root);
+                stage.setScene(scene);
+                stage.show();
+            } else {
+                System.out.println("i am sorry");
+            }
+        }
+    }
 }

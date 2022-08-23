@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import com.example.demo.customer.Customer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,8 +18,13 @@ import java.io.IOException;
 import java.time.LocalDate;
 
 
+
+
 @SuppressWarnings("ALL")
-public class SignupPageController {
+public class SignupPageController extends Customer {
+    public SignupPageController(String firstName, String lastName, String middleName, LocalDate dateOfBirth, String SSN, String phoneNumber, String email, String username, String password) {
+        super(firstName, lastName, middleName, dateOfBirth, SSN, phoneNumber, email, username, password);
+    }
 
     @FXML
     private Button CheckAgeButton;
@@ -74,6 +80,7 @@ public class SignupPageController {
     @FXML
     public void Submit(ActionEvent event){
         try {
+            //Customer customer = new Customer()
             //turn string entered into an int variable
             age = Integer.parseInt(ageTextField.getText());
             if (age >= 16)
