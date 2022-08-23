@@ -3,7 +3,7 @@
     Hex Values
     or Colors
     */
-    -fx-background-color: Orange;
+    -fx-background-color: lightGrey;
 }
 .label{
     -fx-font-size: 20;
