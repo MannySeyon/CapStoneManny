@@ -15,7 +15,8 @@ public class CheckingAccount extends Customer implements Balance {
                            String phoneNumber,
                            String email,
                            String username,
-                           String password) {
+                           String password,
+                           String gender) {
         super(firstName,
                 lastName,
                 middleName,
@@ -24,7 +25,8 @@ public class CheckingAccount extends Customer implements Balance {
                 phoneNumber,
                 email,
                 username,
-                password);
+                password,
+                gender);
     }
 
 
