@@ -15,7 +15,6 @@ public class Customer {
         private String username;
         private String password;
         private String accountNumber;
-        private String gender;
 
         public Customer(String firstName,
                         String lastName,
@@ -25,8 +24,7 @@ public class Customer {
                         String phoneNumber,
                         String email,
                         String username,
-                        String password,
-                        String gender) {
+                        String password) {
             this.firstName = firstName;
             this.lastName = lastName;
             this.middleName = middleName;
@@ -36,7 +34,7 @@ public class Customer {
             this.email = email;
             this.username = username;
             this.password = password;
-            this.gender = gender;
+
         }
 
 
@@ -119,7 +117,6 @@ public class Customer {
         public void setAccountNumber(String accountNumber) {
             this.accountNumber = accountNumber;
         }
-        public void setGender(String gender){this.gender = accountNumber;}
 
 
         @Override
@@ -135,7 +132,6 @@ public class Customer {
                     ", username='" + username + '\'' +
                     ", password='" + password + '\'' +
                     ", accountNumber='" + accountNumber + '\'' +
-                    ", gender='"+ gender + '\''+
                     '}';
         }
 

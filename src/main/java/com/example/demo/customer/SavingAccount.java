@@ -26,8 +26,7 @@ public class SavingAccount extends Customer implements Balance {
                 phoneNumber,
                 email,
                 username,
-                password,
-                gender);
+                password);
     }
 
 
