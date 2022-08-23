@@ -7,16 +7,19 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.time.LocalDate;
 
 
 @SuppressWarnings("ALL")
 public class SignupPageController {
+
     @FXML
     private Button CheckAgeButton;
     @FXML
@@ -34,21 +37,24 @@ public class SignupPageController {
     @FXML
     private Label welcomeLabel;
 
-
-
-
-
-
-
-
+    @FXML
+    private DatePicker datePicker;
+    @FXML
+    private Label label;
 
     @FXML
     private AnchorPane anchorPane;
+
     @FXML
     TextField ageTextField;
-    @FXML
-    int age;
 
+    @FXML
+        int age;
+    @FXML
+    public void getDate(ActionEvent event) {
+        LocalDate date = datePicker.getValue();
+        label.setText(date.toString());
+    }
     @FXML
     protected void Home(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("main.fxml"));
@@ -65,6 +71,7 @@ public class SignupPageController {
         stage.setScene(scene);
         stage.show();
     }
+    @FXML
     public void Submit(ActionEvent event){
         try {
             //turn string entered into an int variable
