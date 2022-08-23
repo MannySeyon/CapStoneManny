@@ -1,6 +1,5 @@
 package com.example.demo;
 
-import com.example.demo.customer.Customer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -18,14 +17,42 @@ import java.io.IOException;
 import java.time.LocalDate;
 
 
-
-
 @SuppressWarnings("ALL")
-public class SignupPageController extends Customer {
-    public SignupPageController(String firstName, String lastName, String middleName, LocalDate dateOfBirth, String SSN, String phoneNumber, String email, String username, String password) {
-        super(firstName, lastName, middleName, dateOfBirth, SSN, phoneNumber, email, username, password);
-    }
-
+public class SignupPageController {
+    @FXML
+    private Label ageLabel;
+    @FXML
+    private  TextField SocialSecurityF;
+    @FXML
+    private  TextField UsernameF;
+    @FXML
+    private TextField PasswordF;
+    @FXML
+    private TextField PhoneNumberF;
+    @FXML
+    private  TextField EmailF;
+    @FXML
+    private TextField LastNameF;
+    @FXML
+    private TextField MiddleNameF;
+    @FXML
+    private  TextField FirstName;
+    @FXML
+    private Label firstName;
+    @FXML
+    private Label LastName;
+    @FXML
+    private Label MiddleName;
+    @FXML
+    private Label SocialSecurity;
+    @FXML
+    private Label Username;
+    @FXML
+    private Label Password;
+    @FXML
+    private Label PhoneNumber;
+    @FXML
+    private Label Email;
     @FXML
     private Button CheckAgeButton;
     @FXML
@@ -37,29 +64,19 @@ public class SignupPageController extends Customer {
     private Parent root;
     @FXML
     private Button Home;
-
     @FXML
     private Button SignupButton;
     @FXML
     private Label welcomeLabel;
-
     @FXML
     private DatePicker datePicker;
     @FXML
-    private Label label;
-
-    @FXML
     private AnchorPane anchorPane;
-
-    @FXML
-    TextField ageTextField;
-
     @FXML
         int age;
     @FXML
     public void getDate(ActionEvent event) {
         LocalDate date = datePicker.getValue();
-        label.setText(date.toString());
     }
     @FXML
     protected void Home(ActionEvent event) throws IOException {
@@ -76,25 +93,6 @@ public class SignupPageController extends Customer {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-    }
-    @FXML
-    public void Submit(ActionEvent event){
-        try {
-            //Customer customer = new Customer()
-            //turn string entered into an int variable
-            age = Integer.parseInt(ageTextField.getText());
-            if (age >= 16)
-            {
-                SignupLabel.setText("You are Eligible for a Basic Account");
-
-            } else
-            {
-                SignupLabel.setText("Must be 16+ to Create basic Account. Please create a Co-owned Account");
-            }
-
-        } catch (Exception e){
-            System.out.println(e);
-        }
     }
 
 }
