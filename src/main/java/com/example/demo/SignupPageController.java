@@ -7,12 +7,14 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.time.LocalDate;
 
 
 @SuppressWarnings("ALL")
@@ -35,19 +37,27 @@ public class SignupPageController {
     private Label welcomeLabel;
 
 
+    public class Scene4Controller {
+        @FXML
+        private DatePicker datePicker;
+        @FXML
+        private Label label;
 
+         @FXML
+        private AnchorPane anchorPane;
 
+        @FXML
+        TextField ageTextField;
 
+        @FXML
+        int age;
+        @FXML
+        public void getDate(ActionEvent event){
+        LocalDate date = datePicker.getValue();
+        label.setText(date.toString());
+    }
 
-
-
-
-    @FXML
-    private AnchorPane anchorPane;
-    @FXML
-    TextField ageTextField;
-    @FXML
-    int age;
+}
 
     @FXML
     protected void Home(ActionEvent event) throws IOException {
