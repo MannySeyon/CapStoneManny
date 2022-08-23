@@ -19,7 +19,9 @@
     -fx-text-fill:Black;
     -fx-font-size: 15;
 }
+.BorderPane{
 
+}
 
 .login_logo_container Text {
     -fx-font-size: 2;

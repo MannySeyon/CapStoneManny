@@ -34,6 +34,14 @@ public class SignupPageController {
     @FXML
     private Label welcomeLabel;
 
+
+
+
+
+
+
+
+
     @FXML
     private AnchorPane anchorPane;
     @FXML
