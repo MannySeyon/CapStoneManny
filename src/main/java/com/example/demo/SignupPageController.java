@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import com.example.demo.customer.Customer;
+import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,34 +16,35 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.time.LocalDate;
 
 
 @SuppressWarnings("ALL")
-public class SignupPageController extends Customer {
-    public SignupPageController(String firstName, String lastName, String middleName, LocalDate dateOfBirth, String SSN, String phoneNumber, String email, String username, String password) {
-        super(firstName, lastName, middleName, dateOfBirth, SSN, phoneNumber, email, username, password);
-    }
+public class SignupPageController {
     @FXML
     private Label ageLabel;
     @FXML
-    private  TextField SocialSecurityF;
+    private  TextField ssn;
     @FXML
-    private  TextField UsernameF;
+    private  TextField username;
     @FXML
-    private TextField PasswordF;
+    private TextField password;
     @FXML
-    private TextField PhoneNumberF;
+    private TextField phonenumber;
     @FXML
-    private  TextField EmailF;
+    private  TextField email;
     @FXML
-    private TextField LastNameF;
+    private TextField lastname;
     @FXML
-    private TextField MiddleNameF;
+    private TextField middlename;
     @FXML
-    private  TextField FirstName;
+    private  TextField firstname;
     @FXML
-    private Label firstName;
+    private TextField dob;
+    @FXML
+    private Label FirstName;
     @FXML
     private Label LastName;
     @FXML
@@ -57,8 +59,6 @@ public class SignupPageController extends Customer {
     private Label PhoneNumber;
     @FXML
     private Label Email;
-
-
     @FXML
     private Button CheckAgeButton;
     @FXML
@@ -79,11 +79,13 @@ public class SignupPageController extends Customer {
     @FXML
     private AnchorPane anchorPane;
     @FXML
-        int age;
+    int age;
+
     @FXML
     public void getDate(ActionEvent event) {
         LocalDate date = datePicker.getValue();
     }
+
     @FXML
     protected void Home(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("main.fxml"));
@@ -92,6 +94,7 @@ public class SignupPageController extends Customer {
         stage.setScene(scene);
         stage.show();
     }
+
     @FXML
     protected void Signup(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
@@ -100,5 +103,25 @@ public class SignupPageController extends Customer {
         stage.setScene(scene);
         stage.show();
     }
+
+    public void saveInfo(){
+        Connectivity connectivity = new Connectivity();
+        Connection connection = connectivity.getConnection();
+
+        Customer customer = new Customer(firstname.getText(),
+                lastname.getText(),
+                middlename.getText(),
+                LocalDate.of(datePicker.getValue().getYear(),datePicker.getValue().getMonth(),datePicker.getValue().getDayOfMonth()),
+                ssn.getText(),
+                phonenumber.getText(),
+                email.getText(),
+                username.getText(),
+                password.getText());
+        String query = "Insert into customer_personal_info ";
+        PreparedStatement preparedStatement = (PreparedStatement) connection;
+
+   }
+
+
 
 }

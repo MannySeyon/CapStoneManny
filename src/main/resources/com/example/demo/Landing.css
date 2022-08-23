@@ -3,7 +3,7 @@
     Hex Values
     or Colors
     */
-    -fx-background-color: black;
+    -fx-background-color: lightgrey;
 }
 .label{
     -fx-font-size: 30;
@@ -12,7 +12,7 @@
     -fx-alignment: center;
 }
 .button{
-    -fx-background-color: LightGrey;
+    -fx-background-color: white;
     -fx-text-fill:Black;
     -fx-font-size: 15;
 }
