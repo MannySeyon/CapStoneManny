@@ -1,6 +1,5 @@
-package com.example.demo1;
+package com.example.demo;
 
-import com.almasb.fxgl.entity.action.Action;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,7 +14,11 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+
+@SuppressWarnings("ALL")
 public class SignupPageController {
+    @FXML
+    private Button CheckAgeButton;
     @FXML
     private Label ageLable;
     @FXML

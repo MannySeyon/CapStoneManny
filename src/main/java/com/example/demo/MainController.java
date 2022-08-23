@@ -1,4 +1,4 @@
-package com.example.demo1;
+package com.example.demo;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,6 +12,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import java.io.IOException;
 
+@SuppressWarnings("ALL")
 public class MainController {
     @FXML
     private Button signupButton;

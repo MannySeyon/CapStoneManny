@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="566.0" prefWidth="864.0"
-            stylesheets="@App.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.MainController">
+            stylesheets="@App.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.MainController">
     <Button fx:id="signupButton" layoutX="333.0" layoutY="200.0" mnemonicParsing="false" onAction="#SignUpPage" prefHeight="73.0" prefWidth="202.0" text="Signup" />
     <Button fx:id="loginButton" layoutX="331.0" layoutY="318.0" mnemonicParsing="false" onAction="#LoginPage" prefHeight="73.0" prefWidth="202.0" text="Login" />
     <Label fx:id="welcomeLabel" layoutX="21.0" layoutY="21.0" prefHeight="98.0" prefWidth="825.0" text="Welcome to Summit Financial Corporation!" />

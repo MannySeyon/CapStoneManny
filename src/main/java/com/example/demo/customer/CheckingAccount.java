@@ -1,5 +1,6 @@
-package com.example.demo1.Customer;
+package com.example.demo.customer;
 import java.time.LocalDate;
+@SuppressWarnings("unused")
 public class CheckingAccount extends Customer implements Balance {
 
     private long balance = 0;

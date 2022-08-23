@@ -3,8 +3,8 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="566.0" prefWidth="864.0" stylesheets="@SignUpPage.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.SignupPageController">
-   <Button fx:id="CheckageButton" layoutX="369.0" layoutY="305.0" mnemonicParsing="false" onAction="#Submit" prefHeight="47.0" prefWidth="156.0" text="Check Age" />
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="566.0" prefWidth="864.0" stylesheets="@SignUpPage.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SignupPageController">
+   <Button fx:id="CheckAgeButton" layoutX="369.0" layoutY="305.0" mnemonicParsing="false" onAction="#Submit" prefHeight="47.0" prefWidth="156.0" text="Check Age" />
    <Label fx:id="welcomeLabel" layoutX="31.0" layoutY="31.0" prefHeight="98.0" prefWidth="825.0" text="Welcome to Summit Financial Corporation!" />
    <Button fx:id="Home" layoutX="31.0" layoutY="494.0" mnemonicParsing="false" onAction="#Home" prefHeight="42.0" prefWidth="95.0" text="Back Home" />
    <Label fx:id="SignupLabel" layoutX="5.0" layoutY="158.0" prefHeight="64.0" prefWidth="849.0" text="Label" />

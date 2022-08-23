@@ -1,8 +1,8 @@
-package com.example.demo1.Customer;
+package com.example.demo.customer;
 import java.time.LocalDate;
+@SuppressWarnings("ALL")
 public class SavingAccount extends Customer implements Balance {
 
-    private long SavingAccountNumber;
     private long balance = 0;
     private long withdrawalAmount;
     private long depositAmount;
@@ -26,7 +26,6 @@ public class SavingAccount extends Customer implements Balance {
                 email,
                 username,
                 password);
-        SavingAccountNumber = savingAccountNumber;
     }
 
 

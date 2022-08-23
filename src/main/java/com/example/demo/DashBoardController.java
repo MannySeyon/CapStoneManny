@@ -1,4 +1,4 @@
-package com.example.demo1;
+package com.example.demo;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,7 +15,10 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+@SuppressWarnings("ALL")
 public class DashBoardController {
+    @FXML
+    private Button exit;
     private Stage stage;
     private Scene scene;
     private Parent root;

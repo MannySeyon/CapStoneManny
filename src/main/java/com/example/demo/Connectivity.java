@@ -1,9 +1,10 @@
-package com.example.demo1;
+package com.example.demo;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+@SuppressWarnings("unused")
 public class Connectivity {
 
     Connection connection;

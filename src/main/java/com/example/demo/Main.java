@@ -1,4 +1,4 @@
-package com.example.demo1;
+package com.example.demo;
 
 import javafx.application.Application;
 import javafx.fxml.FXML;
@@ -10,6 +10,7 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+@SuppressWarnings("ALL")
 public class Main extends Application {
 
     @Override
