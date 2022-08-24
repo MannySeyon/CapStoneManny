@@ -1,17 +1,13 @@
 package com.example.demo;
 
 import com.example.demo.customer.Customer;
-import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -75,13 +71,15 @@ public class SignupPageController {
     @FXML
     private AnchorPane anchorPane;
     @FXML
-    int age;
-
+        int age;
+    @FXML
+    private Label verifySSN;
+    @FXML
+    private Label verifyPhone;
     @FXML
     public void getDate(ActionEvent event) {
         LocalDate date = datePicker.getValue();
     }
-
     @FXML
     protected void Home(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("main.fxml"));
@@ -90,7 +88,6 @@ public class SignupPageController {
         stage.setScene(scene);
         stage.show();
     }
-
     @FXML
     protected void Signup(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
@@ -100,20 +97,39 @@ public class SignupPageController {
         stage.show();
     }
 
+    public void verify(ActionEvent actionEvent) throws SQLException, IOException {
+        if(FirstNameF.getText().isBlank() ||
+                LastNameF.getText().isBlank()||
+                SocialSecurityF.getText().isBlank()||
+                UsernameF.getText().isBlank()||
+                PasswordF.getText().isBlank()||
+                PhoneNumberF.getText().isBlank() ||
+                EmailF.getText().isBlank()){
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Incompleted Fields");
+            alert.setHeaderText("You have incompleted fields");
+            alert.setContentText("You have incompleted fields");
+            alert.show();
+        } else if (SocialSecurityF.getText().length() != 9 || PhoneNumberF.getText().length() != 10) {
+            if(SocialSecurityF.getText().length() != 9){
+                verifySSN.setText("* Your Social Security Number is incomplete.");
+            }
+            if(PhoneNumberF.getText().length() != 10){
+                verifyPhone.setText("* Your phone number is incomplete.");
+            }
+        } else{
+            saveInfo(actionEvent);
+        }
+
+    }
+    //checks for age - ssn & phone = number - if user exists
+    public void checkInfo(){
+
+    }
+
     public void saveInfo(ActionEvent actionEvent) throws SQLException, IOException {
         Connectivity connectivity = new Connectivity();
         Connection connection = connectivity.getConnection();
-
-//        if(FirstNameF.getText().isBlank() ||
-//                LastNameF.getText().isBlank()||
-//                MiddleNameF.getText().isBlank() ||
-//                SocialSecurityF.getText().isBlank()||
-//                UsernameF.getText().isBlank()||
-//                PasswordF.getText().isBlank()||
-//                EmailF.getText().isBlank()){
-//            Signup(actionEvent);
-//        }
-
 
         Customer customer = new Customer(FirstNameF.getText(),
                 LastNameF.getText(),

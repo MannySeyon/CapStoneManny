@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="785.0" prefWidth="1117.0" stylesheets="@SignUpPage.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SignupPageController">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="785.0" prefWidth="1117.0" stylesheets="@SignUpPage.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SignupPageController">
    <ImageView fitHeight="157.0" fitWidth="156.0" layoutX="31.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@/Summit Fin Corp.png" />
@@ -17,7 +13,7 @@
    <Button fx:id="Home" layoutX="31.0" layoutY="494.0" mnemonicParsing="false" onAction="#Home" prefHeight="42.0" prefWidth="95.0" text="Back Home" />
    <Label fx:id="SignupLabel" layoutX="249.0" layoutY="14.0" prefHeight="64.0" prefWidth="761.0" text="Label" />
    <Label fx:id="DOBLabel" layoutX="372.0" layoutY="372.0" prefHeight="42.0" prefWidth="145.0" text="Date Of Birth" />
-   <Button fx:id="SignupButton" layoutX="489.0" layoutY="690.0" mnemonicParsing="false" onAction="#saveInfo" prefHeight="47.0" prefWidth="156.0" text="Signup" />
+   <Button fx:id="SignupButton" layoutX="489.0" layoutY="690.0" mnemonicParsing="false" onAction="#verify" prefHeight="47.0" prefWidth="156.0" text="Signup" />
    <Label fx:id="firstName" layoutX="360.0" layoutY="162.0" prefHeight="42.0" prefWidth="149.0" text="First Name" />
    <Label fx:id="MiddleName" layoutX="376.0" layoutY="221.0" text="Middle Name" />
    <Label fx:id="LastName" layoutX="360.0" layoutY="325.0" prefHeight="42.0" prefWidth="149.0" text="Last Name" />
@@ -37,5 +33,7 @@
    <TextField fx:id="PhoneNumberF" layoutX="542.0" layoutY="585.0" prefHeight="25.0" prefWidth="174.0" />
    <TextField fx:id="EmailF" layoutX="542.0" layoutY="628.0" prefHeight="25.0" prefWidth="174.0" />
    <Label layoutX="406.0" layoutY="285.0" text="Suffix" />
+   <Label fx:id="verifySSN" layoutX="740.0" layoutY="418.0" />
+   <Label fx:id="verifyPhone" layoutX="734.0" layoutY="576.0" />
 
 </AnchorPane>
