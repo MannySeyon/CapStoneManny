@@ -1,15 +1,14 @@
 package com.example.demo;
 
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -17,6 +16,32 @@ import java.io.IOException;
 
 @SuppressWarnings("ALL")
 public class DashBoardController {
+
+    @FXML
+    private  Label cardLabel1;
+    @FXML
+    private  Label TimeDateLabel;
+    @FXML
+    private  FontAwesomeIconView bars;
+    @FXML
+    private ImageView securityLogo;
+    @FXML
+    private  FontAwesomeIconView HomeButton;
+    @FXML
+    private FontAwesomeIconView list;
+    @FXML
+    private  FontAwesomeIconView image;
+    @FXML
+    private  FontAwesomeIconView gear;
+    @FXML
+    private  Separator separator;
+    @FXML
+    private FontAwesomeIconView plus;
+    @FXML
+    private  ImageView bankLogo;
+
+@FXML
+    private Label dashLabel;
     @FXML
     private Button exit;
     private Stage stage;
@@ -26,8 +51,6 @@ public class DashBoardController {
     Label nameLabel;
     @FXML
     private Button Home;
-    @FXML
-    private Label welcomeLabel;
     @FXML
     private AnchorPane anchorPane;
     @FXML
@@ -76,7 +99,7 @@ public class DashBoardController {
         }
     }
     public void displayName(String username){
-        nameLabel.setText("Welcome to your Dashboard: " + username + "!" );
+        nameLabel.setText("Hello, " + "firstName + lastName" + ". Welcome to your Summit Dashboard!" );
     }
 }
 

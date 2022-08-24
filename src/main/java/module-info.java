@@ -1,3 +1,4 @@
+
 module com.example.demo {
     requires javafx.controls;
     requires javafx.fxml;
@@ -5,6 +6,7 @@ module com.example.demo {
     requires javafx.base;
     requires validatorfx;
     requires java.sql;
+    requires de.jensd.fx.glyphs.fontawesome;
 
     opens com.example.demo to javafx.fxml;
     exports com.example.demo;

@@ -8,6 +8,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
+<!--suppress ALL -->
 <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="785.0" prefWidth="1117.0" stylesheets="@SignUpPage.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SignupPageController">
    <ImageView fitHeight="157.0" fitWidth="156.0" layoutX="31.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
       <image>

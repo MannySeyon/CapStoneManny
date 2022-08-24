@@ -1,27 +1,4 @@
-.root{
-    /* Style Color in FX
-    Hex Values
-    or Colors
-    */
-    -fx-background-color: LightGrey;
-}
-#phoneLabel, #emailLabel{
-    -fx-text-fill: Black;
-}
-.label{
-    -fx-font-size: 30;
-    -fx-font-family: Papyrus;
-    -fx-text-fill: White;
-    -fx-alignment: center;
-}
-.button{
-    -fx-background-color: white;
-    -fx-text-fill:Black;
-    -fx-font-size: 15;
-}
-.BorderPane{
 
-}
 
 .login_logo_container Text {
     -fx-font-size: 2;
