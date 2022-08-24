@@ -18,6 +18,8 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.time.LocalDate;
 
 
@@ -98,7 +100,7 @@ public class SignupPageController {
         stage.show();
     }
 
-    public void saveInfo(){
+    public void saveInfo(ActionEvent actionEvent) throws SQLException {
         Connectivity connectivity = new Connectivity();
         Connection connection = connectivity.getConnection();
 
@@ -111,8 +113,22 @@ public class SignupPageController {
                 EmailF.getText(),
                 UsernameF.getText(),
                 PasswordF.getText());
-        String query = "Insert into customer_personal_info ";
-        PreparedStatement preparedStatement = (PreparedStatement) connection;
+        String query = "insert into customer_personal_info(First_name,Last_name,middle_name,date_of_birth,address,contact_no,\n" +
+                "                                ssn,username,password,email,gender) values (?,?,?,?,?,?,?,?,?,?,?)";
+        PreparedStatement statement = connection.prepareStatement(query);
+        statement.setString(1, customer.getFirstName());
+        statement.setString(2, customer.getLastName());
+        statement.setString(3,customer.getMiddleName()) ;
+    statement.setString(4,"2000-03-12");
+    statement.setString(5,"sdsads");
+    statement.setString(6,customer.getPhoneNumber());
+    statement.setString(7, customer.getSSN());
+    statement.setString(8,customer.getUsername());
+    statement.setString(9, customer.getPassword());
+    statement.setString(10,customer.getEmail());
+    statement.setString(11,"m");
+        statement.executeQuery(query);
+        System.out.println(customer.getEmail());
 
    }
 

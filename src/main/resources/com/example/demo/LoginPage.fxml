@@ -37,6 +37,7 @@
         <ImageView fitHeight="118.0" fitWidth="128.0" layoutX="77.0" layoutY="378.0">
             <Image url="@../../../security.png" />
         </ImageView>
+         <Label fx:id="passwordShow" layoutX="453.0" layoutY="309.0" />
     </AnchorPane>
 </center>
 </BorderPane>
