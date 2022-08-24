@@ -85,7 +85,7 @@ public class LoginPageController {
         }
     }
 
-
+@FXML
     public void validateLogin(ActionEvent event ) throws SQLException, IOException {
         Connectivity connectivity = new Connectivity();
         Connection connection = connectivity.getConnection();
