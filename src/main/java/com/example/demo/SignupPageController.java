@@ -107,7 +107,9 @@ public class SignupPageController {
         Customer customer = new Customer(FirstNameF.getText(),
                 LastNameF.getText(),
                 MiddleNameF.getText(),
-                LocalDate.of(datePicker.getValue().getYear(),datePicker.getValue().getMonth(),datePicker.getValue().getDayOfMonth()),
+                LocalDate.of(datePicker.getValue().getYear(),
+                        datePicker.getValue().getMonth(),
+                        datePicker.getValue().getDayOfMonth()),
                 SocialSecurityF.getText(),
                 PhoneNumberF.getText(),
                 EmailF.getText(),
@@ -119,15 +121,15 @@ public class SignupPageController {
         statement.setString(1, customer.getFirstName());
         statement.setString(2, customer.getLastName());
         statement.setString(3,customer.getMiddleName()) ;
-    statement.setString(4,"2000-03-12");
-    statement.setString(5,"sdsads");
-    statement.setString(6,customer.getPhoneNumber());
-    statement.setString(7, customer.getSSN());
-    statement.setString(8,customer.getUsername());
-    statement.setString(9, customer.getPassword());
-    statement.setString(10,customer.getEmail());
-    statement.setString(11,"m");
-        statement.executeQuery(query);
+        statement.setString(4,"2000-03-12");
+        statement.setString(5,"sdsads");
+        statement.setString(6,customer.getPhoneNumber());
+        statement.setString(7, customer.getSSN());
+        statement.setString(8,customer.getUsername());
+        statement.setString(9, customer.getPassword());
+        statement.setString(10,customer.getEmail());
+        statement.setString(11,"m");
+        statement.executeUpdate();
         System.out.println(customer.getEmail());
 
    }

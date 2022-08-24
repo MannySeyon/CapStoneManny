@@ -113,7 +113,7 @@ public class LoginPageController {
                 stage.setScene(scene);
                 stage.show();
             } else {
-                System.out.println("i am sorry");
+                passwordShow.setText("Wrong user name and password combination!");
             }
         }
     }
