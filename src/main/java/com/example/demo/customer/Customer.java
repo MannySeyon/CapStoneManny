@@ -20,7 +20,7 @@ public class Customer {
                         String lastName,
                         String middleName,
                         LocalDate dateOfBirth,
-                        String  SSN,
+                        String SSN,
                         String phoneNumber,
                         String email,
                         String username,
@@ -34,6 +34,7 @@ public class Customer {
             this.email = email;
             this.username = username;
             this.password = password;
+
         }
 
 
