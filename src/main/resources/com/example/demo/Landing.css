@@ -1,9 +1,21 @@
-.root {
-    /* Style Color in FX
-    Hex Values
-    or Colors
-    */
-    -fx-background-color: lightgrey;
+
+.parent{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 30px;
+}
+.sidebar{
+    -fx-background-color:lightgrey;
+    -fx-background-radius: 30px 30px 0px 0px ;
+}
+.sidebar_opt{
+    -fx-fill:grey;
+    -fx-background-radius: 30px 30px 0px 0px ;
+}
+.pane{
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #C1C1C1;
+    -fx-background-radius:  30px 0px 30px 0px ;
+    -fx-border-radius: 30px 30px 30px 30px ;
 }
 .label{
     -fx-font-size: 30;
@@ -12,7 +24,7 @@
     -fx-alignment: center;
 }
 .button{
-    -fx-background-color: white;
+    -fx-background-color: beige;
     -fx-text-fill:Black;
     -fx-font-size: 15;
 }

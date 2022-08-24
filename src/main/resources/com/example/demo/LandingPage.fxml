@@ -1,14 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
 
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" stylesheets="@Landing.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.DashBoardController">
-    <Button fx:id="Logout" layoutX="480.0" layoutY="515.0" mnemonicParsing="false" onAction="#Logout" prefHeight="58.0" prefWidth="113.0" text="Logout" />
-   <Label fx:id="welcomeLabel" layoutX="216.0" layoutY="20.0" prefHeight="98.0" prefWidth="629.0" text="Welcome to Summit Financial Corporation!" />
-    <Button fx:id="Home" layoutX="23.0" layoutY="536.0" mnemonicParsing="false" onAction="#Home" prefHeight="42.0" prefWidth="95.0" text="Back Home" />
-   <Label layoutX="45.0" layoutY="28.0" prefHeight="90.0" prefWidth="163.0" text="Dashboard" />
-   <Label fx:id="nameLabel" layoutX="366.0" layoutY="198.0" prefHeight="61.0" prefWidth="95.0" text="di" />
-   <Button fx:id="exit" layoutX="902.0" layoutY="536.0" mnemonicParsing="false" onAction="#Exit" prefHeight="42.0" prefWidth="102.0" text="Exit" />
-
-</AnchorPane>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" stylesheets="@Landing.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <AnchorPane fx:id="anchorPane" prefHeight="600.0" prefWidth="51.0" styleClass="sidebar" stylesheets="@Landing.css" BorderPane.alignment="CENTER">
+         <children>
+            <FontAwesomeIconView fx:id="bars" fill="#5b5647" glyphName="BARS" layoutX="14.0" layoutY="35.0" size="25" />
+            <ImageView fx:id="securityLogo" fitHeight="57.0" fitWidth="40.0" layoutX="5.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../security.png" />
+               </image>
+            </ImageView>
+            <VBox layoutX="11.0" layoutY="206.0" prefWidth="27.0">
+               <children>
+                  <FontAwesomeIconView fx:id="Home" fill="#d4b85d" glyphName="HOME" size="25" wrappingWidth="23.214284896850586">
+                     <VBox.margin>
+                        <Insets top="12.0" />
+                     </VBox.margin>
+                  </FontAwesomeIconView>
+                  <FontAwesomeIconView fx:id="list" fill="#4c4c4e" glyphName="LIST_UL" size="25" styleClass="sidebar_opt" wrappingWidth="25.0">
+                     <VBox.margin>
+                        <Insets top="12.0" />
+                     </VBox.margin>
+                  </FontAwesomeIconView>
+                  <FontAwesomeIconView fx:id="image" fill="#4c4c4e" glyphName="IMAGE" size="25" styleClass="sidebar_opt">
+                     <VBox.margin>
+                        <Insets top="12.0" />
+                     </VBox.margin>
+                  </FontAwesomeIconView>
+                  <FontAwesomeIconView fx:id="gear" fill="#4c4c4e" glyphName="GEAR" size="25" styleClass="sidebar_opt" wrappingWidth="23.428571701049805">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </FontAwesomeIconView>
+                  <Separator fx:id="seperator" prefHeight="21.0" prefWidth="0.0" styleClass="sidebar_opt">
+                     <VBox.margin>
+                        <Insets top="8.0" />
+                     </VBox.margin>
+                  </Separator>
+                  <FontAwesomeIconView fx:id="plus" fill="#4c4c4e" glyphName="PLUS" size="25" styleClass="sidebar" wrappingWidth="13.64285659790039">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </FontAwesomeIconView>
+               </children>
+            </VBox>
+            <ImageView fx:id="bankLogo" fitHeight="40.0" fitWidth="40.0" layoutX="5.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Summit Fin Corp.png" />
+               </image>
+            </ImageView>
+            <Circle fill="WHITE" layoutX="25.0" layoutY="575.0" radius="18.0" stroke="#c1c1c1" strokeType="INSIDE" />
+         </children></AnchorPane>
+   </left>
+</BorderPane>
