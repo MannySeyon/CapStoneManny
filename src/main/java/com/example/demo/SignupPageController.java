@@ -100,9 +100,20 @@ public class SignupPageController {
         stage.show();
     }
 
-    public void saveInfo(ActionEvent actionEvent) throws SQLException {
+    public void saveInfo(ActionEvent actionEvent) throws SQLException, IOException {
         Connectivity connectivity = new Connectivity();
         Connection connection = connectivity.getConnection();
+
+//        if(FirstNameF.getText().isBlank() ||
+//                LastNameF.getText().isBlank()||
+//                MiddleNameF.getText().isBlank() ||
+//                SocialSecurityF.getText().isBlank()||
+//                UsernameF.getText().isBlank()||
+//                PasswordF.getText().isBlank()||
+//                EmailF.getText().isBlank()){
+//            Signup(actionEvent);
+//        }
+
 
         Customer customer = new Customer(FirstNameF.getText(),
                 LastNameF.getText(),
@@ -115,14 +126,17 @@ public class SignupPageController {
                 EmailF.getText(),
                 UsernameF.getText(),
                 PasswordF.getText());
+
+
+
         String query = "insert into customer_personal_info(First_name,Last_name,middle_name,date_of_birth,address,contact_no,\n" +
                 "                                ssn,username,password,email,gender) values (?,?,?,?,?,?,?,?,?,?,?)";
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, customer.getFirstName());
         statement.setString(2, customer.getLastName());
         statement.setString(3,customer.getMiddleName()) ;
-        statement.setString(4,"2000-03-12");
-        statement.setString(5,"sdsads");
+        statement.setString(4,customer.getDateOfBirth().toString());
+        statement.setString(5,"sdss");
         statement.setString(6,customer.getPhoneNumber());
         statement.setString(7, customer.getSSN());
         statement.setString(8,customer.getUsername());
