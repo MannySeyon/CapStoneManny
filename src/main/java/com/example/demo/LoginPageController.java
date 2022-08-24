@@ -45,6 +45,8 @@ public class LoginPageController {
     @FXML
     private Label welcomeLabel;
     @FXML
+    private Label passwordShow;
+    @FXML
     private AnchorPane anchorPane;
     private Stage stage;
     private Scene scene;
@@ -72,15 +74,14 @@ public class LoginPageController {
 
 @SuppressWarnings("ThrowablePrintedToSystemOut")
 
-
+@FXML
     public void loginButtonOnAction(ActionEvent event) throws SQLException, IOException {
         if(nameTextField.getText().isBlank()==false && passwordField.getText().isBlank()==false){
             validateLogin(event);
 
-
         }
         else {
-
+             passwordShow.setText("Please enter User name and Password");
         }
     }
 
@@ -88,9 +89,11 @@ public class LoginPageController {
     public void validateLogin(ActionEvent event ) throws SQLException, IOException {
         Connectivity connectivity = new Connectivity();
         Connection connection = connectivity.getConnection();
-        String query = "select count(1) from  customer_personal_info where username = ' " + nameTextField.getText() + "' and password= '" + passwordField.getText()+"'";
-        Statement statement = connection.createStatement();
-        ResultSet resultSet = statement.executeQuery(query);
+        String query = "select count(1) from  customer_personal_info where username = ?   and password= ?";
+        PreparedStatement statement = connection.prepareStatement(query);
+        statement.setString(1,nameTextField.getText());
+        statement.setString(2,passwordField.getText());
+        ResultSet resultSet = statement.executeQuery();
         while (resultSet.next()) {
             System.out.println(resultSet.getInt(1));
             if (resultSet.getInt(1) == 1) {
@@ -101,7 +104,7 @@ public class LoginPageController {
                 //Create instance of the next scene's controller
                 DashBoardController landingController = loader.getController();
 
-                //Use scenecontroller variable to call methods within controller class
+                         //Use scenecontroller variable to call methods within controller class
                 landingController.displayName(username);
 
                 //root = FXMLLoader.load(getClass().getResource("LandingPage.fxml"));
@@ -110,7 +113,7 @@ public class LoginPageController {
                 stage.setScene(scene);
                 stage.show();
             } else {
-                System.out.println("i am sorry");
+                passwordShow.setText("Wrong user name and password combination!");
             }
         }
     }

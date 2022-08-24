@@ -18,33 +18,35 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.time.LocalDate;
 
 
 @SuppressWarnings("ALL")
 public class SignupPageController {
     @FXML
-    private Label ageLabel;
+    private Label firstName;
     @FXML
-    private  TextField ssn;
+    private TextField SocialSecurityF;
     @FXML
-    private  TextField username;
+    private TextField UsernameF;
     @FXML
-    private TextField password;
+    private TextField PasswordF;
     @FXML
-    private TextField phonenumber;
+    private TextField PhoneNumberF;
     @FXML
-    private  TextField email;
+    private TextField EmailF;
     @FXML
-    private TextField lastname;
+    private TextField LastNameF;
     @FXML
-    private TextField middlename;
+    private TextField FirstNameF;
     @FXML
-    private  TextField firstname;
+    private TextField SuffixLabel;
     @FXML
-    private TextField dob;
+    private TextField MiddleNameF;
     @FXML
-    private Label FirstName;
+    private Label DOBLabel;
     @FXML
     private Label LastName;
     @FXML
@@ -60,10 +62,6 @@ public class SignupPageController {
     @FXML
     private Label Email;
     @FXML
-    private Button CheckAgeButton;
-    @FXML
-    private Label ageLable;
-    @FXML
     private Label SignupLabel;
     private Stage stage;
     private Scene scene;
@@ -72,8 +70,6 @@ public class SignupPageController {
     private Button Home;
     @FXML
     private Button SignupButton;
-    @FXML
-    private Label welcomeLabel;
     @FXML
     private DatePicker datePicker;
     @FXML
@@ -104,24 +100,38 @@ public class SignupPageController {
         stage.show();
     }
 
-    public void saveInfo(){
+    public void saveInfo(ActionEvent actionEvent) throws SQLException {
         Connectivity connectivity = new Connectivity();
         Connection connection = connectivity.getConnection();
 
-        Customer customer = new Customer(firstname.getText(),
-                lastname.getText(),
-                middlename.getText(),
-                LocalDate.of(datePicker.getValue().getYear(),datePicker.getValue().getMonth(),datePicker.getValue().getDayOfMonth()),
-                ssn.getText(),
-                phonenumber.getText(),
-                email.getText(),
-                username.getText(),
-                password.getText());
-        String query = "Insert into customer_personal_info ";
-        PreparedStatement preparedStatement = (PreparedStatement) connection;
+        Customer customer = new Customer(FirstNameF.getText(),
+                LastNameF.getText(),
+                MiddleNameF.getText(),
+                LocalDate.of(datePicker.getValue().getYear(),
+                        datePicker.getValue().getMonth(),
+                        datePicker.getValue().getDayOfMonth()),
+                SocialSecurityF.getText(),
+                PhoneNumberF.getText(),
+                EmailF.getText(),
+                UsernameF.getText(),
+                PasswordF.getText());
+        String query = "insert into customer_personal_info(First_name,Last_name,middle_name,date_of_birth,address,contact_no,\n" +
+                "                                ssn,username,password,email,gender) values (?,?,?,?,?,?,?,?,?,?,?)";
+        PreparedStatement statement = connection.prepareStatement(query);
+        statement.setString(1, customer.getFirstName());
+        statement.setString(2, customer.getLastName());
+        statement.setString(3,customer.getMiddleName()) ;
+        statement.setString(4,"2000-03-12");
+        statement.setString(5,"sdsads");
+        statement.setString(6,customer.getPhoneNumber());
+        statement.setString(7, customer.getSSN());
+        statement.setString(8,customer.getUsername());
+        statement.setString(9, customer.getPassword());
+        statement.setString(10,customer.getEmail());
+        statement.setString(11,"m");
+        statement.executeUpdate();
+        System.out.println(customer.getEmail());
 
    }
-
-
 
 }
