@@ -27,9 +27,12 @@
    <Label fx:id="Email" layoutX="413.0" layoutY="620.0" prefHeight="42.0" prefWidth="71.0" text="Email" />
    <TextField fx:id="FirstNameF" layoutX="551.0" layoutY="158.0" prefHeight="25.0" prefWidth="174.0" />
    <TextField fx:id="MiddleNameF" layoutX="551.0" layoutY="229.0" prefHeight="25.0" prefWidth="174.0" />
-   <TextField fx:id="SuffixLabel" layoutX="302.0" layoutY="268.0" prefHeight="25.0" prefWidth="174.0" />
    <TextField fx:id="LastNameF" layoutX="542.0" layoutY="333.0" prefHeight="25.0" prefWidth="174.0" />
    <TextField fx:id="SocialSecurityF" layoutX="542.0" layoutY="427.0" prefHeight="25.0" prefWidth="174.0" />
+   <TextField fx:id="Street" layoutX="302.0" layoutY="268.0" prefHeight="25.0" prefWidth="174.0" />
+   <TextField fx:id="City" layoutX="518.0" layoutY="268.0" prefHeight="25.0" prefWidth="174.0" />
+   <TextField fx:id="ZipCode" layoutX="734.0" layoutY="268.0" prefHeight="25.0" prefWidth="174.0" />
+   <TextField fx:id="Apartment" layoutX="923.0" layoutY="268.0" prefHeight="25.0" prefWidth="174.0" />
    <TextField fx:id="UsernameF" layoutX="542.0" layoutY="482.0" prefHeight="25.0" prefWidth="174.0" />
    <TextField fx:id="PasswordF" layoutX="542.0" layoutY="524.0" prefHeight="25.0" prefWidth="174.0" />
    <TextField fx:id="PhoneNumberF" layoutX="542.0" layoutY="585.0" prefHeight="25.0" prefWidth="174.0" />
@@ -37,17 +40,14 @@
    <Label layoutX="356.0" layoutY="298.0" text="Street Name" />
    <Label fx:id="verifySSN" layoutX="740.0" layoutY="418.0" />
    <Label fx:id="verifyPhone" layoutX="734.0" layoutY="576.0" />
-   <TextField fx:id="SuffixLabel1" layoutX="518.0" layoutY="268.0" prefHeight="25.0" prefWidth="174.0" />
-   <Label fx:id="City" layoutX="595.0" layoutY="298.0" text="City" />
-   <TextField fx:id="SuffixLabel11" layoutX="734.0" layoutY="268.0" prefHeight="25.0" prefWidth="174.0" />
-   <Label fx:id="ZipCode" layoutX="785.0" layoutY="307.0" text="Zip Code" />
-   <TextField fx:id="SuffixLabel111" layoutX="923.0" layoutY="268.0" prefHeight="25.0" prefWidth="174.0" />
-   <Label fx:id="Apartment" layoutX="977.0" layoutY="307.0" text="Apart/unit" />
+   <Label  layoutX="595.0" layoutY="298.0" text="City" />
+   <Label  layoutX="785.0" layoutY="307.0" text="Zip Code" />
+   <Label layoutX="977.0" layoutY="307.0" text="Apart/unit" />
    <RadioButton fx:id="male" layoutX="494.0" layoutY="676.0" mnemonicParsing="false" text="Male" />
    <RadioButton fx:id="female" layoutX="578.0" layoutY="675.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="54.0" text="Female" />
    <Label fx:id="Gender" layoutX="408.0" layoutY="676.0" text="Gender" />
    <RadioButton fx:id="other" layoutX="691.0" layoutY="676.0" mnemonicParsing="false" text="Other" />
-   <Label layoutX="771.0" layoutY="527.0" text="Marital Satus" />
+   <Label layoutX="771.0" layoutY="527.0" text="Marital Status" />
    <RadioButton fx:id="single" layoutX="865.0" layoutY="528.0" mnemonicParsing="false" text="Single" />
    <RadioButton fx:id="married" layoutX="967.0" layoutY="527.0" mnemonicParsing="false" text="Married" />
 

@@ -22,12 +22,12 @@ import java.time.LocalDate;
 public class SignupPageController {
     @FXML
     private TextField SocialSecurityF, UsernameF, PasswordF, PhoneNumberF, EmailF,
-            firstName, LastNameF, FirstNameF, uffixLabel, MiddleNameF;
+            firstName, LastNameF, FirstNameF, Street, MiddleNameF, City, ZipCode, Apartment, gender, maritalStatus ;
     private String  genderSet ="";
     private String maritalSet = "";
     @FXML
     private Label DOBLabel,firstName1, LastName, MiddleName, SocialSecurity, Username, Password,
-            PhoneNumber, Email, SignupLabel, verifySSN, verifyPhone,street, City, ZipCode, Apartment, gender, maritalStatus;
+            PhoneNumber, Email, SignupLabel, verifySSN, verifyPhone;
     @FXML
     private RadioButton male;
 
@@ -124,13 +124,13 @@ public class SignupPageController {
     public String genderCheck(){
 
         if(male.isSelected() ){
-            genderSet = "male";
+            genderSet = "m";
         } else if (female.isSelected()) {
-            genderSet = "female";
+            genderSet = "f";
 
         }
         else if(other.isSelected()){
-            genderSet = "other";
+            genderSet = "o";
         }
         return genderSet;
     }
@@ -161,10 +161,9 @@ public class SignupPageController {
                 EmailF.getText(),
                 UsernameF.getText(),
                 PasswordF.getText(),
-                street.getText(),
-
+                Street.getText(),
                 City.getText(),
-                "\"sdlal\"",
+                "mn",
                 ZipCode.getText(),
                 Apartment.getText(),genderSet, maritalSet
                 );
