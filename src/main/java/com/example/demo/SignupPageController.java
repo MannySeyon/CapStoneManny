@@ -167,9 +167,10 @@ public class SignupPageController {
                 ZipCode.getText(),
                 Apartment.getText(),genderSet, maritalSet
                 );
+        System.out.println(customer);
 
-        String query = "insert into customer_personal_info(First_name,Last_name,middle_name,date_of_birth,address,zipp_code,Country,state,city,contact_no,\n" +
-                "                                ssn,username,password,email,gender,marital_status values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        String query = "insert into customer_personal_info(" + "First_name,Last_name,middle_name,date_of_birth,address,zipp_code,Country,states,city,contact_no, ssn,username,password,email,gender,marital_status) values "
+                 + "(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, customer.getFirstName());
         statement.setString(2, customer.getLastName());
@@ -185,8 +186,8 @@ public class SignupPageController {
         statement.setString(12,customer.getUsername());
         statement.setString(13, customer.getPassword());
         statement.setString(14,customer.getEmail());
-        statement.setString(15,customer.getGender());
-        statement.setString(16,customer.getMartialStatus());
+        statement.setString(15,"M");
+        statement.setString(16,"M");
         statement.executeUpdate();
         System.out.println(customer.getEmail());
    }
