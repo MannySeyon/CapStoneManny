@@ -10,52 +10,29 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 @SuppressWarnings("ALL")
 public class DashBoardController {
-
     @FXML
-    private  Label cardLabel1;
+    private BorderPane LandingPageBorder;
     @FXML
-    private  Label TimeDateLabel;
+    private Label userNameCard2, card2Number, balanceLabelCard2, VisaLabelCard2m, card1Number, balanceLabelCard1,
+            userNameCard1, VisaLabelCard1, TimeDateLabel, cardLabel1, dashLabel, nameLabel, VisaLabelCard2;
+    public AnchorPane goldColoredCard, blueColoredCard, anchorPane;
+    public Button card1PlusButton, exit, Home, Logout;
     @FXML
-    private  FontAwesomeIconView bars;
+    private  FontAwesomeIconView bars, HomeButton, list, image, gear,plus;
     @FXML
-    private ImageView securityLogo;
-    @FXML
-    private  FontAwesomeIconView HomeButton;
-    @FXML
-    private FontAwesomeIconView list;
-    @FXML
-    private  FontAwesomeIconView image;
-    @FXML
-    private  FontAwesomeIconView gear;
+    private ImageView securityLogo, bankLogo;
     @FXML
     private  Separator separator;
-    @FXML
-    private FontAwesomeIconView plus;
-    @FXML
-    private  ImageView bankLogo;
-
-@FXML
-    private Label dashLabel;
-    @FXML
-    private Button exit;
     private Stage stage;
     private Scene scene;
     private Parent root;
-    @FXML
-    Label nameLabel;
-    @FXML
-    private Button Home;
-    @FXML
-    private AnchorPane anchorPane;
-    @FXML
-    private Button Logout;
-
     @FXML
     protected void Home(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("main.fxml"));
@@ -81,7 +58,6 @@ public class DashBoardController {
             stage.show();
         }
     }
-
     //Save any progress and close stage
     @FXML
     public void Exit(ActionEvent event) {
@@ -90,7 +66,6 @@ public class DashBoardController {
         alert.setTitle("Exit");
         alert.setHeaderText("You Are About To Quit");
         alert.setContentText("Do you want to Quit?");
-
         if(alert.showAndWait().get() == ButtonType.OK) {
         //set stage =to the current working stage
         stage = (Stage) anchorPane.getScene().getWindow();

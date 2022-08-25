@@ -4,18 +4,8 @@ import java.time.LocalDate;
 
 @SuppressWarnings("unused")
 public class Customer {
-
-        private String firstName;
-        private String lastName;
-        private String middleName;
+        private String firstName, lastName, middleName, phoneNumber, email, username, password,accountNumber,SSN;
         private LocalDate dateOfBirth;
-        private String SSN;
-        private String phoneNumber;
-        private String email;
-        private String username;
-        private String password;
-        private String accountNumber;
-
         public Customer(String firstName,
                         String lastName,
                         String middleName,
@@ -34,14 +24,10 @@ public class Customer {
             this.email = email;
             this.username = username;
             this.password = password;
-
         }
-
-
         public String getFirstName() {
             return firstName;
         }
-
         public void setFirstName(String firstName) {
             this.firstName = firstName;
         }
@@ -49,7 +35,6 @@ public class Customer {
         public String getLastName() {
             return lastName;
         }
-
         public void setLastName(String lastName) {
             this.lastName = lastName;
         }
@@ -57,7 +42,6 @@ public class Customer {
         public String getMiddleName() {
             return middleName;
         }
-
         public void setMiddleName(String middleName) {
             this.middleName = middleName;
         }
@@ -65,7 +49,6 @@ public class Customer {
         public LocalDate getDateOfBirth() {
             return dateOfBirth;
         }
-
         public void setDateOfBirth(LocalDate dateOfBirth) {
             this.dateOfBirth = dateOfBirth;
         }
@@ -73,7 +56,6 @@ public class Customer {
         public String getSSN() {
             return SSN;
         }
-
         public void setSSN(String  SSN) {
             this.SSN = SSN;
         }
@@ -81,7 +63,6 @@ public class Customer {
         public String getPhoneNumber() {
             return phoneNumber;
         }
-
         public void setPhoneNumber(String phoneNumber) {
             this.phoneNumber = phoneNumber;
         }
@@ -89,7 +70,6 @@ public class Customer {
         public String getEmail() {
             return email;
         }
-
         public void setEmail(String email) {
             this.email = email;
         }
@@ -97,7 +77,6 @@ public class Customer {
         public String getUsername() {
             return username;
         }
-
         public void setUsername(String username) {
             this.username = username;
         }
@@ -105,7 +84,6 @@ public class Customer {
         public String getPassword() {
             return password;
         }
-
         public void setPassword(String password) {
             this.password = password;
         }
@@ -113,11 +91,9 @@ public class Customer {
         public String getAccountNumber() {
             return accountNumber;
         }
-
         public void setAccountNumber(String accountNumber) {
             this.accountNumber = accountNumber;
         }
-
 
         @Override
         public String toString() {
@@ -134,6 +110,5 @@ public class Customer {
                     ", accountNumber='" + accountNumber + '\'' +
                     '}';
         }
-
     }
 

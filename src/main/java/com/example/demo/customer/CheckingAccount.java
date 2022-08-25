@@ -2,11 +2,9 @@ package com.example.demo.customer;
 import java.time.LocalDate;
 @SuppressWarnings("unused")
 public class CheckingAccount extends Customer implements Balance {
-
     private long balance = 0;
     private long withdrawalAmount;
     private long depositAmount;
-
     public CheckingAccount(String firstName,
                            String lastName,
                            String middleName,
@@ -26,8 +24,6 @@ public class CheckingAccount extends Customer implements Balance {
                 username,
                 password);
     }
-
-
     @Override
     public long withdrawal(long balance, long withdrawalAmount) throws Exception {
         if(balance >= withdrawalAmount){

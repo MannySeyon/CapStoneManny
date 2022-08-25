@@ -26,11 +26,15 @@
     -fx-background-color: #FFFFFF;
 }
 /*Gradient colors*/
-.coloredCard{
-    -fx-background-color:linear-gradient(to left, #1A3384,#2B49B3);
+.blueColoredCard{
+    -fx-background-color:linear-gradient(to right, #d4b85d,#2B49B3);
     -fx-background-radius: 10px;
 }
-#cardPlusButton{
+.coloredCard{
+    -fx-background-color:linear-gradient(to left, #d4b85d,#2B49B3);
+    -fx-background-radius: 10px;
+}
+#card1PlusButton{
     -fx-background-color: transparent;
     -fx-border-color: #C1C1C1;
     -fx-border-style: dashed;
