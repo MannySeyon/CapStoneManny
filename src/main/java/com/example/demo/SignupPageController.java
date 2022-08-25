@@ -55,7 +55,7 @@ public class SignupPageController {
         stage.setScene(scene);
         stage.show();
     }
-    public void verify(ActionEvent actionEvent) throws SQLException, IOException {
+    public void verify(ActionEvent actionEvent) throws Exception {
         if(FirstNameF.getText().isBlank() ||
                 LastNameF.getText().isBlank()||
                 SocialSecurityF.getText().isBlank()||
@@ -68,12 +68,18 @@ public class SignupPageController {
             alert.setHeaderText("You have incompleted fields");
             alert.setContentText("You have incompleted fields");
             alert.show();
-        } else if (SocialSecurityF.getText().length() != 9 || PhoneNumberF.getText().length() != 10) {
+        } else if (SocialSecurityF.getText().length() != 9 || PhoneNumberF.getText().length() != 10 || checkSSNInfo() == false || checkPhoneInfo() == false) {
             if(SocialSecurityF.getText().length() != 9){
-                verifySSN.setText("* Your Social Security Number is incomplete.");
+                verifySSN.setText("* Your Social Security Number is invalid.");
+            }
+            if(checkSSNInfo() == false){
+                verifySSN.setText("Invalid Social Sercurity Format");
             }
             if(PhoneNumberF.getText().length() != 10){
-                verifyPhone.setText("* Your phone number is incomplete.");
+                verifyPhone.setText("* Your phone number is invalid.");
+            }
+            if(checkPhoneInfo() == false){
+                verifyPhone.setText("Invalid Phone Number Format");
             }
         } else{
             saveInfo(actionEvent);
@@ -81,9 +87,28 @@ public class SignupPageController {
 
     }
     //checks for age - ssn & phone = number - if user exists
-    public void checkInfo(){
+    public boolean checkSSNInfo() throws Exception, ArithmeticException {
 
+        try {
+            int intValue = Integer.parseInt(SocialSecurityF.getText());
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+
+        }
     }
+    public boolean checkPhoneInfo() throws Exception, ArithmeticException {
+
+        try {
+            int intValue = Integer.parseInt(PhoneNumberF.getText());
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+
+        }
+    }
+    
+
     public void saveInfo(ActionEvent actionEvent) throws SQLException, IOException {
         Connectivity connectivity = new Connectivity();
         Connection connection = connectivity.getConnection();

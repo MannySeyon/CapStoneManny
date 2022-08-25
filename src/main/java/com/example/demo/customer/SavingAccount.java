@@ -5,26 +5,9 @@ public class SavingAccount extends Customer implements Balance {
     private long balance = 0;
     private long withdrawalAmount;
     private long depositAmount;
-    public SavingAccount(String firstName,
-                         String lastName,
-                         String middleName,
-                         LocalDate dateOfBirth,
-                         String SSN,
-                         String phoneNumber,
-                         String email,
-                         String username,
-                         String password,
-                         long savingAccountNumber,
-    String gender) {
-        super(firstName,
-                lastName,
-                middleName,
-                dateOfBirth,
-                SSN,
-                phoneNumber,
-                email,
-                username,
-                password);
+
+    public SavingAccount(String firstName, String lastName, String middleName, LocalDate dateOfBirth, String SSN, String phoneNumber, String email, String username, String password, String street, String city, String state, String zipCode, String aptNumber, String gender, String martialStatus) {
+        super(firstName, lastName, middleName, dateOfBirth, SSN, phoneNumber, email, username, password, street, city, state, zipCode, aptNumber, gender, martialStatus);
     }
 
 
