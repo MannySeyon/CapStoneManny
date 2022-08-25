@@ -16,7 +16,7 @@
    <Label fx:id="SignupLabel" layoutX="249.0" layoutY="14.0" prefHeight="64.0" prefWidth="761.0" text="Label" />
    <Label fx:id="DOBLabel" layoutX="372.0" layoutY="372.0" prefHeight="42.0" prefWidth="145.0" text="Date Of Birth" />
    <Button fx:id="SignupButton" layoutX="489.0" layoutY="690.0" mnemonicParsing="false" onAction="#verify" prefHeight="47.0" prefWidth="156.0" text="Signup" />
-   <Label fx:id="firstName" layoutX="360.0" layoutY="162.0" prefHeight="42.0" prefWidth="149.0" text="First Name" />
+   <Label fx:id="firstName1" layoutX="360.0" layoutY="162.0" prefHeight="42.0" prefWidth="149.0" text="First Name" />
    <Label fx:id="MiddleName" layoutX="376.0" layoutY="221.0" text="Middle Name" />
    <Label fx:id="LastName" layoutX="360.0" layoutY="325.0" prefHeight="42.0" prefWidth="149.0" text="Last Name" />
    <Label fx:id="SocialSecurity" layoutX="362.0" layoutY="419.0" text="Social Security " />

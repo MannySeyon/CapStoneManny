@@ -24,7 +24,7 @@ public class SignupPageController {
     private TextField SocialSecurityF, UsernameF, PasswordF, PhoneNumberF, EmailF,
             firstName, LastNameF, FirstNameF, uffixLabel, MiddleNameF;
     @FXML
-    private Label DOBLabel, LastName, MiddleName, SocialSecurity, Username, Password,
+    private Label DOBLabel,firstName1, LastName, MiddleName, SocialSecurity, Username, Password,
             PhoneNumber, Email, SignupLabel, verifySSN, verifyPhone;
     private Stage stage; private Scene scene; private Parent root;
     @FXML
