@@ -23,9 +23,22 @@ public class SignupPageController {
     @FXML
     private TextField SocialSecurityF, UsernameF, PasswordF, PhoneNumberF, EmailF,
             firstName, LastNameF, FirstNameF, uffixLabel, MiddleNameF;
+    private String  genderSet ="";
+    private String maritalSet = "";
     @FXML
     private Label DOBLabel,firstName1, LastName, MiddleName, SocialSecurity, Username, Password,
-            PhoneNumber, Email, SignupLabel, verifySSN, verifyPhone;
+            PhoneNumber, Email, SignupLabel, verifySSN, verifyPhone,street, City, ZipCode, Apartment, gender, maritalStatus;
+    @FXML
+    private RadioButton male;
+
+    @FXML
+    private RadioButton female;
+    @FXML
+    private RadioButton other;
+    @FXML
+    private RadioButton single,married;
+
+
     private Stage stage; private Scene scene; private Parent root;
     @FXML
     private Button Home, SignupButton;
@@ -107,12 +120,36 @@ public class SignupPageController {
 
         }
     }
-    
+
+    public String genderCheck(){
+
+        if(male.isSelected() ){
+            genderSet = "male";
+        } else if (female.isSelected()) {
+            genderSet = "female";
+
+        }
+        else if(other.isSelected()){
+            genderSet = "other";
+        }
+        return genderSet;
+    }
+
+    public String maritalCheck(){
+
+        if(single.isSelected() ){
+            maritalSet = "single";
+        } else if (married.isSelected()) {
+            maritalSet = "married";
+        }
+        return maritalSet;
+    }
+
 
     public void saveInfo(ActionEvent actionEvent) throws SQLException, IOException {
         Connectivity connectivity = new Connectivity();
         Connection connection = connectivity.getConnection();
-
+          Object object = new Object();
         Customer customer = new Customer(FirstNameF.getText(),
                 LastNameF.getText(),
                 MiddleNameF.getText(),
@@ -123,22 +160,34 @@ public class SignupPageController {
                 PhoneNumberF.getText(),
                 EmailF.getText(),
                 UsernameF.getText(),
-                PasswordF.getText());
+                PasswordF.getText(),
+                street.getText(),
 
-        String query = "insert into customer_personal_info(First_name,Last_name,middle_name,date_of_birth,address,contact_no,\n" +
-                "                                ssn,username,password,email,gender) values (?,?,?,?,?,?,?,?,?,?,?)";
+                City.getText(),
+                "\"sdlal\"",
+                ZipCode.getText(),
+                Apartment.getText(),genderSet, maritalSet
+                );
+
+        String query = "insert into customer_personal_info(First_name,Last_name,middle_name,date_of_birth,address,zipp_code,Country,state,city,contact_no,\n" +
+                "                                ssn,username,password,email,gender,marital_status values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, customer.getFirstName());
         statement.setString(2, customer.getLastName());
         statement.setString(3,customer.getMiddleName()) ;
         statement.setString(4,customer.getDateOfBirth().toString());
-        statement.setString(5,"sdss");
-        statement.setString(6,customer.getPhoneNumber());
-        statement.setString(7, customer.getSSN());
-        statement.setString(8,customer.getUsername());
-        statement.setString(9, customer.getPassword());
-        statement.setString(10,customer.getEmail());
-        statement.setString(11,"m");
+        statement.setString(5,customer.getStreet());
+        statement.setString(6,customer.getZipCode());
+        statement.setString(7,"US");
+        statement.setString(8, "MN");
+        statement.setString(9,customer.getCity());
+        statement.setString(10,customer.getPhoneNumber());
+        statement.setString(11, customer.getSSN());
+        statement.setString(12,customer.getUsername());
+        statement.setString(13, customer.getPassword());
+        statement.setString(14,customer.getEmail());
+        statement.setString(15,customer.getGender());
+        statement.setString(16,customer.getMartialStatus());
         statement.executeUpdate();
         System.out.println(customer.getEmail());
    }

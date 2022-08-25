@@ -34,18 +34,21 @@
    <TextField fx:id="PasswordF" layoutX="542.0" layoutY="524.0" prefHeight="25.0" prefWidth="174.0" />
    <TextField fx:id="PhoneNumberF" layoutX="542.0" layoutY="585.0" prefHeight="25.0" prefWidth="174.0" />
    <TextField fx:id="EmailF" layoutX="542.0" layoutY="628.0" prefHeight="25.0" prefWidth="174.0" />
-   <Label layoutX="356.0" layoutY="298.0" text="Street Name" />
+   <Label fx:id layoutX="356.0" layoutY="298.0" text="Street Name" />
    <Label fx:id="verifySSN" layoutX="740.0" layoutY="418.0" />
    <Label fx:id="verifyPhone" layoutX="734.0" layoutY="576.0" />
    <TextField fx:id="SuffixLabel1" layoutX="518.0" layoutY="268.0" prefHeight="25.0" prefWidth="174.0" />
-   <Label layoutX="595.0" layoutY="298.0" text="City" />
+   <Label fx:id="City" layoutX="595.0" layoutY="298.0" text="City" />
    <TextField fx:id="SuffixLabel11" layoutX="734.0" layoutY="268.0" prefHeight="25.0" prefWidth="174.0" />
-   <Label layoutX="785.0" layoutY="307.0" text="Zip Code" />
+   <Label fx:id="ZipCode" layoutX="785.0" layoutY="307.0" text="Zip Code" />
    <TextField fx:id="SuffixLabel111" layoutX="923.0" layoutY="268.0" prefHeight="25.0" prefWidth="174.0" />
-   <Label layoutX="977.0" layoutY="307.0" text="Apart/unit" />
-   <RadioButton layoutX="494.0" layoutY="676.0" mnemonicParsing="false" text="Male" />
-   <RadioButton layoutX="578.0" layoutY="675.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="54.0" text="Female" />
-   <Label layoutX="408.0" layoutY="676.0" text="Gender" />
-   <RadioButton layoutX="691.0" layoutY="676.0" mnemonicParsing="false" text="Other" />
+   <Label fx:id="Apartment" layoutX="977.0" layoutY="307.0" text="Apart/unit" />
+   <RadioButton fx:id="male" layoutX="494.0" layoutY="676.0" mnemonicParsing="false" text="Male" />
+   <RadioButton fx:id="female" layoutX="578.0" layoutY="675.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="54.0" text="Female" />
+   <Label fx:id="Gender" layoutX="408.0" layoutY="676.0" text="Gender" />
+   <RadioButton fx:id="other" layoutX="691.0" layoutY="676.0" mnemonicParsing="false" text="Other" />
+   <Label layoutX="771.0" layoutY="527.0" text="Marital Satus" />
+   <RadioButton fx:id="single" layoutX="865.0" layoutY="528.0" mnemonicParsing="false" text="Single" />
+   <RadioButton fx:id="married" layoutX="967.0" layoutY="527.0" mnemonicParsing="false" text="Married" />
 
 </AnchorPane>
