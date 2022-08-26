@@ -4,6 +4,7 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.chart.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
@@ -90,7 +91,7 @@
                   <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                </padding>
             </VBox>
-            <Circle fill="WHITE" layoutX="23.0" layoutY="576.0" radius="16.0" stroke="#c1c1c1" strokeType="INSIDE" />
+            <Circle fx:id="circle" fill="WHITE" layoutX="23.0" layoutY="576.0" radius="16.0" stroke="#c1c1c1" strokeType="INSIDE" />
             <Button layoutX="5.0" layoutY="6.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="37.0">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -451,7 +452,7 @@
                               <Font name="Calibri Bold" size="14.0" />
                            </font>
                         </Label>
-                        <BarChart prefHeight="150.0" prefWidth="365.0">
+                        <BarChart fx:id="chart" prefHeight="150.0" prefWidth="365.0" styleClass="chart-bar">
                           <xAxis>
                             <CategoryAxis side="BOTTOM" />
                           </xAxis>
@@ -468,13 +469,19 @@
                   </VBox>
                   <Button layoutX="730.0" layoutY="99.0" mnemonicParsing="false" prefWidth="150.0" text="New Transaction" AnchorPane.bottomAnchor="170.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="100.0">
                      <font>
-                        <Font name="Calibri" size="14.0" />
+                        <Font name="Calibri" size="13.0" />
                      </font>
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" />
+                     </effect>
                   </Button>
                   <Button layoutX="730.0" layoutY="137.0" mnemonicParsing="false" prefWidth="150.0" text="Settings" AnchorPane.bottomAnchor="135.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="135.0">
                      <font>
-                        <Font name="Calibri" size="14.0" />
+                        <Font name="Calibri" size="13.0" />
                      </font>
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" />
+                     </effect>
                   </Button>
                </children>
             </AnchorPane>
