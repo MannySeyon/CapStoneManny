@@ -24,6 +24,13 @@
 /*noinspection ALL,CssUnusedSymbol*/
 .button{
     -fx-background-color: #FFFFFF;
+    -fx-background-radius: 5px;
+    -fx-text-fill:#4a4a4a ;
+}
+.button:hover{
+    -fx-background-color: #d4b85d;
+    -fx-background-radius: 5px;
+    -fx-text-fill:#FFFFFF ;
 }
 /*Gradient colors*/
 .blueColoredCard{
@@ -34,10 +41,15 @@
     -fx-background-color:linear-gradient(to left, #d4b85d,#2B49B3);
     -fx-background-radius: 10px;
 }
-#card1PlusButton{
+.card1PlusButton{
     -fx-background-color: transparent;
     -fx-border-color: #C1C1C1;
     -fx-border-style: dashed;
     -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+.circle_lb{
+    -fx-background-color: #f3f3f3;
+    -fx-background-radius: 100%;
     -fx-border-radius: 5px;
 }

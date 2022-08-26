@@ -18,13 +18,15 @@ import java.io.IOException;
 
 @SuppressWarnings("ALL")
 public class DashBoardController {
+
     @FXML
     private BorderPane LandingPageBorder;
     @FXML
-    private Label userNameCard2, card2Number, balanceLabelCard2, VisaLabelCard2m, card1Number, balanceLabelCard1,
-            userNameCard1, VisaLabelCard1, TimeDateLabel, cardLabel1, dashLabel, nameLabel, VisaLabelCard2;
+    private Label userNameCard2, card2Number, balanceLabelCard2, VisaLabelCard2m, card1Number,
+            balanceLabelCard1, userNameCard1, VisaLabelCard1, TimeDateLabel, cardLabel1, dashLabel, nameLabel
+            , VisaLabelCard2, savingsBalance, Savingslabel, checkingsBalance;
     public AnchorPane goldColoredCard, blueColoredCard, anchorPane;
-    public Button card1PlusButton, exit, Home, Logout;
+    public Button card1PlusButton, exit, Home, Logout, homeButton;
     @FXML
     private  FontAwesomeIconView bars, HomeButton, list, image, gear,plus;
     @FXML
