@@ -2,7 +2,7 @@ package com.example.demo.customer;
 
 import java.time.LocalDate;
 
-@SuppressWarnings("unused")
+
 public class Customer {
     private String firstName;
     private String lastName;
