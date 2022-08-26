@@ -14,23 +14,23 @@
    </ImageView>
    <Button fx:id="Home" layoutX="31.0" layoutY="494.0" mnemonicParsing="false" onAction="#Home" prefHeight="42.0" prefWidth="95.0" text="Back Home" />
    <Label fx:id="SignupLabel" layoutX="249.0" layoutY="14.0" prefHeight="64.0" prefWidth="761.0" text="Label" />
-   <Label fx:id="DOBLabel" layoutX="854.0" layoutY="158.0" prefHeight="42.0" prefWidth="145.0" text="Date Of Birth" />
+   <Label fx:id="DOBLabel" layoutX="445.0" layoutY="225.0" prefHeight="42.0" prefWidth="145.0" text="Date Of Birth" />
    <Button fx:id="SignupButton" layoutX="510.0" layoutY="715.0" mnemonicParsing="false" onAction="#verify" prefHeight="47.0" prefWidth="156.0" text="Signup" />
    <Label fx:id="firstName1" layoutX="244.0" layoutY="158.0" prefHeight="42.0" prefWidth="149.0" text="First Name" />
    <Label fx:id="MiddleName" layoutX="447.0" layoutY="170.0" text="Middle Name" />
    <Label fx:id="LastName" layoutX="659.0" layoutY="158.0" prefHeight="42.0" prefWidth="149.0" text="Last Name" />
-   <Label fx:id="SocialSecurity" layoutX="239.0" layoutY="229.0" text="Social Security " />
+   <Label fx:id="SocialSecurity" layoutX="239.0" layoutY="237.0" text="Social Security " />
    <Label fx:id="Username" layoutX="239.0" layoutY="361.0" text="Username" />
-   <DatePicker fx:id="datePicker" layoutX="853.0" layoutY="192.0" onAction="#getDate" promptText="Enter a Date" />
+   <DatePicker fx:id="datePicker" layoutX="446.0" layoutY="258.0" onAction="#getDate" promptText="Enter a Date" />
    <Label fx:id="Password" layoutX="447.0" layoutY="361.0" text="Password" />
    <Label fx:id="PhoneNumber" layoutX="239.0" layoutY="435.0" text="Phone Number" />
    <Label fx:id="Email" layoutX="447.0" layoutY="422.0" prefHeight="42.0" prefWidth="71.0" text="Email" />
    <TextField fx:id="FirstNameF" layoutX="239.0" layoutY="192.0" prefHeight="25.0" prefWidth="174.0" />
    <TextField fx:id="MiddleNameF" layoutX="447.0" layoutY="192.0" prefHeight="25.0" prefWidth="174.0" />
    <TextField fx:id="LastNameF" layoutX="656.0" layoutY="192.0" prefHeight="25.0" prefWidth="174.0" />
-   <TextField fx:id="SocialSecurityF" layoutX="447.0" layoutY="320.0" prefHeight="25.0" prefWidth="174.0" />
-   <TextField fx:id="Street" layoutX="239.0" layoutY="253.0" prefHeight="25.0" prefWidth="174.0" />
-   <TextField fx:id="City" layoutX="239.0" layoutY="320.0" prefHeight="25.0" prefWidth="174.0" />
+   <TextField fx:id="SocialSecurityF" layoutX="239.0" layoutY="258.0" prefHeight="25.0" prefWidth="174.0" />
+   <TextField fx:id="Street" layoutX="239.0" layoutY="320.0" prefHeight="25.0" prefWidth="174.0" />
+   <TextField fx:id="City" layoutX="447.0" layoutY="320.0" prefHeight="25.0" prefWidth="174.0" />
    <TextField fx:id="ZipCode" layoutX="656.0" layoutY="320.0" prefHeight="25.0" prefWidth="174.0" />
    <TextField fx:id="Apartment" layoutX="854.0" layoutY="320.0" prefHeight="25.0" prefWidth="174.0" />
    <TextField fx:id="UsernameF" layoutX="239.0" layoutY="383.0" prefHeight="25.0" prefWidth="174.0" />
