@@ -6,7 +6,7 @@
 
 <!--suppress ALL -->
 
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="785.0" prefWidth="1117.0" stylesheets="@SignUpPage.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SignupPageController">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="785.0" prefWidth="1117.0" stylesheets="@SignUpPage.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SignupPageController">
    <ImageView fitHeight="157.0" fitWidth="156.0" layoutX="31.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@/Summit Fin Corp.png" />
@@ -43,12 +43,18 @@
    <Label layoutX="453.0" layoutY="298.0" text="City" />
    <Label layoutX="656.0" layoutY="298.0" text="Zip Code" />
    <Label layoutX="854.0" layoutY="298.0" text="Apart/unit" />
-   <RadioButton fx:id="male" layoutX="255.0" layoutY="545.0" mnemonicParsing="false" text="Male" />
-   <RadioButton fx:id="female" layoutX="326.0" layoutY="544.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="54.0" text="Female" />
+   <RadioButton fx:id="male" layoutX="255.0" layoutY="545.0" mnemonicParsing="false" text="Male">
+      <toggleGroup>
+         <ToggleGroup fx:id="genderTogg" />
+      </toggleGroup></RadioButton>
+   <RadioButton fx:id="female" layoutX="326.0" layoutY="544.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="54.0" text="Female" toggleGroup="$genderTogg" />
    <Label fx:id="Gender" layoutX="259.0" layoutY="506.0" text="Gender" />
-   <RadioButton fx:id="other" layoutX="401.0" layoutY="545.0" mnemonicParsing="false" text="Other" />
+   <RadioButton fx:id="other" layoutX="401.0" layoutY="545.0" mnemonicParsing="false" text="Other" toggleGroup="$genderTogg" />
    <Label layoutX="643.0" layoutY="506.0" text="Marital Status" />
-   <RadioButton fx:id="single" layoutX="638.0" layoutY="545.0" mnemonicParsing="false" text="Single" />
-   <RadioButton fx:id="married" layoutX="734.0" layoutY="545.0" mnemonicParsing="false" text="Married" />
+   <RadioButton fx:id="single" layoutX="638.0" layoutY="545.0" mnemonicParsing="false" text="Single">
+      <toggleGroup>
+         <ToggleGroup fx:id="maritalTogg" />
+      </toggleGroup></RadioButton>
+   <RadioButton fx:id="married" layoutX="734.0" layoutY="545.0" mnemonicParsing="false" text="Married" toggleGroup="$maritalTogg" />
 
 </AnchorPane>
