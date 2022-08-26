@@ -454,7 +454,7 @@
                         </Label>
                         <BarChart fx:id="chart" prefHeight="150.0" prefWidth="365.0" styleClass="chart-bar">
                           <xAxis>
-                            <CategoryAxis side="BOTTOM" />
+                            <CategoryAxis side="BOTTOM" styleClass="chart-bar" />
                           </xAxis>
                           <yAxis>
                             <NumberAxis side="LEFT" />

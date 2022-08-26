@@ -23,7 +23,7 @@ import java.util.ResourceBundle;
 
 
 @SuppressWarnings("ALL")
-public class DashBoardController implements DashBoardController2 {
+public class DashBoardController  {
     @FXML
     private Circle circle;
     @FXML
@@ -45,18 +45,18 @@ public class DashBoardController implements DashBoardController2 {
     private Stage stage;
     private Scene scene;
     private Parent root;
-    @Override
-    public void intialize(URL url, ResourceBundle rb){
-        //circle.setFill((new ImagePattern("/Summit Fin Corp.png")));
-        XYChart.Series<String,Double> series_01 = new XYChart.Series();
-        series_01.setName("Year 2022");
-        series_01.getData().add(new XYChart.Data("Jan", 500));
-        series_01.getData().add(new XYChart.Data("Feb", 400));
-        series_01.getData().add(new XYChart.Data("Mar", 300));
-        series_01.getData().add(new XYChart.Data("Apr", 200));
-        series_01.getData().add(new XYChart.Data("May", 700));
-        chart.getData().add(series_01);
-    }
+//    @Override
+//    public void intialize(URL url, ResourceBundle rb){
+//        //circle.setFill((new ImagePattern("/Summit Fin Corp.png")));
+//        XYChart.Series<String,Double> series_01 = new XYChart.Series();
+//        series_01.setName("Year 2022");
+//        series_01.getData().add(new XYChart.Data("Jan", 500));
+//        series_01.getData().add(new XYChart.Data("Feb", 400));
+//        series_01.getData().add(new XYChart.Data("Mar", 300));
+//        series_01.getData().add(new XYChart.Data("Apr", 200));
+//        series_01.getData().add(new XYChart.Data("May", 700));
+//        chart.getData().add(series_01);
+//    }
     @FXML
     protected void Home(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("main.fxml"));
@@ -102,9 +102,9 @@ public class DashBoardController implements DashBoardController2 {
         nameLabel.setText("Hello, " + "firstName + lastName" + ". Welcome to your Summit Dashboard!" );
     }
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
-    }
+//    @Override
+//    public void initialize(URL url, ResourceBundle resourceBundle) {
+//
+//    }
 }
 
