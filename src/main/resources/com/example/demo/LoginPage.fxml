@@ -5,15 +5,18 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="862.0" prefWidth="1200.0" stylesheets="@Login.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.LoginPageController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="862.0" prefWidth="1200.0" stylesheets="@Login.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.LoginPageController">
 <left>
     <AnchorPane prefHeight="800.0" prefWidth="344.0" stylesheets="@Login.css" BorderPane.alignment="CENTER">
-        <Label fx:id="emailLabel" layoutX="23.0" layoutY="621.0" prefHeight="61.0" prefWidth="300.0" text="sfcsupport@sfc.com" textFill="WHITE">
+        <Label fx:id="emailLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="75.0" layoutY="621.0" prefHeight="61.0" prefWidth="194.0" text="sfcsupport@sfc.com" textFill="#070707">
             <font>
-                <Font size="13.0" />
+                <Font name="Calibri" size="18.0" />
             </font>
         </Label>
-        <Label fx:id="phoneLabel" layoutX="41.0" layoutY="689.0" prefHeight="61.0" prefWidth="261.0" text="122-333-4444" textFill="WHITE" />
+        <Label fx:id="phoneLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="41.0" layoutY="682.0" prefHeight="61.0" prefWidth="261.0" text="122-333-4444" textFill="#141414">
+            <font>
+               <Font name="Calibri" size="18.0" />
+            </font></Label>
         <Button fx:id="Home" layoutX="124.0" layoutY="767.0" mnemonicParsing="false" onAction="#Home" prefHeight="42.0" prefWidth="95.0" text="Home" />
         <ImageView fitHeight="559.0" fitWidth="327.0" layoutX="8.0" layoutY="9.0">
             <Image url="@../../../Bank.gif" />
@@ -23,18 +26,21 @@
 <center>
     <AnchorPane fx:id="anchorPane" prefHeight="798.0" prefWidth="729.0" stylesheets="@Login.css" BorderPane.alignment="CENTER">
         <style>-fx-background-color: black;</style>
-        <Button fx:id="loginButton" layoutX="491.0" layoutY="504.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="49.0" prefWidth="92.0" text="Login" textFill="#fafafa">
+        <Button fx:id="loginButton" layoutX="382.0" layoutY="511.0" mnemonicParsing="false" onAction="#validateLogin" prefHeight="49.0" prefWidth="92.0" text="Login" textFill="#fafafa">
             <style>-fx-background-color: #cfb53b;</style>
         </Button>
-        <Button fx:id="SignupButton" alignment="CENTER" contentDisplay="CENTER" layoutX="357.0" layoutY="604.0" mnemonicParsing="false" onAction="#SignUpPage" prefHeight="49.0" prefWidth="116.0" text="Sign up" textFill="WHITE">
+        <Button fx:id="SignupButton" alignment="CENTER" contentDisplay="CENTER" layoutX="377.0" layoutY="715.0" mnemonicParsing="false" onAction="#SignUpPage" prefHeight="49.0" prefWidth="102.0" text="Sign up" textFill="WHITE">
             <style>-fx-background-color: #cfb53b;</style>
         </Button>
         <TextField fx:id="nameTextField" layoutX="391.0" layoutY="384.0" prefHeight="33.0" prefWidth="292.0" promptText="Enter Your Username" />
         <PasswordField fx:id="passwordField" layoutX="389.0" layoutY="437.0" prefHeight="37.0" prefWidth="294.0" promptText="Enter Your Password" />
-        <Label fx:id="passwordLabel" layoutX="179.0" layoutY="425.0" prefHeight="42.0" prefWidth="187.0" text="Password" textFill="WHITE" />
-        <Label fx:id="UserLabel" layoutX="205.0" layoutY="370.0" text="Username" textFill="#f7f7f7" />
-        <Label fx:id="welcomeLabel" layoutX="63.0" layoutY="31.0" prefHeight="98.0" prefWidth="664.0" text="Welcome to Summit Financial Corporation!" />
-        <ImageView fitHeight="118.0" fitWidth="128.0" layoutX="77.0" layoutY="378.0">
+        <Label fx:id="passwordLabel" layoutX="275.0" layoutY="437.0" prefHeight="42.0" prefWidth="73.0" text="Password" textFill="WHITE" />
+        <Label fx:id="UserLabel" layoutX="275.0" layoutY="392.0" text="Username" textFill="#f7f7f7" />
+        <Label fx:id="welcomeLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="96.0" layoutY="29.0" prefHeight="98.0" prefWidth="664.0" text="Welcome to Summit Financial Corporation!" textFill="#ebe8e8">
+            <font>
+               <Font name="Calibri" size="36.0" />
+            </font></Label>
+        <ImageView fitHeight="118.0" fitWidth="128.0" layoutX="123.0" layoutY="378.0">
             <Image url="@../../../security.png" />
         </ImageView>
          <Label fx:id="passwordShow" layoutX="453.0" layoutY="309.0" />
