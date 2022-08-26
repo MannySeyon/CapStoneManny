@@ -15,8 +15,6 @@
 }
 #dashboardLabel{
     -fx-font-size: 15;
-    -fx-font-family: System;
-    -fx-font-style: Bold;
     -fx-text-fill: Black;
     -fx-alignment: center;
 }
