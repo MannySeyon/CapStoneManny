@@ -69,6 +69,10 @@ public class SignupPageController {
         stage.show();
     }
     public void verify(ActionEvent actionEvent) throws Exception {
+        String [] check = new String[]{FirstNameF.getText(),LastNameF.getText(),SocialSecurityF.getText(),
+                UsernameF.getText(), PasswordF.getText(), PhoneNumberF.getText(), EmailF.getText()};
+
+
         if(FirstNameF.getText().isBlank() ||
                 LastNameF.getText().isBlank()||
                 SocialSecurityF.getText().isBlank()||
@@ -98,7 +102,9 @@ public class SignupPageController {
             saveInfo(actionEvent);
         }
 
-    }
+
+        }
+
     //checks for age - ssn & phone = number - if user exists
     public boolean checkSSNInfo() throws Exception, ArithmeticException {
 
@@ -124,13 +130,13 @@ public class SignupPageController {
     public String genderCheck(){
 
         if(male.isSelected() ){
-            genderSet = "m";
+            genderSet = "M";
         } else if (female.isSelected()) {
-            genderSet = "f";
+            genderSet = "F";
 
         }
         else if(other.isSelected()){
-            genderSet = "o";
+            genderSet = "O";
         }
         return genderSet;
     }
@@ -144,7 +150,9 @@ public class SignupPageController {
         }
         return maritalSet;
     }
+  public void checkEmptyFields(){
 
+  }
 
     public void saveInfo(ActionEvent actionEvent) throws SQLException, IOException {
         Connectivity connectivity = new Connectivity();
@@ -165,7 +173,7 @@ public class SignupPageController {
                 City.getText(),
                 "mn",
                 ZipCode.getText(),
-                Apartment.getText(),genderSet, maritalSet
+                Apartment.getText(),genderCheck(), maritalCheck()
                 );
         System.out.println(customer);
 
@@ -186,9 +194,10 @@ public class SignupPageController {
         statement.setString(12,customer.getUsername());
         statement.setString(13, customer.getPassword());
         statement.setString(14,customer.getEmail());
-        statement.setString(15,"M");
-        statement.setString(16,"M");
+        statement.setString(15,customer.getGender());
+        statement.setString(16,customer.getMartialStatus());
         statement.executeUpdate();
         System.out.println(customer.getEmail());
+        connection.close();
    }
 }

@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import com.example.demo.customer.Customer;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -73,6 +74,7 @@ public class DashBoardController {
         stage.close();
         }
     }
+
     public void displayName(String username){
         nameLabel.setText("Hello, " + "firstName + lastName" + ". Welcome to your Summit Dashboard!" );
     }
