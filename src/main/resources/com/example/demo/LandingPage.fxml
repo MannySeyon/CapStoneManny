@@ -7,7 +7,6 @@
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
 <!--suppress ALL -->
@@ -16,7 +15,7 @@
    <left>
       <AnchorPane fx:id="anchorPane" prefHeight="600.0" prefWidth="44.0" styleClass="pane" stylesheets="@Landing.css" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fx:id="securityLogo" fitHeight="57.0" fitWidth="40.0" layoutX="2.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="securityLogo" fitHeight="57.0" fitWidth="40.0" layoutX="3.0" layoutY="554.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../security.png" />
                </image>
@@ -91,7 +90,6 @@
                   <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                </padding>
             </VBox>
-            <Circle fx:id="circle" fill="WHITE" layoutX="23.0" layoutY="576.0" radius="16.0" stroke="#c1c1c1" strokeType="INSIDE" />
             <Button layoutX="5.0" layoutY="6.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="37.0">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -291,7 +289,7 @@
                               <Insets left="5.0" right="10.0" />
                            </HBox.margin>
                         </Separator>
-                        <VBox prefWidth="200.0" HBox.hgrow="ALWAYS">
+                        <VBox alignment="CENTER" prefWidth="200.0" HBox.hgrow="ALWAYS">
                            <padding>
                               <Insets top="15.0" />
                            </padding>
@@ -321,82 +319,52 @@
                                     </FontAwesomeIconView>
                                  </children>
                               </HBox>
-                              <Label fx:id="savingsBalance1" alignment="CENTER" prefHeight="33.0" prefWidth="128.0" style="-fx-font-style: Bold;" text="\$73,890.01" textFill="#d4b85d">
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+                              <Label fx:id="savingsBalance1" prefHeight="48.0" prefWidth="134.0" style="-fx-font-style: Bold;" text="\$73,890.01" textFill="#d4b85d">
                                  <font>
-                                    <Font name="Calibri Bold" size="20.0" />
+                                    <Font name="Calibri Bold" size="24.0" />
                                  </font>
                                  <padding>
-                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="15.0" />
                                  </padding>
                               </Label>
-                              <Label fx:id="card2Number1" alignment="CENTER" prefHeight="16.0" prefWidth="129.0" style="-fx-font-style: Bold;" text="****  ****  ****  5783" textFill="#d4b85d">
-                                 <font>
-                                    <Font name="Calibri Bold" size="12.0" />
-                                 </font>
-                                 <padding>
-                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                 </padding>
-                              </Label>
-                              <Label fx:id="dashLabel1" alignment="CENTER" contentDisplay="CENTER" prefHeight="19.0" prefWidth="61.0" style="-fx-font-style: Bold;" text="Income" textFill="#1bda14">
+                              <Label fx:id="dashLabel1" alignment="CENTER_RIGHT" contentDisplay="RIGHT" style="-fx-font-style: Bold;" text="Income" textFill="#1bda14">
                                  <font>
                                     <Font name="Calibri Bold" size="14.0" />
                                  </font>
                                  <padding>
                                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                  </padding>
-                                 <VBox.margin>
-                                    <Insets />
-                                 </VBox.margin>
                               </Label>
-                              <Label alignment="CENTER" layoutX="10.0" layoutY="44.0" prefHeight="35.0" prefWidth="35.0" styleClass="circle_lb">
-                                 <graphic>
-                                    <FontAwesomeIconView fill="#1bda14" glyphName="ARROW_UP" selectionFill="#1bda14" size="18" textAlignment="CENTER" wrappingWidth="22.714284896850586" />
-                                 </graphic>
-                                 <VBox.margin>
-                                    <Insets left="45.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label fx:id="savingsBalance11" alignment="CENTER" prefHeight="11.0" prefWidth="80.0" style="-fx-font-style: Bold;" text="\$73,890.01" textFill="#d4b85d">
+                              <FontAwesomeIconView fill="#1bda14" glyphName="ARROW_UP" selectionFill="#1bda14" size="18" textAlignment="CENTER" wrappingWidth="22.714284896850586" />
+                              <Separator orientation="VERTICAL" prefHeight="200.0" />
+                              <Label fx:id="savingsBalance11" alignment="CENTER_RIGHT" prefHeight="13.0" prefWidth="56.0" style="-fx-font-style: Bold;" text="\$73,890.01" textFill="#d4b85d">
                                  <font>
                                     <Font name="Calibri Bold" size="10.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="dashLabel11" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="139.0" style="-fx-font-style: Bold;" text="Expenses" textFill="#d71d10">
+                              <Label fx:id="dashLabel11" prefHeight="27.0" prefWidth="66.0" style="-fx-font-style: Bold;" text="Expenses" textFill="#d71d10">
                                  <font>
                                     <Font name="Calibri Bold" size="14.0" />
                                  </font>
                                  <padding>
                                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                  </padding>
-                                 <VBox.margin>
-                                    <Insets />
-                                 </VBox.margin>
                               </Label>
-                              <Label fx:id="savingsBalance111" alignment="CENTER" prefHeight="11.0" prefWidth="80.0" style="-fx-font-style: Bold;" text="\$73,890.01" textFill="#d4b85d">
+                              <FontAwesomeIconView fill="#d71d10" glyphName="ARROW_DOWN" selectionFill="#e1270a" size="18" textAlignment="CENTER" />
+                              <Label fx:id="savingsBalance111" style="-fx-font-style: Bold;" text="\$73,890.01" textFill="#d71d10">
                                  <font>
                                     <Font name="Calibri Bold" size="10.0" />
                                  </font>
                               </Label>
-                              <Label alignment="CENTER" prefHeight="35.0" prefWidth="35.0" styleClass="circle_lb">
-                                 <graphic>
-                                    <FontAwesomeIconView fill="#d71d10" glyphName="ARROW_DOWN" selectionFill="#e1270a" size="18" textAlignment="CENTER" />
-                                 </graphic>
-                                 <VBox.margin>
-                                    <Insets left="45.0" />
-                                 </VBox.margin>
-                              </Label>
+                              <Label alignment="CENTER" prefHeight="35.0" prefWidth="35.0" styleClass="circle_lb" />
                            </children>
                         </VBox>
                      </children>
                   </HBox>
                </children>
             </VBox>
-            <ImageView fx:id="bankLogo" fitHeight="48.0" fitWidth="45.0" layoutX="918.0" layoutY="540.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../Summit Fin Corp.png" />
-               </image>
-            </ImageView>
-            <AnchorPane layoutX="60.0" layoutY="310.0" prefHeight="285.0" prefWidth="858.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="310.0">
+            <AnchorPane layoutX="60.0" layoutY="310.0" prefHeight="200.0" prefWidth="858.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="310.0">
                <children>
                   <Label fx:id="cardLabel11" alignment="CENTER" prefHeight="43.0" prefWidth="175.0" style="-fx-font-style: Bold;" text="Monthly Summary" textFill="#4c4c4e">
                      <font>
@@ -418,7 +386,7 @@
                                     <Insets left="5.0" />
                                  </padding>
                               </Label>
-                              <Label fx:id="checkingsBalance1" alignment="CENTER" prefHeight="27.0" prefWidth="97.0" style="-fx-font-style: Bold;" text="\$1500.69" textFill="#1bda14">
+                              <Label fx:id="checkingsBalance1" alignment="CENTER" prefHeight="27.0" prefWidth="97.0" style="-fx-font-style: Bold;" text="+$1500.69" textFill="#1bda14">
                                  <font>
                                     <Font name="Calibri Bold" size="20.0" />
                                  </font>
@@ -433,7 +401,7 @@
                                     <Font name="Calibri Bold" size="16.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="checkingsBalance11" alignment="CENTER" layoutX="30.0" layoutY="55.0" prefHeight="27.0" prefWidth="86.0" style="-fx-font-style: Bold;" text="\$1500.69" textFill="#d71d10">
+                              <Label fx:id="checkingsBalance11" alignment="CENTER" layoutX="30.0" layoutY="55.0" prefHeight="27.0" prefWidth="86.0" style="-fx-font-style: Bold;" text="-$1500.69" textFill="#d71d10">
                                  <font>
                                     <Font name="Calibri Bold" size="20.0" />
                                  </font>
@@ -445,7 +413,7 @@
                         </VBox>
                      </children>
                   </Pane>
-                  <VBox layoutX="264.0" layoutY="42.0" prefHeight="178.0" prefWidth="349.0">
+                  <VBox layoutX="277.0" layoutY="35.0" prefHeight="178.0" prefWidth="349.0">
                      <children>
                         <Label fx:id="dashLabel2" alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" style="-fx-font-style: Bold;" text="Generate Report" textFill="#d4b85d">
                            <font>
@@ -460,14 +428,14 @@
                             <NumberAxis side="LEFT" />
                           </yAxis>
                         </BarChart>
-                        <Label fx:id="dashLabel21" maxWidth="1.7976931348623157E308" style="-fx-font-style: Bold;" text="Date and Time " textFill="#4c4c4e">
+                        <Label fx:id="dashLabel21" maxWidth="1.7976931348623157E308" prefHeight="14.0" prefWidth="324.0" style="-fx-font-style: Bold;" text="Date and Time " textFill="#4c4c4e">
                            <font>
                               <Font name="Calibri Bold" size="12.0" />
                            </font>
                         </Label>
                      </children>
                   </VBox>
-                  <Button layoutX="730.0" layoutY="99.0" mnemonicParsing="false" prefWidth="150.0" text="New Transaction" AnchorPane.bottomAnchor="170.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="100.0">
+                  <Button layoutX="730.0" layoutY="99.0" mnemonicParsing="false" prefWidth="150.0" text="Transactions" AnchorPane.bottomAnchor="170.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="100.0">
                      <font>
                         <Font name="Calibri" size="13.0" />
                      </font>
