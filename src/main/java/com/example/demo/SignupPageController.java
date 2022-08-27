@@ -27,7 +27,7 @@ public class SignupPageController {
     private String maritalSet = "";
     @FXML
     private Label DOBLabel, firstName1, LastName, MiddleName, SocialSecurity, Username, Password,
-            PhoneNumber, Email, SignupLabel, verifySSN, verifyPhone;
+            PhoneNumber, Email, SignupLabel, verifySSN, verifyPhone, verifyAgeLabel;
     @FXML
     private RadioButton male;
     @FXML
@@ -99,14 +99,18 @@ public class SignupPageController {
             else {
                 verifyPhone.setText("");
             }
-            if (ageVerify() == true){
+            if (ageVerify() == false){
                 datePicker.setStyle("-fx-text-box-border: #ff0000; -fx-focus-color: #ff0000;");
-
+                verifyAgeLabel.setText("You are not eligable to create an account");
+            }
+            else{
+                verifyAgeLabel.setText("");
             }
 
         } else {
             verifySSN.setText("");
             verifyPhone.setText("");
+            verifyAgeLabel.setText("");
             saveInfo(actionEvent);
         }
     }
