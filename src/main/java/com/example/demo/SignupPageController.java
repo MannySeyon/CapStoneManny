@@ -142,19 +142,13 @@ public class SignupPageController {
                 datePicker.getValue().getMonth(),
                 datePicker.getValue().getDayOfMonth());
         LocalDate verifyAge = today.minusYears(birthday.getYear());
-        System.out.println(verifyAge.getYear());
-
         if (verifyAge.getYear() < 16) {
-            System.out.println(1);
             return false;
         } else if (verifyAge.getYear() == 16 && today.getMonthValue() < birthday.getMonthValue()) {
-            System.out.println(2);
             return false;
         } else if (verifyAge.getYear() == 16 && today.getMonthValue() == birthday.getMonthValue() && today.getDayOfMonth() < birthday.getDayOfMonth()) {
-            System.out.println(3);
             return false;
         } else {
-            System.out.println("you are old");
             return true;
         }
     }
