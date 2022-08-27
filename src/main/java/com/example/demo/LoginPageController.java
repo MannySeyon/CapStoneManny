@@ -16,15 +16,24 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class LoginPageController{
+    @FXML
     public Label emailLabel;
+    @FXML
     public Label phoneLabel;
-    public Button Home;
-    public AnchorPane anchorPane;
-    public Label welcomeLabel;
-    public Button clientButton;
-    public Button adminButton;
-    public Button SignupButton;
-    public Label AccountTypeLabel;
+    @FXML
+    private Button Home;
+    @FXML
+    private AnchorPane anchorPane;
+    @FXML
+    private Label welcomeLabel;
+    @FXML
+    private Button clientButton;
+    @FXML
+    private Button adminButton;
+    @FXML
+    private Button SignupButton;
+    @FXML
+    private Label AccountTypeLabel;
     private Stage stage;
     private Scene scene;
     private Parent root;
