@@ -15,8 +15,6 @@
 }
 #dashboardLabel{
     -fx-font-size: 15;
-    -fx-font-family: System;
-    -fx-font-style: Bold;
     -fx-text-fill: Black;
     -fx-alignment: center;
 }
@@ -52,4 +50,32 @@
     -fx-background-color: #f3f3f3;
     -fx-background-radius: 100%;
     -fx-border-radius: 5px;
+}
+.chart-bar{
+    -fx-background-color: transparent;
+}
+.data0.chart-bar{
+    -fx-background-color:#2B49B3;
+    -fx-width: 15px;
+    -fx-background-radius: 3px 3px 0px 0px ;
+}
+.data1.chart-bar{
+    -fx-background-color:#2B49B3;
+    -fx-width: 15px;
+    -fx-background-radius: 3px 3px 0px 0px ;
+}
+.data2.chart-bar{
+    -fx-background-color:#2B49B3;
+    -fx-width: 15px;
+    -fx-background-radius: 3px 3px 0px 0px ;
+}
+.data3.chart-bar{
+    -fx-background-color:#2B49B3;
+    -fx-width: 15px;
+    -fx-background-radius: 3px 3px 0px 0px ;
+}
+.data4.chart-bar{
+    -fx-background-color:#2B49B3;
+    -fx-width: 15px;
+    -fx-background-radius: 3px 3px 0px 0px ;
 }

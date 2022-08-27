@@ -8,17 +8,26 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.chart.BarChart;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.paint.ImagePattern;
+import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
-
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
 
 @SuppressWarnings("ALL")
-public class DashBoardController {
-
+public class DashBoardController  {
+    @FXML
+    private Circle circle;
+    @FXML
+    private BarChart<String, Double> chart;
     @FXML
     private BorderPane LandingPageBorder;
     @FXML
@@ -36,6 +45,18 @@ public class DashBoardController {
     private Stage stage;
     private Scene scene;
     private Parent root;
+//    @Override
+//    public void intialize(URL url, ResourceBundle rb){
+//        //circle.setFill((new ImagePattern("/Summit Fin Corp.png")));
+//        XYChart.Series<String,Double> series_01 = new XYChart.Series();
+//        series_01.setName("Year 2022");
+//        series_01.getData().add(new XYChart.Data("Jan", 500));
+//        series_01.getData().add(new XYChart.Data("Feb", 400));
+//        series_01.getData().add(new XYChart.Data("Mar", 300));
+//        series_01.getData().add(new XYChart.Data("Apr", 200));
+//        series_01.getData().add(new XYChart.Data("May", 700));
+//        chart.getData().add(series_01);
+//    }
     @FXML
     protected void Home(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("main.fxml"));
@@ -80,5 +101,10 @@ public class DashBoardController {
     public void displayName(String username){
         nameLabel.setText("Hello, " + "firstName + lastName" + ". Welcome to your Summit Dashboard!" );
     }
+
+//    @Override
+//    public void initialize(URL url, ResourceBundle resourceBundle) {
+//
+//    }
 }
 
