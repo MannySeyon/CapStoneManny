@@ -24,16 +24,20 @@
         </AnchorPane>
     </left>
     <center>
-        <AnchorPane fx:id="anchorPane" prefHeight="798.0" prefWidth="729.0" stylesheets="@Login.css" BorderPane.alignment="CENTER">
+        <AnchorPane fx:id="anchorPane" prefHeight="798.0" prefWidth="729.0" stylesheets="@Login1.css" BorderPane.alignment="CENTER">
             <style>-fx-background-color: black;</style>
             <Label fx:id="welcomeLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="96.0" layoutY="29.0" prefHeight="98.0" prefWidth="664.0" text="Welcome to Summit Financial Corporation!" textFill="#ebe8e8">
                 <font>
                     <Font name="Calibri" size="36.0" />
                 </font></Label>
             <Label fx:id="passwordShow" layoutX="453.0" layoutY="309.0" />
-         <Label layoutX="286.0" layoutY="224.0" prefHeight="36.0" prefWidth="283.0" text="Label" />
-         <Button layoutX="274.0" layoutY="309.0" mnemonicParsing="false" prefHeight="133.0" prefWidth="288.0" text="Button" />
-         <Button layoutX="274.0" layoutY="490.0" mnemonicParsing="false" prefHeight="133.0" prefWidth="288.0" text="Button" />
+         <Label alignment="CENTER" layoutX="235.0" layoutY="224.0" prefHeight="41.0" prefWidth="386.0" text="Choose Account Type" textFill="#f8f3f3">
+            <font>
+               <Font name="Calibri Bold" size="28.0" />
+            </font>
+         </Label>
+         <Button fx:id="clientButton" layoutX="274.0" layoutY="309.0" mnemonicParsing="false" onAction="#ClientLogin" prefHeight="133.0" prefWidth="288.0" styleClass="acc_button" text="CLIENT" />
+         <Button fx:id="adminButton" layoutX="274.0" layoutY="490.0" mnemonicParsing="false" onAction="#AdminButton" prefHeight="133.0" prefWidth="288.0" styleClass="acc_button" text="ADMIN" />
         </AnchorPane>
     </center>
 </BorderPane>
