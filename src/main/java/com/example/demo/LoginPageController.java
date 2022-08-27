@@ -61,28 +61,4 @@ public class LoginPageController{
         stage.setScene(scene);
         stage.show();
     }
-    //@FXML
-//    protected void AdminLoginPage(ActionEvent event) throws IOException {
-//        root = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
-//        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-//        scene = new Scene(root);
-//        stage.setScene(scene);
-//        stage.show();
-//
-//    }
-
-    @FXML
-        public void Exit(Stage primaryStage) {
-            //Create Alert box-Confirmation type
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setTitle("Exit");
-            alert.setHeaderText("You Are About To Quit");
-            alert.setContentText("Do you want to Quit?");
-
-            if(alert.showAndWait().get() == ButtonType.OK) {
-                //set stage =to the current working stage
-                System.out.println("You've successfully Quit!");
-                primaryStage.close();
-            }
-        }
 }

@@ -36,8 +36,8 @@
             </font>
          </Label>
          <Button fx:id="clientButton" layoutX="274.0" layoutY="309.0" mnemonicParsing="false" onAction="#ClientLoginPage" prefHeight="133.0" prefWidth="288.0" styleClass="acc_button" text="CLIENT" />
-         <Button fx:id="adminButton" layoutX="274.0" layoutY="490.0" mnemonicParsing="false" onAction="#AdminLoginPage" prefHeight="133.0" prefWidth="288.0" styleClass="acc_button" text="ADMIN" />
-         <Button fx:id="SignupButton" layoutX="274.0" layoutY="665.0" mnemonicParsing="false" onAction="#SignUpPage" prefHeight="133.0" prefWidth="288.0" styleClass="acc_button" text="ADMIN" />
+         <Button fx:id="adminButton" layoutX="274.0" layoutY="490.0" mnemonicParsing="false" prefHeight="133.0" prefWidth="288.0" styleClass="acc_button" text="ADMIN" />
+         <Button fx:id="SignupButton" layoutX="274.0" layoutY="665.0" mnemonicParsing="false" onAction="#SignUpPage" prefHeight="133.0" prefWidth="288.0" styleClass="acc_button" text="SIGNUP" />
         </AnchorPane>
     </center>
 </BorderPane>
