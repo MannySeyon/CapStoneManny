@@ -30,14 +30,14 @@
                 <font>
                     <Font name="Calibri" size="36.0" />
                 </font></Label>
-            <Label fx:id="passwordShow" layoutX="453.0" layoutY="309.0" />
-         <Label alignment="CENTER" layoutX="235.0" layoutY="224.0" prefHeight="41.0" prefWidth="386.0" text="Choose Account Type" textFill="#f8f3f3">
+         <Label fx:id="AccountTypeLabel" alignment="CENTER" layoutX="235.0" layoutY="224.0" prefHeight="41.0" prefWidth="386.0" text="Choose An Account Type" textFill="#f8f3f3">
             <font>
                <Font name="Calibri Bold" size="28.0" />
             </font>
          </Label>
-         <Button fx:id="clientButton" layoutX="274.0" layoutY="309.0" mnemonicParsing="false" onAction="#ClientLogin" prefHeight="133.0" prefWidth="288.0" styleClass="acc_button" text="CLIENT" />
-         <Button fx:id="adminButton" layoutX="274.0" layoutY="490.0" mnemonicParsing="false" onAction="#AdminButton" prefHeight="133.0" prefWidth="288.0" styleClass="acc_button" text="ADMIN" />
+         <Button fx:id="clientButton" layoutX="274.0" layoutY="309.0" mnemonicParsing="false" onAction="#ClientLoginPage" prefHeight="133.0" prefWidth="288.0" styleClass="acc_button" text="CLIENT" />
+         <Button fx:id="adminButton" layoutX="274.0" layoutY="490.0" mnemonicParsing="false" onAction="#AdminLoginPage" prefHeight="133.0" prefWidth="288.0" styleClass="acc_button" text="ADMIN" />
+         <Button fx:id="SignupButton" layoutX="274.0" layoutY="665.0" mnemonicParsing="false" onAction="#SignUpPage" prefHeight="133.0" prefWidth="288.0" styleClass="acc_button" text="ADMIN" />
         </AnchorPane>
     </center>
 </BorderPane>
