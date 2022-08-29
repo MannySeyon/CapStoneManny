@@ -26,7 +26,7 @@ public class SignupPageController {
     private String genderSet = "";
     private String maritalSet = "";
     @FXML
-    private Label DOBLabel, FirstName, LastName, MiddleName, SocialSecurity, Username, Password,
+    private Label DOBLabel, FirstName, LastName, MiddleName, SocialSecurity, Username, Password, zipCode, streetName,
             PhoneNumber, Email, SignupLabel, verifySSN, verifyPhone, verifyAgeLabel, progressLabel, progressPercentLabel;
     @FXML
     private RadioButton male, other,female, single, married;
@@ -35,8 +35,8 @@ public class SignupPageController {
     private Scene scene;
     private Parent root;
     @FXML
-    private Button loginButton1,  Home1,  SignupButton1,
-            progressButton1;
+    private Button LoginButton,  Home,  SignupButton, nextButton,
+            progressButton;
     @FXML
     private DatePicker datePicker;
     @FXML

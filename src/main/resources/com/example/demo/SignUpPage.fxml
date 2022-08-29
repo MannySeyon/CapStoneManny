@@ -52,22 +52,22 @@
          <FontAwesomeIconView fill="#d4b85d" glyphName="USER_PLUS" size="25" />
       </graphic>
    </Button>
-   <Button fx:id="Home1" alignment="CENTER" layoutX="395.0" layoutY="530.0" mnemonicParsing="false" onAction="#Home" prefHeight="50.0" prefWidth="50.0" styleClass="Button" stylesheets="@SignUpPage.css">
+   <Button fx:id="Home" alignment="CENTER" layoutX="395.0" layoutY="530.0" mnemonicParsing="false" onAction="#Home" prefHeight="50.0" prefWidth="50.0" styleClass="Button" stylesheets="@SignUpPage.css">
       <graphic>
          <FontAwesomeIconView fill="#d4b85d" glyphName="HOME" size="25" />
       </graphic>
    </Button>
-   <Button fx:id="nextButton1" contentDisplay="CENTER" layoutX="519.0" layoutY="530.0" mnemonicParsing="false" onAction="#NextPage" prefHeight="50.0" prefWidth="50.0" styleClass="Button" stylesheets="@SignUpPage.css">
+   <Button fx:id="nextButton" contentDisplay="CENTER" layoutX="519.0" layoutY="530.0" mnemonicParsing="false" onAction="#NextPage" prefHeight="50.0" prefWidth="50.0" styleClass="Button" stylesheets="@SignUpPage.css">
       <graphic>
          <FontAwesomeIconView fill="#d4b85d" glyphName="ARROW_RIGHT" size="25" />
       </graphic>
    </Button>
-   <Button fx:id="progressButton1" alignment="CENTER" layoutX="462.0" layoutY="530.0" mnemonicParsing="false" onAction="#PreviousPage" prefHeight="50.0" prefWidth="50.0" styleClass="Button" stylesheets="@SignUpPage.css">
+   <Button fx:id="progressButton" alignment="CENTER" layoutX="462.0" layoutY="530.0" mnemonicParsing="false" onAction="#PreviousPage" prefHeight="50.0" prefWidth="50.0" styleClass="Button" stylesheets="@SignUpPage.css">
       <graphic>
          <FontAwesomeIconView fill="#d4b85d" glyphName="ARROW_LEFT" size="25" />
       </graphic>
    </Button>
-   <Button fx:id="LoginButton1" alignment="CENTER" layoutX="334.0" layoutY="530.0" mnemonicParsing="false" onAction="#LoginPage" prefHeight="50.0" prefWidth="50.0" styleClass="Button" stylesheets="@SignUpPage.css">
+   <Button fx:id="LoginButton" alignment="CENTER" layoutX="334.0" layoutY="530.0" mnemonicParsing="false" onAction="#LoginPage" prefHeight="50.0" prefWidth="50.0" styleClass="Button" stylesheets="@SignUpPage.css">
       <graphic>
          <FontAwesomeIconView fill="#d4b85d" glyphName="USER" size="25" />
       </graphic>
