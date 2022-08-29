@@ -17,6 +17,8 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
+import org.w3c.dom.ls.LSOutput;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -97,6 +99,12 @@ public class DashBoardController  {
         stage.close();
         }
     }
+
+    LoginPageController loginPageController = new LoginPageController();
+
+
+
+
 
     public void displayName(String username){
         nameLabel.setText("Hello, " + "firstName + lastName" + ". Welcome to your Summit Dashboard!" );
