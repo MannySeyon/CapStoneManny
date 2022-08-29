@@ -1,3 +1,13 @@
-      .TextFields{
-          -fx-background-color: #cccccc;
+      .TextField {
+          -fx-background-radius: 5px;
+          -fx-background-color: White;
+          -fx-border-radius: 5px;
+
       }
+.Button{
+
+          -fx-background-radius: 5px;
+        -fx-background-color: #E7E7E7;
+    -fx-border-radius: 5px;
+
+}

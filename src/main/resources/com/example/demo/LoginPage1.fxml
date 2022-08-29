@@ -5,20 +5,20 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" stylesheets="@Login.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.LoginPageController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" stylesheets="@Login.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.LoginPageController">
     <left>
-        <AnchorPane prefHeight="800.0" prefWidth="340.0" stylesheets="@Login.css" BorderPane.alignment="CENTER">
-            <Label fx:id="emailLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="75.0" layoutY="607.0" prefHeight="61.0" prefWidth="194.0" text="sfcsupport@sfc.com" textFill="#070707">
+        <AnchorPane prefHeight="600.0" prefWidth="340.0" stylesheets="@Login.css" BorderPane.alignment="CENTER">
+            <Label fx:id="emailLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="74.0" layoutY="442.0" prefHeight="61.0" prefWidth="194.0" text="sfcsupport@sfc.com" textFill="#070707">
                 <font>
                     <Font name="Calibri" size="18.0" />
                 </font>
             </Label>
-            <Label fx:id="phoneLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="41.0" layoutY="668.0" prefHeight="61.0" prefWidth="261.0" text="122-333-4444" textFill="#141414">
+            <Label fx:id="phoneLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="40.0" layoutY="483.0" prefHeight="40.0" prefWidth="261.0" text="122-333-4444" textFill="#141414">
                 <font>
                     <Font name="Calibri" size="18.0" />
                 </font></Label>
-            <Button fx:id="Home" layoutX="124.0" layoutY="729.0" mnemonicParsing="false" onAction="#Home" prefHeight="42.0" prefWidth="95.0" text="Home" />
-            <ImageView fitHeight="503.0" fitWidth="286.0" layoutX="8.0" layoutY="9.0">
+            <Button fx:id="Home" layoutX="123.0" layoutY="523.0" mnemonicParsing="false" onAction="#Home" prefHeight="42.0" prefWidth="95.0" text="Home" />
+            <ImageView fitHeight="418.0" fitWidth="304.0" layoutX="19.0" layoutY="14.0">
                 <Image url="@../../../Bank.gif" />
             </ImageView>
         </AnchorPane>
@@ -26,18 +26,18 @@
     <center>
         <AnchorPane fx:id="anchorPane" prefHeight="800.0" prefWidth="722.0" stylesheets="@Login1.css" BorderPane.alignment="CENTER">
             <style>-fx-background-color: black;</style>
-            <Label fx:id="welcomeLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="54.0" layoutY="51.0" prefHeight="98.0" prefWidth="586.0" text="Welcome to Summit Financial Corporation!" textFill="#ebe8e8">
+            <Label fx:id="welcomeLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="185.0" layoutY="40.0" prefHeight="74.0" prefWidth="586.0" text="Welcome to Summit Financial Corporation!" textFill="#ebe8e8">
                 <font>
                     <Font name="Calibri" size="36.0" />
                 </font></Label>
-         <Label fx:id="AccountTypeLabel" alignment="CENTER" layoutX="200.0" layoutY="167.0" prefHeight="41.0" prefWidth="386.0" text="Choose An Account Type" textFill="#f8f3f3">
+         <Label fx:id="AccountTypeLabel" alignment="CENTER" layoutX="258.0" layoutY="128.0" prefHeight="41.0" prefWidth="386.0" text="Choose An Account Type" textFill="#f8f3f3">
             <font>
                <Font name="Calibri Bold" size="28.0" />
             </font>
          </Label>
-         <Button fx:id="clientButton" layoutX="249.0" layoutY="267.0" mnemonicParsing="false" onAction="#ClientLoginPage" prefHeight="133.0" prefWidth="288.0" styleClass="acc_button" text="CLIENT" />
-         <Button fx:id="adminButton" layoutX="249.0" layoutY="459.0" mnemonicParsing="false" prefHeight="133.0" prefWidth="288.0" styleClass="acc_button" text="ADMIN" />
-         <Button fx:id="SignupButton" layoutX="249.0" layoutY="639.0" mnemonicParsing="false" onAction="#SignUpPage" prefHeight="133.0" prefWidth="288.0" styleClass="acc_button" text="SIGNUP" />
+         <Button fx:id="clientButton" layoutX="490.0" layoutY="234.0" mnemonicParsing="false" onAction="#ClientLoginPage" prefHeight="133.0" prefWidth="288.0" styleClass="acc_button" text="CLIENT" />
+         <Button fx:id="adminButton" layoutX="114.0" layoutY="234.0" mnemonicParsing="false" prefHeight="133.0" prefWidth="288.0" styleClass="acc_button" text="ADMIN" />
+         <Button fx:id="SignupButton" layoutX="307.0" layoutY="367.0" mnemonicParsing="false" onAction="#SignUpPage" prefHeight="133.0" prefWidth="288.0" styleClass="acc_button" text="SIGNUP" />
         </AnchorPane>
     </center>
 </BorderPane>

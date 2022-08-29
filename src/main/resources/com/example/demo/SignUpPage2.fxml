@@ -1,59 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<!--suppress ALL -->
-
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" stylesheets="@SignUpPage.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SignupPageController">
-    <ImageView fitHeight="157.0" fitWidth="156.0" layoutX="31.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-        <image>
-            <Image url="@/Summit Fin Corp.png" />
-        </image>
-    </ImageView>
-    <Button fx:id="Home" layoutX="40.0" layoutY="709.0" mnemonicParsing="false" onAction="#Home" prefHeight="42.0" prefWidth="95.0" stylesheets="@SignUpPage.css" text="Back Home" />
-    <Label fx:id="SignupLabel" alignment="CENTER" layoutX="40.0" layoutY="14.0" prefHeight="47.0" prefWidth="1120.0" text="Welcome To Summit Financial Corporation " AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
-        <font>
-            <Font name="Calibri" size="36.0" />
-        </font></Label>
-    <Button fx:id="SignupButton" layoutX="552.0" layoutY="709.0" mnemonicParsing="false" onAction="#NextPage" prefHeight="42.0" prefWidth="95.0" stylesheets="@SignUpPage.css" text="NEXT" />
-    <Label fx:id="verifyPhone" layoutX="42.0" layoutY="459.0" prefHeight="18.0" prefWidth="167.0" />
-    <Label fx:id="Username" alignment="CENTER" layoutX="491.0" layoutY="165.0" text="Username" />
-    <Label fx:id="Password" alignment="CENTER" layoutX="496.0" layoutY="234.0" text="Password" />
-    <Label fx:id="PhoneNumber" layoutX="479.0" layoutY="293.0" text="Phone Number" />
-    <Label fx:id="Email" alignment="CENTER" layoutX="493.0" layoutY="365.0" prefHeight="30.0" prefWidth="66.0" text="Email" />
-    <TextField fx:id="UsernameF" layoutX="439.0" layoutY="178.0" prefHeight="25.0" prefWidth="174.0" />
-    <TextField fx:id="PasswordF" layoutX="439.0" layoutY="243.0" prefHeight="25.0" prefWidth="174.0" />
-    <TextField fx:id="PhoneNumberF" layoutX="439.0" layoutY="311.0" prefHeight="25.0" prefWidth="174.0" />
-    <TextField fx:id="EmailF" layoutX="435.0" layoutY="394.0" prefHeight="25.0" prefWidth="174.0" />
-    <Label fx:id="verifyPhone" layoutX="42.0" layoutY="459.0" prefHeight="18.0" prefWidth="167.0" />
-    <RadioButton fx:id="male" layoutX="382.0" layoutY="572.0" mnemonicParsing="false" text="Male">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" stylesheets="@SignUpPage.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SignupPageController">
+    <Label fx:id="Username" layoutX="416.0" layoutY="120.0" stylesheets="@Landing.css" text="Username" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+    <Label fx:id="Password" layoutX="416.0" layoutY="170.0" stylesheets="@Landing.css" text="Password" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+    <Label fx:id="PhoneNumber" layoutX="416.0" layoutY="225.0" stylesheets="@Landing.css" text="Phone Number" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+    <Label fx:id="Email" layoutX="416.0" layoutY="277.0" prefHeight="18.0" prefWidth="66.0" stylesheets="@Landing.css" text="Email" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+    <TextField fx:id="UsernameF" layoutX="416.0" layoutY="138.0" prefHeight="25.0" prefWidth="174.0" styleClass="TextField" stylesheets="@SignUpPage.css" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+    <TextField fx:id="PasswordF" layoutX="416.0" layoutY="188.0" prefHeight="25.0" prefWidth="174.0" styleClass="TextFields" stylesheets="@SignUpPage.css" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+    <TextField fx:id="PhoneNumberF" layoutX="416.0" layoutY="243.0" prefHeight="25.0" prefWidth="174.0" styleClass="TextFields" stylesheets="@SignUpPage.css" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+    <TextField fx:id="EmailF" layoutX="416.0" layoutY="295.0" prefHeight="25.0" prefWidth="174.0" styleClass="TextFields" stylesheets="@SignUpPage.css" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+    <RadioButton fx:id="male" layoutX="393.0" layoutY="471.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="73.0" stylesheets="@Landing.css" text="Male" AnchorPane.leftAnchor="393.0" AnchorPane.rightAnchor="558.0">
         <toggleGroup>
             <ToggleGroup fx:id="genderTogg" />
         </toggleGroup></RadioButton>
-    <RadioButton fx:id="female" layoutX="466.0" layoutY="578.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="83.0" text="Female" toggleGroup="$genderTogg" />
-    <Label fx:id="Gender" layoutX="514.0" layoutY="551.0" text="Gender" />
-    <RadioButton fx:id="other" layoutX="564.0" layoutY="572.0" mnemonicParsing="false" text="Non-Binary" toggleGroup="$genderTogg" />
-    <Label layoutX="490.0" layoutY="460.0" text="Marital Status" />
-    <RadioButton fx:id="single" layoutX="439.0" layoutY="484.0" mnemonicParsing="false" text="Single">
+    <RadioButton fx:id="female" layoutX="461.0" layoutY="477.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="83.0" stylesheets="@Landing.css" text="Female" toggleGroup="$genderTogg" AnchorPane.leftAnchor="461.0" AnchorPane.rightAnchor="480.0" />
+    <Label layoutX="416.0" layoutY="453.0" stylesheets="@Landing.css" text="Gender" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+    <RadioButton fx:id="other" layoutX="544.0" layoutY="471.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="103.0" stylesheets="@Landing.css" text="Non-Binary" toggleGroup="$genderTogg" AnchorPane.leftAnchor="544.0" AnchorPane.rightAnchor="377.0" />
+    <Label layoutX="416.0" layoutY="385.0" stylesheets="@Landing.css" text="Marital Status" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+    <RadioButton fx:id="single" layoutX="429.0" layoutY="412.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="83.0" stylesheets="@Landing.css" text="Single" AnchorPane.leftAnchor="429.0" AnchorPane.rightAnchor="512.0">
         <toggleGroup>
             <ToggleGroup fx:id="maritalTogg" />
         </toggleGroup></RadioButton>
-    <RadioButton fx:id="married" layoutX="532.0" layoutY="484.0" mnemonicParsing="false" text="Married" toggleGroup="$maritalTogg" />
-    <ProgressBar fx:id="progressBar" layoutX="213.0" layoutY="57.0" prefHeight="22.0" prefWidth="596.0" progress="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" />
-    <Button fx:id="progressButton" layoutX="432.0" layoutY="709.0" mnemonicParsing="false" onAction="#PreviousPage" prefHeight="42.0" prefWidth="95.0" stylesheets="@SignUpPage.css" text="BACK" />
-    <Label fx:id="progressLabel" alignment="CENTER" layoutX="126.0" layoutY="57.0" prefHeight="22.0" prefWidth="73.0" text="Progress">
-        <font>
-            <Font name="Calibri" size="18.0" />
-        </font>
-    </Label>
-    <Label fx:id="progressPercentLabel" alignment="CENTER" layoutX="800.0" layoutY="57.0" prefHeight="22.0" prefWidth="55.0" text="0%">
-        <font>
-            <Font name="Calibri" size="18.0" />
-        </font>
-    </Label>
-   <Button fx:id="Home1" layoutX="881.0" layoutY="709.0" mnemonicParsing="false" onAction="#Signup" prefHeight="42.0" prefWidth="95.0" stylesheets="@SignUpPage.css" text="SIGNUP" />
+    <RadioButton fx:id="married" layoutX="512.0" layoutY="412.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="92.0" stylesheets="@Landing.css" text="Married" toggleGroup="$maritalTogg" AnchorPane.leftAnchor="512.0" AnchorPane.rightAnchor="420.0" />
+   <Label fx:id="SocialSecurity" layoutX="416.0" layoutY="327.0" prefWidth="100.0" stylesheets="@Landing.css" text="Social Security " AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+   <TextField fx:id="SocialSecurityF" layoutX="416.0" layoutY="345.0" prefHeight="25.0" prefWidth="174.0" styleClass="TextFields" stylesheets="@SignUpPage.css" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+   <Button fx:id="SignupButton2" contentDisplay="CENTER" layoutX="592.0" layoutY="520.0" mnemonicParsing="false" onAction="#Signup" prefHeight="50.0" prefWidth="50.0" styleClass="Button" stylesheets="@SignUpPage.css">
+      <graphic>
+         <FontAwesomeIconView fill="#d4b85d" glyphName="USER_PLUS" size="25" />
+      </graphic>
+   </Button>
+   <Button fx:id="Home2" alignment="CENTER" layoutX="380.0" layoutY="520.0" mnemonicParsing="false" onAction="#Home" prefHeight="50.0" prefWidth="50.0" styleClass="Button" stylesheets="@SignUpPage.css">
+      <graphic>
+         <FontAwesomeIconView fill="#d4b85d" glyphName="HOME" size="25" />
+      </graphic>
+   </Button>
+   <Button fx:id="SignupButton2_2" contentDisplay="CENTER" layoutX="518.0" layoutY="520.0" mnemonicParsing="false" onAction="#Signup" prefHeight="50.0" prefWidth="50.0" styleClass="Button" stylesheets="@SignUpPage.css">
+      <graphic>
+         <FontAwesomeIconView fill="#d4b85d" glyphName="ARROW_RIGHT" size="25" />
+      </graphic>
+   </Button>
+   <Button fx:id="progressButton2" alignment="CENTER" layoutX="453.0" layoutY="520.0" mnemonicParsing="false" onAction="#PreviousPage" prefHeight="50.0" prefWidth="50.0" styleClass="Button" stylesheets="@SignUpPage.css">
+      <graphic>
+         <FontAwesomeIconView fill="#d4b85d" glyphName="ARROW_LEFT" size="25" />
+      </graphic>
+   </Button>
+   <Separator layoutX="416.0" layoutY="169.0" prefWidth="300.0" stylesheets="@Landing.css" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+   <Separator layoutX="416.0" layoutY="382.0" prefWidth="300.0" stylesheets="@Landing.css" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+   <Separator layoutX="416.0" layoutY="452.0" prefWidth="300.0" stylesheets="@Landing.css" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+   <Separator layoutX="416.0" layoutY="276.0" prefWidth="300.0" stylesheets="@Landing.css" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+   <Separator layoutX="416.0" layoutY="224.0" prefWidth="300.0" stylesheets="@Landing.css" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+   <Separator layoutX="416.0" layoutY="503.0" prefWidth="300.0" stylesheets="@Landing.css" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+   <Separator layoutX="416.0" layoutY="326.0" prefWidth="300.0" stylesheets="@Landing.css" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+   <Button fx:id="LoginButton2" alignment="CENTER" layoutX="305.0" layoutY="520.0" mnemonicParsing="false" onAction="#LoginPage" prefHeight="50.0" prefWidth="50.0" styleClass="Button" stylesheets="@SignUpPage.css">
+      <graphic>
+         <FontAwesomeIconView fx:id="loginButton2" fill="#d4b85d" glyphName="USER" size="25" />
+      </graphic>
+   </Button>
+   <Label fx:id="SignupLabel2" alignment="CENTER" layoutX="52.0" layoutY="24.0" prefHeight="47.0" prefWidth="934.0" text="Welcome To Summit Financial Corporation ">
+      <font>
+         <Font name="Calibri" size="36.0" />
+      </font>
+   </Label>
+   <ProgressBar fx:id="progressBar2" layoutX="214.0" layoutY="78.0" prefHeight="22.0" prefWidth="596.0" progress="0.0" />
+   <Label fx:id="progressLabel2" alignment="CENTER" layoutX="141.0" layoutY="78.0" prefHeight="22.0" prefWidth="73.0" text="Progress">
+      <font>
+         <Font name="Calibri" size="18.0" />
+      </font>
+   </Label>
+   <Label fx:id="progressPercentLabel2" alignment="CENTER" layoutX="810.0" layoutY="78.0" prefHeight="22.0" prefWidth="55.0" text="0%">
+      <font>
+         <Font name="Calibri" size="18.0" />
+      </font>
+   </Label>
 
 </AnchorPane>

@@ -16,40 +16,34 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.time.LocalDate;
-import java.time.Period;
 
 
 @SuppressWarnings("ALL")
 public class SignupPageController {
     @FXML
-    private TextField SocialSecurityF, UsernameF, PasswordF, PhoneNumberF, EmailF,
-            firstName, LastNameF, FirstNameF, Street, MiddleNameF, City, ZipCode, Apartment, gender, maritalStatus;
+    private TextField SocialSecurityF, UsernameF, PasswordF, PhoneNumberF, EmailF
+            , LastNameF, FirstNameF, StreetF, MiddleNameF, CityF, ZipCodeF, ApartmentF, Gender, MaritalStatus;
     private String genderSet = "";
     private String maritalSet = "";
     @FXML
-    private Label DOBLabel, firstName1, LastName, MiddleName, SocialSecurity, Username, Password,
+    private Label DOBLabel, FirstName, LastName, MiddleName, SocialSecurity, Username, Password,
             PhoneNumber, Email, SignupLabel, verifySSN, verifyPhone, verifyAgeLabel, progressLabel, progressPercentLabel;
     @FXML
-    private RadioButton male;
-    @FXML
-    private RadioButton female;
-    @FXML
-    private RadioButton other;
-    @FXML
-    private RadioButton single, married;
+    private RadioButton male, other,female, single, married;
+
     private Stage stage;
     private Scene scene;
     private Parent root;
     @FXML
-    private Button Home, SignupButton;
+    private Button loginButton1,  Home1,  SignupButton1,
+            progressButton1;
     @FXML
     private DatePicker datePicker;
     @FXML
     private AnchorPane anchorPane;
     @FXML
     private int age;
-    @FXML
-    private Button progressButton;
+
     @FXML
     private ProgressBar progressBar;
     BigDecimal progress = new BigDecimal(String.format("%.2f", 0.0));
@@ -68,6 +62,7 @@ public class SignupPageController {
         stage.show();
     }
 
+    //Redundant
     @FXML
     protected void Signup(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
@@ -76,11 +71,19 @@ public class SignupPageController {
         stage.setScene(scene);
         stage.show();
     }
+    @FXML
+    protected void LoginPage(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
 
+    }
     public void verify(ActionEvent actionEvent) throws Exception {
         String[] verifyTextfield = new String[]{FirstNameF.getText(), LastNameF.getText(), SocialSecurityF.getText(),
-                UsernameF.getText(), PasswordF.getText(), PhoneNumberF.getText(), EmailF.getText(), Street.getText(), City.getText(), ZipCode.getText(), Apartment.getText()};
-        TextField[] textFields = new TextField[]{FirstNameF, LastNameF, SocialSecurityF, UsernameF, PasswordF, PhoneNumberF, EmailF, Street, City, ZipCode, Apartment};
+                UsernameF.getText(), PasswordF.getText(), PhoneNumberF.getText(), EmailF.getText(), StreetF.getText(), CityF.getText(), ZipCodeF.getText(), ApartmentF.getText()};
+        TextField[] textFields = new TextField[]{FirstNameF, LastNameF, SocialSecurityF, UsernameF, PasswordF, PhoneNumberF, EmailF, StreetF, CityF, ZipCodeF, ApartmentF};
         for (int i = 0; i < verifyTextfield.length; i++) {
             if (verifyTextfield[i].isBlank()) {
                 textFields[i].setStyle("-fx-text-box-border: #ff0000; -fx-focus-color: #ff0000;");
@@ -88,7 +91,6 @@ public class SignupPageController {
                 textFields[i].setStyle("-fx-text-box-border: #D3D3D3; -fx-focus-color: #D3D3D3;");
             }
         }
-
         if (SocialSecurityF.getText().length() != 9 || PhoneNumberF.getText().length() != 10 || checkSSNInfo() == false || checkPhoneInfo() == false || ageVerify() == false) {
 
             if (SocialSecurityF.getText().length() != 9 || checkSSNInfo() == false) {
@@ -129,7 +131,6 @@ public class SignupPageController {
             return false;
         }
     }
-
     public boolean checkPhoneInfo() throws Exception, ArithmeticException {
 
         try {
@@ -140,7 +141,6 @@ public class SignupPageController {
 
         }
     }
-
     public boolean ageVerify() {
         LocalDate today = LocalDate.now();
         LocalDate birthday = LocalDate.of(datePicker.getValue().getYear(),
@@ -157,7 +157,6 @@ public class SignupPageController {
             return true;
         }
     }
-
 
     public String genderCheck() {
 
@@ -183,7 +182,6 @@ public class SignupPageController {
     }
 
     public void checkEmptyFields() {
-
     }
 
 
@@ -202,11 +200,11 @@ public class SignupPageController {
                 EmailF.getText(),
                 UsernameF.getText(),
                 PasswordF.getText(),
-                Street.getText(),
-                City.getText(),
+                StreetF.getText(),
+                CityF.getText(),
                 "mn",
-                ZipCode.getText(),
-                Apartment.getText(), genderCheck(), maritalCheck()
+                ZipCodeF.getText(),
+                ApartmentF.getText(), genderCheck(), maritalCheck()
         );
         System.out.println(customer);
 
@@ -236,23 +234,25 @@ public class SignupPageController {
     @FXML  //Set progress percents =to Scene pages for Sign up
     protected void NextPage(ActionEvent event) throws IOException {
 
-        root = FXMLLoader.load(getClass().getResource("SignUpPage2.fxml"));
-        //get Source cast to a node //Pass node to Stage
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        //Pass the new fxml path to scene variable
-        scene = new Scene(root);
-        //pass scene to stage
-        stage.setScene(scene);
-        stage.show();
         //Method to access value in progress
         if (progress.doubleValue() < 1) {
             //must keep reInstantiate BigDecimals
-            progress = new BigDecimal(String.format("%.2f", progress.doubleValue() + 0.25));
+            progress = new BigDecimal(String.format("%.2f", progress.doubleValue() + 0.50));
             progressBar.setProgress(progress.doubleValue());
             //Set text to progress *100 add % string to end //change double to Integer and round
             //progressLabel.setText(Integer.toString((int) Math.round(progress.doubleValue() * 100)) + "%");
             progressPercentLabel.setText(Integer.toString((int) (progress.doubleValue() * 100)) + "%");
+
+            root = FXMLLoader.load(getClass().getResource("SignUpPage2.fxml"));
+            //get Source cast to a node //Pass node to Stage
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            //Pass the new fxml path to scene variable
+            scene = new Scene(root);
+            //pass scene to stage
+            stage.setScene(scene);
+            stage.show();
         }
+
     }
 
 
@@ -269,7 +269,7 @@ public class SignupPageController {
         //Method to access value in progress
         if (progress.doubleValue() < 1) {
             //must keep reInstantiate BigDecimals
-            progress = new BigDecimal(String.format("%.2f", progress.doubleValue() + -0.25));
+            progress = new BigDecimal(String.format("%.2f", progress.doubleValue() + -0.50));
             progressBar.setProgress(progress.doubleValue());
             //Set text to progress *100 add % string to end //change double to Integer and round
             //progressLabel.setText(Integer.toString((int) Math.round(progress.doubleValue() * 100)) + "%");
@@ -277,5 +277,6 @@ public class SignupPageController {
         }
 
     }
-    }
+
+}
 
