@@ -12,6 +12,7 @@ import javafx.stage.Stage;
 
 @SuppressWarnings("ALL")
 public class Main extends Application {
+    //Set Background as Bank.png and increase border size, make cleaner, less black
     @Override
     public void start(Stage primaryStage){
             try {

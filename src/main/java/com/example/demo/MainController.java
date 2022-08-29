@@ -15,15 +15,15 @@ import java.io.IOException;
 @SuppressWarnings("ALL")
 public class MainController {
     @FXML
-    private Button signupButton;
+    public Label emailLabel;
     @FXML
-    private Button loginButton;
+    public Label phoneLabel;
     @FXML
-    private Label baLable;
+    private AnchorPane anchorPane;
     @FXML
     private Label welcomeLabel;
     @FXML
-    private AnchorPane anchorPane;
+    private Button signupButton, loginButton;
     private Stage stage;
     private Scene scene;
     private Parent root;

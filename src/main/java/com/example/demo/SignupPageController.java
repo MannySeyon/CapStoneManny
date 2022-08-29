@@ -11,6 +11,7 @@ import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -27,7 +28,7 @@ public class SignupPageController {
     private String maritalSet = "";
     @FXML
     private Label DOBLabel, firstName1, LastName, MiddleName, SocialSecurity, Username, Password,
-            PhoneNumber, Email, SignupLabel, verifySSN, verifyPhone, verifyAgeLabel;
+            PhoneNumber, Email, SignupLabel, verifySSN, verifyPhone, verifyAgeLabel, progressLabel, progressPercentLabel;
     @FXML
     private RadioButton male;
     @FXML
@@ -47,6 +48,11 @@ public class SignupPageController {
     private AnchorPane anchorPane;
     @FXML
     private int age;
+    @FXML
+    private Button progressButton;
+    @FXML
+    private ProgressBar progressBar;
+    BigDecimal progress = new BigDecimal(String.format("%.2f", 0.0));
 
     @FXML
     public void getDate(ActionEvent event) {
@@ -92,18 +98,16 @@ public class SignupPageController {
                 verifySSN.setText("");
             }
 
-             if (checkPhoneInfo() == false || PhoneNumberF.getText().length() != 10) {
+            if (checkPhoneInfo() == false || PhoneNumberF.getText().length() != 10) {
                 PhoneNumberF.setStyle("-fx-text-box-border: #ff0000; -fx-focus-color: #ff0000;");
                 verifyPhone.setText("Your phone number is invalid.");
-            }
-            else {
+            } else {
                 verifyPhone.setText("");
             }
-            if (ageVerify() == false){
+            if (ageVerify() == false) {
                 datePicker.setStyle("-fx-text-box-border: #ff0000; -fx-focus-color: #ff0000;");
                 verifyAgeLabel.setText("You are not eligable to create an account");
-            }
-            else{
+            } else {
                 verifyAgeLabel.setText("");
             }
 
@@ -136,6 +140,7 @@ public class SignupPageController {
 
         }
     }
+
     public boolean ageVerify() {
         LocalDate today = LocalDate.now();
         LocalDate birthday = LocalDate.of(datePicker.getValue().getYear(),
@@ -152,7 +157,6 @@ public class SignupPageController {
             return true;
         }
     }
-
 
 
     public String genderCheck() {
@@ -229,4 +233,47 @@ public class SignupPageController {
         System.out.println(customer.getEmail());
         connection.close();
     }
-}
+    @FXML  //Set progress percents =to Scene pages for Sign up
+    protected void NextPage(ActionEvent event) throws IOException {
+
+        root = FXMLLoader.load(getClass().getResource("SignUpPage2.fxml"));
+        //get Source cast to a node //Pass node to Stage
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        //Pass the new fxml path to scene variable
+        scene = new Scene(root);
+        //pass scene to stage
+        stage.setScene(scene);
+        stage.show();
+        //Method to access value in progress
+        if (progress.doubleValue() < 1) {
+            //must keep reInstantiate BigDecimals
+            progress = new BigDecimal(String.format("%.2f", progress.doubleValue() + 0.25));
+            progressBar.setProgress(progress.doubleValue());
+            //Set text to progress *100 add % string to end //change double to Integer and round
+            //progressLabel.setText(Integer.toString((int) Math.round(progress.doubleValue() * 100)) + "%");
+            progressPercentLabel.setText(Integer.toString((int) (progress.doubleValue() * 100)) + "%");
+        }
+    }
+    @FXML
+    protected void PreviousPage(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("SignUpPage.fxml"));
+        //get Source cast to a node //Pass node to Stage
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        //Pass the new fxml path to scene variable
+        scene = new Scene(root);
+        //pass scene to stage
+        stage.setScene(scene);
+        stage.show();
+        //Method to access value in progress
+        if (progress.doubleValue() < 1) {
+            //must keep reInstantiate BigDecimals
+            progress = new BigDecimal(String.format("%.2f", progress.doubleValue() + -0.25));
+            progressBar.setProgress(progress.doubleValue());
+            //Set text to progress *100 add % string to end //change double to Integer and round
+            //progressLabel.setText(Integer.toString((int) Math.round(progress.doubleValue() * 100)) + "%");
+            progressPercentLabel.setText(Integer.toString((int) (progress.doubleValue() * 100)) + "%");
+        }
+
+    }
+    }
+

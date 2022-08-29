@@ -351,13 +351,15 @@
                                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                  </padding>
                               </Label>
-                              <FontAwesomeIconView fill="#d71d10" glyphName="ARROW_DOWN" selectionFill="#e1270a" size="18" textAlignment="CENTER" />
                               <Label fx:id="savingsBalance111" style="-fx-font-style: Bold;" text="\$73,890.01" textFill="#d71d10">
                                  <font>
                                     <Font name="Calibri Bold" size="10.0" />
                                  </font>
                               </Label>
-                              <Label alignment="CENTER" prefHeight="35.0" prefWidth="35.0" styleClass="circle_lb" />
+                              <Label alignment="CENTER" prefHeight="35.0" prefWidth="35.0" styleClass="circle_lb">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#d71d10" glyphName="ARROW_DOWN" selectionFill="#e1270a" size="18" textAlignment="CENTER" />
+                                 </graphic></Label>
                            </children>
                         </VBox>
                      </children>

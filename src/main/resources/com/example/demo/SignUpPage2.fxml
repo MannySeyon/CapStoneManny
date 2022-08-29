@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<!--suppress ALL -->
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1200.0" stylesheets="@SignUpPage.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SignupPageController">
+    <ImageView fitHeight="157.0" fitWidth="156.0" layoutX="31.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@/Summit Fin Corp.png" />
+        </image>
+    </ImageView>
+    <Button fx:id="Home" layoutX="23.0" layoutY="833.0" mnemonicParsing="false" onAction="#Home" prefHeight="42.0" prefWidth="95.0" text="Back Home" />
+    <Label fx:id="SignupLabel" alignment="CENTER" layoutX="42.0" layoutY="14.0" prefHeight="47.0" prefWidth="1120.0" text="Welcome To Summit Financial Corporation " AnchorPane.leftAnchor="42.0" AnchorPane.rightAnchor="38.0">
+        <font>
+            <Font name="Calibri" size="36.0" />
+        </font></Label>
+    <Button fx:id="SignupButton" layoutX="612.0" layoutY="833.0" mnemonicParsing="false" onAction="#NextPage" prefHeight="42.0" prefWidth="95.0" text="NEXT" />
+    <Label fx:id="verifyPhone" layoutX="42.0" layoutY="459.0" prefHeight="18.0" prefWidth="167.0" />
+    <Label fx:id="Username" alignment="CENTER" layoutX="567.0" layoutY="235.0" text="Username" />
+    <Label fx:id="Password" alignment="CENTER" layoutX="572.0" layoutY="304.0" text="Password" />
+    <Label fx:id="PhoneNumber" layoutX="555.0" layoutY="363.0" text="Phone Number" />
+    <Label fx:id="Email" alignment="CENTER" layoutX="569.0" layoutY="435.0" prefHeight="30.0" prefWidth="66.0" text="Email" />
+    <TextField fx:id="UsernameF" layoutX="515.0" layoutY="248.0" prefHeight="25.0" prefWidth="174.0" />
+    <TextField fx:id="PasswordF" layoutX="515.0" layoutY="313.0" prefHeight="25.0" prefWidth="174.0" />
+    <TextField fx:id="PhoneNumberF" layoutX="515.0" layoutY="381.0" prefHeight="25.0" prefWidth="174.0" />
+    <TextField fx:id="EmailF" layoutX="511.0" layoutY="464.0" prefHeight="25.0" prefWidth="174.0" />
+    <Label fx:id="verifyPhone" layoutX="42.0" layoutY="459.0" prefHeight="18.0" prefWidth="167.0" />
+    <RadioButton fx:id="male" layoutX="458.0" layoutY="642.0" mnemonicParsing="false" text="Male">
+        <toggleGroup>
+            <ToggleGroup fx:id="genderTogg" />
+        </toggleGroup></RadioButton>
+    <RadioButton fx:id="female" layoutX="542.0" layoutY="648.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="83.0" text="Female" toggleGroup="$genderTogg" />
+    <Label fx:id="Gender" layoutX="590.0" layoutY="621.0" text="Gender" />
+    <RadioButton fx:id="other" layoutX="640.0" layoutY="642.0" mnemonicParsing="false" text="Non-Binary" toggleGroup="$genderTogg" />
+    <Label layoutX="566.0" layoutY="530.0" text="Marital Status" />
+    <RadioButton fx:id="single" layoutX="515.0" layoutY="554.0" mnemonicParsing="false" text="Single">
+        <toggleGroup>
+            <ToggleGroup fx:id="maritalTogg" />
+        </toggleGroup></RadioButton>
+    <RadioButton fx:id="married" layoutX="608.0" layoutY="554.0" mnemonicParsing="false" text="Married" toggleGroup="$maritalTogg" />
+
+
+
+
+    <ProgressBar fx:id="progressBar" layoutX="305.0" layoutY="68.0" prefHeight="22.0" prefWidth="596.0" progress="0.0" />
+    <Button fx:id="progressButton" layoutX="498.0" layoutY="833.0" mnemonicParsing="false" onAction="#PreviousPage" prefHeight="42.0" prefWidth="95.0" text="BACK" />
+    <Label fx:id="progressLabel" alignment="CENTER" layoutX="232.0" layoutY="68.0" prefHeight="22.0" prefWidth="73.0" text="Progress">
+        <font>
+            <Font name="Calibri" size="18.0" />
+        </font>
+    </Label>
+    <Label fx:id="progressPercentLabel" alignment="CENTER" layoutX="901.0" layoutY="68.0" prefHeight="22.0" prefWidth="55.0" text="0%">
+        <font>
+            <Font name="Calibri" size="18.0" />
+        </font>
+    </Label>
+
+</AnchorPane>
