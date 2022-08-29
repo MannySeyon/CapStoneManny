@@ -26,11 +26,11 @@
         <AnchorPane fx:id="anchorPane" prefHeight="867.0" prefWidth="859.0" stylesheets="@Login1.css" BorderPane.alignment="CENTER">
             <style>-fx-background-color: black;</style>
          <children>
-            <Button fx:id="signupButton" layoutX="267.0" layoutY="295.0" mnemonicParsing="false" onAction="#SignUpPage" prefHeight="133.0" prefWidth="288.0" styleClass="acc_button" text="Signup" />
-            <Button fx:id="loginButton" layoutX="267.0" layoutY="504.0" mnemonicParsing="false" onAction="#LoginPage" prefHeight="133.0" prefWidth="288.0" styleClass="acc_button" text="Login" />
-            <Label fx:id="welcomeLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="98.0" layoutY="42.0" prefHeight="98.0" prefWidth="641.0" text="Welcome to Summit Financial Corporation!" textFill="#ebe8e8" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+            <Button fx:id="signupButton" layoutX="184.0" layoutY="255.0" mnemonicParsing="false" onAction="#SignUpPage" prefHeight="133.0" prefWidth="288.0" styleClass="acc_button" text="Signup" />
+            <Button fx:id="loginButton" layoutX="184.0" layoutY="400.0" mnemonicParsing="false" onAction="#LoginPage" prefHeight="133.0" prefWidth="288.0" styleClass="acc_button" text="Login" />
+            <Label fx:id="welcomeLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="40.0" layoutY="30.0" prefHeight="98.0" prefWidth="641.0" text="Welcome to Summit Financial Corporation!" textFill="#ebe8e8" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
                <font>
-                  <Font name="Calibri" size="36.0" />
+                  <Font name="Calibri" size="30.0" />
                </font>
             </Label>
          </children>

@@ -1,64 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<!--suppress ALL -->
 
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" stylesheets="@SignUpPage.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SignupPageController">
-   <ImageView fitHeight="157.0" fitWidth="156.0" layoutX="31.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-      <image>
-         <Image url="@/Summit Fin Corp.png" />
-      </image>
-   </ImageView>
-   <Button fx:id="Home" layoutX="356.0" layoutY="719.0" mnemonicParsing="false" onAction="#Home" prefHeight="42.0" prefWidth="95.0" text="Back Home" />
-   <Label fx:id="SignupLabel" alignment="CENTER" layoutX="42.0" layoutY="14.0" prefHeight="47.0" prefWidth="1120.0" text="Welcome To Summit Financial Corporation " AnchorPane.leftAnchor="42.0" AnchorPane.rightAnchor="38.0">
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" stylesheets="@SignUpPage.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SignupPageController">
+   <Label fx:id="SignupLabel" alignment="CENTER" layoutX="42.0" layoutY="14.0" prefHeight="47.0" prefWidth="1120.0" text="Welcome To Summit Financial Corporation " AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
       <font>
          <Font name="Calibri" size="36.0" />
       </font></Label>
-   <Label fx:id="DOBLabel" layoutX="566.0" layoutY="581.0" prefHeight="29.0" prefWidth="72.0" text="Date Of Birth" />
-   <Button fx:id="SignupButton" layoutX="579.0" layoutY="719.0" mnemonicParsing="false" onAction="#NextPage" prefHeight="42.0" prefWidth="95.0" text="NEXT" />
-   <Label fx:id="firstName1" layoutX="571.0" layoutY="176.0" prefHeight="25.0" prefWidth="63.0" text="First Name" />
-   <Label fx:id="MiddleName" layoutX="566.0" layoutY="235.0" text="Middle Name" />
-   <Label fx:id="LastName" layoutX="578.0" layoutY="290.0" prefHeight="18.0" prefWidth="63.0" text="Last Name" />
-   <Label fx:id="SocialSecurity" layoutX="566.0" layoutY="333.0" text="Social Security " />
-   <DatePicker fx:id="datePicker" layoutX="515.0" layoutY="605.0" onAction="#getDate" promptText="Enter a Date" />
-   <TextField fx:id="FirstNameF" layoutX="518.0" layoutY="201.0" prefHeight="25.0" prefWidth="174.0" />
-   <TextField fx:id="MiddleNameF" layoutX="518.0" layoutY="254.0" prefHeight="25.0" prefWidth="174.0" />
-   <TextField fx:id="LastNameF" layoutX="516.0" layoutY="305.0" prefHeight="25.0" prefWidth="174.0" />
-   <TextField fx:id="SocialSecurityF" layoutX="516.0" layoutY="350.0" prefHeight="25.0" prefWidth="174.0" />
-   <TextField fx:id="Apartment" layoutX="515.0" layoutY="551.0" prefHeight="25.0" prefWidth="174.0" />
-   <Label fx:id="verifySSN" layoutX="23.0" layoutY="243.0" prefHeight="47.0" prefWidth="192.0" />
-   <Label fx:id="verifyPhone" layoutX="42.0" layoutY="459.0" prefHeight="18.0" prefWidth="167.0" />
-   <Label layoutX="573.0" layoutY="534.0" text="Apart/unit" />
-   <Label fx:id="verifyAgeLabel" layoutX="645.0" layoutY="258.0" />
+   <Label fx:id="DOBLabel" layoutX="420.0" layoutY="262.0" prefHeight="29.0" prefWidth="72.0" text="Date Of Birth" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+   <Label fx:id="FirstName" layoutX="494.0" layoutY="106.0" prefHeight="25.0" prefWidth="63.0" text="First Name" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+   <Label fx:id="MiddleName" layoutX="489.0" layoutY="165.0" text="Middle Name" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+   <Label fx:id="LastName" layoutX="501.0" layoutY="220.0" prefHeight="18.0" prefWidth="63.0" text="Last Name" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+   <DatePicker fx:id="datePicker" layoutX="420.0" layoutY="286.0" onAction="#getDate" promptText="Enter a Date" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+   <TextField fx:id="FirstNameF" layoutX="441.0" layoutY="131.0" prefHeight="25.0" prefWidth="174.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+   <TextField fx:id="MiddleNameF" layoutX="441.0" layoutY="184.0" prefHeight="25.0" prefWidth="174.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+   <TextField fx:id="LastNameF" layoutX="439.0" layoutY="235.0" prefHeight="25.0" prefWidth="174.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+   <TextField fx:id="ApartmentF" layoutX="438.0" layoutY="481.0" prefHeight="25.0" prefWidth="174.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+   <Label fx:id="apt" layoutX="496.0" layoutY="464.0" text="Apt/Unit" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
    <ProgressBar fx:id="progressBar" layoutX="204.0" layoutY="68.0" prefHeight="22.0" prefWidth="596.0" progress="0.0" />
-   <Button fx:id="progressButton" layoutX="467.0" layoutY="719.0" mnemonicParsing="false" onAction="#PreviousPage" prefHeight="42.0" prefWidth="95.0" text="BACK" />
-   <Label fx:id="progressLabel" alignment="CENTER" layoutX="126.0" layoutY="68.0" prefHeight="22.0" prefWidth="73.0" text="Progress">
+   <Label fx:id="progressLabel" alignment="CENTER" layoutX="131.0" layoutY="68.0" prefHeight="22.0" prefWidth="73.0" text="Progress">
       <font>
          <Font name="Calibri" size="18.0" />
       </font>
    </Label>
-   <Separator layoutX="455.0" layoutY="332.0" prefWidth="300.0" />
-   <Separator layoutX="455.0" layoutY="289.0" prefWidth="300.0" />
-   <Separator layoutX="453.0" layoutY="481.0" prefWidth="300.0" />
-   <Separator layoutX="451.0" layoutY="533.0" prefWidth="300.0" />
-   <Separator layoutX="452.0" layoutY="581.0" prefWidth="300.0" />
-   <TextField fx:id="Street" layoutX="515.0" layoutY="402.0" prefHeight="25.0" prefWidth="174.0" />
-   <TextField fx:id="City1" layoutX="513.0" layoutY="499.0" prefHeight="25.0" prefWidth="174.0" />
-   <Label layoutX="572.0" layoutY="385.0" text="Street Name" />
-   <Label layoutX="588.0" layoutY="482.0" text="City" />
-   <TextField fx:id="ZipCode" layoutX="514.0" layoutY="454.0" prefHeight="25.0" prefWidth="174.0" />
-   <Label layoutX="578.0" layoutY="433.0" text="Zip Code" />
-   <Separator layoutX="455.0" layoutY="432.0" prefWidth="300.0" />
-   <Separator layoutX="455.0" layoutY="383.0" prefWidth="300.0" />
-   <Label fx:id="progressPercentLabel" alignment="CENTER" layoutX="802.0" layoutY="68.0" prefHeight="22.0" prefWidth="55.0" text="0%">
+   <Separator layoutX="378.0" layoutY="262.0" prefWidth="300.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+   <Separator layoutX="378.0" layoutY="219.0" prefWidth="300.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+   <Separator layoutX="376.0" layoutY="411.0" prefWidth="300.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+   <Separator layoutX="374.0" layoutY="463.0" prefWidth="300.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+   <Separator layoutX="375.0" layoutY="511.0" prefWidth="300.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+   <TextField fx:id="StreetF" layoutX="438.0" layoutY="332.0" prefHeight="25.0" prefWidth="174.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+   <TextField fx:id="CityF" layoutX="436.0" layoutY="429.0" prefHeight="25.0" prefWidth="174.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+   <Label fx:id="streetName" layoutX="495.0" layoutY="315.0" text="Street Name" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+   <Label layoutX="511.0" layoutY="412.0" text="City" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+   <TextField fx:id="ZipCodeF" layoutX="437.0" layoutY="384.0" prefHeight="25.0" prefWidth="174.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+   <Label fx:id="zipCode" layoutX="501.0" layoutY="363.0" text="Zip Code" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+   <Separator layoutX="378.0" layoutY="362.0" prefWidth="300.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+   <Separator layoutX="378.0" layoutY="313.0" prefWidth="300.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+   <Label fx:id="progressPercentLabel" alignment="CENTER" layoutX="800.0" layoutY="68.0" prefHeight="22.0" prefWidth="55.0" text="0%">
       <font>
          <Font name="Calibri" size="18.0" />
       </font>
    </Label>
-   <Separator layoutX="462.0" layoutY="234.0" prefWidth="300.0" />
+   <Separator layoutX="385.0" layoutY="164.0" prefWidth="300.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+   <Button fx:id="SignupButton" contentDisplay="CENTER" layoutX="579.0" layoutY="530.0" mnemonicParsing="false" onAction="#Signup" prefHeight="50.0" prefWidth="50.0" styleClass="Button" stylesheets="@SignUpPage.css">
+      <graphic>
+         <FontAwesomeIconView fill="#d4b85d" glyphName="USER_PLUS" size="25" />
+      </graphic>
+   </Button>
+   <Button fx:id="Home" alignment="CENTER" layoutX="395.0" layoutY="530.0" mnemonicParsing="false" onAction="#Home" prefHeight="50.0" prefWidth="50.0" styleClass="Button" stylesheets="@SignUpPage.css">
+      <graphic>
+         <FontAwesomeIconView fill="#d4b85d" glyphName="HOME" size="25" />
+      </graphic>
+   </Button>
+   <Button fx:id="nextButton" contentDisplay="CENTER" layoutX="519.0" layoutY="530.0" mnemonicParsing="false" onAction="#NextPage" prefHeight="50.0" prefWidth="50.0" styleClass="Button" stylesheets="@SignUpPage.css">
+      <graphic>
+         <FontAwesomeIconView fill="#d4b85d" glyphName="ARROW_RIGHT" size="25" />
+      </graphic>
+   </Button>
+   <Button fx:id="progressButton" alignment="CENTER" layoutX="462.0" layoutY="530.0" mnemonicParsing="false" onAction="#PreviousPage" prefHeight="50.0" prefWidth="50.0" styleClass="Button" stylesheets="@SignUpPage.css">
+      <graphic>
+         <FontAwesomeIconView fill="#d4b85d" glyphName="ARROW_LEFT" size="25" />
+      </graphic>
+   </Button>
+   <Button fx:id="LoginButton" alignment="CENTER" layoutX="334.0" layoutY="530.0" mnemonicParsing="false" onAction="#LoginPage" prefHeight="50.0" prefWidth="50.0" styleClass="Button" stylesheets="@SignUpPage.css">
+      <graphic>
+         <FontAwesomeIconView fill="#d4b85d" glyphName="USER" size="25" />
+      </graphic>
+   </Button>
 
 </AnchorPane>
