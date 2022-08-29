@@ -26,7 +26,7 @@ public class SignupPageController {
     private String genderSet = "";
     private String maritalSet = "";
     @FXML
-    private Label DOBLabel, FirstName, LastName, MiddleName, SocialSecurity, Username, Password, zipCode, streetName,
+    private Label DOBLabel, FirstName, LastName, MiddleName, SocialSecurity, Username, Password, zipCode, streetName, apt,
             PhoneNumber, Email, SignupLabel, verifySSN, verifyPhone, verifyAgeLabel, progressLabel, progressPercentLabel;
     @FXML
     private RadioButton male, other,female, single, married;
