@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" stylesheets="@SignUpPage.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SignupPageController">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" stylesheets="@SignUpPage.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SignupPageController">
     <Label fx:id="Username" layoutX="416.0" layoutY="120.0" stylesheets="@Landing.css" text="Username" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
     <Label fx:id="Password" layoutX="416.0" layoutY="170.0" stylesheets="@Landing.css" text="Password" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
     <Label fx:id="PhoneNumber" layoutX="416.0" layoutY="225.0" stylesheets="@Landing.css" text="Phone Number" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
@@ -14,6 +14,13 @@
     <TextField fx:id="PasswordF" layoutX="416.0" layoutY="188.0" prefHeight="25.0" prefWidth="174.0" styleClass="TextFields" stylesheets="@SignUpPage.css" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
     <TextField fx:id="PhoneNumberF" layoutX="416.0" layoutY="243.0" prefHeight="25.0" prefWidth="174.0" styleClass="TextFields" stylesheets="@SignUpPage.css" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
     <TextField fx:id="EmailF" layoutX="416.0" layoutY="295.0" prefHeight="25.0" prefWidth="174.0" styleClass="TextFields" stylesheets="@SignUpPage.css" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+    <TextField fx:id="SocialSecurityF" layoutX="416.0" layoutY="345.0" prefHeight="25.0" prefWidth="174.0" styleClass="TextFields" stylesheets="@SignUpPage.css" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+    <Label layoutX="416.0" layoutY="385.0" stylesheets="@Landing.css" text="Marital Status" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+    <RadioButton fx:id="single" layoutX="429.0" layoutY="412.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="83.0" stylesheets="@Landing.css" text="Single" AnchorPane.leftAnchor="429.0" AnchorPane.rightAnchor="512.0">
+        <toggleGroup>
+            <ToggleGroup fx:id="maritalTogg" />
+        </toggleGroup></RadioButton>
+    <RadioButton fx:id="married" layoutX="512.0" layoutY="412.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="92.0" stylesheets="@Landing.css" text="Married" toggleGroup="$maritalTogg" AnchorPane.leftAnchor="512.0" AnchorPane.rightAnchor="420.0" />
     <RadioButton fx:id="male" layoutX="393.0" layoutY="471.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="73.0" stylesheets="@Landing.css" text="Male" AnchorPane.leftAnchor="393.0" AnchorPane.rightAnchor="558.0">
         <toggleGroup>
             <ToggleGroup fx:id="genderTogg" />
@@ -21,14 +28,7 @@
     <RadioButton fx:id="female" layoutX="461.0" layoutY="477.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="83.0" stylesheets="@Landing.css" text="Female" toggleGroup="$genderTogg" AnchorPane.leftAnchor="461.0" AnchorPane.rightAnchor="480.0" />
     <Label layoutX="416.0" layoutY="453.0" stylesheets="@Landing.css" text="Gender" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
     <RadioButton fx:id="other" layoutX="544.0" layoutY="471.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="103.0" stylesheets="@Landing.css" text="Non-Binary" toggleGroup="$genderTogg" AnchorPane.leftAnchor="544.0" AnchorPane.rightAnchor="377.0" />
-    <Label layoutX="416.0" layoutY="385.0" stylesheets="@Landing.css" text="Marital Status" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
-    <RadioButton fx:id="single" layoutX="429.0" layoutY="412.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="83.0" stylesheets="@Landing.css" text="Single" AnchorPane.leftAnchor="429.0" AnchorPane.rightAnchor="512.0">
-        <toggleGroup>
-            <ToggleGroup fx:id="maritalTogg" />
-        </toggleGroup></RadioButton>
-    <RadioButton fx:id="married" layoutX="512.0" layoutY="412.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="92.0" stylesheets="@Landing.css" text="Married" toggleGroup="$maritalTogg" AnchorPane.leftAnchor="512.0" AnchorPane.rightAnchor="420.0" />
    <Label fx:id="SocialSecurity" layoutX="416.0" layoutY="327.0" prefWidth="100.0" stylesheets="@Landing.css" text="Social Security " AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
-   <TextField fx:id="SocialSecurityF" layoutX="416.0" layoutY="345.0" prefHeight="25.0" prefWidth="174.0" styleClass="TextFields" stylesheets="@SignUpPage.css" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
    <Button fx:id="SignupButton2" contentDisplay="CENTER" layoutX="592.0" layoutY="520.0" mnemonicParsing="false" onAction="#Signup" prefHeight="50.0" prefWidth="50.0" styleClass="Button" stylesheets="@SignUpPage.css">
       <graphic>
          <FontAwesomeIconView fill="#d4b85d" glyphName="USER_PLUS" size="25" />

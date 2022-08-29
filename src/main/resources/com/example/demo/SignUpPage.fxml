@@ -5,9 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-
-
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" stylesheets="@SignUpPage.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SignupPageController">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" stylesheets="@SignUpPage.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SignupPageController">
    <Label fx:id="SignupLabel" alignment="CENTER" layoutX="42.0" layoutY="14.0" prefHeight="47.0" prefWidth="1120.0" text="Welcome To Summit Financial Corporation " AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
       <font>
          <Font name="Calibri" size="36.0" />
@@ -16,12 +14,15 @@
    <Label fx:id="FirstName" layoutX="494.0" layoutY="106.0" prefHeight="25.0" prefWidth="63.0" text="First Name" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
    <Label fx:id="MiddleName" layoutX="489.0" layoutY="165.0" text="Middle Name" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
    <Label fx:id="LastName" layoutX="501.0" layoutY="220.0" prefHeight="18.0" prefWidth="63.0" text="Last Name" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
-   <DatePicker fx:id="datePicker" layoutX="420.0" layoutY="286.0" onAction="#getDate" promptText="Enter a Date" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
    <TextField fx:id="FirstNameF" layoutX="441.0" layoutY="131.0" prefHeight="25.0" prefWidth="174.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
    <TextField fx:id="MiddleNameF" layoutX="441.0" layoutY="184.0" prefHeight="25.0" prefWidth="174.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
    <TextField fx:id="LastNameF" layoutX="439.0" layoutY="235.0" prefHeight="25.0" prefWidth="174.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
-   <TextField fx:id="ApartmentF" layoutX="438.0" layoutY="481.0" prefHeight="25.0" prefWidth="174.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
-   <Label fx:id="apt" layoutX="496.0" layoutY="464.0" text="Apt/Unit" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+   <DatePicker fx:id="datePicker" layoutX="420.0" layoutY="286.0" onAction="#getDate" promptText="Enter a Date" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+   <TextField fx:id="StreetF" layoutX="438.0" layoutY="332.0" prefHeight="25.0" prefWidth="174.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+   <TextField fx:id="CityF" layoutX="420.0" layoutY="382.0" prefHeight="25.0" prefWidth="174.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+   <TextField fx:id="ApartmentF" layoutX="420.0" layoutY="432.0" prefHeight="25.0" prefWidth="174.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+   <TextField fx:id="ZipCodeF" layoutX="420.0" layoutY="484.0" prefHeight="26.0" prefWidth="184.0" />
+   <Label fx:id="apt" layoutX="420.0" layoutY="415.0" text="Apt/Unit" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
    <ProgressBar fx:id="progressBar" layoutX="204.0" layoutY="68.0" prefHeight="22.0" prefWidth="596.0" progress="0.0" />
    <Label fx:id="progressLabel" alignment="CENTER" layoutX="131.0" layoutY="68.0" prefHeight="22.0" prefWidth="73.0" text="Progress">
       <font>
@@ -33,12 +34,9 @@
    <Separator layoutX="376.0" layoutY="411.0" prefWidth="300.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
    <Separator layoutX="374.0" layoutY="463.0" prefWidth="300.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
    <Separator layoutX="375.0" layoutY="511.0" prefWidth="300.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
-   <TextField fx:id="StreetF" layoutX="438.0" layoutY="332.0" prefHeight="25.0" prefWidth="174.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
-   <TextField fx:id="CityF" layoutX="436.0" layoutY="429.0" prefHeight="25.0" prefWidth="174.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
    <Label fx:id="streetName" layoutX="495.0" layoutY="315.0" text="Street Name" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
-   <Label layoutX="511.0" layoutY="412.0" text="City" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
-   <TextField fx:id="ZipCodeF" layoutX="437.0" layoutY="384.0" prefHeight="25.0" prefWidth="174.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
-   <Label fx:id="zipCode" layoutX="501.0" layoutY="363.0" text="Zip Code" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+   <Label layoutX="420.0" layoutY="364.0" text="City" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+   <Label fx:id="zipCode" layoutX="420.0" layoutY="466.0" text="Zip Code" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
    <Separator layoutX="378.0" layoutY="362.0" prefWidth="300.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
    <Separator layoutX="378.0" layoutY="313.0" prefWidth="300.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
    <Label fx:id="progressPercentLabel" alignment="CENTER" layoutX="800.0" layoutY="68.0" prefHeight="22.0" prefWidth="55.0" text="0%">
