@@ -54,5 +54,6 @@
             <Font name="Calibri" size="18.0" />
         </font>
     </Label>
+   <Button fx:id="Home1" layoutX="1067.0" layoutY="833.0" mnemonicParsing="false" onAction="#Signup" prefHeight="42.0" prefWidth="95.0" text="SIGNUP" />
 
 </AnchorPane>
