@@ -254,6 +254,8 @@ public class SignupPageController {
             progressPercentLabel.setText(Integer.toString((int) (progress.doubleValue() * 100)) + "%");
         }
     }
+
+
     @FXML
     protected void PreviousPage(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("SignUpPage.fxml"));
