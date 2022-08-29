@@ -12,9 +12,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import java.io.IOException;
 import java.math.BigDecimal;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 import java.time.LocalDate;
 import java.time.Period;
 
@@ -276,6 +274,26 @@ public class SignupPageController {
             progressPercentLabel.setText(Integer.toString((int) (progress.doubleValue() * 100)) + "%");
         }
 
+////        public static void CheckUsernameExists() {
+////            try {
+////                Connectivity connectivity = new Connectivity();
+////                Connection connection = connectivity.getConnection();
+////                Statement stmt = connection.createStatement();
+////                String SQL = "SELECT * FROM customer_personal_info WHERE username = ' " +
+////
+////            } catch (SQLException e) {
+////                throw new RuntimeException(e);
+////            }
+////        }
+//
+//        Connectivity connectivity = new Connectivity();
+//        Connection connection = connectivity.getConnection();
+//        DatabaseMetaData md = connection.getMetaData();
+//        ResultSet rs = md.getColumns(null, null, "table_name", "column_name");
+//        if (rs.next()) {
+//            //Column in table exist
+//        }
+
     }
-    }
+}
 
