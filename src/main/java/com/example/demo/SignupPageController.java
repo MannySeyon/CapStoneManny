@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
 
@@ -21,21 +22,20 @@ import java.time.LocalDate;
 @SuppressWarnings("ALL")
 public class SignupPageController {
     @FXML
-    private TextField SocialSecurityF, UsernameF, PasswordF, PhoneNumberF, EmailF
-            , LastNameF, FirstNameF, StreetF, MiddleNameF, CityF, ZipCodeF, ApartmentF, Gender, MaritalStatus;
+    private TextField SocialSecurityF, UsernameF, PasswordF, PhoneNumberF, EmailF, LastNameF, FirstNameF, StreetF, MiddleNameF, CityF, ZipCodeF, ApartmentF, Gender, MaritalStatus;
     private String genderSet = "";
     private String maritalSet = "";
     @FXML
     private Label DOBLabel, FirstName, LastName, MiddleName, SocialSecurity, Username, Password, zipCode, streetName, apt,
             PhoneNumber, Email, SignupLabel, verifySSN, verifyPhone, verifyAgeLabel, progressLabel, progressPercentLabel;
     @FXML
-    private RadioButton male, other,female, single, married;
+    private RadioButton male, other, female, single, married;
 
     private Stage stage;
     private Scene scene;
     private Parent root;
     @FXML
-    private Button LoginButton,  Home,  SignupButton, nextButton,
+    private Button LoginButton, Home, SignupButton, nextButton,
             progressButton;
     @FXML
     private DatePicker datePicker;
@@ -71,6 +71,7 @@ public class SignupPageController {
         stage.setScene(scene);
         stage.show();
     }
+
     @FXML
     protected void LoginPage(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
@@ -80,6 +81,7 @@ public class SignupPageController {
         stage.show();
 
     }
+
     public void verify(ActionEvent actionEvent) throws Exception {
         String[] verifyTextfield = new String[]{FirstNameF.getText(), LastNameF.getText(), SocialSecurityF.getText(),
                 UsernameF.getText(), PasswordF.getText(), PhoneNumberF.getText(), EmailF.getText(), StreetF.getText(), CityF.getText(), ZipCodeF.getText(), ApartmentF.getText()};
@@ -131,6 +133,7 @@ public class SignupPageController {
             return false;
         }
     }
+
     public boolean checkPhoneInfo() throws Exception, ArithmeticException {
 
         try {
@@ -141,6 +144,7 @@ public class SignupPageController {
 
         }
     }
+
     public boolean ageVerify() {
         LocalDate today = LocalDate.now();
         LocalDate birthday = LocalDate.of(datePicker.getValue().getYear(),
@@ -231,6 +235,7 @@ public class SignupPageController {
         System.out.println(customer.getEmail());
         connection.close();
     }
+
     @FXML  //Set progress percents =to Scene pages for Sign up
     protected void NextPage(ActionEvent event) throws IOException {
 
@@ -257,7 +262,7 @@ public class SignupPageController {
 
 
     @FXML
-    protected void PreviousPage(ActionEvent event) throws IOException {
+    protected void PreviousPage(ActionEvent event) throws IOException, SQLException {
         root = FXMLLoader.load(getClass().getResource("SignUpPage.fxml"));
         //get Source cast to a node //Pass node to Stage
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -278,5 +283,17 @@ public class SignupPageController {
 
     }
 
+    public void CheckIfUserExists() throws SQLException {
+        Connectivity connectivity = new Connectivity();
+        Connection connection = connectivity.getConnection();
+        String query = "SELECT * FROM customer_personal_info WHERE ssn = ?";
+        PreparedStatement statement = connection.prepareStatement(query);
+        statement.setString(1, SocialSecurityF.getText());
+        ResultSet resultSet = statement.executeQuery();
+        if (resultSet.next()) {
+
+        }
+
+    }
 }
 
