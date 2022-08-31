@@ -102,6 +102,8 @@ public class DashBoardController  {
         nameLabel.setText("Hello, " + "firstName + lastName" + ". Welcome to your Summit Dashboard!" );
     }
 
+
+
 //    @Override
 //    public void initialize(URL url, ResourceBundle resourceBundle) {
 //

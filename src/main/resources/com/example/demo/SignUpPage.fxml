@@ -10,41 +10,34 @@
       <font>
          <Font name="Calibri" size="36.0" />
       </font></Label>
-   <Label fx:id="DOBLabel" layoutX="420.0" layoutY="262.0" prefHeight="29.0" prefWidth="72.0" text="Date Of Birth" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
-   <Label fx:id="FirstName" layoutX="494.0" layoutY="106.0" prefHeight="25.0" prefWidth="63.0" text="First Name" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
-   <Label fx:id="MiddleName" layoutX="489.0" layoutY="165.0" text="Middle Name" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
-   <Label fx:id="LastName" layoutX="501.0" layoutY="220.0" prefHeight="18.0" prefWidth="63.0" text="Last Name" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
-   <TextField fx:id="FirstNameF" layoutX="441.0" layoutY="131.0" prefHeight="25.0" prefWidth="174.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
-   <TextField fx:id="MiddleNameF" layoutX="441.0" layoutY="184.0" prefHeight="25.0" prefWidth="174.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
-   <TextField fx:id="LastNameF" layoutX="439.0" layoutY="235.0" prefHeight="25.0" prefWidth="174.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
-   <DatePicker fx:id="datePicker" layoutX="420.0" layoutY="286.0" onAction="#getDate" promptText="Enter a Date" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
-   <TextField fx:id="StreetF" layoutX="438.0" layoutY="332.0" prefHeight="25.0" prefWidth="174.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
-   <TextField fx:id="CityF" layoutX="420.0" layoutY="382.0" prefHeight="25.0" prefWidth="174.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
-   <TextField fx:id="ApartmentF" layoutX="420.0" layoutY="432.0" prefHeight="25.0" prefWidth="174.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
-   <TextField fx:id="ZipCodeF" layoutX="420.0" layoutY="484.0" prefHeight="26.0" prefWidth="184.0" />
-   <Label fx:id="apt" layoutX="420.0" layoutY="415.0" text="Apt/Unit" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+   <Label fx:id="DOBLabel" layoutX="131.0" layoutY="185.0" prefHeight="18.0" prefWidth="184.0" text="Date Of Birth" AnchorPane.leftAnchor="131.0" AnchorPane.rightAnchor="709.0" />
+   <Label fx:id="FirstName" layoutX="131.0" layoutY="134.0" prefHeight="25.0" prefWidth="63.0" text="First Name" AnchorPane.leftAnchor="131.0" AnchorPane.rightAnchor="709.0" />
+   <Label fx:id="MiddleName" layoutX="333.0" layoutY="138.0" text="Middle Name" AnchorPane.leftAnchor="333.0" AnchorPane.rightAnchor="507.0" />
+   <Label fx:id="LastName" layoutX="537.0" layoutY="137.0" prefHeight="18.0" prefWidth="63.0" text="Last Name" AnchorPane.leftAnchor="537.0" AnchorPane.rightAnchor="303.0" />
+   <TextField fx:id="FirstNameF" layoutX="131.0" layoutY="155.0" prefHeight="25.0" prefWidth="174.0" AnchorPane.leftAnchor="131.0" AnchorPane.rightAnchor="709.0" />
+   <TextField fx:id="MiddleNameF" layoutX="333.0" layoutY="155.0" prefHeight="25.0" prefWidth="174.0" AnchorPane.leftAnchor="333.0" AnchorPane.rightAnchor="507.0" />
+   <TextField fx:id="LastNameF" layoutX="537.0" layoutY="155.0" prefHeight="25.0" prefWidth="174.0" AnchorPane.leftAnchor="537.0" AnchorPane.rightAnchor="303.0" />
+   <DatePicker fx:id="datePicker" layoutX="131.0" layoutY="205.0" onAction="#getDate" promptText="Enter a Date" AnchorPane.leftAnchor="131.0" AnchorPane.rightAnchor="709.0" />
+   <TextField fx:id="StreetF" layoutX="131.0" layoutY="306.0" prefHeight="25.0" prefWidth="174.0" AnchorPane.leftAnchor="131.0" AnchorPane.rightAnchor="709.0" />
+   <TextField fx:id="CityF" layoutX="333.0" layoutY="305.0" prefHeight="25.0" prefWidth="174.0" AnchorPane.leftAnchor="333.0" AnchorPane.rightAnchor="507.0" />
+   <TextField fx:id="ApartmentF" layoutX="537.0" layoutY="304.0" prefHeight="26.0" prefWidth="64.0" AnchorPane.leftAnchor="537.0" AnchorPane.rightAnchor="423.0" />
+   <TextField fx:id="ZipCodeF" layoutX="622.0" layoutY="305.0" prefHeight="26.0" prefWidth="135.0" />
+   <Label fx:id="apt" layoutX="537.0" layoutY="286.0" prefHeight="18.0" prefWidth="64.0" text="State" AnchorPane.leftAnchor="537.0" AnchorPane.rightAnchor="423.0" />
    <ProgressBar fx:id="progressBar" layoutX="204.0" layoutY="68.0" prefHeight="22.0" prefWidth="596.0" progress="0.0" />
    <Label fx:id="progressLabel" alignment="CENTER" layoutX="131.0" layoutY="68.0" prefHeight="22.0" prefWidth="73.0" text="Progress">
       <font>
          <Font name="Calibri" size="18.0" />
       </font>
    </Label>
-   <Separator layoutX="378.0" layoutY="262.0" prefWidth="300.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
-   <Separator layoutX="378.0" layoutY="219.0" prefWidth="300.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
-   <Separator layoutX="376.0" layoutY="411.0" prefWidth="300.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
-   <Separator layoutX="374.0" layoutY="463.0" prefWidth="300.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
    <Separator layoutX="375.0" layoutY="511.0" prefWidth="300.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
-   <Label fx:id="streetName" layoutX="495.0" layoutY="315.0" text="Street Name" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
-   <Label layoutX="420.0" layoutY="364.0" text="City" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
-   <Label fx:id="zipCode" layoutX="420.0" layoutY="466.0" text="Zip Code" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
-   <Separator layoutX="378.0" layoutY="362.0" prefWidth="300.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
-   <Separator layoutX="378.0" layoutY="313.0" prefWidth="300.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+   <Label fx:id="streetName" layoutX="131.0" layoutY="288.0" text="Street Name" AnchorPane.leftAnchor="131.0" AnchorPane.rightAnchor="709.0" />
+   <Label layoutX="333.0" layoutY="287.0" text="City" AnchorPane.leftAnchor="333.0" AnchorPane.rightAnchor="507.0" />
+   <Label fx:id="zipCode" layoutX="622.0" layoutY="287.0" prefHeight="18.0" prefWidth="135.0" text="Zip Code" AnchorPane.leftAnchor="622.0" AnchorPane.rightAnchor="267.0" />
    <Label fx:id="progressPercentLabel" alignment="CENTER" layoutX="800.0" layoutY="68.0" prefHeight="22.0" prefWidth="55.0" text="0%">
       <font>
          <Font name="Calibri" size="18.0" />
       </font>
    </Label>
-   <Separator layoutX="385.0" layoutY="164.0" prefWidth="300.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
    <Button fx:id="SignupButton" contentDisplay="CENTER" layoutX="579.0" layoutY="530.0" mnemonicParsing="false" onAction="#Signup" prefHeight="50.0" prefWidth="50.0" styleClass="Button" stylesheets="@SignUpPage.css">
       <graphic>
          <FontAwesomeIconView fill="#d4b85d" glyphName="USER_PLUS" size="25" />
@@ -70,5 +63,29 @@
          <FontAwesomeIconView fill="#d4b85d" glyphName="USER" size="25" />
       </graphic>
    </Button>
+   <Label layoutX="601.0" layoutY="133.0" />
+   <Label layoutX="333.0" layoutY="185.0" text="Social Security Number" />
+   <Label layoutX="334.0" layoutY="235.0" text="Email" />
+   <Label layoutX="131.0" layoutY="375.0" text="Username" />
+   <Label layoutX="334.0" layoutY="375.0" text="Password" />
+   <TextField layoutX="131.0" layoutY="255.0" prefHeight="26.0" prefWidth="184.0" />
+   <TextField layoutX="333.0" layoutY="204.0" prefHeight="26.0" prefWidth="184.0" />
+   <TextField layoutX="333.0" layoutY="255.0" prefHeight="26.0" prefWidth="184.0" />
+   <TextField layoutX="131.0" layoutY="393.0" prefHeight="26.0" prefWidth="184.0" />
+   <TextField layoutX="333.0" layoutY="393.0" prefHeight="26.0" prefWidth="184.0" />
+   <Label layoutX="131.0" layoutY="235.0" prefHeight="18.0" prefWidth="184.0" text="Phone Number" />
+   <Label layoutX="604.0" layoutY="347.0" text="Marital Status" />
+   <Label layoutX="855.0" layoutY="347.0" text="Gender" />
+   <RadioButton layoutX="577.0" layoutY="366.0" mnemonicParsing="false" text="Single">
+      <toggleGroup>
+         <ToggleGroup fx:id="maritaltoggle" />
+      </toggleGroup></RadioButton>
+   <RadioButton layoutX="658.0" layoutY="366.0" mnemonicParsing="false" text="Married" toggleGroup="$maritaltoggle" />
+   <RadioButton layoutX="910.0" layoutY="366.0" mnemonicParsing="false" text="Non-Binary">
+      <toggleGroup>
+         <ToggleGroup fx:id="gendertoggle" />
+      </toggleGroup></RadioButton>
+   <RadioButton layoutX="837.0" layoutY="366.0" mnemonicParsing="false" text="Female" toggleGroup="$gendertoggle" />
+   <RadioButton layoutX="776.0" layoutY="366.0" mnemonicParsing="false" text="Male" toggleGroup="$gendertoggle" />
 
 </AnchorPane>
