@@ -20,82 +20,72 @@
       <font>
          <Font name="Calibri" size="36.0" />
       </font></Label>
+
+   <!-- Labels for signup information -->
    <Label fx:id="DOBLabel" layoutX="131.0" layoutY="185.0" prefHeight="18.0" prefWidth="184.0" text="Date Of Birth" AnchorPane.leftAnchor="131.0" AnchorPane.rightAnchor="709.0" />
-   <Label fx:id="FirstName" layoutX="131.0" layoutY="134.0" prefHeight="25.0" prefWidth="63.0" text="First Name" AnchorPane.leftAnchor="131.0" AnchorPane.rightAnchor="709.0" />
-   <Label fx:id="MiddleName" layoutX="333.0" layoutY="138.0" text="Middle Name" AnchorPane.leftAnchor="333.0" AnchorPane.rightAnchor="507.0" />
-   <Label fx:id="LastName" layoutX="537.0" layoutY="137.0" prefHeight="18.0" prefWidth="63.0" text="Last Name" AnchorPane.leftAnchor="537.0" AnchorPane.rightAnchor="303.0" />
-   <TextField fx:id="FirstNameF" layoutX="131.0" layoutY="155.0" prefHeight="25.0" prefWidth="174.0" AnchorPane.leftAnchor="131.0" AnchorPane.rightAnchor="709.0" />
-   <TextField fx:id="MiddleNameF" layoutX="333.0" layoutY="155.0" prefHeight="25.0" prefWidth="174.0" AnchorPane.leftAnchor="333.0" AnchorPane.rightAnchor="507.0" />
-   <TextField fx:id="LastNameF" layoutX="537.0" layoutY="155.0" prefHeight="25.0" prefWidth="174.0" AnchorPane.leftAnchor="537.0" AnchorPane.rightAnchor="303.0" />
+   <Label fx:id="firstNameLabel" layoutX="131.0" layoutY="134.0" prefHeight="25.0" prefWidth="63.0" text="First Name" AnchorPane.leftAnchor="131.0" AnchorPane.rightAnchor="709.0" />
+   <Label fx:id="middleNameLabel" layoutX="333.0" layoutY="138.0" text="Middle Name" AnchorPane.leftAnchor="333.0" AnchorPane.rightAnchor="507.0" />
+   <Label fx:id="lastNameLabel" layoutX="537.0" layoutY="137.0" prefHeight="18.0" prefWidth="63.0" text="Last Name" AnchorPane.leftAnchor="537.0" AnchorPane.rightAnchor="303.0" />
+   <Label fx:id="ssnLabel" layoutX="333.0" layoutY="185.0" text="Social Security Number" />
+   <Label fx:id="emailLabel" layoutX="334.0" layoutY="235.0" text="Email" />
+   <Label fx:id="usernameLabel" layoutX="131.0" layoutY="393.0" text="Username" />
+   <Label fx:id="passwordLabel" layoutX="332.0" layoutY="393.0" text="Password" />
+   <Label layoutX="601.0" layoutY="133.0" />
+   <Label fx:id="phoneNumberLabel" layoutX="131.0" layoutY="235.0" prefHeight="18.0" prefWidth="184.0" text="Phone Number" />
+   <Label fx:id="maritalStatusLabel" layoutX="130.0" layoutY="339.0" text="Marital Status" />
+   <Label fx:id="genderLabel" layoutX="333.0" layoutY="339.0" text="Gender" />
+   <Label fx:id="aptLabel" layoutX="537.0" layoutY="286.0" prefHeight="18.0" prefWidth="64.0" text="State" AnchorPane.leftAnchor="537.0" AnchorPane.rightAnchor="423.0" />
+   <Label fx:id="streetNameLabel" layoutX="131.0" layoutY="288.0" text="Street Name" AnchorPane.leftAnchor="131.0" AnchorPane.rightAnchor="709.0" />
+   <Label fx:id="cityLabel" layoutX="333.0" layoutY="287.0" text="City" AnchorPane.leftAnchor="333.0" AnchorPane.rightAnchor="507.0" />
+   <Label fx:id="zipCodeLabel" layoutX="622.0" layoutY="287.0" prefHeight="18.0" prefWidth="135.0" text="Zip Code" AnchorPane.leftAnchor="622.0" AnchorPane.rightAnchor="267.0" />
+
+   <!-- TextFields for signup information (in order) -->
+   <TextField fx:id="firstNameTF" layoutX="131.0" layoutY="155.0" prefHeight="25.0" prefWidth="174.0" AnchorPane.leftAnchor="131.0" AnchorPane.rightAnchor="709.0" />
+   <TextField fx:id="middleNameTF" layoutX="333.0" layoutY="155.0" prefHeight="25.0" prefWidth="174.0" AnchorPane.leftAnchor="333.0" AnchorPane.rightAnchor="507.0" />
+   <TextField fx:id="lastNameTF" layoutX="537.0" layoutY="155.0" prefHeight="25.0" prefWidth="174.0" AnchorPane.leftAnchor="537.0" AnchorPane.rightAnchor="303.0" />
    <DatePicker fx:id="datePicker" layoutX="131.0" layoutY="205.0" onAction="#getDate" promptText="Enter a Date" AnchorPane.leftAnchor="131.0" AnchorPane.rightAnchor="709.0" />
-   <TextField fx:id="StreetF" layoutX="131.0" layoutY="306.0" prefHeight="25.0" prefWidth="174.0" AnchorPane.leftAnchor="131.0" AnchorPane.rightAnchor="709.0" />
-   <TextField fx:id="CityF" layoutX="333.0" layoutY="305.0" prefHeight="25.0" prefWidth="174.0" AnchorPane.leftAnchor="333.0" AnchorPane.rightAnchor="507.0" />
-   <TextField fx:id="ApartmentF" layoutX="537.0" layoutY="304.0" prefHeight="26.0" prefWidth="64.0" AnchorPane.leftAnchor="537.0" AnchorPane.rightAnchor="423.0" />
-   <TextField fx:id="ZipCodeF" layoutX="622.0" layoutY="305.0" prefHeight="26.0" prefWidth="135.0" />
-   <Label fx:id="apt" layoutX="537.0" layoutY="286.0" prefHeight="18.0" prefWidth="64.0" text="State" AnchorPane.leftAnchor="537.0" AnchorPane.rightAnchor="423.0" />
-   <ProgressBar fx:id="progressBar" layoutX="204.0" layoutY="68.0" prefHeight="22.0" prefWidth="596.0" progress="0.0" />
-   <Label fx:id="progressLabel" alignment="CENTER" layoutX="131.0" layoutY="68.0" prefHeight="22.0" prefWidth="73.0" text="Progress">
-      <font>
-         <Font name="Calibri" size="18.0" />
-      </font>
-   </Label>
-   <Separator layoutX="375.0" layoutY="511.0" prefWidth="300.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
-   <Label fx:id="streetName" layoutX="131.0" layoutY="288.0" text="Street Name" AnchorPane.leftAnchor="131.0" AnchorPane.rightAnchor="709.0" />
-   <Label layoutX="333.0" layoutY="287.0" text="City" AnchorPane.leftAnchor="333.0" AnchorPane.rightAnchor="507.0" />
-   <Label fx:id="zipCode" layoutX="622.0" layoutY="287.0" prefHeight="18.0" prefWidth="135.0" text="Zip Code" AnchorPane.leftAnchor="622.0" AnchorPane.rightAnchor="267.0" />
-   <Label fx:id="progressPercentLabel" alignment="CENTER" layoutX="800.0" layoutY="68.0" prefHeight="22.0" prefWidth="55.0" text="0%">
-      <font>
-         <Font name="Calibri" size="18.0" />
-      </font>
-   </Label>
+   <TextField fx:id="ssnTF" layoutX="333.0" layoutY="204.0" prefHeight="26.0" prefWidth="184.0" />
+   <TextField fx:id="phoneNumberTF" layoutX="131.0" layoutY="255.0" prefHeight="26.0" prefWidth="184.0" />
+   <TextField fx:id="emailTF" layoutX="333.0" layoutY="255.0" prefHeight="26.0" prefWidth="184.0" />
+   <TextField fx:id="streetTF" layoutX="131.0" layoutY="306.0" prefHeight="25.0" prefWidth="174.0" AnchorPane.leftAnchor="131.0" AnchorPane.rightAnchor="709.0" />
+   <TextField fx:id="cityTF" layoutX="333.0" layoutY="305.0" prefHeight="25.0" prefWidth="174.0" AnchorPane.leftAnchor="333.0" AnchorPane.rightAnchor="507.0" />
+   <TextField fx:id="apartmentTF" layoutX="537.0" layoutY="304.0" prefHeight="26.0" prefWidth="64.0" AnchorPane.leftAnchor="537.0" AnchorPane.rightAnchor="423.0" />
+   <TextField fx:id="zipCodeTF" layoutX="622.0" layoutY="305.0" prefHeight="26.0" prefWidth="135.0" />
+
+   <!-- RadioButton for signup information -->
+   <RadioButton layoutX="131.0" layoutY="366.0" mnemonicParsing="false" text="Single" toggleGroup="$maritaltoggle"/>
+   <RadioButton layoutX="205.0" layoutY="366.0" mnemonicParsing="false" text="Married">
+      <toggleGroup>
+         <ToggleGroup fx:id="maritaltoggle" />
+      </toggleGroup></RadioButton>
+
+   <RadioButton layoutX="333.0" layoutY="366.0" mnemonicParsing="false" text="Male" toggleGroup="$gendertoggle" />
+   <RadioButton layoutX="393.0" layoutY="365.0" mnemonicParsing="false" text="Female" toggleGroup="$gendertoggle" />
+   <RadioButton layoutX="468.0" layoutY="366.0" mnemonicParsing="false" text="Non-Binary">
+      <toggleGroup>
+         <ToggleGroup fx:id="gendertoggle" />
+      </toggleGroup></RadioButton>
+
+   <!-- TextField for signup information (this comes after the radio buttons on screen -->
+   <TextField fx:id="UsernameF" layoutX="131.0" layoutY="419.0" prefHeight="26.0" prefWidth="184.0" />
+   <TextField fx:id="PasswordF" layoutX="333.0" layoutY="419.0" prefHeight="26.0" prefWidth="184.0" />
+
    <Button fx:id="SignupButton" contentDisplay="CENTER" layoutX="579.0" layoutY="530.0" mnemonicParsing="false" onAction="#Signup" prefHeight="50.0" prefWidth="50.0" styleClass="Button" stylesheets="@SignUpPage.css">
       <graphic>
          <FontAwesomeIconView fill="#d4b85d" glyphName="USER_PLUS" size="25" />
       </graphic>
    </Button>
+
    <Button fx:id="Home" alignment="CENTER" layoutX="395.0" layoutY="530.0" mnemonicParsing="false" onAction="#Home" prefHeight="50.0" prefWidth="50.0" styleClass="Button" stylesheets="@SignUpPage.css">
       <graphic>
          <FontAwesomeIconView fill="#d4b85d" glyphName="HOME" size="25" />
       </graphic>
    </Button>
-   <Button fx:id="nextButton" contentDisplay="CENTER" layoutX="519.0" layoutY="530.0" mnemonicParsing="false" onAction="#NextPage" prefHeight="50.0" prefWidth="50.0" styleClass="Button" stylesheets="@SignUpPage.css">
-      <graphic>
-         <FontAwesomeIconView fill="#d4b85d" glyphName="ARROW_RIGHT" size="25" />
-      </graphic>
-   </Button>
-   <Button fx:id="progressButton" alignment="CENTER" layoutX="462.0" layoutY="530.0" mnemonicParsing="false" onAction="#PreviousPage" prefHeight="50.0" prefWidth="50.0" styleClass="Button" stylesheets="@SignUpPage.css">
-      <graphic>
-         <FontAwesomeIconView fill="#d4b85d" glyphName="ARROW_LEFT" size="25" />
-      </graphic>
-   </Button>
+
    <Button fx:id="LoginButton" alignment="CENTER" layoutX="334.0" layoutY="530.0" mnemonicParsing="false" onAction="#LoginPage" prefHeight="50.0" prefWidth="50.0" styleClass="Button" stylesheets="@SignUpPage.css">
       <graphic>
          <FontAwesomeIconView fill="#d4b85d" glyphName="USER" size="25" />
       </graphic>
    </Button>
-   <Label layoutX="601.0" layoutY="133.0" />
-   <Label layoutX="333.0" layoutY="185.0" text="Social Security Number" />
-   <Label layoutX="334.0" layoutY="235.0" text="Email" />
-   <Label layoutX="131.0" layoutY="393.0" text="Username" />
-   <Label layoutX="332.0" layoutY="393.0" text="Password" />
-   <TextField layoutX="131.0" layoutY="255.0" prefHeight="26.0" prefWidth="184.0" />
-   <TextField layoutX="333.0" layoutY="204.0" prefHeight="26.0" prefWidth="184.0" />
-   <TextField layoutX="333.0" layoutY="255.0" prefHeight="26.0" prefWidth="184.0" />
-   <TextField layoutX="131.0" layoutY="419.0" prefHeight="26.0" prefWidth="184.0" />
-   <TextField layoutX="333.0" layoutY="419.0" prefHeight="26.0" prefWidth="184.0" />
-   <Label layoutX="131.0" layoutY="235.0" prefHeight="18.0" prefWidth="184.0" text="Phone Number" />
-   <Label layoutX="130.0" layoutY="339.0" text="Marital Status" />
-   <Label layoutX="333.0" layoutY="339.0" text="Gender" />
-   <RadioButton layoutX="131.0" layoutY="366.0" mnemonicParsing="false" text="Single">
-      <toggleGroup>
-         <ToggleGroup fx:id="maritaltoggle" />
-      </toggleGroup></RadioButton>
-   <RadioButton layoutX="205.0" layoutY="366.0" mnemonicParsing="false" text="Married" toggleGroup="$maritaltoggle" />
-   <RadioButton layoutX="468.0" layoutY="366.0" mnemonicParsing="false" text="Non-Binary">
-      <toggleGroup>
-         <ToggleGroup fx:id="gendertoggle" />
-      </toggleGroup></RadioButton>
-   <RadioButton layoutX="393.0" layoutY="365.0" mnemonicParsing="false" text="Female" toggleGroup="$gendertoggle" />
-   <RadioButton layoutX="333.0" layoutY="366.0" mnemonicParsing="false" text="Male" toggleGroup="$gendertoggle" />
 
 </AnchorPane>
