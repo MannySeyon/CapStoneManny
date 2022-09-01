@@ -1,5 +1,6 @@
 .parent{
     -fx-background-color: transparent;
+    -fx-background-image: url(city.jpg);
 }
 .pane{
     //#2196f3 transparent;
