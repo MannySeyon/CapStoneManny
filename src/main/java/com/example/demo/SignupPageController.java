@@ -251,54 +251,6 @@ public class SignupPageController {
         System.out.println(customer.getEmail());
         connection.close();
     }
-
-//    @FXML  //Set progress percents =to Scene pages for Sign up
-//    protected void NextPage(ActionEvent event) throws IOException {
-//
-//        //Method to access value in progress
-//        if (progress.doubleValue() < 1) {
-//            //must keep reInstantiate BigDecimals
-//            progress = new BigDecimal(String.format("%.2f", progress.doubleValue() + 0.50));
-//            progressBar.setProgress(progress.doubleValue());
-//            //Set text to progress *100 add % string to end //change double to Integer and round
-//            //progressLabel.setText(Integer.toString((int) Math.round(progress.doubleValue() * 100)) + "%");
-//            progressPercentLabel.setText(Integer.toString((int) (progress.doubleValue() * 100)) + "%");
-//
-//            root = FXMLLoader.load(getClass().getResource("SignUpPage2.fxml"));
-//            //get Source cast to a node //Pass node to Stage
-//            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-//            //Pass the new fxml path to scene variable
-//            scene = new Scene(root);
-//            //pass scene to stage
-//            stage.setScene(scene);
-//            stage.show();
-//        }
-//
-//    }
-
-
-//    @FXML
-//    protected void PreviousPage(ActionEvent event) throws IOException, SQLException {
-//        root = FXMLLoader.load(getClass().getResource("SignUpPage.fxml"));
-//        //get Source cast to a node //Pass node to Stage
-//        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-//        //Pass the new fxml path to scene variable
-//        scene = new Scene(root);
-//        //pass scene to stage
-//        stage.setScene(scene);
-//        stage.show();
-//        //Method to access value in progress
-//        if (progress.doubleValue() < 1) {
-//            //must keep reInstantiate BigDecimals
-//            progress = new BigDecimal(String.format("%.2f", progress.doubleValue() + -0.50));
-//            progressBar.setProgress(progress.doubleValue());
-//            //Set text to progress *100 add % string to end //change double to Integer and round
-//            //progressLabel.setText(Integer.toString((int) Math.round(progress.doubleValue() * 100)) + "%");
-//            progressPercentLabel.setText(Integer.toString((int) (progress.doubleValue() * 100)) + "%");
-//        }
-//
-//    }
-
     public void CheckIfUserExists() throws SQLException {
         Connectivity connectivity = new Connectivity();
         Connection connection = connectivity.getConnection();
