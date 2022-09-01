@@ -45,7 +45,7 @@ public class MainControllermodif implements Initializable {
         transition.play();
         transition.setOnFinished((e) ->{
             try{
-                fxml = FXMLLoader.load(getClass().getResource("SignIn.fxml"));
+                fxml = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
                 vbox.getChildren().removeAll();
                 vbox.getChildren().setAll(fxml);
             }catch(IOException ex){
