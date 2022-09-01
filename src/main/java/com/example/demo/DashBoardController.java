@@ -19,6 +19,10 @@ import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 
@@ -26,6 +30,7 @@ import java.util.ResourceBundle;
 public class DashBoardController  {
     @FXML
     private Circle circle;
+
     @FXML
     private BarChart<String, Double> chart;
     @FXML
@@ -34,6 +39,7 @@ public class DashBoardController  {
     private Label userNameCard2, card2Number, balanceLabelCard2, VisaLabelCard2m, card1Number,
             balanceLabelCard1, userNameCard1, VisaLabelCard1, TimeDateLabel, cardLabel1, dashLabel, nameLabel
             , VisaLabelCard2, savingsBalance, Savingslabel, checkingsBalance;
+    String nameUser, password;
     public AnchorPane goldColoredCard, blueColoredCard, anchorPane;
     public Button card1PlusButton, exit, Home, Logout, homeButton;
     @FXML
@@ -57,6 +63,9 @@ public class DashBoardController  {
 //        series_01.getData().add(new XYChart.Data("May", 700));
 //        chart.getData().add(series_01);
 //    }
+
+
+  
     @FXML
     protected void Home(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("main.fxml"));
@@ -64,6 +73,13 @@ public class DashBoardController  {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+    public void getInfo (String password,String nameUser){
+        this.password=password;
+        this.nameUser =nameUser;
+    }
+    public String setUser(String user){
+        return user;
     }
     @FXML
     protected void Logout(ActionEvent event) throws IOException {
@@ -98,8 +114,21 @@ public class DashBoardController  {
         }
     }
 
-    public void displayName(String username){
-        nameLabel.setText("Hello, " + "firstName + lastName" + ". Welcome to your Summit Dashboard!" );
+
+    public void displayName(String nameUser,String password) throws SQLException {
+        Connectivity connectivity = new Connectivity();
+        Connection connection = connectivity.getConnection();
+        String query = "select First_name,Last_name from  customer_personal_info where username = ?   and password= ?";
+        PreparedStatement statement = connection.prepareStatement(query);
+        statement.setString(1,nameUser);
+        statement.setString(2,password);
+        ResultSet resultSet = statement.executeQuery();
+        System.out.println(password);
+        while(resultSet.next()){
+            nameLabel.setText("Hello, " + resultSet.getString(1) +" "+ resultSet.getString(2)  + ". Welcome to your Summit Dashboard!" );
+
+        }
+
     }
 
 

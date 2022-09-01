@@ -16,7 +16,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage){
             try {
-                Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
+                Parent root = FXMLLoader.load(getClass().getResource("MainModified.fxml"));
                 primaryStage.setScene(new Scene(root));
                 primaryStage.setTitle("Summit Financial Corporation");
                 Image bankLogo = new Image("Summit Fin Corp.png");

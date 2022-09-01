@@ -55,6 +55,7 @@ public class LoginPageController{
     }
     @FXML
     protected void ClientLoginPage(ActionEvent event) throws IOException {
+
         root = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);

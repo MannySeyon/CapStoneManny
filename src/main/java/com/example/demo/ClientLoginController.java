@@ -69,14 +69,14 @@ public class ClientLoginController {
         while (resultSet.next()) {
             System.out.println(resultSet.getInt(1));
             if (resultSet.getInt(1) == 1) {
+
+                DashBoardController dashBoardController= new DashBoardController();
+                dashBoardController.getInfo(nameTextField.getText(),passwordField.getText());
+
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("LandingPage.fxml"));
-                //set root =to loader and load it.
                 root = loader.load();
-                //Create instance of the next scene's controller
                 DashBoardController landingController = loader.getController();
-                //Use scenecontroller variable to call methods within controller class
-                landingController.displayName(username);
-                //root = FXMLLoader.load(getClass().getResource("LandingPage.fxml"));
+                    landingController.displayName(nameTextField.getText(),passwordField.getText());
                 stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 scene = new Scene(root);
                 stage.setScene(scene);
