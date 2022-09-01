@@ -68,7 +68,7 @@ public class DashBoardController  {
   
     @FXML
     protected void Home(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("MainModified.fxml"));
+        root = FXMLLoader.load(getClass().getResource("LandingPage.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

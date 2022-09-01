@@ -32,14 +32,14 @@ public class MainControllermodif implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        Teanslation();
+        Translation();
     }
     @FXML
     private void open_signin(ActionEvent event){
-        Teanslation();
+        Translation();
     }
 
-    private void Teanslation() {
+    private void Translation() {
         TranslateTransition transition = new TranslateTransition(Duration.seconds(1), vbox);
         transition.setToX(vbox.getLayoutX() * 20);
         transition.play();
@@ -79,7 +79,7 @@ public class MainControllermodif implements Initializable {
         t.play();
         t.setOnFinished((e) ->{
             try{
-                fxml = FXMLLoader.load(getClass().getResource("signupForm.fxml"));
+                fxml = FXMLLoader.load(getClass().getResource("SignUp.fxml"));
                 vbox.getChildren().removeAll();
                 vbox.getChildren().setAll(fxml);
             }catch(IOException ex){
