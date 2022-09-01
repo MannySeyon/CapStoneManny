@@ -10,8 +10,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.io.IOException;
@@ -22,7 +25,8 @@ import java.util.ResourceBundle;
 public class MainControllermodif implements Initializable {
      
     @FXML
-    private VBox vbox;    
+    private VBox vbox;
+    @FXML
     private Parent fxml;
     
     
@@ -52,20 +56,14 @@ public class MainControllermodif implements Initializable {
     }
 
 
-//    private void AdminDash() {
-//        TranslateTransition transition = new TranslateTransition(Duration.seconds(1), vbox);
-//        transition.setToX(vbox.getLayoutX() * 20);
-//        transition.play();
-//        transition.setOnFinished((e) ->{
-//            try{
-//                fxml = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
-//                vbox.getChildren().removeAll();
-//                vbox.getChildren().setAll(fxml);
-//            }catch(IOException ex){
-//
-//            }
-//        });
-//    }
+    @FXML
+        protected void AdminDash(ActionEvent event) throws IOException {
+            fxml = FXMLLoader.load(getClass().getResource("AdminDashboard.fxml"));
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(fxml);
+            stage.setScene(scene);
+            stage.show();
+        }
 
 
     @FXML
