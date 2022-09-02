@@ -1,18 +1,18 @@
 .parent{
-    -fx-background-color: transparent;
-    -fx-background-image: url(city.jpg);
+    /*-fx-background-color: linear-gradient(bottom , #181c2c, white);*/
+    -fx-background-image: url('../../../bg1.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+
 }
 .pane{
     //#2196f3 transparent;
-    -fx-background-color: #BBA14F;
-
-    -fx-effect: dropshadow(three-pass-box,#2196f3  , 30, 0.5, 0, 0);
-
-
+    -fx-background-image: url('../../../Gray.jpg');
+    /*-fx-effect: dropshadow(three-pass-box,#BEBEBE, 30, 0.5, 0, 0);*/
 
 }
 .trans-btn-white-border{
-    -fx-background-color: transparent;
+    -fx-background-color: white;
     -fx-background-radius: 5px;
     -fx-border-color: #cccccc;
     -fx-border-radius: 5px;
