@@ -3,11 +3,13 @@ package com.example.demo;
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 @SuppressWarnings("ALL")
@@ -17,10 +19,15 @@ public class Main extends Application {
     public void start(Stage primaryStage){
             try {
                 Parent root = FXMLLoader.load(getClass().getResource("MainModified.fxml"));
+
+
+
                 primaryStage.setScene(new Scene(root));
                 primaryStage.setTitle("Summit Financial Corporation");
                 Image bankLogo = new Image("Summit Fin Corp.png");
                 primaryStage.getIcons().add(bankLogo);
+
+
                 //Al-F4 also closes application with Exit method
                 // when you click x on window
                 primaryStage.setOnCloseRequest(event -> {

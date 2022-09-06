@@ -58,7 +58,7 @@ public class MainControllermodif implements Initializable {
 
     @FXML
         protected void AdminDash(ActionEvent event) throws IOException {
-            fxml = FXMLLoader.load(getClass().getResource("AdminDashboard.fxml"));
+            fxml = FXMLLoader.load(getClass().getResource(""));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(fxml);
             stage.setScene(scene);
