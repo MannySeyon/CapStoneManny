@@ -75,17 +75,16 @@
          </VBox.margin>
       </HBox>
       <Button fx:id="loginButton" mnemonicParsing="false" onAction="#validateLogin" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #BEBEBE#BEBEBE;" styleClass="blue-btn" text="LOGIN">
-<!--         <Button fx:id="adminButton" layoutX="661.0" layoutY="356.0" minWidth="53.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="77.0" styleClass="trans-btn-white-border" text="ADMIN" />-->
 
          <VBox.margin>
             <Insets left="187.0" top="20.0" />
          </VBox.margin></Button>
-      <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #BEBEBE#BEBEBE;" styleClass="blue-btn" text="ADMIN">
+      <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #BEBEBE#BEBEBE;" onAction="#AdminDash" styleClass="blue-btn" text="ADMIN">
          <VBox.margin>
             <Insets left="187.0" top="20.0" />
          </VBox.margin>
       </Button>
-      <Hyperlink text="Forgot Username Or Password">
+      <Hyperlink  onAction="#passwordRecovery" text="Forgot Username Or Password">
          <VBox.margin>
             <Insets left="150.0" top="10.0" />
          </VBox.margin>
