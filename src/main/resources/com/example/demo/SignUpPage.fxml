@@ -1,15 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+
 <?import de.jensd.fx.glyphs.fontawesome.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" stylesheets="@SignUpPage.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SignupPageController">
-   <Label fx:id="SignupLabel" alignment="CENTER" layoutX="42.0" layoutY="14.0" prefHeight="47.0" prefWidth="1120.0" text="Welcome To Summit Financial Corporation " AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" stylesheets="@SignUpPage.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SignupPageController">
+   <ImageView fitHeight="704.0" fitWidth="1046.0" layoutX="-7.0" layoutY="-104.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../Gold.jpeg" />
+      </image>
+   </ImageView>
+   <ImageView blendMode="OVERLAY" fitHeight="356.0" fitWidth="677.0" layoutX="172.0" layoutY="131.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../white.jpeg" />
+      </image>
+      <effect>
+         <BoxBlur iterations="3" />
+      </effect>
+   </ImageView>
+   <Label fx:id="SignupLabel" alignment="CENTER" layoutX="40.0" layoutY="52.0" prefHeight="47.0" prefWidth="1120.0" text="Welcome To Summit Financial Corporation " AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
       <font>
-         <Font name="Calibri" size="36.0" />
-      </font></Label>
+         <Font name="Apple LiSung Light" size="48.0" />
+      </font>
+      <opaqueInsets>
+         <Insets />
+      </opaqueInsets></Label>
 
    <!-- Labels for signup information -->
    <Label fx:id="DOBLabel" layoutX="200.0" layoutY="193.0" prefHeight="18.0" prefWidth="184.0" text="Date Of Birth" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="640.0" />
@@ -60,19 +89,19 @@
    <TextField fx:id="UsernameF" layoutX="200.0" layoutY="427.0" prefHeight="26.0" prefWidth="184.0" />
    <TextField fx:id="PasswordF" layoutX="402.0" layoutY="427.0" prefHeight="26.0" prefWidth="184.0" />
 
-   <Button fx:id="SignupButton" contentDisplay="CENTER" layoutX="512.0" layoutY="512.0" mnemonicParsing="false" onAction="#Signup" prefHeight="60.0" prefWidth="60.0" styleClass="Button" stylesheets="@SignUpPage.css" AnchorPane.leftAnchor="512.0" AnchorPane.rightAnchor="452.0">
+   <Button fx:id="SignupButton" contentDisplay="CENTER" layoutX="556.0" layoutY="512.0" mnemonicParsing="false" onAction="#Signup" prefHeight="60.0" prefWidth="60.0" styleClass="Button" stylesheets="@SignUpPage.css" AnchorPane.leftAnchor="556.0" AnchorPane.rightAnchor="408.0">
       <graphic>
          <FontAwesomeIconView fill="#d4b85d" glyphName="USER_PLUS" size="25" />
       </graphic>
    </Button>
 
-   <Button fx:id="Home" alignment="CENTER" layoutX="426.0" layoutY="512.0" mnemonicParsing="false" onAction="#Home" prefHeight="60.0" prefWidth="60.0" styleClass="Button" stylesheets="@SignUpPage.css">
+   <Button fx:id="Home" alignment="CENTER" layoutX="464.0" layoutY="512.0" mnemonicParsing="false" onAction="#Home" prefHeight="60.0" prefWidth="60.0" styleClass="Button" stylesheets="@SignUpPage.css">
       <graphic>
          <FontAwesomeIconView fill="#d4b85d" glyphName="HOME" size="25" />
       </graphic>
    </Button>
 
-   <Button fx:id="LoginButton" alignment="CENTER" layoutX="333.0" layoutY="512.0" mnemonicParsing="false" onAction="#LoginPage" prefHeight="60.0" prefWidth="60.0" styleClass="Button" stylesheets="@SignUpPage.css">
+   <Button fx:id="LoginButton" alignment="CENTER" layoutX="373.0" layoutY="512.0" mnemonicParsing="false" onAction="#LoginPage" prefHeight="60.0" prefWidth="60.0" styleClass="Button" stylesheets="@SignUpPage.css">
       <graphic>
          <FontAwesomeIconView fill="#d4b85d" glyphName="USER" size="25" />
       </graphic>
