@@ -139,6 +139,22 @@ public class DashBoardController  {
         TimeDateLabel.setText(String.valueOf(LocalDateTime.now()));
         TimeDateLabel2.setText(String.valueOf(LocalDateTime.now()));
     }
+    public void showBalance (String nameUser,String password) throws SQLException {
+        Connectivity connectivity = new Connectivity();
+        Connection connection = connectivity.getConnection();
+        String query= "call checking_balance(?,?)";
+        PreparedStatement statement = connection.prepareStatement(query);
+        statement.setString(1,nameUser);
+        statement.setString(2,password);
+        ResultSet resultSet = statement.executeQuery();
+        System.out.println(password);
+        while(resultSet.next()){
+            checkingsBalance.setText("$"+resultSet.getString(1));
+
+
+    }
+    }
+
     public void displayName(String nameUser,String password) throws SQLException {
         Connectivity connectivity = new Connectivity();
         Connection connection = connectivity.getConnection();

@@ -97,6 +97,7 @@ public class ClientLoginController {
                 DashBoardController landingController = loader.getController();
                     landingController.displayName(nameTextField.getText(),passwordField.getText());
                 landingController.showTime();
+                landingController.showBalance(nameTextField.getText(),passwordField.getText());
                 stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 scene = new Scene(root);
                 stage.setScene(scene);
