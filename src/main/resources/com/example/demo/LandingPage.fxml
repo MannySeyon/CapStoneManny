@@ -11,7 +11,7 @@
 
 <!--suppress ALL -->
 
-<BorderPane fx:id="LandingPageBorder" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" stylesheets="@Landing.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.DashBoardController">
+<BorderPane fx:id="LandingPageBorder" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" stylesheets="@Landing.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.DashBoardController">
    <left>
       <AnchorPane fx:id="anchorPane" prefHeight="600.0" prefWidth="44.0" styleClass="pane" stylesheets="@Landing.css" BorderPane.alignment="CENTER">
          <children>
@@ -20,7 +20,7 @@
                   <Image url="@../../../security.png" />
                </image>
             </ImageView>
-            <VBox layoutX="7.0" layoutY="242.0" prefHeight="100.0" prefWidth="39.0">
+            <VBox layoutX="5.0" layoutY="241.0" prefHeight="100.0" prefWidth="39.0">
                <children>
                   <Button fx:id="homeButton" mnemonicParsing="false" onAction="#Home" prefHeight="25.0" prefWidth="25.0">
                      <graphic>
@@ -33,7 +33,7 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
                   </Button>
-                  <Button fx:id="TransactionButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0">
+                  <Button fx:id="TransactionButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#Transactions" prefHeight="25.0" prefWidth="25.0">
                      <graphic>
                         <FontAwesomeIconView fill="#4c4c4e" glyphName="LIST_UL" size="18" styleClass="sidebar_opt" wrappingWidth="25.0" />
                      </graphic>
@@ -44,18 +44,10 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
                   </Button>
-                  <Button fx:id="SettingButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0">
+                  <Button fx:id="SettingButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#Settings" prefHeight="25.0" prefWidth="25.0">
                      <graphic>
                         <FontAwesomeIconView fill="#4c4c4e" glyphName="GEAR" size="18" styleClass="sidebar_opt" wrappingWidth="23.428571701049805" />
                      </graphic>
-                     <VBox.margin>
-                        <Insets top="10.0" />
-                     </VBox.margin>
-                     <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </padding>
-                  </Button>
-                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
@@ -82,7 +74,7 @@
    <center>
       <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" BorderPane.alignment="CENTER">
          <children>
-            <VBox layoutX="39.0" layoutY="7.0" prefHeight="303.0" prefWidth="903.0" styleClass="pane" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="35.0">
+            <VBox layoutX="39.0" layoutY="7.0" prefHeight="265.0" prefWidth="903.0" styleClass="pane" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="35.0">
                <children>
                   <HBox prefHeight="36.0" prefWidth="876.0">
                      <children>
@@ -415,7 +407,7 @@
                         </Label>
                      </children>
                   </VBox>
-                  <Button layoutX="730.0" layoutY="99.0" mnemonicParsing="false" prefWidth="150.0" text="Transactions" AnchorPane.bottomAnchor="170.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="100.0">
+                  <Button fx:id="transactionButton" layoutX="730.0" layoutY="99.0" mnemonicParsing="false" onAction="#Transactions" prefWidth="150.0" text="Transactions" AnchorPane.bottomAnchor="170.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="100.0">
                      <font>
                         <Font name="Calibri" size="13.0" />
                      </font>
@@ -423,7 +415,7 @@
                         <DropShadow blurType="ONE_PASS_BOX" />
                      </effect>
                   </Button>
-                  <Button layoutX="730.0" layoutY="137.0" mnemonicParsing="false" prefWidth="150.0" text="Settings" AnchorPane.bottomAnchor="135.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="135.0">
+                  <Button layoutX="730.0" layoutY="137.0" mnemonicParsing="false" onAction="#Settings" prefWidth="150.0" text="Settings" AnchorPane.bottomAnchor="135.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="135.0">
                      <font>
                         <Font name="Calibri" size="13.0" />
                      </font>

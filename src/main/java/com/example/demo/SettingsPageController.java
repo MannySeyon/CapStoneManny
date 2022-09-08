@@ -53,7 +53,7 @@ public class SettingsPageController   {
     }
     @FXML
     protected void Settings(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("Setting.fxml"));
+        root = FXMLLoader.load(getClass().getResource("SettingsPage.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -61,7 +61,7 @@ public class SettingsPageController   {
     }
     @FXML
     protected void Transactions(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("LandingPage.fxml"));
+        root = FXMLLoader.load(getClass().getResource("TransactionPage.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

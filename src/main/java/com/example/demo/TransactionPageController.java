@@ -8,6 +8,7 @@ package com.example.demo;
         import javafx.scene.Node;
         import javafx.scene.Parent;
         import javafx.scene.Scene;
+        import javafx.scene.chart.BarChart;
         import javafx.scene.control.Alert;
         import javafx.scene.control.Button;
         import javafx.scene.control.ButtonType;
@@ -23,6 +24,14 @@ package com.example.demo;
         import java.sql.SQLException;
 
 public class TransactionPageController  {
+
+
+    @FXML
+    private BarChart chart;
+    @FXML
+    private Label dateandTime2;
+    @FXML
+    private  Label GenerateReportLabel;
 
     @FXML
     private Label dashLabel;
@@ -54,7 +63,7 @@ public class TransactionPageController  {
     }
     @FXML
     protected void Settings(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("Setting.fxml"));
+        root = FXMLLoader.load(getClass().getResource("SettingsPage.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
