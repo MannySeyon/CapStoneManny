@@ -59,16 +59,6 @@ public class MainControllermodif implements Initializable {
 
 
     @FXML
-        protected void AdminDash(ActionEvent event) throws IOException {
-            fxml = FXMLLoader.load(getClass().getResource(""));
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(fxml);
-            stage.setScene(scene);
-            stage.show();
-        }
-
-
-    @FXML
     private void open_signup(ActionEvent event){
           TranslateTransition transition = new TranslateTransition(Duration.seconds(1), vbox);
         transition.setToX(0);
