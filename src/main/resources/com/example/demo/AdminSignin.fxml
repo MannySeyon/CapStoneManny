@@ -11,7 +11,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="644.0" prefWidth="689.0" styleClass="parent2" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.PasswordRecoveryController">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="644.0" prefWidth="689.0" styleClass="parent2" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.AdminSiginin">
    <children>
       <Label prefHeight="86.0" prefWidth="561.0" style="-fx-background-color: transparent; -fx-font-family: Trocchi; -fx-font-family: serif;" text="Please Use your Summit financial id and password ,in order to Sign In" textFill="#fafafa">
          <VBox.margin>
@@ -21,9 +21,27 @@
             <Font size="18.0" />
          </font>
       </Label>
+      <Label fx:id="passwordShow" prefHeight="35.0" prefWidth="136.0" style="-fx-font-weight: bold;" text="">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.7052631378173828" green="0.5668225884437561" blue="0.5668225884437561" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
       <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="486.0">
          <children>
-            <TextField fx:id="email" mouseTransparent="true" prefHeight="26.0" prefWidth="402.0" promptText="Employee Id" styleClass="tf_box" HBox.hgrow="ALWAYS">
+            <TextField fx:id="employee_id" mouseTransparent="true" prefHeight="26.0" prefWidth="402.0" promptText="Employee Id" styleClass="tf_box" HBox.hgrow="ALWAYS">
                <HBox.margin>
                   <Insets left="100.0" right="100.0" />
                </HBox.margin></TextField>
@@ -35,7 +53,7 @@
       </HBox>
       <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0">
          <children>
-            <TextField fx:id="ssn" promptText="Password" styleClass="tf_box" HBox.hgrow="ALWAYS">
+            <TextField fx:id="password" promptText="Password" styleClass="tf_box" HBox.hgrow="ALWAYS">
                <opaqueInsets>
                   <Insets top="52.0" />
                </opaqueInsets>
@@ -47,7 +65,7 @@
             <Insets left="15.0" right="15.0" top="20.0" />
          </VBox.margin>
       </HBox>
-      <Button fx:id="loginButton" mnemonicParsing="false" onAction="#VerifyCoustmer" prefHeight="43.0" prefWidth="114.0" style="-fx-background-color: #2f2f2fa3; -fx-text-fill: white; -fx-font-weight: bolder; -fx-font-family: serif;" text="Login" textFill="WHITE" VBox.vgrow="ALWAYS">
+      <Button fx:id="loginButton" mnemonicParsing="false" onAction="#Login" prefHeight="43.0" prefWidth="114.0" style="-fx-background-color: #2f2f2fa3; -fx-text-fill: white; -fx-font-weight: bolder; -fx-font-family: serif;" text="Login" textFill="WHITE" VBox.vgrow="ALWAYS">
          <VBox.margin>
             <Insets left="15.0" right="15.0" top="20.0" />
          </VBox.margin>
