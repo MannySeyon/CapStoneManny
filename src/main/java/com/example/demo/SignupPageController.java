@@ -43,7 +43,7 @@ public class SignupPageController {
     private String genderSet = "";
     private String maritalSet = "";
     @FXML
-    private RadioButton male, nonbinary, female, single, married;
+    private RadioButton maleButton, nonbinaryButton, femaleButton, singleButton, marriedButton;
     @FXML
     private ToggleGroup gendertoggle;
     @FXML
@@ -81,7 +81,7 @@ public class SignupPageController {
 
     @FXML
     protected void Home(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("main.fxml"));
+        root = FXMLLoader.load(getClass().getResource("MainModified.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -164,7 +164,9 @@ public class SignupPageController {
             } else {
                 verifyAgeLabel.setText("");
             }
-
+            if(!maleButton.isSelected() || !femaleButton.isSelected() || !nonbinaryButton.isSelected()){
+                genderLabel.setStyle("-fx-text-box-border: #ff0000; -fx-focus-color: #ff0000;");
+            }
 
         } else {
             verifySSNLabel.setText("");
@@ -213,14 +215,15 @@ public class SignupPageController {
         }
     }
 
+
     public String genderCheck() {
 
-        if (male.isSelected()) {
+        if (maleButton.isSelected()) {
             genderSet = "M";
-        } else if (female.isSelected()) {
+        } else if (femaleButton.isSelected()) {
             genderSet = "F";
 
-        } else if (nonbinary.isSelected()) {
+        } else if (nonbinaryButton.isSelected()) {
             genderSet = "O";
         }
         return genderSet;
@@ -228,9 +231,9 @@ public class SignupPageController {
 
     public String maritalCheck() {
 
-        if (single.isSelected()) {
+        if (singleButton.isSelected()) {
             maritalSet = "single";
-        } else if (married.isSelected()) {
+        } else if (marriedButton.isSelected()) {
             maritalSet = "married";
         }
         return maritalSet;

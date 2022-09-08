@@ -100,11 +100,11 @@
          <FontAwesomeIconView fill="#d4b85d" glyphName="HOME" size="25" />
       </graphic>
    </Button>
-
+<!--
    <Button fx:id="LoginButton" alignment="CENTER" layoutX="373.0" layoutY="512.0" mnemonicParsing="false" onAction="#LoginPage" prefHeight="60.0" prefWidth="60.0" styleClass="Button" stylesheets="@SignUpPage.css">
       <graphic>
          <FontAwesomeIconView fill="#d4b85d" glyphName="USER" size="25" />
       </graphic>
    </Button>
-
+-->
 </AnchorPane>

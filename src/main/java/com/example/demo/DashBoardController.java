@@ -23,6 +23,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ResourceBundle;
 
 
@@ -38,7 +40,7 @@ public class DashBoardController  {
     @FXML
     private Label userNameCard2, card2Number, balanceLabelCard2, VisaLabelCard2m, card1Number,
             balanceLabelCard1, userNameCard1, VisaLabelCard1, TimeDateLabel, cardLabel1, dashLabel, nameLabel
-            , VisaLabelCard2, savingsBalance, Savingslabel, checkingsBalance;
+            , VisaLabelCard2, savingsBalance, Savingslabel, checkingsBalance, TimeDateLabel2;
     String nameUser, password;
     public AnchorPane goldColoredCard, blueColoredCard, anchorPane;
     public Button card1PlusButton, exit, Home, Logout, homeButton;
@@ -51,6 +53,8 @@ public class DashBoardController  {
     private Stage stage;
     private Scene scene;
     private Parent root;
+
+
 //    @Override
 //    public void intialize(URL url, ResourceBundle rb){
 //        //circle.setFill((new ImagePattern("/Summit Fin Corp.png")));
@@ -115,6 +119,10 @@ public class DashBoardController  {
     }
 
 
+    public void showTime() {
+        TimeDateLabel.setText(String.valueOf(LocalDateTime.now()));
+        TimeDateLabel2.setText(String.valueOf(LocalDateTime.now()));
+    }
     public void displayName(String nameUser,String password) throws SQLException {
         Connectivity connectivity = new Connectivity();
         Connection connection = connectivity.getConnection();
