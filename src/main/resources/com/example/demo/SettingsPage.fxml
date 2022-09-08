@@ -2,17 +2,16 @@
 
 <?import de.jensd.fx.glyphs.fontawesome.*?>
 <?import javafx.geometry.*?>
-<?import javafx.scene.chart.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1024.0" stylesheets="@Landing.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.TransactionPageController">
+<AnchorPane prefHeight="600.0" prefWidth="1024.0" stylesheets="@Landing.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SettingsPageController">
    <children>
-      <HBox layoutX="148.0" layoutY="7.0" prefHeight="36.0" prefWidth="876.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="10.0">
+      <HBox layoutX="56.0" layoutY="6.0" prefHeight="62.0" prefWidth="957.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="10.0">
          <children>
-            <Label fx:id="dashLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="25.0" style="-fx-font-style: Bold;" text="Transactions" textFill="#d4b85d">
+            <Label fx:id="dashLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="25.0" style="-fx-font-style: Bold;" text="Settings" textFill="#d4b85d">
                <font>
                   <Font name="Calibri Bold" size="18.0" />
                </font>
@@ -33,7 +32,7 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
             </Label>
-            <Label fx:id="TimeDateLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="128.0" layoutY="25.0" maxWidth="1.7976931348623157E308" style="-fx-font-style: Bold;" text=" Date and Tme" textFill="#747475" HBox.hgrow="ALWAYS">
+            <Label fx:id="TimeDateLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="128.0" layoutY="25.0" maxWidth="1.7976931348623157E308" prefWidth="86.0" style="-fx-font-style: Bold;" text=" Date and Tme" textFill="#747475" HBox.hgrow="ALWAYS">
                <font>
                   <Font name="Calibri Bold" size="14.0" />
                </font>
@@ -55,7 +54,7 @@
             </ImageView>
             <VBox layoutX="5.0" layoutY="241.0">
                <children>
-                  <Button fx:id="homeButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#Home" prefHeight="25.0" prefWidth="25.0">
+                  <Button fx:id="homeButton" mnemonicParsing="false" onAction="#Home" prefHeight="25.0" prefWidth="25.0">
                      <graphic>
                         <FontAwesomeIconView fx:id="HomeButton" fill="#d4b85d" glyphName="HOME" size="18" wrappingWidth="23.214284896850586" />
                      </graphic>
@@ -66,7 +65,7 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
                   </Button>
-                  <Button fx:id="TransactionButton" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0">
+                  <Button fx:id="TransactionButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0">
                      <graphic>
                         <FontAwesomeIconView fill="#4c4c4e" glyphName="LIST_UL" size="18" styleClass="sidebar_opt" wrappingWidth="25.0" />
                      </graphic>
@@ -77,7 +76,7 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
                   </Button>
-                  <Button fx:id="SettingButton" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0">
+                  <Button fx:id="SettingButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0">
                      <graphic>
                         <FontAwesomeIconView fill="#4c4c4e" glyphName="GEAR" size="18" styleClass="sidebar_opt" wrappingWidth="23.428571701049805" />
                      </graphic>
@@ -93,46 +92,16 @@
                   <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                </padding>
             </VBox>
-            <Button layoutX="5.0" layoutY="14.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="37.0">
+            <Button layoutX="3.0" layoutY="14.0" minWidth="40.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="40.0">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
                <graphic>
-                  <FontAwesomeIconView fx:id="bars" fill="#d4b85d" glyphName="BARS" size="25" text="" wrappingWidth="21.428571701049805" />
+                  <FontAwesomeIconView fx:id="bars" fill="#d4b85d" glyphName="BARS" size="25" text="" />
                </graphic>
             </Button>
          </children>
       </AnchorPane>
-      <VBox alignment="CENTER" layoutX="602.0" layoutY="104.0" prefHeight="345.0" prefWidth="376.0">
-         <children>
-            <Label fx:id="dashLabel2" alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" prefHeight="31.0" prefWidth="336.0" style="-fx-font-style: Bold;" text="Generate Report" textFill="#d4b85d">
-               <font>
-                  <Font name="Calibri Bold" size="14.0" />
-               </font>
-            </Label>
-            <BarChart fx:id="chart" prefHeight="221.0" prefWidth="336.0" styleClass="chart-bar">
-               <xAxis>
-                  <CategoryAxis side="BOTTOM" />
-               </xAxis>
-               <yAxis>
-                  <NumberAxis side="LEFT" />
-               </yAxis>
-            </BarChart>
-            <Label fx:id="dashLabel21" maxWidth="1.7976931348623157E308" prefHeight="28.0" prefWidth="336.0" style="-fx-font-style: Bold;" text="Date and Time " textFill="#4c4c4e">
-               <font>
-                  <Font name="Calibri Bold" size="12.0" />
-               </font>
-            </Label>
-         </children>
-      </VBox>
-      <TableView layoutX="114.0" layoutY="104.0" prefHeight="345.0" prefWidth="423.0">
-        <columns>
-          <TableColumn prefWidth="75.0" text="Date &amp; Time" />
-          <TableColumn prefWidth="75.0" text="Transaction" />
-            <TableColumn prefWidth="75.0" text="Type" />
-            <TableColumn prefWidth="75.0" text="Price" />
-            <TableColumn prefWidth="108.0" text="Current Total" />
-        </columns>
-      </TableView>
+
    </children>
 </AnchorPane>
