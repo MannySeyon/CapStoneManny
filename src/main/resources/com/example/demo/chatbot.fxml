@@ -1,16 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.chatBot">
-   <children>
-      <TextArea fx:id="page" layoutX="-1.0" prefHeight="332.0" prefWidth="594.0">
-         <effect>
-            <Glow />
-         </effect></TextArea>
-      <TextField fx:id="user" layoutX="2.0" layoutY="335.0" prefHeight="63.0" prefWidth="544.0" />
-      <Button fx:id="clientButton" layoutX="546.0" layoutY="333.0" mnemonicParsing="false" onAction="#send" prefHeight="63.0" prefWidth="52.0" text="Button" />
-   </children>
-</AnchorPane>
+<AnchorPane fx:id="anchPane" prefHeight="600.0" prefWidth="400.0" stylesheets="@Chatbot.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.ChatbotController">
+        <children>
+            <Pane fx:id="sidebar" prefHeight="90.0" prefWidth="400.0" styleClass="sidebar">
+                <children>
+                    <Circle fx:id="avatarBackground" fill="#fcfcfc" layoutX="42.0" layoutY="44.0" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+                    <ImageView fx:id="chatbotAvatar" fitHeight="48.0" fitWidth="48.0" layoutX="18.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../../../chatbotAvatar.png" />
+                        </image>
+                    </ImageView>
+                    <Label fx:id="chatbotNameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="124.0" layoutY="20.0" prefHeight="48.0" prefWidth="168.0" text="Chat Bot" textFill="#eaecff">
+                        <font>
+                            <Font name="Forte" size="28.0" />
+                        </font>
+                    </Label>
+                    <Button fx:id="minButton" layoutX="346.0" layoutY="2.0" maxWidth="37.0" minWidth="10.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="37.0" style="-fx-opacity: .8;" styleClass="minButton">
+               <graphic>
+                  <FontAwesomeIconView fx:id="minIcon" glyphName="CHEVRON_DOWN" size="15" />
+               </graphic>
+            </Button>
+                </children></Pane>
+            <TextField fx:id="userInput" alignment="CENTER" layoutX="14.0" layoutY="538.0" prefHeight="48.0" prefWidth="318.0" promptText="Enter your message here! Begin by typing &quot;HI&quot;">
+                <font>
+                    <Font name="Calibri" size="12.0" />
+                </font>
+            </TextField>
+            <Button fx:id="sendButton" layoutX="336.0" layoutY="537.0" minWidth="53.0" mnemonicParsing="false" onAction="#SendMessage" prefHeight="50.0" prefWidth="53.0" style="-fx-opacity: .7;" styleClass="sendButton" text="SEND" />
+            <TextArea fx:id="Console" layoutX="10.0" layoutY="98.0" prefHeight="432.0" prefWidth="380.0" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="98.0" />
+        </children>
+    </AnchorPane>
