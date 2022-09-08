@@ -58,7 +58,7 @@ public class ClientLoginController {
     }
     @FXML
     protected void AdminDash(ActionEvent event) throws IOException {
-        Parent fxml = FXMLLoader.load(getClass().getResource("AdminDashboard.fxml"));
+        Parent fxml = FXMLLoader.load(getClass().getResource("AdminSignin.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(fxml);
         stage.setScene(scene);
