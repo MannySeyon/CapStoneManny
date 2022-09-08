@@ -21,15 +21,16 @@ import java.time.LocalDate;
 
 @SuppressWarnings("ALL")
 public class SignupPageController {
-    //Declaring lbels for signup
+    //Declaring labels for signup
     @FXML
     private Label firstNameLabel, lastNameLabel, middleNameLabel,
             DOBLabel, ssnLabel, phoneNumberLabel, emailLabel,
             streetNameLabel, zipCodeLabel, aptLabel, cityLabel,
             genderLabel, maritalStatusLabel,
             usernameLabel, passwordLabel,
-            verifySSN, verifyPhone, verifyAgeLabel,
+            verifySSNLabel, verifyPhoneLabel, verifyAgeLabel,
              SignupLabel,  progressLabel, progressPercentLabel ;
+
     //Decalring Text Fields for signup (TF = textfields)
     @FXML
     private TextField firstNameTF,middleNameTF,lastNameTF,
@@ -42,17 +43,23 @@ public class SignupPageController {
     private String genderSet = "";
     private String maritalSet = "";
     @FXML
-    private RadioButton male, other, female, single, married;
+    private RadioButton maleButton, nonbinaryButton, femaleButton, singleButton, marriedButton;
+    @FXML
+    private ToggleGroup gendertoggle;
+    @FXML
+    private ToggleGroup martialtoggle;
 
     //Declaring window
     private Stage stage;
     private Scene scene;
     private Parent root;
 
+
     //Declaring buttons
     @FXML
     private Button LoginButton, Home, SignupButton, nextButton,
             progressButton;
+
     //Decalring datePicker
     @FXML
     private DatePicker datePicker;
@@ -60,13 +67,12 @@ public class SignupPageController {
     //Declaring AncherPane for Sceen Builder
     @FXML
     private AnchorPane anchorPane;
+
     //Declaring age
     @FXML
     private int age;
-    //Declaring progressBar
-    @FXML
-    private ProgressBar progressBar;
-    BigDecimal progress = new BigDecimal(String.format("%.2f", 0.0));
+
+
     //Declaring getting Date
     @FXML
     public void getDate(ActionEvent event) {
@@ -75,7 +81,7 @@ public class SignupPageController {
 
     @FXML
     protected void Home(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("main.fxml"));
+        root = FXMLLoader.load(getClass().getResource("MainModified.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -101,10 +107,35 @@ public class SignupPageController {
         stage.show();
     }
 
+    public boolean CheckDate(){
+        if (datePicker.getValue()==null){
+            return false;
+        }
+        return true;
+    }
+
+    /*
+    A method named "verify" to check if user input in text fields & alert user incompleted fields.
+    ◻ declare array to get text from text fields
+    ◻ declare array for text fields
+    ◽ integrate for-loop to check each text field
+    ◽ if-else statements that check to see if text fields are blank -> text fields will turn red to alert user
+    ◻ check if ssn text field is 9 digits long and if it is digits only - if not then alert user for invalid ssn format
+    ◻ check if phone number text field is 10 digits long and if it is digits only - it not, then alert user for invalid phone number format
+    ◻ check if user is over the age of 16 - if not, then they are not eligable to create a bank account
+     */
     public void verify(ActionEvent actionEvent) throws Exception {
+
         String[] verifyTextfield = new String[]{firstNameTF.getText(), lastNameTF.getText(), ssnTF.getText(),
                 usernameTF.getText(), passwordTF.getText(), phoneNumberTF.getText(), emailTF.getText(), streetTF.getText(), cityTF.getText(), zipCodeTF.getText(), apartmentTF.getText()};
+
         TextField[] textFields = new TextField[]{firstNameTF, lastNameTF, ssnTF, usernameTF, passwordTF, phoneNumberTF, emailTF, streetTF, cityTF, zipCodeTF, apartmentTF};
+
+        if(CheckDate()==false) {
+            datePicker.setStyle("-fx-text-box-border: #ff0000; -fx-focus-color: #ff0000;");
+        }
+
+
         for (int i = 0; i < verifyTextfield.length; i++) {
             if (verifyTextfield[i].isBlank()) {
                 textFields[i].setStyle("-fx-text-box-border: #ff0000; -fx-focus-color: #ff0000;");
@@ -116,16 +147,16 @@ public class SignupPageController {
 
             if (ssnTF.getText().length() != 9 || checkSSNInfo() == false) {
                 ssnTF.setStyle("-fx-text-box-border: #ff0000; -fx-focus-color: #ff0000;");
-                verifySSN.setText("Your Social Security Number is invalid.");
+                verifySSNLabel.setText("Your Social Security Number is invalid.");
             } else {
-                verifySSN.setText("");
+                verifySSNLabel.setText("");
             }
 
             if (checkPhoneInfo() == false || phoneNumberTF.getText().length() != 10) {
                 phoneNumberTF.setStyle("-fx-text-box-border: #ff0000; -fx-focus-color: #ff0000;");
-                verifyPhone.setText("Your phone number is invalid.");
+                verifyPhoneLabel.setText("Your phone number is invalid.");
             } else {
-                verifyPhone.setText("");
+                verifyPhoneLabel.setText("");
             }
             if (ageVerify() == false) {
                 datePicker.setStyle("-fx-text-box-border: #ff0000; -fx-focus-color: #ff0000;");
@@ -133,10 +164,13 @@ public class SignupPageController {
             } else {
                 verifyAgeLabel.setText("");
             }
+            if(!maleButton.isSelected() || !femaleButton.isSelected() || !nonbinaryButton.isSelected()){
+                genderLabel.setStyle("-fx-text-box-border: #ff0000; -fx-focus-color: #ff0000;");
+            }
 
         } else {
-            verifySSN.setText("");
-            verifyPhone.setText("");
+            verifySSNLabel.setText("");
+            verifyPhoneLabel.setText("");
             verifyAgeLabel.setText("");
             saveInfo(actionEvent);
         }
@@ -160,9 +194,9 @@ public class SignupPageController {
             return true;
         } catch (NumberFormatException e) {
             return false;
-
         }
     }
+
 
     public boolean ageVerify() {
         LocalDate today = LocalDate.now();
@@ -181,14 +215,15 @@ public class SignupPageController {
         }
     }
 
+
     public String genderCheck() {
 
-        if (male.isSelected()) {
+        if (maleButton.isSelected()) {
             genderSet = "M";
-        } else if (female.isSelected()) {
+        } else if (femaleButton.isSelected()) {
             genderSet = "F";
 
-        } else if (other.isSelected()) {
+        } else if (nonbinaryButton.isSelected()) {
             genderSet = "O";
         }
         return genderSet;
@@ -196,15 +231,15 @@ public class SignupPageController {
 
     public String maritalCheck() {
 
-        if (single.isSelected()) {
+        if (singleButton.isSelected()) {
             maritalSet = "single";
-        } else if (married.isSelected()) {
+        } else if (marriedButton.isSelected()) {
             maritalSet = "married";
         }
         return maritalSet;
     }
 
-    //Method that saves information
+    //Method that saves information from user input
     public void saveInfo(ActionEvent actionEvent) throws SQLException, IOException {
         Connectivity connectivity = new Connectivity();
         Connection connection = connectivity.getConnection();
@@ -251,6 +286,7 @@ public class SignupPageController {
         System.out.println(customer.getEmail());
         connection.close();
     }
+
     public void CheckIfUserExists() throws SQLException {
         Connectivity connectivity = new Connectivity();
         Connection connection = connectivity.getConnection();
@@ -261,7 +297,6 @@ public class SignupPageController {
         if (resultSet.next()) {
 
         }
-
     }
 }
 

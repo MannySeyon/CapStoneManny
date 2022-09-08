@@ -13,14 +13,16 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.util.converter.LocalDateTimeStringConverter;
 
 import java.io.IOException;
 import java.sql.*;
+import java.time.LocalDateTime;
 
 @SuppressWarnings("ALL")
 public class ClientLoginController {
     @FXML
-    private Label phoneLabel, emailLabel, UserLabel, passwordLabel, welcomeLabel, passwordShow;
+    private Label phoneLabel, emailLabel, UserLabel, passwordLabel, welcomeLabel, passwordShow, TimeDateLabel;
     @FXML
     ImageView BanklogoGif;
     @FXML TextField nameTextField;  @FXML private PasswordField passwordField;
@@ -94,6 +96,7 @@ public class ClientLoginController {
                 root = loader.load();
                 DashBoardController landingController = loader.getController();
                     landingController.displayName(nameTextField.getText(),passwordField.getText());
+                landingController.showTime();
                 stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 scene = new Scene(root);
                 stage.setScene(scene);
