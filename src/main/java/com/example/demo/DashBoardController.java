@@ -78,6 +78,22 @@ public class DashBoardController  {
         stage.setScene(scene);
         stage.show();
     }
+    @FXML
+    protected void Settings(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("SettingsPage.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    @FXML
+    protected void Transactions(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("TransactionPage.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
     public void getInfo (String password,String nameUser){
         this.password=password;
         this.nameUser =nameUser;

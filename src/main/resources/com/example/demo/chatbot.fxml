@@ -12,17 +12,13 @@
             <Pane fx:id="sidebar" prefHeight="90.0" prefWidth="400.0" styleClass="sidebar">
                 <children>
                     <Circle fx:id="avatarBackground" fill="#fcfcfc" layoutX="42.0" layoutY="44.0" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
-                    <ImageView fx:id="chatbotAvatar" fitHeight="48.0" fitWidth="48.0" layoutX="18.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                            <Image url="@../../../chatbotAvatar.png" />
-                        </image>
-                    </ImageView>
+                    <ImageView fx:id="chatbotAvatar" fitHeight="48.0" fitWidth="48.0" layoutX="18.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" />
                     <Label fx:id="chatbotNameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="124.0" layoutY="20.0" prefHeight="48.0" prefWidth="168.0" text="Chat Bot" textFill="#eaecff">
                         <font>
                             <Font name="Forte" size="28.0" />
                         </font>
                     </Label>
-                    <Button fx:id="minButton" layoutX="346.0" layoutY="2.0" maxWidth="37.0" minWidth="10.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="37.0" style="-fx-opacity: .8;" styleClass="minButton">
+                    <Button fx:id="minButton" layoutX="371.0" layoutY="-3.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-opacity: .8;" styleClass="minButton">
                <graphic>
                   <FontAwesomeIconView fx:id="minIcon" glyphName="CHEVRON_DOWN" size="15" />
                </graphic>
