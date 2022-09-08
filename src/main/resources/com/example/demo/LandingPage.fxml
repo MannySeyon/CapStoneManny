@@ -20,7 +20,7 @@
                   <Image url="@../../../security.png" />
                </image>
             </ImageView>
-            <VBox layoutX="5.0" layoutY="196.0" prefHeight="186.0" prefWidth="39.0">
+            <VBox layoutX="7.0" layoutY="242.0" prefHeight="100.0" prefWidth="39.0">
                <children>
                   <Button fx:id="homeButton" mnemonicParsing="false" onAction="#Home" prefHeight="25.0" prefWidth="25.0">
                      <graphic>
@@ -56,28 +56,6 @@
                      </padding>
                   </Button>
                   <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0">
-                     <graphic>
-                        <FontAwesomeIconView fx:id="image" fill="#4c4c4e" glyphName="IMAGE" size="18" styleClass="sidebar_opt" wrappingWidth="21.785715103149414" />
-                     </graphic>
-                     <VBox.margin>
-                        <Insets top="10.0" />
-                     </VBox.margin>
-                     <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </padding>
-                  </Button>
-                  <Separator fx:id="separator" styleClass="sidebar_opt">
-                     <VBox.margin>
-                        <Insets top="10.0" />
-                     </VBox.margin>
-                     <padding>
-                        <Insets top="2.0" />
-                     </padding>
-                  </Separator>
-                  <Button fx:id="LogoutButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#Logout" prefHeight="25.0" prefWidth="25.0">
-                     <graphic>
-                        <FontAwesomeIconView fx:id="plus" fill="#4c4c4e" glyphName="ARROW_LEFT" size="18" styleClass="sidebar" wrappingWidth="20.64285659790039" />
-                     </graphic>
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>

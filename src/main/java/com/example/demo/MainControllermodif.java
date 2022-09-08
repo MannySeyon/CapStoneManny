@@ -13,6 +13,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -23,7 +24,8 @@ import java.util.ResourceBundle;
 
 
 public class MainControllermodif implements Initializable {
-     
+
+    public Button LoginButton;
     @FXML
     private VBox vbox;
     @FXML
@@ -82,26 +84,9 @@ public class MainControllermodif implements Initializable {
         });
     }
 
-    @FXML
-    private void Signupp(ActionEvent event){
-
-
-        TranslateTransition t = new TranslateTransition(Duration.seconds(1), vbox);
-        t.setToX(vbox.getLayoutX() * 20);
-        t.play();
-        t.setOnFinished((e) ->{
-            try{
-                fxml = FXMLLoader.load(getClass().getResource("SignUp.fxml"));
-                vbox.getChildren().removeAll();
-                vbox.getChildren().setAll(fxml);
-            }catch(IOException ex){
-
-            }
-        });
 
     }
 
 
-    }
     
 
