@@ -7,9 +7,11 @@ module com.example.demo {
     requires validatorfx;
     requires java.sql;
     requires de.jensd.fx.glyphs.fontawesome;
+//    requires java.mail;
 
     opens com.example.demo to javafx.fxml;
     exports com.example.demo;
-    exports com.example.demo.Admin;
+
     opens com.example.demo.Admin to javafx.fxml;
+    exports com.example.demo.Admin;
 }
