@@ -1,0 +1,22 @@
+package com.example.demo.Admin;
+
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class AdminDepositController implements Initializable {
+    public TextField raddress_fld;
+    public Button search_btn;
+    public ListView result_listview;
+    public TextField amount_fld;
+    public Button deposit_btn;
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+    }
+}

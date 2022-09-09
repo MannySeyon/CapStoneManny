@@ -21,7 +21,7 @@
 
 .title_container Text{
     -fx-fill:#000000;
-    -fx-font-size: 12;
+    -fx-font-sixe: 12;
 }
 /*Navigation Section*/
 .menu_container {
@@ -33,32 +33,32 @@
     -fx-pref-width: 115;
     -fx-pref-height: 40;
     -fx-background-color: #FFFFFF;
-    -fx-fill: #d9bb79;
+    -fx-fill: #132A13;
     -fx-font-sixe: 12;
     -fx-alignment: center_left;
     -fx-effect: dropshadow(three-pass-box, #000000, 5, 0, 0, 6);
 }
 
 .menu_container Button:hover{
-    -fx-fill: #d9bb79;
+    -fx-fill: #132A13;
 }
 
 .alt_menu_btn{
     -fx-pref-width: 115;
     -fx-pref-height: 40;
-    -fx-background-color: #d9bb79;
+    -fx-background-color: #D4AF37;
     -fx-text-fill: #FFFFFF;
-    -fx-font-size: 12;
+    -fx-font-sixe: 12;
     -fx-alignment: center_left;
 }
 
 .alt_menu_btn FontAwesomeIconView{
-    -fx-fill: #d9bb79;
+    -fx-fill: #d4af37;
 }
 
 /*Report bug/suggestion */
 .report_container {
-    -fx-background-color:#d9bb79;
+    -fx-background-color: #d4af37;
     -fx-background-radius: 20 20 0 0;
     -fx-alignment: center;
     -fx-space: 10;
@@ -86,15 +86,6 @@
 }
 
 .report_container Button FontAwesomeIconView{
-    -fx-fill: #d9bb79
-
+    -fx-fill: #d4af37;
 }
 
-.table-view .column-header-background .filler {
-    -fx-cell-size: 20;
-    -fx-background-color: #d9bb79;
-}
-
-.table-view Text {
-    -fx-text-fill: #FFFFFF;
-}

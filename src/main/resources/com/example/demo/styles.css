@@ -1,19 +1,9 @@
-
-.parent2{
-    -fx-background-image: url('../../../banknewtry.jpg');
-    -fx-background-repeat: no-repeat;
-    -fx-background-size: cover;
-
-}
 .parent{
     /*-fx-background-color: linear-gradient(bottom , #181c2c, white);*/
-    -fx-background-image: url('../../../optionalBank.jpg');
+    -fx-background-image: url('../../../bg1.png');
     -fx-background-repeat: no-repeat;
     -fx-background-size: cover;
 
-}
-.label-font{
-    color: #7c795d; font-family: 'Trocchi', serif; font-size: 28px; font-weight: normal; line-height: 32px; margin: 0;
 }
 .pane{
     //#2196f3 transparent;
@@ -38,7 +28,6 @@
 .tf_box{
     -fx-background-color: transparent;
     -fx-border-color: #DEDEE4;
-    -fx-text-fill: #fffff;
     -fx-border-width: 0px 0px 1px 0px;
 }
 .tf{
