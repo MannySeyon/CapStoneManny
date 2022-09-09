@@ -13,6 +13,7 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -23,12 +24,12 @@ import java.sql.SQLException;
 
 public class SettingsPageController   {
 
+   @FXML
+   private BorderPane SettingPageBorder;
     @FXML
     private Label dashLabel;
     @FXML
     private Label nameLabel;
-    @FXML
-    private Label TimeDateLabel;
     @FXML
     private AnchorPane anchorPane;
     @FXML

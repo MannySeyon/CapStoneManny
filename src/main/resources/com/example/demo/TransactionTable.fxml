@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="420.0" prefWidth="438.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.TransactionPageController">
+   <children>
+      <Pane layoutX="14.0" layoutY="3.0" prefHeight="523.0" prefWidth="513.0" style="-fx-background-color: transparent;" styleClass="pane">
+         <children>
+            <TableView fx:id="TransactionTable" layoutX="6.0" layoutY="14.0" prefHeight="499.0" prefWidth="508.0">
+               <columns>
+                  <TableColumn prefWidth="91.0" text="Date &amp; Time" />
+                  <TableColumn prefWidth="104.0" text="Transactions" />
+                  <TableColumn prefWidth="85.0" text="Type" />
+                  <TableColumn prefWidth="95.0" text="Price" />
+                  <TableColumn prefWidth="129.0" text="Current Total" />
+               </columns>
+            </TableView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

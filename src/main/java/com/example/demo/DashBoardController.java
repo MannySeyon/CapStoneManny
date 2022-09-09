@@ -42,7 +42,7 @@ public class DashBoardController  {
             balanceLabelCard1, userNameCard1, VisaLabelCard1, TimeDateLabel, cardLabel1, dashLabel, nameLabel
             , VisaLabelCard2, savingsBalance, Savingslabel, checkingsBalance, TimeDateLabel2;
     String nameUser, password;
-    public AnchorPane goldColoredCard, blueColoredCard, anchorPane;
+    public AnchorPane goldColoredCard, blueColoredCard, anchorPane, pane2;
     public Button card1PlusButton, exit, Home, Logout, homeButton;
     @FXML
     private  FontAwesomeIconView bars, HomeButton, list, image, gear,plus;
