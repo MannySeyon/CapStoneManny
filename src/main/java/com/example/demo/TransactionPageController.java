@@ -35,7 +35,9 @@ public class TransactionPageController {
     @FXML
     private TableView TransactionTable;
     @FXML private ImageView securityLogo;
-    @FXML private AnchorPane anchorPane, TransactionBorder;
+    @FXML private AnchorPane anchorPane, pane2;
+    @FXML
+    private BorderPane TransactionBorder;
     @FXML
     private BarChart chart;
     @FXML

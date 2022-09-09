@@ -3,7 +3,6 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
 <AnchorPane prefHeight="420.0" prefWidth="438.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.TransactionPageController">
    <children>
       <Pane layoutX="14.0" layoutY="3.0" prefHeight="523.0" prefWidth="513.0" style="-fx-background-color: transparent;" styleClass="pane">

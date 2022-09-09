@@ -305,7 +305,7 @@
                   </HBox>
                </children>
             </VBox>
-            <AnchorPane layoutX="192.0" layoutY="324.0" prefHeight="253.0" prefWidth="272.0" style="-fx-background-color: white; -fx-opacity: .8;" styleClass="pane" AnchorPane.leftAnchor="192.0" AnchorPane.rightAnchor="514.0" AnchorPane.topAnchor="324.0">
+            <AnchorPane layoutX="393.0" layoutY="324.0" prefHeight="253.0" prefWidth="272.0" style="-fx-background-color: white; -fx-opacity: .8;" styleClass="pane" AnchorPane.leftAnchor="393.0" AnchorPane.rightAnchor="313.0" AnchorPane.topAnchor="324.0">
                <children>
                   <Pane layoutX="11.0" layoutY="10.0" prefHeight="250.0" prefWidth="250.0" styleClass="card1PlusButton">
                      <children>
@@ -342,7 +342,8 @@
                               <Label alignment="CENTER" prefHeight="35.0" prefWidth="35.0" styleClass="circle_lb">
                                  <graphic>
                                     <FontAwesomeIconView fill="#d71d10" glyphName="ARROW_DOWN" selectionFill="#e1270a" size="18" textAlignment="CENTER" />
-                                 </graphic></Label>
+                                 </graphic>
+                              </Label>
                               <Label fx:id="checkingsBalance11" alignment="CENTER" contentDisplay="CENTER" layoutX="30.0" layoutY="55.0" prefHeight="27.0" prefWidth="86.0" style="-fx-font-style: Bold;" text="-$1500.69" textFill="#d71d10">
                                  <font>
                                     <Font name="Calibri Bold" size="20.0" />
@@ -357,7 +358,7 @@
                   </Pane>
                </children>
             </AnchorPane>
-            <Button layoutX="732.0" layoutY="332.0" mnemonicParsing="false" onAction="#Settings" prefHeight="30.0" prefWidth="80.0" text="Settings">
+            <Button layoutX="294.0" layoutY="354.0" mnemonicParsing="false" onAction="#Settings" prefHeight="30.0" prefWidth="80.0" text="Settings">
                <font>
                   <Font name="Calibri" size="13.0" />
                </font>
@@ -365,7 +366,7 @@
                   <DropShadow blurType="ONE_PASS_BOX" />
                </effect>
             </Button>
-            <Button fx:id="transactionButton11" layoutX="631.0" layoutY="332.0" mnemonicParsing="false" onAction="#Transactions" prefHeight="30.0" prefWidth="85.0" text="Transactions">
+            <Button fx:id="transactionButton11" layoutX="177.0" layoutY="354.0" mnemonicParsing="false" onAction="#Transactions" prefHeight="30.0" prefWidth="85.0" text="Transactions">
                <font>
                   <Font name="Calibri" size="13.0" />
                </font>
@@ -373,7 +374,7 @@
                   <DropShadow blurType="ONE_PASS_BOX" />
                </effect>
             </Button>
-            <Button fx:id="transactionButton111" layoutX="483.0" layoutY="332.0" mnemonicParsing="false" onAction="#Transactions" prefHeight="30.0" prefWidth="134.0" text="Monthly Statements">
+            <Button fx:id="transactionButton111" layoutX="53.0" layoutY="354.0" mnemonicParsing="false" onAction="#Transactions" prefHeight="30.0" prefWidth="94.0" text="Statements">
                <font>
                   <Font name="Calibri" size="13.0" />
                </font>
