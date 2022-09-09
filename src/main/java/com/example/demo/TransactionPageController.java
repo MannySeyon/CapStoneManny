@@ -28,100 +28,24 @@ package com.example.demo;
         import java.time.LocalDateTime;
         import java.util.ResourceBundle;
 
-public class TransactionPageController implements Initializable {
-
+public class TransactionPageController {
 
     @FXML
     private  Button statementPageButton, graphView, tableView, homeButton, SettingButton, TransactionButton;
     @FXML
     private TableView TransactionTable;
     @FXML private ImageView securityLogo;
-    @FXML
-    private BorderPane TransactionBorder;
-    @FXML private AnchorPane anchorPane;
+    @FXML private AnchorPane anchorPane, TransactionBorder;
     @FXML
     private BarChart chart;
     @FXML
-    private Label nameLabel, TimeDateLabel, dashLabel, GenerateReportLabel;
+    private Label nameLabel, TimeDateLabel, dashLabel, GenerateReportLabel, dateandTime2;
     @FXML
     private FontAwesomeIconView HomeButton, bars;
-    String nameUser, password;
     private Stage stage;
     private Scene scene;
     private Parent root;
-    @FXML
-    private VBox vbox;
-    @FXML
-    private Parent fxml;
 
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        Translation();
-    }
-
-    @FXML
-    private void Open_Table(ActionEvent event) {
-        Translation();
-    }
-
-    private void Translation() {
-        TranslateTransition transition = new TranslateTransition(Duration.seconds(1), vbox);
-        transition.setToX(vbox.getLayoutX() * 20);
-        transition.play();
-        transition.setOnFinished((e) -> {
-            try {
-                fxml = FXMLLoader.load(getClass().getResource("TransactionTable.fxml"));
-                vbox.getChildren().removeAll();
-                vbox.getChildren().setAll(fxml);
-            } catch (IOException ex) {
-
-            }
-        });
-    }
-
-    @FXML
-    private void Open_Graph(ActionEvent event) {
-        TranslateTransition transition = new TranslateTransition(Duration.seconds(1), vbox);
-        transition.setToX(0);
-        transition.play();
-        transition.setOnFinished((e) -> {
-            try {
-                fxml = FXMLLoader.load(getClass().getResource("TransactionGraph.fxml"));
-                vbox.getChildren().removeAll();
-                vbox.getChildren().setAll(fxml);
-            } catch (IOException ex) {
-
-            }
-        });
-    }
-    public void getInfo(String password, String nameUser) {
-        this.password = password;
-        this.nameUser = nameUser;
-    }
-
-    public String setUser(String user) {
-        return user;
-    }
-
-    public void showTime() {
-        TimeDateLabel.setText(String.valueOf(LocalDateTime.now()));
-        TimeDateLabel.setText(String.valueOf(LocalDateTime.now()));
-    }
-
-    public void displayName(String nameUser, String password) throws SQLException {
-        Connectivity connectivity = new Connectivity();
-        Connection connection = connectivity.getConnection();
-        String query = "select First_name,Last_name from  customer_personal_info where username = ?   and password= ?";
-        PreparedStatement statement = connection.prepareStatement(query);
-        statement.setString(1, nameUser);
-        statement.setString(2, password);
-        ResultSet resultSet = statement.executeQuery();
-        System.out.println(password);
-        while (resultSet.next()) {
-            nameLabel.setText("Hello, " + resultSet.getString(1) + " " + resultSet.getString(2) + ". Welcome to your Summit Dashboard!");
-
-        }
-    }
     @FXML
     protected void Home(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("LandingPage.fxml"));
@@ -149,6 +73,22 @@ public class TransactionPageController implements Initializable {
         stage.show();
     }
 
+    @FXML
+    protected void TransactionsTable(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("TransactionTable.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    @FXML
+    protected void TransactionsGraph(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("TransactionGraph.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 
     @FXML
     protected void Logout(ActionEvent event) throws IOException {

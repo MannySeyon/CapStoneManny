@@ -40,7 +40,7 @@ public class DashBoardController  {
     @FXML
     private Label userNameCard2, card2Number, balanceLabelCard2, VisaLabelCard2m, card1Number,
             balanceLabelCard1, userNameCard1, VisaLabelCard1, TimeDateLabel, cardLabel1, dashLabel, nameLabel
-            , VisaLabelCard2, savingsBalance, Savingslabel, checkingsBalance, TimeDateLabel2;
+            , VisaLabelCard2, savingsBalance, Savingslabel, checkingsBalance;
     String nameUser, password;
     public AnchorPane goldColoredCard, blueColoredCard, anchorPane, pane2;
     public Button card1PlusButton, exit, Home, Logout, homeButton;
@@ -54,22 +54,6 @@ public class DashBoardController  {
     private Scene scene;
     private Parent root;
 
-
-//    @Override
-//    public void intialize(URL url, ResourceBundle rb){
-//        //circle.setFill((new ImagePattern("/Summit Fin Corp.png")));
-//        XYChart.Series<String,Double> series_01 = new XYChart.Series();
-//        series_01.setName("Year 2022");
-//        series_01.getData().add(new XYChart.Data("Jan", 500));
-//        series_01.getData().add(new XYChart.Data("Feb", 400));
-//        series_01.getData().add(new XYChart.Data("Mar", 300));
-//        series_01.getData().add(new XYChart.Data("Apr", 200));
-//        series_01.getData().add(new XYChart.Data("May", 700));
-//        chart.getData().add(series_01);
-//    }
-
-
-  
     @FXML
     protected void Home(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("LandingPage.fxml"));
@@ -137,7 +121,6 @@ public class DashBoardController  {
 
     public void showTime() {
         TimeDateLabel.setText(String.valueOf(LocalDateTime.now()));
-        TimeDateLabel2.setText(String.valueOf(LocalDateTime.now()));
     }
     public void showBalance (String nameUser,String password) throws SQLException {
         Connectivity connectivity = new Connectivity();
@@ -170,12 +153,5 @@ public class DashBoardController  {
         }
 
     }
-
-
-
-//    @Override
-//    public void initialize(URL url, ResourceBundle resourceBundle) {
-//
-//    }
 }
 

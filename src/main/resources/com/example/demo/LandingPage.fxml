@@ -98,7 +98,7 @@
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
                         </Label>
-                        <Label fx:id="TimeDateLabel2" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="125.0" layoutY="25.0" maxWidth="1.7976931348623157E308" prefHeight="27.0" prefWidth="156.0" style="-fx-font-style: Bold;" text="" textFill="#747475">
+                        <Label fx:id="TimeDateLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="125.0" layoutY="25.0" maxWidth="1.7976931348623157E308" prefHeight="27.0" prefWidth="156.0" style="-fx-font-style: Bold;" text="" textFill="#747475">
                            <font>
                               <Font name="Calibri Bold" size="14.0" />
                            </font>
@@ -357,7 +357,7 @@
                   </Pane>
                </children>
             </AnchorPane>
-            <Button layoutX="844.0" layoutY="440.0" mnemonicParsing="false" onAction="#Settings" prefHeight="30.0" prefWidth="80.0" text="Settings">
+            <Button layoutX="732.0" layoutY="332.0" mnemonicParsing="false" onAction="#Settings" prefHeight="30.0" prefWidth="80.0" text="Settings">
                <font>
                   <Font name="Calibri" size="13.0" />
                </font>
@@ -365,7 +365,7 @@
                   <DropShadow blurType="ONE_PASS_BOX" />
                </effect>
             </Button>
-            <Button fx:id="transactionButton11" layoutX="689.0" layoutY="440.0" mnemonicParsing="false" onAction="#Transactions" prefHeight="30.0" prefWidth="85.0" text="Transactions">
+            <Button fx:id="transactionButton11" layoutX="631.0" layoutY="332.0" mnemonicParsing="false" onAction="#Transactions" prefHeight="30.0" prefWidth="85.0" text="Transactions">
                <font>
                   <Font name="Calibri" size="13.0" />
                </font>
@@ -373,7 +373,7 @@
                   <DropShadow blurType="ONE_PASS_BOX" />
                </effect>
             </Button>
-            <Button fx:id="transactionButton111" layoutX="476.0" layoutY="440.0" mnemonicParsing="false" onAction="#Transactions" prefHeight="30.0" prefWidth="134.0" text="Monthly Statements">
+            <Button fx:id="transactionButton111" layoutX="483.0" layoutY="332.0" mnemonicParsing="false" onAction="#Transactions" prefHeight="30.0" prefWidth="134.0" text="Monthly Statements">
                <font>
                   <Font name="Calibri" size="13.0" />
                </font>
