@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox prefHeight="420.0" prefWidth="438.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.TransactionPageController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="470.0">
+         <children>
+            <BarChart fx:id="chart" layoutX="4.0" layoutY="1.0" prefHeight="519.0" prefWidth="470.0" styleClass="chart-bar">
+               <xAxis>
+                  <CategoryAxis side="BOTTOM" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis side="LEFT" tickLabelFill="#e8e8e8" />
+               </yAxis>
+            </BarChart>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

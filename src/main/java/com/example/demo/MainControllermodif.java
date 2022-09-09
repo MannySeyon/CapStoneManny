@@ -25,7 +25,8 @@ import java.util.ResourceBundle;
 
 public class MainControllermodif implements Initializable {
 
-    public Button LoginButton;
+    @FXML
+    private Button LoginButton,aboutUsButton;
     @FXML
     private VBox vbox;
     @FXML
@@ -55,6 +56,24 @@ public class MainControllermodif implements Initializable {
 
             }
         });
+    }
+
+
+    @FXML
+        protected void AdminDash(ActionEvent event) throws IOException {
+            fxml = FXMLLoader.load(getClass().getResource("AdminDashboard.fxml"));
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(fxml);
+            stage.setScene(scene);
+            stage.show();
+        }
+    @FXML
+    protected void aboutUsPage(ActionEvent event) throws IOException {
+        fxml = FXMLLoader.load(getClass().getResource("AboutUs.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(fxml);
+        stage.setScene(scene);
+        stage.show();
     }
 
 

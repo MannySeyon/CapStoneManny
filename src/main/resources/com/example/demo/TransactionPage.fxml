@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1024.0" stylesheets="@Landing.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.TransactionPageController">
+<AnchorPane fx:id="TransactionBorder" prefHeight="600.0" prefWidth="1024.0" styleClass="pane2" stylesheets="@Landing.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.TransactionPageController">
    <HBox layoutX="148.0" layoutY="7.0" prefHeight="36.0" prefWidth="876.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="10.0">
       <padding>
          <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
@@ -96,14 +96,14 @@
          </graphic>
       </Button>
    </AnchorPane>
-   <VBox alignment="CENTER" layoutX="602.0" layoutY="104.0" prefHeight="345.0" prefWidth="376.0">
+   <VBox alignment="CENTER" layoutX="628.0" layoutY="66.0" prefHeight="432.0" prefWidth="376.0">
       <Label fx:id="GenerateReportLabel" alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" prefHeight="31.0" prefWidth="336.0" text="Generate Report" textFill="#d4b85d">
          <style>-fx-font-style: Bold;</style>
          <font>
             <Font name="Calibri Bold" size="14.0" />
          </font>
       </Label>
-      <BarChart fx:id="chart" prefHeight="221.0" prefWidth="336.0" styleClass="chart-bar">
+      <BarChart fx:id="chart" prefHeight="289.0" prefWidth="376.0" styleClass="chart-bar">
          <xAxis>
             <CategoryAxis side="BOTTOM" />
          </xAxis>
@@ -117,7 +117,7 @@
          </font>
       </Label>
    </VBox>
-   <TableView layoutX="84.0" layoutY="104.0" prefHeight="345.0" prefWidth="505.0">
+   <TableView fx:id="TransactionTable" layoutX="98.0" layoutY="120.0" prefHeight="370.0" prefWidth="505.0">
       <columns>
          <TableColumn prefWidth="91.0" text="Date &amp; Time" />
          <TableColumn prefWidth="104.0" text="Transaction" />
@@ -126,4 +126,7 @@
          <TableColumn prefWidth="114.0" text="Current Total" />
       </columns>
    </TableView>
+   <Button fx:id="tableView" layoutX="323.0" layoutY="505.0" mnemonicParsing="false" text="Table" />
+   <Button fx:id="graphView" layoutX="816.0" layoutY="505.0" mnemonicParsing="false" onAction="#TransactionsGraph" text="Graph" />
+   <Button fx:id="statementPageButton" layoutX="526.0" layoutY="69.0" mnemonicParsing="false" text="Statements" />
 </AnchorPane>

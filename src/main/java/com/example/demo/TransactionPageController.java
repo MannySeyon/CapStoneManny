@@ -2,56 +2,49 @@
 package com.example.demo;
 
         import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
+        import javafx.animation.TranslateTransition;
         import javafx.event.ActionEvent;
         import javafx.fxml.FXML;
         import javafx.fxml.FXMLLoader;
+        import javafx.fxml.Initializable;
         import javafx.scene.Node;
         import javafx.scene.Parent;
         import javafx.scene.Scene;
         import javafx.scene.chart.BarChart;
-        import javafx.scene.control.Alert;
-        import javafx.scene.control.Button;
-        import javafx.scene.control.ButtonType;
-        import javafx.scene.control.Label;
+        import javafx.scene.control.*;
         import javafx.scene.image.ImageView;
         import javafx.scene.layout.AnchorPane;
+        import javafx.scene.layout.BorderPane;
+        import javafx.scene.layout.VBox;
         import javafx.stage.Stage;
+        import javafx.util.Duration;
 
         import java.io.IOException;
+        import java.net.URL;
         import java.sql.Connection;
         import java.sql.PreparedStatement;
         import java.sql.ResultSet;
         import java.sql.SQLException;
+        import java.time.LocalDateTime;
+        import java.util.ResourceBundle;
 
-public class TransactionPageController  {
+public class TransactionPageController {
 
-
+    @FXML
+    private  Button statementPageButton, graphView, tableView, homeButton, SettingButton, TransactionButton;
+    @FXML
+    private TableView TransactionTable;
+    @FXML private ImageView securityLogo;
+    @FXML private AnchorPane anchorPane, TransactionBorder;
     @FXML
     private BarChart chart;
     @FXML
-    private Label dateandTime2;
-    @FXML
-    private  Label GenerateReportLabel;
-
-    @FXML
-    private Label dashLabel;
-    @FXML
-    private Label nameLabel;
-    @FXML
-    private Label TimeDateLabel;
-    @FXML
-    private AnchorPane anchorPane;
-    @FXML
-    private ImageView securityLogo;
-    @FXML
-    private Button homeButton, SettingButton, TransactionButton;
+    private Label nameLabel, TimeDateLabel, dashLabel, GenerateReportLabel, dateandTime2;
     @FXML
     private FontAwesomeIconView HomeButton, bars;
-    String nameUser, password;
     private Stage stage;
     private Scene scene;
     private Parent root;
-
 
     @FXML
     protected void Home(ActionEvent event) throws IOException {
@@ -61,6 +54,7 @@ public class TransactionPageController  {
         stage.setScene(scene);
         stage.show();
     }
+
     @FXML
     protected void Settings(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("SettingsPage.fxml"));
@@ -69,6 +63,7 @@ public class TransactionPageController  {
         stage.setScene(scene);
         stage.show();
     }
+
     @FXML
     protected void Transactions(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("LandingPage.fxml"));
@@ -77,13 +72,24 @@ public class TransactionPageController  {
         stage.setScene(scene);
         stage.show();
     }
-    public void getInfo (String password,String nameUser){
-        this.password=password;
-        this.nameUser =nameUser;
+
+    @FXML
+    protected void TransactionsTable(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("TransactionTable.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
-    public String setUser(String user){
-        return user;
+    @FXML
+    protected void TransactionsGraph(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("TransactionGraph.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
+
     @FXML
     protected void Logout(ActionEvent event) throws IOException {
         //Logout Alert
@@ -93,7 +99,7 @@ public class TransactionPageController  {
         alert.setContentText("Do you want to Logout?");
 
         //If they click ok-logout-return to the login screen
-        if(alert.showAndWait().get() == ButtonType.OK) {
+        if (alert.showAndWait().get() == ButtonType.OK) {
             root = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene = new Scene(root);
@@ -101,6 +107,7 @@ public class TransactionPageController  {
             stage.show();
         }
     }
+
     //Save any progress and close stage
     @FXML
     public void Exit(ActionEvent event) {
@@ -109,30 +116,12 @@ public class TransactionPageController  {
         alert.setTitle("Exit");
         alert.setHeaderText("You Are About To Quit");
         alert.setContentText("Do you want to Quit?");
-        if(alert.showAndWait().get() == ButtonType.OK) {
+        if (alert.showAndWait().get() == ButtonType.OK) {
             //set stage =to the current working stage
             stage = (Stage) anchorPane.getScene().getWindow();
             System.out.println("You've successfully Quit!");
             stage.close();
         }
     }
-
-
-    public void displayName(String nameUser,String password) throws SQLException {
-        Connectivity connectivity = new Connectivity();
-        Connection connection = connectivity.getConnection();
-        String query = "select First_name,Last_name from  customer_personal_info where username = ?   and password= ?";
-        PreparedStatement statement = connection.prepareStatement(query);
-        statement.setString(1,nameUser);
-        statement.setString(2,password);
-        ResultSet resultSet = statement.executeQuery();
-        System.out.println(password);
-        while(resultSet.next()){
-            nameLabel.setText("Hello, " + resultSet.getString(1) +" "+ resultSet.getString(2)  + ". Welcome to your Summit Dashboard!" );
-
-        }
-
-    }
-
 
 }
