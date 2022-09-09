@@ -1,8 +1,9 @@
 .TextField {
     -fx-background-radius: 5px;
-    -fx-background-color: White;
+    -fx-background-color: white;
     -fx-border-radius: 5px;
-    -fx-opacity: .9;
+    -fx-opacity: .7;
+    -fx-text-inner-color: black;
 }
 
 .Button {
@@ -17,11 +18,21 @@
     -fx-font-weight: 900;
 }
 
-.Image {
-    -fx-border-radius: 30px;
+.BackgroundImage {
+    -fx-background-image: url("../../../Gold.jpeg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
 }
 
 .ButtonFonts {
     -fx-font-family: "Apple LiSung";
     -fx-font-size: 18px;
+}
+
+.secondImage {
+    -fx-background-image: url("../../../white.jpeg");
+    -fx-opacity: .25;
+
+
+
 }
