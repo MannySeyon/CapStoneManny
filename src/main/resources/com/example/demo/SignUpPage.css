@@ -1,13 +1,27 @@
-      .TextField {
-          -fx-background-radius: 5px;
-          -fx-background-color: White;
-          -fx-border-radius: 5px;
-
-      }
-.Button{
-
-          -fx-background-radius: 5px;
-        -fx-background-color: #E7E7E7;
+.TextField {
+    -fx-background-radius: 5px;
+    -fx-background-color: White;
     -fx-border-radius: 5px;
+    -fx-opacity: .9;
+}
 
+.Button {
+    -fx-background-radius: 5px;
+    -fx-background-color: #E7E7E7;
+    -fx-border-radius: 5px;
+}
+
+.Font {
+    -fx-font-family: "Apple LiSung";
+    -fx-font-size: 22px;
+    -fx-font-weight: 900;
+}
+
+.Image {
+    -fx-border-radius: 30px;
+}
+
+.ButtonFonts {
+    -fx-font-family: "Apple LiSung";
+    -fx-font-size: 18px;
 }
