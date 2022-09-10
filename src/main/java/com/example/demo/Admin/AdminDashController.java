@@ -1,14 +1,21 @@
 package com.example.demo.Admin;
 
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class AdminDashController implements Initializable {
@@ -94,36 +101,37 @@ public class AdminDashController implements Initializable {
     private Button create_c_btn, Clients_btn, deposit_btn, logout_btn;
 // table data clients view
     @FXML
-    public TableView table;
+    private TableView<ConnTable> table;
     @FXML
-    public TableColumn col_accnum;
+    private TableColumn<ConnTable, String> col_accnum;
     @FXML
-    public TableColumn col_fname;
+    private TableColumn<ConnTable, String> col_fname;
     @FXML
-    public TableColumn col_lname;
+    private TableColumn<ConnTable, String> col_lname;
     @FXML
-    public TableColumn col_mname;
+    private TableColumn<ConnTable, String> col_mname;
     @FXML
-    public TableColumn col_dob;
+    private TableColumn<ConnTable, String> col_dob;
     @FXML
-    public TableColumn col_address;
+    private TableColumn<ConnTable, String> col_address;
     @FXML
-    public TableColumn col_zip;
+    private TableColumn<ConnTable, String> col_zip;
     @FXML
-    public TableColumn col_state;
+    private TableColumn<ConnTable, String> col_state;
     @FXML
-    public TableColumn col_country;
+    private TableColumn<ConnTable, String> col_country;
     @FXML
-    public TableColumn col_city;
+    private TableColumn<ConnTable, String> col_city;
     @FXML
-    public TableColumn col_contactnum;
+    private TableColumn <ConnTable, String>col_contactnum;
     @FXML
-    public TableColumn col_last4ssn;
+    private TableColumn<ConnTable, String> col_last4ssn;
     @FXML
-    public TableColumn col_username;
+    private TableColumn<ConnTable, String> col_username;
     @FXML
-    public TableColumn col_email;
+    private TableColumn<ConnTable, String> col_email;
 
+    ObservableList<ConnTable>clientsList = FXCollections.observableArrayList();
 
 
 
@@ -156,5 +164,38 @@ public class AdminDashController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
+        Connection con;
+        try {
+            con = DriverManager.getConnection("jdbc:mysql://34.68.83.162/bs_db1", "root", "1558");
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        try {
+            ResultSet rs = con.createStatement().executeQuery("select * from customer_personal_info ");
+            while (rs.next()) {
+                clientsList.add(new ConnTable(rs.getString("Account_number"),rs.getString("First_name"), rs.getString("Last_name"),rs.getString("Middle_name"),rs.getString("date_of_birth"),rs.getString("address"),rs.getString("zipp_code"),rs.getString("state"),rs.getString("Country"),rs.getString("city"),rs.getString("contact_no"),rs.getString( "ssn"),rs.getString( "username"),rs.getString( "email")));
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        col_accnum.setCellValueFactory(new PropertyValueFactory<>("Account_number"));
+        col_fname.setCellValueFactory(new PropertyValueFactory<>("First_name"));
+        col_lname.setCellValueFactory(new PropertyValueFactory<>("Last_name"));
+        col_mname.setCellValueFactory(new PropertyValueFactory<>("Middle_name"));
+        col_dob.setCellValueFactory(new PropertyValueFactory<>("date_of_birth"));
+        col_address.setCellValueFactory(new PropertyValueFactory<>("address"));
+        col_zip.setCellValueFactory(new PropertyValueFactory<>("zipp_code"));
+        col_state.setCellValueFactory(new PropertyValueFactory<>("state"));
+        col_country.setCellValueFactory(new PropertyValueFactory<>("Country"));
+        col_city.setCellValueFactory(new PropertyValueFactory<>("city"));
+        col_contactnum.setCellValueFactory(new PropertyValueFactory<>("contact_no"));
+        col_last4ssn.setCellValueFactory(new PropertyValueFactory<>("ssn"));
+        col_username.setCellValueFactory(new PropertyValueFactory<>("username"));
+        col_email.setCellValueFactory(new PropertyValueFactory<>("email"));
+
+        table.setItems(clientsList);
     }
 }
