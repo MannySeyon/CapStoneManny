@@ -76,6 +76,17 @@ public class ClientLoginController {
              passwordShow.setText("Please enter User name and Password");
         }
     }
+
+    private  void dashboard() throws IOException, SQLException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("LandingPage.fxml"));
+        root = loader.load();
+        DashBoardController landingController = loader.getController();
+        landingController.getInfo(nameTextField.getText(),passwordField.getText());
+        landingController.showTime();
+        landingController.displayName(nameTextField.getText(),passwordField.getText());
+        landingController.showBalance(nameTextField.getText(),passwordField.getText());
+
+    }
 @FXML
     public void validateLogin(ActionEvent event ) throws SQLException, IOException {
         Connectivity connectivity = new Connectivity();
@@ -88,16 +99,7 @@ public class ClientLoginController {
         while (resultSet.next()) {
             System.out.println(resultSet.getInt(1));
             if (resultSet.getInt(1) == 1) {
-
-                DashBoardController dashBoardController= new DashBoardController();
-                dashBoardController.getInfo(nameTextField.getText(),passwordField.getText());
-
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("LandingPage.fxml"));
-                root = loader.load();
-                DashBoardController landingController = loader.getController();
-                    landingController.displayName(nameTextField.getText(),passwordField.getText());
-                landingController.showTime();
-                landingController.showBalance(nameTextField.getText(),passwordField.getText());
+                dashboard();
                 stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 scene = new Scene(root);
                 stage.setScene(scene);

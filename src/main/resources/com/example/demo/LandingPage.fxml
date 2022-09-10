@@ -212,7 +212,7 @@
                                                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                              </padding>
                                           </Label>
-                                          <Label fx:id="savingsBalance" alignment="CENTER" layoutX="13.0" layoutY="91.0" prefHeight="33.0" prefWidth="106.0" style="-fx-font-style: Bold;" text="\$73,890.01" textFill="#e5e5f2" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="91.0">
+                                          <Label fx:id="savingsBalance" alignment="CENTER" layoutX="13.0" layoutY="91.0" prefHeight="33.0" prefWidth="106.0" style="-fx-font-style: Bold;" text="" textFill="#e5e5f2" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="91.0">
                                              <font>
                                                 <Font name="Calibri Bold" size="20.0" />
                                              </font>
@@ -290,7 +290,7 @@
                               </HBox>
                               <AnchorPane prefHeight="25.0" prefWidth="260.0">
                                  <children>
-                                    <Label fx:id="savingsBalance1" alignment="CENTER" layoutX="5.0" layoutY="6.0" prefHeight="61.0" prefWidth="238.0" style="-fx-font-style: Bold;" text="\$73,890.01" textFill="#f8f8f8">
+                                    <Label fx:id="savingsBalance1" alignment="CENTER" layoutX="5.0" layoutY="6.0" prefHeight="61.0" prefWidth="238.0" style="-fx-font-style: Bold;" text="" textFill="#f8f8f8">
                                        <font>
                                           <Font name="Calibri Bold" size="36.0" />
                                        </font>

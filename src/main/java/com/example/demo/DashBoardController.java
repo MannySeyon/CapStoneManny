@@ -40,7 +40,7 @@ public class DashBoardController  {
     @FXML
     private Label userNameCard2, card2Number, balanceLabelCard2, VisaLabelCard2m, card1Number,
             balanceLabelCard1, userNameCard1, VisaLabelCard1, TimeDateLabel, cardLabel1, dashLabel, nameLabel
-            , VisaLabelCard2, savingsBalance, Savingslabel, checkingsBalance;
+            , VisaLabelCard2, savingsBalance, Savingslabel, checkingsBalance,savingsBalance1;
     String nameUser, password;
     public AnchorPane goldColoredCard, blueColoredCard, anchorPane, pane2;
     public Button card1PlusButton, exit, Home, Logout, homeButton;
@@ -130,12 +130,19 @@ public class DashBoardController  {
         statement.setString(1,nameUser);
         statement.setString(2,password);
         ResultSet resultSet = statement.executeQuery();
-        System.out.println(password);
+
         while(resultSet.next()){
             checkingsBalance.setText("$"+resultSet.getString(1));
-
-
     }
+        String query2= "call saving_balance(?,?)";
+        PreparedStatement statement2 = connection.prepareStatement(query2);
+        statement2.setString(1,nameUser);
+        statement2.setString(2,password);
+        ResultSet resultSet2 = statement2.executeQuery();
+        while(resultSet2.next()){
+            savingsBalance.setText("$"+resultSet2.getString(1));
+            savingsBalance1.setText("$"+resultSet2.getString(1));
+        }
     }
 
     public void displayName(String nameUser,String password) throws SQLException {
