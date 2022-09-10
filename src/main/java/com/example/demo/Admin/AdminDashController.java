@@ -81,6 +81,8 @@ public class AdminDashController implements Initializable {
     @FXML
     public Button Search_Client_btn;
     @FXML
+    public TextField raddress_fld;
+    @FXML
     private SplitPane pnCreateClient;
     @FXML
     private Pane pnClientsListview;
@@ -90,6 +92,38 @@ public class AdminDashController implements Initializable {
     private BorderPane mainPane;
     @FXML
     private Button create_c_btn, Clients_btn, deposit_btn, logout_btn;
+// table data clients view
+    @FXML
+    public TableView table;
+    @FXML
+    public TableColumn col_accnum;
+    @FXML
+    public TableColumn col_fname;
+    @FXML
+    public TableColumn col_lname;
+    @FXML
+    public TableColumn col_mname;
+    @FXML
+    public TableColumn col_dob;
+    @FXML
+    public TableColumn col_address;
+    @FXML
+    public TableColumn col_zip;
+    @FXML
+    public TableColumn col_state;
+    @FXML
+    public TableColumn col_country;
+    @FXML
+    public TableColumn col_city;
+    @FXML
+    public TableColumn col_contactnum;
+    @FXML
+    public TableColumn col_last4ssn;
+    @FXML
+    public TableColumn col_username;
+    @FXML
+    public TableColumn col_email;
+
 
 
 
