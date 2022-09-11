@@ -1,13 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" styleClass="pane2" stylesheets="@Landing.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
-   <left>
-      <AnchorPane prefHeight="600.0" prefWidth="44.0" styleClass="pane" BorderPane.alignment="CENTER" />
-   </left>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1210.0" styleClass="pane2" stylesheets="@Landing.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <center>
-      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="950.0" stylesheets="@Landing.css" BorderPane.alignment="CENTER" />
+      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="950.0" stylesheets="@Landing.css" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="105.0" fitWidth="139.0" layoutX="39.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Bird.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="105.0" fitWidth="139.0" layoutX="225.0" layoutY="416.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Bird.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="105.0" fitWidth="139.0" layoutX="426.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Bird.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="105.0" fitWidth="139.0" layoutX="679.0" layoutY="424.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Bird.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="105.0" fitWidth="139.0" layoutX="1075.0" layoutY="416.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Bird.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="40.0" layoutY="109.0" styleClass="namelabel" text="Chuoa" textFill="#252525" />
+            <Label layoutX="226.0" layoutY="60.0" prefHeight="22.0" prefWidth="65.0" styleClass="namelabel" text="Pandora" textFill="#252525" />
+            <Label layoutX="426.0" layoutY="107.0" prefHeight="23.0" prefWidth="64.0" styleClass="namelabel" text="Manny" textFill="#252525" />
+            <Label layoutX="746.0" layoutY="58.0" prefHeight="23.0" prefWidth="33.0" styleClass="namelabel" text="Sam" textFill="#252525" />
+            <Label layoutX="939.0" layoutY="109.0" prefHeight="23.0" prefWidth="48.0" styleClass="namelabel" text="David" textFill="#252525" />
+            <ImageView fitHeight="105.0" fitWidth="139.0" layoutX="888.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Bird.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="1110.0" layoutY="58.0" prefHeight="23.0" prefWidth="67.0" styleClass="namelabel" text="Ruhama" textFill="#252525" />
+            <Label alignment="BOTTOM_LEFT" layoutX="39.0" layoutY="308.0" prefHeight="259.0" prefWidth="154.0" styleClass="DescLabel" text="Chuoa" textFill="#252525" />
+            <Label alignment="BOTTOM_LEFT" layoutX="225.0" layoutY="141.0" prefHeight="259.0" prefWidth="154.0" styleClass="DescLabel" text="Chuoa" textFill="#252525" />
+            <Label alignment="BOTTOM_LEFT" layoutX="424.0" layoutY="306.0" prefHeight="259.0" prefWidth="154.0" styleClass="DescLabel" text="Chuoa" textFill="#252525" />
+            <Label alignment="BOTTOM_LEFT" layoutX="626.0" layoutY="142.0" prefHeight="259.0" prefWidth="154.0" styleClass="DescLabel" text="Chuoa" textFill="#252525" />
+            <Label alignment="BOTTOM_LEFT" layoutX="835.0" layoutY="306.0" prefHeight="259.0" prefWidth="154.0" styleClass="DescLabel" text="Chuoa" textFill="#252525" />
+            <Label alignment="BOTTOM_LEFT" layoutX="1023.0" layoutY="141.0" prefHeight="259.0" prefWidth="154.0" styleClass="DescLabel" text="Chuoa" textFill="#252525" />
+            <Label layoutX="226.0" layoutY="86.0" prefHeight="50.0" prefWidth="152.0" styleClass="linklabel" text="links" textFill="#252525" />
+            <Label layoutX="40.0" layoutY="247.0" prefHeight="50.0" prefWidth="152.0" styleClass="linklabel" text="links" textFill="#252525" />
+            <Label alignment="TOP_LEFT" layoutX="426.0" layoutY="246.0" prefHeight="50.0" prefWidth="152.0" styleClass="linklabel" text="Email,Phone,Linkedin,Github" textFill="#252525">
+               <font>
+                  <Font size="11.0" />
+               </font></Label>
+            <Label alignment="CENTER_RIGHT" layoutX="627.0" layoutY="84.0" prefHeight="50.0" prefWidth="152.0" styleClass="linklabel" text="links" textFill="#252525" />
+            <Label alignment="CENTER_RIGHT" layoutX="837.0" layoutY="247.0" prefHeight="50.0" prefWidth="152.0" styleClass="linklabel" text="links" textFill="#252525" />
+            <Label alignment="CENTER_RIGHT" layoutX="1024.0" layoutY="86.0" prefHeight="50.0" prefWidth="152.0" styleClass="linklabel" text="links" textFill="#252525" />
+            <Label alignment="CENTER" layoutX="465.0" layoutY="14.0" prefHeight="46.0" prefWidth="227.0" text="ABOUT US" textFill="#e4d6d6">
+               <font>
+                  <Font name="Calibri Bold" size="36.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
    </center>
 </BorderPane>

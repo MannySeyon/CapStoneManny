@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.chart.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
@@ -83,6 +85,62 @@
       </AnchorPane>
    </center>
    <left>
-      <AnchorPane prefHeight="600.0" prefWidth="44.0" styleClass="pane" BorderPane.alignment="CENTER" />
+      <AnchorPane prefHeight="600.0" prefWidth="44.0" styleClass="pane" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="securityLogo" fitHeight="57.0" fitWidth="40.0" layoutX="11.0" layoutY="546.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../security.png" />
+               </image>
+            </ImageView>
+            <VBox layoutX="2.0" layoutY="250.0" prefHeight="100.0" prefWidth="39.0">
+               <children>
+                  <Button fx:id="homeButton" mnemonicParsing="false" onAction="#Home" prefHeight="25.0" prefWidth="25.0">
+                     <graphic>
+                        <FontAwesomeIconView fx:id="HomeButton" fill="#d4b85d" glyphName="HOME" size="18" wrappingWidth="23.214284896850586" />
+                     </graphic>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="TransactionButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#Transactions" prefHeight="25.0" prefWidth="25.0">
+                     <graphic>
+                        <FontAwesomeIconView fill="#4c4c4e" glyphName="LIST_UL" size="18" styleClass="sidebar_opt" wrappingWidth="25.0" />
+                     </graphic>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="SettingButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#Settings" prefHeight="25.0" prefWidth="25.0">
+                     <graphic>
+                        <FontAwesomeIconView fill="#4c4c4e" glyphName="GEAR" size="18" styleClass="sidebar_opt" wrappingWidth="23.428571701049805" />
+                     </graphic>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </VBox>
+            <Button layoutX="4.0" layoutY="22.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="37.0">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <graphic>
+                  <FontAwesomeIconView fx:id="bars" fill="#d4b85d" glyphName="BARS" size="25" text="" />
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
    </left>
 </BorderPane>
