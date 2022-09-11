@@ -139,6 +139,7 @@ public class DashBoardController  {
         statement2.setString(1,nameUser);
         statement2.setString(2,password);
         ResultSet resultSet2 = statement2.executeQuery();
+
         while(resultSet2.next()){
             savingsBalance.setText("$"+resultSet2.getString(1));
             savingsBalance1.setText("$"+resultSet2.getString(1));
