@@ -139,3 +139,13 @@
     -fx-arch-Width: 180;
     -fx-arch-hieght: 180;
 }
+
+.TextImage {
+    -fx-background-image: url("../../../white.jpeg");
+    -fx-opacity: .6;
+}
+
+.TextFont {
+    -fx-font-family: "Apple LiSung";
+    -fx-font-size: 25px;
+}
