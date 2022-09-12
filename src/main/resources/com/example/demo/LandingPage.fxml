@@ -213,14 +213,6 @@
                                                 <Image url="@../../../Summit Fin Corp.png" />
                                              </image>
                                           </ImageView>
-                                          <Label fx:id="checkingsLabel" alignment="CENTER" layoutX="7.0" layoutY="91.0" prefHeight="33.0" prefWidth="106.0" style="-fx-font-style: Bold;" text="\$73,890.01" textFill="#e5e5f2">
-                                             <font>
-                                                <Font name="Calibri Bold" size="20.0" />
-                                             </font>
-                                             <padding>
-                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                             </padding>
-                                          </Label>
                                        </children>
                                     </AnchorPane>
                                     <AnchorPane fx:id="goldColoredCard" layoutX="105.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="250.0" styleClass="coloredCard">
@@ -241,7 +233,7 @@
                                                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                              </padding>
                                           </Label>
-                                          <Label fx:id="savingsBalance" alignment="CENTER" layoutX="13.0" layoutY="91.0" prefHeight="33.0" prefWidth="106.0" style="-fx-font-style: Bold;" text="\$73,890.01" textFill="#e5e5f2" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="91.0">
+                                          <Label fx:id="savingsBalance" alignment="CENTER" layoutX="13.0" layoutY="91.0" prefHeight="33.0" prefWidth="106.0" style="-fx-font-style: Bold;" text="" textFill="#e5e5f2" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="91.0">
                                              <font>
                                                 <Font name="Calibri Bold" size="20.0" />
                                              </font>
@@ -249,7 +241,7 @@
                                                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                              </padding>
                                           </Label>
-                                          <Label fx:id="card2Number" alignment="CENTER" layoutX="12.0" layoutY="59.0" prefHeight="32.0" prefWidth="227.0" style="-fx-font-style: Bold;" text="****  ****  ****  5783" textFill="#c3c3c3" AnchorPane.leftAnchor="12.0">
+                                          <Label fx:id="card2Number" alignment="CENTER" layoutX="12.0" layoutY="59.0" prefHeight="32.0" prefWidth="227.0" style="-fx-font-style: Bold;" text="" textFill="#c3c3c3" AnchorPane.leftAnchor="12.0">
                                              <font>
                                                 <Font name="Calibri Bold" size="18.0" />
                                              </font>

@@ -18,6 +18,7 @@ import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -133,6 +134,16 @@ public class DashBoardController  {
 
         while(resultSet.next()){
             checkingsBalance.setText("$"+resultSet.getString(1));
+            Integer dataBalance = resultSet.getInt(2);
+
+            String lengthDataBalance=dataBalance.toString();
+            int k=0;
+            char [] checkingBalance = new char[4];
+            for (int i = lengthDataBalance.length()-4; i < lengthDataBalance.length(); i++) {
+                checkingBalance[k]= String.valueOf(dataBalance).charAt(i);
+                k++;
+            }
+            card1Number.setText("****  ****  ****  "+String.valueOf(checkingBalance));
     }
         String query2= "call saving_balance(?,?)";
         PreparedStatement statement2 = connection.prepareStatement(query2);
@@ -143,6 +154,15 @@ public class DashBoardController  {
         while(resultSet2.next()){
             savingsBalance.setText("$"+resultSet2.getString(1));
             savingsBalance1.setText("$"+resultSet2.getString(1));
+            Integer dataBalance = resultSet2.getInt(2);
+            String lengthDataBalance=dataBalance.toString();
+            int k=0;
+            char [] savingBalance = new char[4];
+            for (int i = lengthDataBalance.length()-4; i < lengthDataBalance.length(); i++) {
+                savingBalance[k]= String.valueOf(dataBalance).charAt(i);
+                k++;
+            }
+            card2Number.setText("****  ****  ****  "+String.valueOf(savingBalance));
         }
     }
 
