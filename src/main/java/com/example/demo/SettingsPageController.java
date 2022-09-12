@@ -7,10 +7,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.Label;
+import javafx.scene.chart.BarChart;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -24,12 +22,23 @@ import java.sql.SQLException;
 
 public class SettingsPageController   {
 
-   @FXML
+    public Button userProfileButton;
+    public TableView TransactionTable;
+    public BarChart chart;
+    public Label dateandTime2;
+    public Label GenerateReportLabel;
+    @FXML
+   private Label firstNameLabel, middleNameLabel, lastNameLabel, ssnLabel, DOBLabel,
+           phoneNumberLabel, emailLabel, streetNameLabel, cityLabel, zipCodeLabel, aptLabel,
+           maritalStatusLabel, genderLabel, usernameLabel, passwordLabel, dashLabel, nameLabel;
+    @FXML
+    private TextField firstNameTF,middleNameTF, lastNameTF, ssnTF, phoneNumberTF, emailTF,
+            cityTF, streetTF, zipCodeTF,apartmentTF,UsernameF, PasswordF;
+    public DatePicker datePicker;
+    public ToggleGroup maritaltoggle;
+    public ToggleGroup gendertoggle;
+    @FXML
    private BorderPane SettingPageBorder;
-    @FXML
-    private Label dashLabel;
-    @FXML
-    private Label nameLabel;
     @FXML
     private AnchorPane anchorPane;
     @FXML
