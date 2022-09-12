@@ -1,136 +1,139 @@
 package com.example.demo.Admin;
 
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
+
 public class ConnTable {
+    private final SimpleIntegerProperty account_number;
+    private final SimpleStringProperty First_name, Last_name, Middle_name, date_of_birth, address, zipp_code, state, Country, city, contact_no, ssn, username, email;
 
-    String Account_number, First_name, Last_name, Middle_name, date_of_birth, address, zipp_code, state, Country, city, contact_no, ssn, username, email;
-
-    public ConnTable(String Account_number,String  First_name,String  Last_name,String  Middle_name,String  date_of_birth,
+    public ConnTable(Integer Account_number,String  First_name,String  Last_name,String  Middle_name,String  date_of_birth,
                      String address,String  zipp_code,String  state,String  Country,String  city,String  contact_no,String  ssn,String  username,String  email){
-        this.Account_number = Account_number;
-        this.First_name = First_name;
-        this.Last_name = Last_name;
-        this.Middle_name = Middle_name;
-        this.date_of_birth = date_of_birth;
-        this.address = address;
-        this.zipp_code = zipp_code;
-        this.state = state;
-        this.Country = Country;
-        this.city = city;
-        this.contact_no = contact_no;
-        this.ssn = ssn;
-        this.username = username;
-        this.email = email;
+        this.account_number =new SimpleIntegerProperty(Account_number);
+        this.First_name =new SimpleStringProperty(First_name);
+        this.Last_name =new SimpleStringProperty(Last_name);
+        this.Middle_name =new SimpleStringProperty(Middle_name);
+        this.date_of_birth =new SimpleStringProperty(date_of_birth);
+        this.address =new SimpleStringProperty(address);
+        this.zipp_code =new SimpleStringProperty(zipp_code);
+        this.state =new SimpleStringProperty(state);
+        this.Country =new SimpleStringProperty(Country);
+        this.city =new SimpleStringProperty(city);
+        this.contact_no =new SimpleStringProperty(contact_no);
+        this.ssn =new SimpleStringProperty(ssn);
+        this.username =new SimpleStringProperty(username);
+        this.email =new SimpleStringProperty(email);
     }
 
-    public String getAccount_number() {
-        return Account_number;
+    public int getAccount_number() {
+        return account_number.get();
     }
 
-    public void setAccount_number(String account_number) {
-        Account_number = account_number;
+    public void setAccount_number(int account_number) {
+        this.account_number.set(account_number);
     }
 
     public String getFirst_name()  {
-        return First_name;
+        return First_name.get();
     }
 
     public void setFirst_name(String first_name) {
-        First_name = first_name;
+       this.First_name.set(first_name);
     }
 
     public String getLast_name() {
-        return Last_name;
+        return Last_name.get();
     }
 
     public void setLast_name(String last_name) {
-        Last_name = last_name;
+       this.Last_name.set(last_name);
     }
 
     public String getMiddle_name() {
-        return Middle_name;
+        return Middle_name.get();
     }
 
     public void setMiddle_name(String middle_name) {
-        Middle_name = middle_name;
+        this.Middle_name.set(middle_name);
     }
 
     public String getDate_of_birth() {
-        return date_of_birth;
+        return date_of_birth.get();
     }
 
     public void setDate_of_birth(String date_of_birth) {
-        this.date_of_birth = date_of_birth;
+        this.date_of_birth.set(date_of_birth);
     }
 
     public String getAddress() {
-        return address;
+        return address.get();
     }
 
     public void setAddress(String address) {
-        this.address = address;
+        this.address.set(address);
     }
 
     public String getZipp_code() {
-        return zipp_code;
+        return zipp_code.get();
     }
 
     public void setZipp_code(String zipp_code) {
-        this.zipp_code = zipp_code;
+        this.zipp_code.set(zipp_code);
     }
 
     public String getState() {
-        return state;
+        return state.get();
     }
 
     public void setState(String state) {
-        this.state = state;
+        this.state.set(state);
     }
 
     public String getCountry() {
-        return Country;
+        return Country.get();
     }
 
     public void setCountry(String country) {
-        Country = country;
+        this.Country.set(country);
     }
 
     public String getCity() {
-        return city;
+        return city.get();
     }
 
     public void setCity(String city) {
-        this.city = city;
+        this.city.set(city);
     }
 
     public String getContact_no() {
-        return contact_no;
+        return contact_no.get();
     }
 
     public void setContact_no(String contact_no) {
-        this.contact_no = contact_no;
+        this.contact_no.set(contact_no);
     }
 
     public String getSsn() {
-        return ssn;
+        return ssn.get();
     }
 
     public void setSsn(String ssn) {
-        this.ssn = ssn;
+        this.ssn.set(ssn);
     }
 
     public String getUsername() {
-        return username;
+        return username.get();
     }
 
     public void setUsername(String username) {
-        this.username = username;
+        this.username.set(username);
     }
 
     public String getEmail() {
-        return email;
+        return email.get();
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        this.email.set(email);
     }
 }
