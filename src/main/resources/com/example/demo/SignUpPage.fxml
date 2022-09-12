@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+
 <?import de.jensd.fx.glyphs.fontawesome.*?>
 <?import java.lang.*?>
 <?import javafx.geometry.*?>
@@ -10,7 +11,7 @@
 <?import javafx.scene.text.*?>
 
 <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" styleClass="BackgroundImage" stylesheets="@SignUpPage.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SignupPageController">
-   <Pane layoutX="89.0" layoutY="85.0" prefHeight="631.0" prefWidth="1221.0" styleClass="secondImage" stylesheets="@SignUpPage.css">
+   <Pane layoutX="89.0" layoutY="85.0" prefHeight="631.0" prefWidth="1221.0" styleClass="secondImage" stylesheets="@SignUpPage.css" AnchorPane.leftAnchor="89.0" AnchorPane.rightAnchor="90.0">
       <effect>
          <DropShadow blurType="GAUSSIAN" height="41.75" radius="21.1175" spread="0.33" width="44.72" />
       </effect>
@@ -23,7 +24,7 @@
          <Insets />
       </opaqueInsets>
    </Label>
-   <ImageView fitHeight="50.0" fitWidth="44.0" layoutX="185.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="50.0" fitWidth="44.0" layoutX="228.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="235.0">
       <image>
          <Image url="@../../../Summit_Fin_Corp-removebg-preview.png" />
       </image>
@@ -379,7 +380,7 @@
       </graphic>
    </Button>
    <Label layoutX="601.0" layoutY="133.0" />
-   <ImageView fitHeight="50.0" fitWidth="44.0" layoutX="1153.0" layoutY="110.0" AnchorPane.topAnchor="110.0">
+   <ImageView fitHeight="50.0" fitWidth="44.0" layoutX="1121.0" layoutY="100.0" AnchorPane.rightAnchor="240.0">
       <image>
          <Image url="@../../../flipped.png" />
       </image>
