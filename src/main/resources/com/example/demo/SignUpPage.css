@@ -5,7 +5,12 @@
     -fx-opacity: .7;
     -fx-text-inner-color: black;
 }
-
+.textF{
+    -fx-border-style: none none dotted none;
+    -fx-background-color: transparent;
+    -fx-border-color: #302b2b;
+    -fx-border-width: 0px0px2px0px;
+}
 .Button {
     -fx-background-radius: 5px;
     -fx-background-color: #E7E7E7;
