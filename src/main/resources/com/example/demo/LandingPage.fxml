@@ -8,8 +8,6 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<!--suppress ALL -->
-
 <BorderPane fx:id="LandingPageBorder" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" styleClass="pane2" stylesheets="@Landing.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.DashBoardController">
    <left>
       <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="44.0" styleClass="pane" stylesheets="@Landing.css" BorderPane.alignment="CENTER">
@@ -67,7 +65,7 @@
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
                         </Button>
-                        <Button fx:id="userProfileButton1" alignment="CENTER" contentDisplay="CENTER" layoutX="18.0" layoutY="22.0" mnemonicParsing="false" onAction="#Settings" prefHeight="25.0" prefWidth="25.0">
+                        <Button fx:id="transferButton" alignment="CENTER" contentDisplay="CENTER" layoutX="18.0" layoutY="22.0" mnemonicParsing="false" onAction="#Settings" prefHeight="25.0" prefWidth="25.0">
                            <graphic>
                               <FontAwesomeIconView fill="#4c4c4e" glyphName="fa-solid fa-right-left" size="18" styleClass="sidebar_opt" wrappingWidth="18.0" />
                            </graphic>
@@ -215,6 +213,14 @@
                                                 <Image url="@../../../Summit Fin Corp.png" />
                                              </image>
                                           </ImageView>
+                                          <Label fx:id="checkingsLabel" alignment="CENTER" layoutX="7.0" layoutY="91.0" prefHeight="33.0" prefWidth="106.0" style="-fx-font-style: Bold;" text="\$73,890.01" textFill="#e5e5f2">
+                                             <font>
+                                                <Font name="Calibri Bold" size="20.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </padding>
+                                          </Label>
                                        </children>
                                     </AnchorPane>
                                     <AnchorPane fx:id="goldColoredCard" layoutX="105.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="250.0" styleClass="coloredCard">
@@ -376,7 +382,7 @@
             </VBox>
             <ButtonBar layoutX="627.0" layoutY="64.0" prefHeight="30.0" prefWidth="299.0" styleClass="buttonbar" AnchorPane.leftAnchor="630.0" AnchorPane.rightAnchor="50.0">
                <buttons>
-                  <Button fx:id="transactionButton111" mnemonicParsing="false" onAction="#Transactions" prefHeight="30.0" prefWidth="94.0" text="Statements">
+                  <Button fx:id="statementsButton" mnemonicParsing="false" onAction="#Transactions" prefHeight="30.0" prefWidth="94.0" text="Statements">
                      <font>
                         <Font name="Calibri" size="13.0" />
                      </font>
@@ -384,7 +390,7 @@
                         <DropShadow blurType="ONE_PASS_BOX" />
                      </effect>
                   </Button>
-                  <Button fx:id="transactionButton11" mnemonicParsing="false" onAction="#Transactions" prefHeight="30.0" prefWidth="85.0" text="Transactions">
+                  <Button fx:id="transactionButton2" mnemonicParsing="false" onAction="#Transactions" prefHeight="30.0" prefWidth="85.0" text="Transactions">
                      <font>
                         <Font name="Calibri" size="13.0" />
                      </font>
@@ -392,7 +398,7 @@
                         <DropShadow blurType="ONE_PASS_BOX" />
                      </effect>
                   </Button>
-                  <Button fx:id="settingsButton" mnemonicParsing="false" onAction="#Settings" prefHeight="30.0" prefWidth="80.0" text="Settings">
+                  <Button fx:id="settingsButton2" mnemonicParsing="false" onAction="#Settings" prefHeight="30.0" prefWidth="80.0" text="Settings">
                      <font>
                         <Font name="Calibri" size="13.0" />
                      </font>
