@@ -33,6 +33,21 @@
     -fx-background-image: url("../../../white.jpeg");
     -fx-opacity: .25;
 
+}
+*{
+    -fx-primary-color: #007acc;
+    -fx-secondary-color: #4B6EAF;
+    -fx-grey-color: #b9b9b9;
 
+    -fx-focus-color: -fx-secondary-color;
+}
 
+.text-field {
+    -fx-accent: -fx-primary-color;
+    -fx-background-color: transparent;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-background-radius: 0;
+}
+.text-field:focused {
+    -fx-background-color:  transparent;
 }

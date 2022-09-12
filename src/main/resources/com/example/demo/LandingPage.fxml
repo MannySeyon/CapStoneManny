@@ -313,7 +313,7 @@
                               </HBox>
                               <AnchorPane prefHeight="25.0" prefWidth="260.0">
                                  <children>
-                                    <Label fx:id="savingsBalance1" alignment="CENTER" contentDisplay="CENTER" layoutX="5.0" layoutY="6.0" prefHeight="61.0" prefWidth="238.0" style="-fx-font-style: Bold;" text="\$73,890.01" textFill="#f8f8f8" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+                                    <Label fx:id="savingsBalance1" alignment="CENTER" contentDisplay="CENTER" layoutX="5.0" layoutY="6.0" prefHeight="61.0" prefWidth="238.0" style="-fx-font-style: Bold;" text="" textFill="#f8f8f8" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
                                        <font>
                                           <Font name="Calibri Bold" size="36.0" />
                                        </font>
@@ -340,7 +340,7 @@
                                                 <FontAwesomeIconView fill="#1bda14" glyphName="ARROW_UP" layoutX="-11.0" layoutY="37.0" selectionFill="#e1270a" size="18" textAlignment="CENTER" />
                                              </graphic>
                                           </Label>
-                                          <Label fx:id="checkingsBalance12" alignment="CENTER" contentDisplay="CENTER" layoutX="57.0" layoutY="56.0" prefHeight="27.0" prefWidth="97.0" style="-fx-font-style: Bold;" text="+$1500.69" textFill="#1bda14">
+                                          <Label fx:id="checkingsBalance12" alignment="CENTER" contentDisplay="CENTER" layoutX="57.0" layoutY="56.0" prefHeight="27.0" prefWidth="97.0" style="-fx-font-style: Bold;" text="" textFill="#1bda14">
                                              <font>
                                                 <Font name="Calibri Bold" size="20.0" />
                                              </font>
@@ -356,7 +356,7 @@
                                                 <FontAwesomeIconView fill="#d71d10" glyphName="ARROW_DOWN" selectionFill="#e1270a" size="18" textAlignment="CENTER" />
                                              </graphic>
                                           </Label>
-                                          <Label fx:id="checkingsBalance111" alignment="CENTER" contentDisplay="CENTER" layoutX="68.0" layoutY="141.0" prefHeight="27.0" prefWidth="86.0" style="-fx-font-style: Bold;" text="-$1500.69" textFill="#d71d10">
+                                          <Label fx:id="checkingsBalance111" alignment="CENTER" contentDisplay="CENTER" layoutX="68.0" layoutY="141.0" prefHeight="27.0" prefWidth="86.0" style="-fx-font-style: Bold;" text="" textFill="#d71d10">
                                              <font>
                                                 <Font name="Calibri Bold" size="20.0" />
                                              </font>
