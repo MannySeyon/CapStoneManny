@@ -3,10 +3,9 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
-<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TableColumn?>
@@ -89,118 +88,56 @@
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="298.0" prefWidth="1132.0" style="-fx-background-color: white;">
                            <children>
                               <Label layoutX="70.0" layoutY="51.0" text="First Name" />
-                              <TextField layoutX="70.0" layoutY="72.0" />
-                              <Label layoutX="81.0" layoutY="132.0" text="Date of Birth" />
+                              <TextField fx:id="FName_fld" layoutX="69.0" layoutY="72.0" />
+                              <Label layoutX="70.0" layoutY="135.0" text="Date of Birth" />
                               <Label layoutX="385.0" layoutY="51.0" text="Middle Name" />
-                              <TextField layoutX="385.0" layoutY="72.0" />
-                              <TextField layoutX="385.0" layoutY="156.0" />
-                              <TextField layoutX="752.0" layoutY="72.0" />
-                              <TextField layoutX="752.0" layoutY="146.0" />
+                              <TextField fx:id="MName_fld" layoutX="385.0" layoutY="72.0" />
+                              <TextField fx:id="Ssn_fld" layoutX="385.0" layoutY="156.0" />
+                              <TextField fx:id="LName_fld" layoutX="752.0" layoutY="72.0" />
+                              <TextField fx:id="Phone_no_fld" layoutX="752.0" layoutY="146.0" />
                               <Label layoutX="385.0" layoutY="135.0" text="Social Security Number" />
                               <Label layoutX="752.0" layoutY="51.0" text="Last Name" />
                               <Label layoutX="752.0" layoutY="126.0" text="Phone Number" />
-                              <DatePicker layoutX="79.0" layoutY="153.0" prefHeight="26.0" prefWidth="154.0" />
-                              <Label layoutX="271.0" layoutY="195.0" text="Marital Status" />
-                              <RadioButton layoutX="271.0" layoutY="231.0" mnemonicParsing="false" text="Single" />
-                              <RadioButton layoutX="362.0" layoutY="231.0" mnemonicParsing="false" text="Married" />
-                              <RadioButton layoutX="562.0" layoutY="231.0" mnemonicParsing="false" text="Male" />
-                              <RadioButton layoutX="636.0" layoutY="231.0" mnemonicParsing="false" text="Female" />
-                              <RadioButton layoutX="719.0" layoutY="231.0" mnemonicParsing="false" text="non-Binary" />
-                              <Label layoutX="562.0" layoutY="195.0" text="Gender" />
+                              <DatePicker fx:id="DOB_fld" layoutX="67.0" layoutY="155.0" prefHeight="26.0" prefWidth="154.0" />
+                              <Label fx:id="maritalSetLabel" layoutX="271.0" layoutY="195.0" text="Marital Status" />
+                              <RadioButton fx:id="Single_radio_btn" layoutX="271.0" layoutY="231.0" mnemonicParsing="false" text="Single" />
+                              <RadioButton fx:id="Married_radio_btn" layoutX="362.0" layoutY="231.0" mnemonicParsing="false" text="Married" />
+                              <Label fx:id="genderLabel" layoutX="562.0" layoutY="195.0" text="Gender" />
+                              <RadioButton fx:id="Male_radio_btn" layoutX="562.0" layoutY="231.0" mnemonicParsing="false" text="Male" />
+                              <RadioButton fx:id="Female_radio_btn" layoutX="636.0" layoutY="231.0" mnemonicParsing="false" text="Female" />
+                              <RadioButton fx:id="Non_binary_radio_btn" layoutX="719.0" layoutY="231.0" mnemonicParsing="false" text="non-Binary" />
                            </children>
                         </AnchorPane>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="297.0" prefWidth="1084.0" style="-fx-background-color: white;">
                            <children>
-                              <Label layoutX="41.0" layoutY="99.0" text="State" />
-                              <Label layoutX="378.0" layoutY="108.0" text="Zip Code" />
-                              <Label layoutX="41.0" layoutY="24.0" text="Email" />
-                              <TextField layoutX="41.0" layoutY="44.0" />
-                              <TextField layoutX="378.0" layoutY="44.0" />
-                              <Label layoutX="383.0" layoutY="24.0" text="Street Address" />
-                              <TextField layoutX="753.0" layoutY="44.0" />
-                              <Label layoutX="753.0" layoutY="24.0" text="City" />
-                              <TextField layoutX="378.0" layoutY="130.0" />
-                              <TextField layoutX="753.0" layoutY="126.0" />
+                              <Label layoutX="68.0" layoutY="102.0" text="State" />
+                              <Label layoutX="531.0" layoutY="102.0" text="Zip Code" />
+                              <Label layoutX="68.0" layoutY="24.0" text="Email" />
+                              <TextField fx:id="email_fld" layoutX="66.0" layoutY="44.0" />
+                              <TextField fx:id="Address_fld" layoutX="301.0" layoutY="53.0" />
+                              <Label layoutX="306.0" layoutY="33.0" text="Street Address" />
+                              <TextField fx:id="city_fld" layoutX="301.0" layoutY="123.0" />
+                              <Label layoutX="301.0" layoutY="103.0" text="City" />
+                              <TextField fx:id="zipcode_fld" layoutX="531.0" layoutY="124.0" />
+                              <TextField fx:id="username_fld" layoutX="753.0" layoutY="126.0" />
                               <Label layoutX="753.0" layoutY="108.0" text="Username" />
-                              <TextField layoutX="41.0" layoutY="189.0" />
-                              <Label layoutX="41.0" layoutY="171.0" text="Password" />
+                              <TextField fx:id="password_fld" layoutX="753.0" layoutY="49.0" />
+                              <Label layoutX="754.0" layoutY="33.0" text="Password" />
                               <Label layoutX="325.0" layoutY="162.0" text="Accounts:" />
-                              <CheckBox layoutX="325.0" layoutY="183.0" mnemonicParsing="false" text="Checking" />
-                              <CheckBox layoutX="594.0" layoutY="183.0" mnemonicParsing="false" text="Savings " />
-                              <TextField layoutX="321.0" layoutY="233.0" />
-                              <TextField layoutX="594.0" layoutY="233.0" />
+                              <CheckBox fx:id="ck_acc_cb" layoutX="325.0" layoutY="183.0" mnemonicParsing="false" text="Checking" />
+                              <CheckBox fx:id="sv_acc_cb" layoutX="594.0" layoutY="183.0" mnemonicParsing="false" text="Savings " />
+                              <TextField fx:id="ck_acc_bal_fld" layoutX="321.0" layoutY="233.0" />
+                              <TextField fx:id="sv_acc_bal_fld" layoutX="594.0" layoutY="233.0" />
                               <Label layoutX="324.0" layoutY="214.0" text="Checking Account Balance:" />
                               <Label layoutX="597.0" layoutY="214.0" text="Savings Account Balance:" />
-                              <Button layoutX="780.0" layoutY="232.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="122.0" style="-fx-background-color: #d9bb79;" text="Create Client" textFill="WHITE" />
-                              <ChoiceBox layoutX="41.0" layoutY="117.0" prefWidth="150.0" />
+                              <Button fx:id="Create_new_btn" layoutX="780.0" layoutY="232.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="122.0" style="-fx-background-color: #d9bb79;" text="Create Client" textFill="WHITE" />
+                              <ComboBox fx:id="state_ComboBox" layoutX="65.0" layoutY="126.0" prefWidth="150.0" promptText="Select State" />
+                              <TextField fx:id="Apartment_fld" layoutX="531.0" layoutY="53.0" />
+                              <Label layoutX="531.0" layoutY="33.0" text="Apartment Number" />
                            </children>
                         </AnchorPane>
                     </items>
                   </SplitPane>
-                  <AnchorPane fx:id="pnDeposits" layoutX="59.0" layoutY="9.0" prefHeight="613.0" prefWidth="1052.0">
-                     <children>
-                        <VBox fillWidth="false" layoutX="-65.0" layoutY="1.0" prefHeight="604.0" prefWidth="1124.0">
-                           <children>
-                              <HBox alignment="CENTER" prefHeight="84.0" prefWidth="1179.0" style="-fx-background-color: #d9bb79;" styleClass="search_box">
-                                 <children>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Search By Recipient Address: " />
-                                    <TextField fx:id="raddress_fld" styleClass="search_box" />
-                                    <Button fx:id="search_btn" mnemonicParsing="false" prefHeight="27.0" prefWidth="94.0" style="-fx-background-color: #d9bb79; -fx-border-color: white;" text="Search" />
-                                 </children>
-                              </HBox>
-                              <HBox prefHeight="222.0" prefWidth="1134.0">
-                                 <children>
-                                    <ListView fx:id="result_listview" orientation="HORIZONTAL" prefHeight="210.0" prefWidth="1146.0" />
-                                 </children>
-                              </HBox>
-                              <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="308.0" prefWidth="1123.0" style="-fx-background-color: white;" styleClass="deposit_box">
-                                 <children>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Deposit">
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" top="20.0" />
-                                       </VBox.margin>
-                                    </Text>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Amount in Checking:">
-                                       <VBox.margin>
-                                          <Insets bottom="5.0" />
-                                       </VBox.margin>
-                                    </Text>
-                                    <TextField fx:id="amount_fld">
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" />
-                                       </VBox.margin>
-                                    </TextField>
-                                    <Button fx:id="ck_deposit_btn" mnemonicParsing="false" style="-fx-background-color: #d9bb79;" text="Deposit">
-                                       <VBox.margin>
-                                          <Insets bottom="30.0" />
-                                       </VBox.margin>
-                                    </Button>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Deposit">
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" />
-                                       </VBox.margin>
-                                    </Text>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Amount in Savings:">
-                                       <VBox.margin>
-                                          <Insets bottom="5.0" />
-                                       </VBox.margin>
-                                    </Text>
-                                    <TextField fx:id="amount_fld1">
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" />
-                                       </VBox.margin>
-                                    </TextField>
-                                    <Button fx:id="sv_deposit_btn" mnemonicParsing="false" style="-fx-background-color: #d9bb79;" text="Deposit">
-                                       <VBox.margin>
-                                          <Insets />
-                                       </VBox.margin>
-                                    </Button>
-                                 </children>
-                              </VBox>
-                           </children>
-                        </VBox>
-                     </children>
-                  </AnchorPane>
                   <Pane fx:id="pnClientsListview" layoutY="-4.0" prefHeight="614.0" prefWidth="1116.0" style="-fx-background-color: white;">
                      <children>
                         <HBox layoutX="-6.0" layoutY="9.0" prefHeight="124.0" prefWidth="1125.0" style="-fx-background-color: #d9bb79;">
@@ -235,12 +172,92 @@
                         </TableView>
                         <HBox alignment="CENTER" layoutX="14.0" layoutY="131.0" prefHeight="49.0" prefWidth="476.0">
                            <children>
-                              <TextField alignment="CENTER" prefHeight="26.0" prefWidth="299.0" promptText="Enter Client" />
+                              <TextField fx:id="search_db_fld" alignment="CENTER" prefHeight="26.0" prefWidth="299.0" promptText="Enter Client" />
                               <Button fx:id="Search_Client_btn" alignment="CENTER" mnemonicParsing="false" prefHeight="26.0" prefWidth="158.0" style="-fx-background-color: #d9bb79;" text="Search Client" textFill="WHITE" />
                            </children>
                         </HBox>
+                        <Button fx:id="Update_btn" layoutX="519.0" layoutY="141.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="98.0" style="-fx-background-color: #d9bb79;" text="Update" textFill="WHITE" />
+                        <Button fx:id="Delete_btn" layoutX="634.0" layoutY="141.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="98.0" style="-fx-background-color: #d9bb79;" text="Delete" textFill="WHITE" />
                      </children>
                   </Pane>
+                  <AnchorPane fx:id="pnDeposits" layoutX="59.0" layoutY="9.0" prefHeight="613.0" prefWidth="1052.0">
+                     <children>
+                        <VBox fillWidth="false" layoutX="-65.0" layoutY="1.0" prefHeight="604.0" prefWidth="1124.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="84.0" prefWidth="1179.0" style="-fx-background-color: #d9bb79;" styleClass="search_box">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Search By Recipient Address: " />
+                                    <TextField fx:id="raddress_fld" styleClass="search_box" />
+                                    <Button fx:id="search_btn" mnemonicParsing="false" prefHeight="27.0" prefWidth="94.0" style="-fx-background-color: #d9bb79; -fx-border-color: white;" text="Search" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="1124.0" style="-fx-background-color: white;">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" text="Transactions">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="202.0" prefWidth="1124.0">
+                                 <children>
+                                    <TableView fx:id="Transaction_table" prefHeight="200.0" prefWidth="1124.0">
+                                      <columns>
+                                        <TableColumn fx:id="col_Transaction_Number" prefWidth="122.39997863769531" text="Transaction number" />
+                                        <TableColumn fx:id="col_Account_Number" prefWidth="123.20004272460938" text="Account Number" />
+                                          <TableColumn fx:id="col_Date_created" minWidth="0.0" prefWidth="88.80001831054688" text="Date Created" />
+                                          <TableColumn fx:id="col_income_date" minWidth="0.0" prefWidth="96.79998779296875" text="Income Date" />
+                                          <TableColumn fx:id="col_income_deposit" prefWidth="171.20001220703125" text="Income Deposit Amount" />
+                                          <TableColumn fx:id="col_income_amount" prefWidth="107.20001220703125" text="Income Amount" />
+                                          <TableColumn fx:id="col_expense_date" minWidth="0.0" prefWidth="118.4000244140625" text="Expense Date" />
+                                          <TableColumn fx:id="col_expense_supplier" prefWidth="138.39990234375" text="Expense Supplier" />
+                                          <TableColumn fx:id="col_expense_amount" prefWidth="160.7999267578125" text="Expense Amount" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </HBox>
+                              <SplitPane dividerPositions="0.5" prefHeight="288.0" prefWidth="1124.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="14.0" text="Checking Account" />
+                                          <TableView fx:id="Checking_table" layoutX="28.0" layoutY="43.0" prefHeight="174.0" prefWidth="499.0">
+                                            <columns>
+                                              <TableColumn fx:id="col_checking_acc_number" prefWidth="178.3999900817871" text="Checking Account Number" />
+                                              <TableColumn fx:id="col_account_number" prefWidth="126.40000915527344" text="Account Number" />
+                                                <TableColumn fx:id="col_account_balance" prefWidth="192.80003662109374" text="Account Balance" />
+                                            </columns>
+                                          </TableView>
+                                          <Label layoutX="36.0" layoutY="226.0" text="Deposit Amount to Checking Account:" />
+                                          <TextField fx:id="ck_amount_deposit_fld" layoutX="36.0" layoutY="244.0" />
+                                          <Button fx:id="ck_amount_deposit_btn" layoutX="196.0" layoutY="244.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="82.0" style="-fx-background-color: #d9bb79;" text="Deposit" />
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="14.0" text="Savings Account" />
+                                          <TableView fx:id="Savings_table" layoutX="29.0" layoutY="40.0" prefHeight="174.0" prefWidth="499.0">
+                                             <columns>
+                                                <TableColumn fx:id="col_saving_acc_number" prefWidth="179.99999618530273" text="Savings Account Number" />
+                                                <TableColumn fx:id="col_acc_number" prefWidth="138.40003967285156" text="Account Number" />
+                                                <TableColumn fx:id="col_acc_bal" prefWidth="179.99993896484375" text="Account Balance" />
+                                             </columns>
+                                          </TableView>
+                                          <Label layoutX="43.0" layoutY="222.0" text="Deposit Amount to Savings Account:" />
+                                          <TextField fx:id="sv_amount_deposit_fld" layoutX="43.0" layoutY="240.0" />
+                                          <Button fx:id="sv_amount_deposit_btn" layoutX="205.0" layoutY="240.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="82.0" style="-fx-background-color: #d9bb79;" text="Deposit" />
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
                </children>
             </Pane>
          </center>
