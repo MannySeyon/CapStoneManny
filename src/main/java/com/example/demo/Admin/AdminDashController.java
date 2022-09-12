@@ -126,6 +126,7 @@ public class AdminDashController implements Initializable {
     @FXML
     private Button ck_amount_deposit_btn;
     //Savings table
+    //l
     @FXML
     private TableView Savings_table;
     @FXML
