@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1210.0" styleClass="pane2" stylesheets="@Landing.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <top>
@@ -68,7 +64,7 @@
                   <Image url="@../../../Summit_Fin_Corp-removebg-preview.png" />
                </image>
             </ImageView>
-            <Pane layoutX="405.0" layoutY="202.0" prefHeight="273.0" prefWidth="190.0" styleClass="TextImage">
+            <Pane layoutX="407.0" layoutY="127.0" prefHeight="460.0" prefWidth="186.0" styleClass="TextImage">
                <effect>
                   <DropShadow blurType="GAUSSIAN" height="26.0" radius="12.5" spread="0.33" width="26.0">
                      <color>
@@ -77,17 +73,17 @@
                   </DropShadow>
                </effect>
             </Pane>
-            <Text fill="WHITE" layoutX="465.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TextFont" text="Manny">
+            <Text fill="WHITE" layoutX="477.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TextFont" text="Emmanuel">
                <font>
                   <Font size="20.0" />
                </font>
             </Text>
-            <Text layoutX="413.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;" text="Email: &#10;Choualo@outlook.com&#10;LinkedIn: &#10;www.linkedin.com/in/choua-lo-1579a1228&#10;&#10;My name is Choua, and I am trying to make a career switch from Logistics to Software Engineering. My dream is to one day become an iOS developer and to be able to create an application that can help boost productivity at my company. " textAlignment="CENTER" wrappingWidth="174.0850067138672">
+            <Text layoutX="413.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;" text="Email&#10;noyysey@gmail.com&#10;GitHub&#10;·www.github.com/MannySeyon&#10;LinkedIn&#10;·www.linkedin.com/in/emmanuel-seyon-35368b181&#10;&#10;An Artist, Writer, Entrepreneur, Software Developer, avid Volunteer, and Activist. Manny graduated from Summit Academy OIC in 2022, and attended Guilford College from 2018-2021 for Peace and Conflict Studies. Aspires to publish a series, develop a related video game, and continue to serve the community.&#10;" textAlignment="CENTER" wrappingWidth="174.0850067138672">
                <font>
-                  <Font name="Apple LiSung Light" size="15.0" />
+                  <Font size="15.0" />
                </font>
             </Text>
-            <ImageView fitHeight="70.0" fitWidth="65.0" layoutX="467.0" layoutY="479.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="70.0" fitWidth="65.0" layoutX="402.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../Summit_Fin_Corp-removebg-preview.png" />
                </image>
