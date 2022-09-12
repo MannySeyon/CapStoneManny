@@ -106,7 +106,7 @@
                   </DropShadow>
                </effect>
             </Pane>
-            <Text layoutX="613.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;" text="Email: &#10;Officialtfv@gmail.com&#10;&#10;LinkedIn: &#10;www.linkedin.com/in/choua-lo-1579a1228&#10;&#10;My name is Choua, and I am trying to make a career switch from Logistics to Software Engineering. My dream is to one day become an iOS developer and to be able to create an application that can help boost productivity at my company. " textAlignment="CENTER" wrappingWidth="174.0850067138672">
+            <Text layoutX="613.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;" text="Email: &#10;Officialtfv@gmail.com&#10;&#10;LinkedIn: &#10;https://www.linkedin.com/in/david-hall-82485920a/&#10;&#10;My name is David Hall I have a thrill for software engineering my &#10;passion for creative problem-solving led me to a great industry. My main goal is to help cultivated innovative ways to better the world around us." textAlignment="CENTER" wrappingWidth="174.0850067138672">
                <font>
                   <Font name="Apple LiSung Light" size="15.0" />
                </font>
@@ -154,16 +154,16 @@
                   </DropShadow>
                </effect>
             </Pane>
-            <ImageView fitHeight="70.0" fitWidth="65.0" layoutX="1069.0" layoutY="417.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../Summit_Fin_Corp-removebg-preview.png" />
-               </image>
-            </ImageView>
             <Text layoutX="1015.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;" text="Email: &#10;Choualo@outlook.com&#10;LinkedIn: &#10;www.linkedin.com/in/choua-lo-1579a1228&#10;&#10;My name is Choua, and I am trying to make a career switch from Logistics to Software Engineering. My dream is to one day become an iOS developer and to be able to create an application that can help boost productivity at my company. " textAlignment="CENTER" wrappingWidth="174.0850067138672">
                <font>
                   <Font name="Apple LiSung Light" size="15.0" />
                </font>
             </Text>
+            <ImageView fitHeight="70.0" fitWidth="65.0" layoutX="1069.0" layoutY="417.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Summit_Fin_Corp-removebg-preview.png" />
+               </image>
+            </ImageView>
          </children></AnchorPane>
    </top>
 </BorderPane>
