@@ -10,371 +10,376 @@
 <?import javafx.scene.text.*?>
 
 <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" styleClass="BackgroundImage" stylesheets="@SignUpPage.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SignupPageController">
-   <Pane layoutX="88.0" layoutY="85.0" prefHeight="631.0" prefWidth="1221.0" styleClass="secondImage" stylesheets="@SignUpPage.css">
+   <Pane layoutX="89.0" layoutY="85.0" prefHeight="631.0" prefWidth="1221.0" styleClass="secondImage" stylesheets="@SignUpPage.css">
       <effect>
          <DropShadow blurType="GAUSSIAN" height="41.75" radius="21.1175" spread="0.33" width="44.72" />
       </effect>
    </Pane>
-   <Label fx:id="SignupLabel" alignment="CENTER" layoutX="182.0" layoutY="175.0" prefHeight="50.0" prefWidth="1221.0" text="Welcome To Summit Financial Corporation " AnchorPane.leftAnchor="182.0" AnchorPane.rightAnchor="97.0">
+   <Label fx:id="SignupLabel" alignment="CENTER" layoutX="182.0" layoutY="175.0" prefHeight="50.0" prefWidth="1221.0" text="Welcome To Summit Financial Corporation " AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="100.0">
       <font>
          <Font name="Apple LiSung Light" size="48.0" />
       </font>
       <opaqueInsets>
          <Insets />
-      </opaqueInsets></Label>
-   <ImageView fitHeight="50.0" fitWidth="44.0" layoutX="239.0" layoutY="186.0" pickOnBounds="true" preserveRatio="true">
+      </opaqueInsets>
+   </Label>
+   <ImageView fitHeight="50.0" fitWidth="44.0" layoutX="185.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../../Summit_Fin_Corp-removebg-preview.png" />
       </image>
    </ImageView>
-   <AnchorPane layoutX="255.0" layoutY="267.0" prefHeight="397.0" prefWidth="900.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0">
+   <VBox alignment="CENTER" layoutX="200.0" layoutY="189.0" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="424.0" prefWidth="904.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="250.0">
       <children>
-         <HBox layoutX="1.0" layoutY="14.0">
+         <AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="454.0" prefWidth="893.0">
             <children>
-               <Label fx:id="firstNameLabel" prefHeight="30.0" prefWidth="200.0" styleClass="Font" text="First Name" HBox.hgrow="ALWAYS">
-                  <font>
-                     <Font name="System Bold" size="18.0" />
-                  </font>
-                  <HBox.margin>
-                     <Insets right="30.0" />
-                  </HBox.margin>
-               </Label>
-               <Label fx:id="middleNameLabel" prefHeight="30.0" prefWidth="200.0" styleClass="Font" text="Middle Name" HBox.hgrow="ALWAYS">
-                  <font>
-                     <Font size="18.0" />
-                  </font>
-                  <HBox.margin>
-                     <Insets right="30.0" />
-                  </HBox.margin>
-               </Label>
-               <Label fx:id="lastNameLabel" prefHeight="30.0" prefWidth="200.0" styleClass="Font" text="Last Name">
-                  <font>
-                     <Font size="18.0" />
-                  </font>
-                  <HBox.margin>
-                     <Insets right="30.0" />
-                  </HBox.margin>
-               </Label>
+               <HBox layoutX="1.0" layoutY="14.0">
+                  <children>
+                     <Label fx:id="firstNameLabel" prefHeight="30.0" prefWidth="200.0" styleClass="Font" text="First Name" HBox.hgrow="ALWAYS">
+                        <font>
+                           <Font name="System Bold" size="18.0" />
+                        </font>
+                        <HBox.margin>
+                           <Insets right="30.0" />
+                        </HBox.margin>
+                     </Label>
+                     <Label fx:id="middleNameLabel" prefHeight="30.0" prefWidth="200.0" styleClass="Font" text="Middle Name" HBox.hgrow="ALWAYS">
+                        <font>
+                           <Font size="18.0" />
+                        </font>
+                        <HBox.margin>
+                           <Insets right="30.0" />
+                        </HBox.margin>
+                     </Label>
+                     <Label fx:id="lastNameLabel" prefHeight="30.0" prefWidth="200.0" styleClass="Font" text="Last Name">
+                        <font>
+                           <Font size="18.0" />
+                        </font>
+                        <HBox.margin>
+                           <Insets right="30.0" />
+                        </HBox.margin>
+                     </Label>
+                  </children>
+               </HBox>
+               <HBox layoutX="1.0" layoutY="46.0" stylesheets="@SignUpPage.css">
+                  <children>
+                  
+                                       <!-- TextFields for signup information (in order) -->
+                     <TextField fx:id="firstNameTF" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="200.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" stylesheets="@SignUpPage.css">
+                        <HBox.margin>
+                           <Insets right="30.0" />
+                        </HBox.margin>
+                        <styleClass>
+                           <String fx:value="TextField" />
+                           <String fx:value="textF" />
+                        </styleClass>
+                     </TextField>
+                     <TextField fx:id="middleNameTF" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="200.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" stylesheets="@SignUpPage.css">
+                        <HBox.margin>
+                           <Insets right="30.0" />
+                        </HBox.margin>
+                        <styleClass>
+                           <String fx:value="TextField" />
+                           <String fx:value="textF" />
+                        </styleClass>
+                     </TextField>
+                     <TextField fx:id="lastNameTF" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="200.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" stylesheets="@SignUpPage.css">
+                        <HBox.margin>
+                           <Insets />
+                        </HBox.margin>
+                        <styleClass>
+                           <String fx:value="TextField" />
+                           <String fx:value="textF" />
+                        </styleClass>
+                     </TextField>
+                  </children>
+               </HBox>
+               <HBox layoutX="2.0" layoutY="86.0" prefHeight="40.0" prefWidth="494.0" AnchorPane.bottomAnchor="298.0" AnchorPane.topAnchor="86.0">
+                  <children>
+                  
+                                                   <!-- Labels for signup information -->
+                     <Label fx:id="DOBLabel" prefHeight="30.0" prefWidth="200.0" styleClass="Font" text="Date Of Birth">
+                        <font>
+                           <Font size="18.0" />
+                        </font>
+                        <HBox.margin>
+                           <Insets right="30.0" />
+                        </HBox.margin>
+                     </Label>
+                     <Label fx:id="ssnLabel" layoutX="685.0" layoutY="55.0" prefHeight="32.0" prefWidth="264.0" styleClass="Font" text="Social Security Number">
+                        <font>
+                           <Font size="18.0" />
+                        </font>
+                        <HBox.margin>
+                           <Insets />
+                        </HBox.margin>
+                     </Label>
+                  </children>
+               </HBox>
+               <HBox layoutX="-2.0" layoutY="106.0" prefHeight="32.0" prefWidth="435.0">
+                  <children>
+                     <DatePicker fx:id="datePicker" layoutX="224.0" layoutY="226.0" onAction="#getDate" prefHeight="30.0" prefWidth="200.0" promptText="Enter a Date" stylesheets="@SignUpPage.css">
+                        <HBox.margin>
+                           <Insets right="30.0" top="10.0" />
+                        </HBox.margin>
+                     </DatePicker>
+                     <TextField fx:id="ssnTF" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="200.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" stylesheets="@SignUpPage.css">
+                        <styleClass>
+                           <String fx:value="TextField" />
+                           <String fx:value="textF" />
+                        </styleClass>
+                        <HBox.margin>
+                           <Insets top="10.0" />
+                        </HBox.margin>
+                     </TextField>
+                  </children>
+               </HBox>
+               <HBox layoutX="2.0" layoutY="146.0" prefHeight="42.0" prefWidth="402.0">
+                  <children>
+                     <Label fx:id="phoneNumberLabel" prefHeight="32.0" prefWidth="279.0" styleClass="Font" text="Phone Number">
+                        <font>
+                           <Font size="18.0" />
+                        </font>
+                        <HBox.margin>
+                           <Insets right="30.0" top="10.0" />
+                        </HBox.margin>
+                     </Label>
+                     <Label fx:id="emailLabel" prefHeight="32.0" prefWidth="254.0" styleClass="Font" text="Email">
+                        <font>
+                           <Font size="18.0" />
+                        </font>
+                        <HBox.margin>
+                           <Insets top="10.0" />
+                        </HBox.margin>
+                     </Label>
+                  </children>
+               </HBox>
+               <HBox layoutY="174.0" prefHeight="35.0" prefWidth="518.0">
+                  <children>
+                     <TextField fx:id="phoneNumberTF" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="200.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" stylesheets="@SignUpPage.css">
+                        <HBox.margin>
+                           <Insets right="30.0" top="10.0" />
+                        </HBox.margin>
+                        <styleClass>
+                           <String fx:value="TextField" />
+                           <String fx:value="textF" />
+                        </styleClass>
+                     </TextField>
+                     <TextField fx:id="emailTF" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="200.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" stylesheets="@SignUpPage.css">
+                        <styleClass>
+                           <String fx:value="TextField" />
+                           <String fx:value="textF" />
+                        </styleClass>
+                        <HBox.margin>
+                           <Insets right="30.0" top="10.0" />
+                        </HBox.margin>
+                     </TextField>
+                  </children>
+               </HBox>
+               <HBox layoutX="1.0" layoutY="205.0" prefHeight="32.0" prefWidth="859.0">
+                  <children>
+                     <Label fx:id="streetNameLabel" prefHeight="32.0" prefWidth="199.0" styleClass="Font" text="Street Name">
+                        <font>
+                           <Font size="18.0" />
+                        </font>
+                        <HBox.margin>
+                           <Insets right="30.0" top="10.0" />
+                        </HBox.margin>
+                     </Label>
+                     <Label fx:id="cityLabel" prefHeight="32.0" prefWidth="204.0" styleClass="Font" text="City">
+                        <font>
+                           <Font size="18.0" />
+                        </font>
+                        <HBox.margin>
+                           <Insets right="30.0" top="10.0" />
+                        </HBox.margin>
+                     </Label>
+                     <Label fx:id="aptLabel" prefHeight="32.0" prefWidth="198.0" styleClass="Font" text="State">
+                        <font>
+                           <Font size="18.0" />
+                        </font>
+                        <HBox.margin>
+                           <Insets right="30.0" top="10.0" />
+                        </HBox.margin>
+                     </Label>
+                     <Label fx:id="zipCodeLabel" prefHeight="32.0" prefWidth="168.0" styleClass="Font" text="Zip Code">
+                        <font>
+                           <Font size="18.0" />
+                        </font>
+                        <HBox.margin>
+                           <Insets top="10.0" />
+                        </HBox.margin>
+                     </Label>
+                  </children>
+               </HBox>
+               <HBox layoutX="2.0" layoutY="247.0">
+                  <children>
+                     <TextField fx:id="streetTF" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="200.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" stylesheets="@SignUpPage.css">
+                        <HBox.margin>
+                           <Insets right="30.0" />
+                        </HBox.margin>
+                        <styleClass>
+                           <String fx:value="TextField" />
+                           <String fx:value="textF" />
+                        </styleClass>
+                     </TextField>
+                     <TextField fx:id="cityTF" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="200.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" stylesheets="@SignUpPage.css">
+                        <HBox.margin>
+                           <Insets right="30.0" />
+                        </HBox.margin>
+                        <styleClass>
+                           <String fx:value="TextField" />
+                           <String fx:value="textF" />
+                        </styleClass>
+                     </TextField>
+                     <TextField fx:id="apartmentTF" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="200.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" stylesheets="@SignUpPage.css">
+                        <HBox.margin>
+                           <Insets right="30.0" />
+                        </HBox.margin>
+                        <styleClass>
+                           <String fx:value="TextField" />
+                           <String fx:value="textF" />
+                        </styleClass>
+                     </TextField>
+                     <TextField fx:id="zipCodeTF" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="200.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" stylesheets="@SignUpPage.css">
+                        <HBox.margin>
+                           <Insets />
+                        </HBox.margin>
+                        <styleClass>
+                           <String fx:value="TextField" />
+                           <String fx:value="textF" />
+                        </styleClass>
+                     </TextField>
+                  </children>
+               </HBox>
+               <HBox layoutY="277.0" prefHeight="32.0" prefWidth="382.0">
+                  <children>
+                     <Label fx:id="maritalStatusLabel" prefHeight="30.0" prefWidth="200.0" styleClass="Font" text="Marital Status">
+                        <font>
+                           <Font size="18.0" />
+                        </font>
+                        <HBox.margin>
+                           <Insets right="70.0" top="10.0" />
+                        </HBox.margin>
+                     </Label>
+                     <Label fx:id="genderLabel" prefHeight="30.0" prefWidth="200.0" styleClass="Font" text="Gender">
+                        <font>
+                           <Font size="18.0" />
+                        </font>
+                        <HBox.margin>
+                           <Insets top="10.0" />
+                        </HBox.margin>
+                     </Label>
+                  </children>
+               </HBox>
+               <HBox layoutY="319.0">
+                  <children>
+                  
+                                       <!-- RadioButton for signup information -->
+                     <RadioButton mnemonicParsing="false" styleClass="ButtonFonts" stylesheets="@SignUpPage.css" text="Single">
+                        <toggleGroup>
+                           <ToggleGroup fx:id="maritaltoggle" />
+                        </toggleGroup>
+                        <HBox.margin>
+                           <Insets right="20.0" />
+                        </HBox.margin>
+                        <font>
+                           <Font size="15.0" />
+                        </font>
+                     </RadioButton>
+                     <RadioButton mnemonicParsing="false" styleClass="ButtonFonts" stylesheets="@SignUpPage.css" text="Married" toggleGroup="$maritaltoggle">
+                        <HBox.margin>
+                           <Insets right="30.0" />
+                        </HBox.margin>
+                        <font>
+                           <Font size="15.0" />
+                        </font>
+                     </RadioButton>
+                  
+                                       <RadioButton mnemonicParsing="false" prefHeight="27.0" prefWidth="89.0" styleClass="ButtonFonts" stylesheets="@SignUpPage.css" text="Male">
+                        <toggleGroup>
+                           <ToggleGroup fx:id="gendertoggle" />
+                        </toggleGroup>
+                        <HBox.margin>
+                           <Insets right="20.0" />
+                        </HBox.margin>
+                        <font>
+                           <Font size="15.0" />
+                        </font>
+                     </RadioButton>
+                     <RadioButton mnemonicParsing="false" styleClass="ButtonFonts" stylesheets="@SignUpPage.css" text="Female" toggleGroup="$gendertoggle">
+                        <HBox.margin>
+                           <Insets right="20.0" />
+                        </HBox.margin>
+                        <font>
+                           <Font size="15.0" />
+                        </font>
+                     </RadioButton>
+                     <RadioButton mnemonicParsing="false" styleClass="ButtonFonts" stylesheets="@SignUpPage.css" text="Non-Binary" toggleGroup="$gendertoggle">
+                        <font>
+                           <Font size="15.0" />
+                        </font>
+                     </RadioButton>
+                  </children>
+               </HBox>
+               <HBox layoutY="355.0">
+                  <children>
+                     <Label fx:id="usernameLabel" prefHeight="30.0" prefWidth="200.0" styleClass="Font" text="Username">
+                        <font>
+                           <Font size="18.0" />
+                        </font>
+                        <HBox.margin>
+                           <Insets right="30.0" />
+                        </HBox.margin>
+                     </Label>
+                     <Label fx:id="passwordLabel" prefHeight="30.0" prefWidth="200.0" styleClass="Font" text="Password">
+                        <font>
+                           <Font size="18.0" />
+                        </font>
+                        <HBox.margin>
+                           <Insets />
+                        </HBox.margin>
+                     </Label>
+                  </children>
+               </HBox>
+               <HBox layoutY="387.0">
+                  <children>
+                  
+                                       <!-- TextField for signup information (this comes after the radio buttons on screen -->
+                     <TextField fx:id="UsernameF" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="200.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" stylesheets="@SignUpPage.css">
+                        <HBox.margin>
+                           <Insets right="30.0" />
+                        </HBox.margin>
+                        <styleClass>
+                           <String fx:value="TextField" />
+                           <String fx:value="textF" />
+                        </styleClass>
+                     </TextField>
+                     <TextField fx:id="PasswordF" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="200.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" stylesheets="@SignUpPage.css">
+                        <styleClass>
+                           <String fx:value="TextField" />
+                           <String fx:value="textF" />
+                        </styleClass>
+                     </TextField>
+                  </children>
+               </HBox>
             </children>
-         </HBox>
-         <HBox layoutX="1.0" layoutY="46.0" stylesheets="@SignUpPage.css">
-            <children>
-            
-               <!-- TextFields for signup information (in order) -->
-               <TextField fx:id="firstNameTF" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" prefWidth="200.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" stylesheets="@SignUpPage.css">
-                  <HBox.margin>
-                     <Insets right="30.0" />
-                  </HBox.margin>
-                  <styleClass>
-                     <String fx:value="TextField" />
-                     <String fx:value="textF" />
-                  </styleClass>
-               </TextField>
-               <TextField fx:id="middleNameTF" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" prefWidth="200.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" stylesheets="@SignUpPage.css">
-                  <HBox.margin>
-                     <Insets right="30.0" />
-                  </HBox.margin>
-                  <styleClass>
-                     <String fx:value="TextField" />
-                     <String fx:value="textF" />
-                  </styleClass>
-               </TextField>
-               <TextField fx:id="lastNameTF" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" prefWidth="200.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" stylesheets="@SignUpPage.css">
-                  <HBox.margin>
-                     <Insets />
-                  </HBox.margin>
-                  <styleClass>
-                     <String fx:value="TextField" />
-                     <String fx:value="textF" />
-                  </styleClass>
-               </TextField>
-            </children>
-         </HBox>
-         <HBox layoutY="71.0" AnchorPane.bottomAnchor="291.0" AnchorPane.topAnchor="71.0">
-            <children>
-            
-                           <!-- Labels for signup information -->
-               <Label fx:id="DOBLabel" prefHeight="30.0" prefWidth="200.0" styleClass="Font" text="Date Of Birth">
-                  <font>
-                     <Font size="18.0" />
-                  </font>
-                  <HBox.margin>
-                     <Insets right="30.0" />
-                  </HBox.margin>
-               </Label>
-               <Label fx:id="ssnLabel" layoutX="685.0" layoutY="55.0" prefHeight="32.0" prefWidth="264.0" styleClass="Font" text="Social Security Number">
-                  <font>
-                     <Font size="18.0" />
-                  </font>
-                  <HBox.margin>
-                     <Insets />
-                  </HBox.margin>
-               </Label>
-            </children>
-         </HBox>
-         <HBox layoutX="1.0" layoutY="97.0" prefHeight="29.0" prefWidth="435.0">
-            <children>
-               <DatePicker fx:id="datePicker" layoutX="224.0" layoutY="226.0" onAction="#getDate" prefHeight="30.0" prefWidth="200.0" promptText="Enter a Date" stylesheets="@SignUpPage.css">
-                  <HBox.margin>
-                     <Insets right="30.0" top="10.0" />
-                  </HBox.margin>
-               </DatePicker>
-               <TextField fx:id="ssnTF" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" prefWidth="200.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" stylesheets="@SignUpPage.css">
-                  <styleClass>
-                     <String fx:value="TextField" />
-                     <String fx:value="textF" />
-                  </styleClass>
-                  <HBox.margin>
-                     <Insets top="10.0" />
-                  </HBox.margin>
-               </TextField>
-            </children>
-         </HBox>
-         <HBox layoutY="132.0" prefHeight="42.0" prefWidth="402.0">
-            <children>
-               <Label fx:id="phoneNumberLabel" prefHeight="32.0" prefWidth="279.0" styleClass="Font" text="Phone Number">
-                  <font>
-                     <Font size="18.0" />
-                  </font>
-                  <HBox.margin>
-                     <Insets right="30.0" top="10.0" />
-                  </HBox.margin>
-               </Label>
-               <Label fx:id="emailLabel" prefHeight="32.0" prefWidth="254.0" styleClass="Font" text="Email">
-                  <font>
-                     <Font size="18.0" />
-                  </font>
-                  <HBox.margin>
-                     <Insets top="10.0" />
-                  </HBox.margin>
-               </Label>
-            </children>
-         </HBox>
-         <HBox layoutY="165.0" prefHeight="35.0" prefWidth="518.0">
-            <children>
-               <TextField fx:id="phoneNumberTF" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" prefWidth="200.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" stylesheets="@SignUpPage.css">
-                  <HBox.margin>
-                     <Insets right="30.0" top="10.0" />
-                  </HBox.margin>
-                  <styleClass>
-                     <String fx:value="TextField" />
-                     <String fx:value="textF" />
-                  </styleClass>
-               </TextField>
-               <TextField fx:id="emailTF" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" prefWidth="200.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" stylesheets="@SignUpPage.css">
-                  <styleClass>
-                     <String fx:value="TextField" />
-                     <String fx:value="textF" />
-                  </styleClass>
-                  <HBox.margin>
-                     <Insets right="30.0" top="10.0" />
-                  </HBox.margin>
-               </TextField>
-            </children>
-         </HBox>
-         <HBox layoutX="1.0" layoutY="191.0" prefHeight="32.0" prefWidth="859.0">
-            <children>
-               <Label fx:id="streetNameLabel" prefHeight="32.0" prefWidth="199.0" styleClass="Font" text="Street Name">
-                  <font>
-                     <Font size="18.0" />
-                  </font>
-                  <HBox.margin>
-                     <Insets right="30.0" top="10.0" />
-                  </HBox.margin>
-               </Label>
-               <Label fx:id="cityLabel" prefHeight="32.0" prefWidth="204.0" styleClass="Font" text="City">
-                  <font>
-                     <Font size="18.0" />
-                  </font>
-                  <HBox.margin>
-                     <Insets right="30.0" top="10.0" />
-                  </HBox.margin>
-               </Label>
-               <Label fx:id="aptLabel" prefHeight="32.0" prefWidth="198.0" styleClass="Font" text="State">
-                  <font>
-                     <Font size="18.0" />
-                  </font>
-                  <HBox.margin>
-                     <Insets right="30.0" top="10.0" />
-                  </HBox.margin>
-               </Label>
-               <Label fx:id="zipCodeLabel" prefHeight="32.0" prefWidth="168.0" styleClass="Font" text="Zip Code">
-                  <font>
-                     <Font size="18.0" />
-                  </font>
-                  <HBox.margin>
-                     <Insets top="10.0" />
-                  </HBox.margin>
-               </Label>
-            </children>
-         </HBox>
-         <HBox layoutY="233.0">
-            <children>
-               <TextField fx:id="streetTF" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" prefWidth="200.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" stylesheets="@SignUpPage.css">
-                  <HBox.margin>
-                     <Insets right="30.0" />
-                  </HBox.margin>
-                  <styleClass>
-                     <String fx:value="TextField" />
-                     <String fx:value="textF" />
-                  </styleClass>
-               </TextField>
-               <TextField fx:id="cityTF" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" prefWidth="200.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" stylesheets="@SignUpPage.css">
-                  <HBox.margin>
-                     <Insets right="30.0" />
-                  </HBox.margin>
-                  <styleClass>
-                     <String fx:value="TextField" />
-                     <String fx:value="textF" />
-                  </styleClass>
-               </TextField>
-               <TextField fx:id="apartmentTF" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" prefWidth="200.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" stylesheets="@SignUpPage.css">
-                  <HBox.margin>
-                     <Insets right="30.0" />
-                  </HBox.margin>
-                  <styleClass>
-                     <String fx:value="TextField" />
-                     <String fx:value="textF" />
-                  </styleClass>
-               </TextField>
-               <TextField fx:id="zipCodeTF" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" prefWidth="200.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" stylesheets="@SignUpPage.css">
-                  <HBox.margin>
-                     <Insets />
-                  </HBox.margin>
-                  <styleClass>
-                     <String fx:value="TextField" />
-                     <String fx:value="textF" />
-                  </styleClass>
-               </TextField>
-            </children>
-         </HBox>
-         <HBox layoutY="258.0" prefHeight="32.0" prefWidth="382.0">
-            <children>
-               <Label fx:id="maritalStatusLabel" prefHeight="30.0" prefWidth="200.0" styleClass="Font" text="Marital Status">
-                  <font>
-                     <Font size="18.0" />
-                  </font>
-                  <HBox.margin>
-                     <Insets right="70.0" top="10.0" />
-                  </HBox.margin>
-               </Label>
-               <Label fx:id="genderLabel" prefHeight="30.0" prefWidth="200.0" styleClass="Font" text="Gender">
-                  <font>
-                     <Font size="18.0" />
-                  </font>
-                  <HBox.margin>
-                     <Insets top="10.0" />
-                  </HBox.margin>
-               </Label>
-            </children>
-         </HBox>
-         <HBox layoutY="299.0">
-            <children>
-            
-               <!-- RadioButton for signup information -->
-               <RadioButton mnemonicParsing="false" styleClass="ButtonFonts" stylesheets="@SignUpPage.css" text="Single">
-                  <toggleGroup>
-                     <ToggleGroup fx:id="maritaltoggle" />
-                  </toggleGroup>
-                  <HBox.margin>
-                     <Insets right="20.0" />
-                  </HBox.margin>
-                  <font>
-                     <Font size="15.0" />
-                  </font>
-               </RadioButton>
-               <RadioButton mnemonicParsing="false" styleClass="ButtonFonts" stylesheets="@SignUpPage.css" text="Married" toggleGroup="$maritaltoggle">
-                  <HBox.margin>
-                     <Insets right="30.0" />
-                  </HBox.margin>
-                  <font>
-                     <Font size="15.0" />
-                  </font>
-               </RadioButton>
-            
-               <RadioButton mnemonicParsing="false" prefHeight="27.0" prefWidth="89.0" styleClass="ButtonFonts" stylesheets="@SignUpPage.css" text="Male">
-                  <toggleGroup>
-                     <ToggleGroup fx:id="gendertoggle" />
-                  </toggleGroup>
-                  <HBox.margin>
-                     <Insets right="20.0" />
-                  </HBox.margin>
-                  <font>
-                     <Font size="15.0" />
-                  </font>
-               </RadioButton>
-               <RadioButton mnemonicParsing="false" styleClass="ButtonFonts" stylesheets="@SignUpPage.css" text="Female" toggleGroup="$gendertoggle">
-                  <HBox.margin>
-                     <Insets right="20.0" />
-                  </HBox.margin>
-                  <font>
-                     <Font size="15.0" />
-                  </font>
-               </RadioButton>
-               <RadioButton mnemonicParsing="false" styleClass="ButtonFonts" stylesheets="@SignUpPage.css" text="Non-Binary" toggleGroup="$gendertoggle">
-                  <font>
-                     <Font size="15.0" />
-                  </font>
-               </RadioButton>
-            </children>
-         </HBox>
-         <HBox layoutY="326.0">
-            <children>
-               <Label fx:id="usernameLabel" prefHeight="30.0" prefWidth="200.0" styleClass="Font" text="Username">
-                  <font>
-                     <Font size="18.0" />
-                  </font>
-                  <HBox.margin>
-                     <Insets right="30.0" />
-                  </HBox.margin>
-               </Label>
-               <Label fx:id="passwordLabel" prefHeight="30.0" prefWidth="200.0" styleClass="Font" text="Password">
-                  <font>
-                     <Font size="18.0" />
-                  </font>
-                  <HBox.margin>
-                     <Insets />
-                  </HBox.margin>
-               </Label>
-            </children>
-         </HBox>
-         <HBox layoutY="358.0">
-            <children>
-            
-               <!-- TextField for signup information (this comes after the radio buttons on screen -->
-               <TextField fx:id="UsernameF" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" prefWidth="200.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" stylesheets="@SignUpPage.css">
-                  <HBox.margin>
-                     <Insets right="30.0" />
-                  </HBox.margin>
-                  <styleClass>
-                     <String fx:value="TextField" />
-                     <String fx:value="textF" />
-                  </styleClass>
-               </TextField>
-               <TextField fx:id="PasswordF" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" prefWidth="200.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" stylesheets="@SignUpPage.css">
-                  <styleClass>
-                     <String fx:value="TextField" />
-                     <String fx:value="textF" />
-                  </styleClass>
-               </TextField>
-            </children>
-         </HBox>
+         </AnchorPane>
       </children>
-   </AnchorPane>
+   </VBox>
 
-                     <Button fx:id="SignupButton" contentDisplay="CENTER" layoutX="713.0" layoutY="726.0" mnemonicParsing="false" onAction="#Signup" prefHeight="60.0" prefWidth="60.0" styleClass="Button" stylesheets="@SignUpPage.css">
+                     <Button fx:id="SignupButton" contentDisplay="CENTER" layoutX="713.0" layoutY="650.0" mnemonicParsing="false" onAction="#Signup" prefHeight="60.0" prefWidth="60.0" styleClass="Button" stylesheets="@SignUpPage.css">
       <graphic>
          <FontAwesomeIconView fill="#d4b85d" glyphName="USER_PLUS" size="25" />
       </graphic>
    </Button>
 
-                     <Button fx:id="Home" alignment="CENTER" layoutX="639.0" layoutY="726.0" mnemonicParsing="false" onAction="#Home" prefHeight="60.0" prefWidth="60.0" styleClass="Button" stylesheets="@SignUpPage.css">
+                     <Button fx:id="Home" alignment="CENTER" layoutX="639.0" layoutY="650.0" mnemonicParsing="false" onAction="#Home" prefHeight="60.0" prefWidth="60.0" styleClass="Button" stylesheets="@SignUpPage.css">
       <graphic>
          <FontAwesomeIconView fill="#d4b85d" glyphName="HOME" size="25" />
       </graphic>
    </Button>
    <Label layoutX="601.0" layoutY="133.0" />
-   <ImageView fitHeight="50.0" fitWidth="44.0" layoutX="1186.0" layoutY="185.0">
+   <ImageView fitHeight="50.0" fitWidth="44.0" layoutX="1153.0" layoutY="110.0" AnchorPane.topAnchor="110.0">
       <image>
          <Image url="@../../../flipped.png" />
       </image>
