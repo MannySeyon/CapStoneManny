@@ -5,15 +5,21 @@ import com.example.demo.Connectivity;
 import com.example.demo.customer.Customer;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
-
+import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
@@ -21,6 +27,12 @@ import java.time.LocalDate;
 import java.util.ResourceBundle;
 
 public class AdminDashController implements Initializable {
+    @FXML
+    private Label maritalSetLabel;
+    @FXML
+    private ToggleGroup maritalStatus;
+    @FXML
+    private ToggleGroup genderStatus;
     //First splitPane create clients
     @FXML
     private TextField FName_fld;
@@ -141,6 +153,7 @@ public class AdminDashController implements Initializable {
     private Button sv_amount_deposit_btn;
     @FXML
     private TextField Apartment_fld;
+    @FXML
     private TextField search_db_fld;
 
 
@@ -205,6 +218,14 @@ public class AdminDashController implements Initializable {
     @FXML
     private TableColumn<ConnTable, String> col_email;
 
+    @FXML
+    private Stage stage;
+    @FXML
+    private Scene scene;
+    @FXML
+    private Parent root;
+
+
     ObservableList<ConnTable>clientsList = FXCollections.observableArrayList();
     ObservableList<String> stateList = FXCollections.observableArrayList(
             "Alabama",
@@ -261,7 +282,7 @@ public class AdminDashController implements Initializable {
 
 
     @FXML
-    private void handleClicks(ActionEvent event) {
+    private void handleClicks(ActionEvent event) throws IOException {
 
         if (event.getSource() == create_c_btn) {
             pnCreateClient.toFront();
@@ -270,22 +291,33 @@ public class AdminDashController implements Initializable {
             pnClientsListview.toFront();
         } else if (event.getSource() == deposit_btn) {
             pnDeposits.toFront();
+        } else if (event.getSource() == logout_btn) {
+            Parent root =  FXMLLoader.load(getClass().getResource("AdminSignin.fxml"));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
         }
     }
 
     @FXML
-    private void createClientActions(ActionEvent event) {
-
-
-
+    private void handleSearch(ActionEvent event) throws IOException{
     }
+
+   /* @FXML
+    private void SearchClients(ActionEvent event) {
+         if(search_db_fld.textProperty().addListener())
+
+
+    }*/
+   @FXML
+   protected void Logout(ActionEvent event) throws IOException {
+
+   }
     @FXML
     protected void ClientListActions(ActionEvent actionEvent) {
     }
-    @FXML
-    protected void depositActions(ActionEvent actionEvent) {
 
-    }
   public boolean CheckDate(){
         if (DOB_fld.getValue()==null){
             return false;
@@ -483,33 +515,61 @@ public class AdminDashController implements Initializable {
         try {
             ResultSet rs = con.createStatement().executeQuery("select * from customer_personal_info ");
             while (rs.next()) {
+
                 clientsList.add(new ConnTable(rs.getString("Account_number"),rs.getString("First_name"), rs.getString("Last_name"),rs.getString("Middle_name"),rs.getString("date_of_birth"),rs.getString("address"),rs.getString("zipp_code"),rs.getString("state"),rs.getString("Country"),rs.getString("city"),rs.getString("contact_no"),rs.getString( "ssn"),rs.getString( "username"),rs.getString( "email")));
+
             }
+            col_accnum.setCellValueFactory(new PropertyValueFactory<>("Account_number"));
+            col_fname.setCellValueFactory(new PropertyValueFactory<>("First_name"));
+            col_lname.setCellValueFactory(new PropertyValueFactory<>("Last_name"));
+            col_mname.setCellValueFactory(new PropertyValueFactory<>("Middle_name"));
+            col_dob.setCellValueFactory(new PropertyValueFactory<>("date_of_birth"));
+            col_address.setCellValueFactory(new PropertyValueFactory<>("address"));
+            col_zip.setCellValueFactory(new PropertyValueFactory<>("zipp_code"));
+            col_state.setCellValueFactory(new PropertyValueFactory<>("state"));
+            col_country.setCellValueFactory(new PropertyValueFactory<>("Country"));
+            col_city.setCellValueFactory(new PropertyValueFactory<>("city"));
+            col_contactnum.setCellValueFactory(new PropertyValueFactory<>("contact_no"));
+            col_last4ssn.setCellValueFactory(new PropertyValueFactory<>("ssn"));
+            col_username.setCellValueFactory(new PropertyValueFactory<>("username"));
+            col_email.setCellValueFactory(new PropertyValueFactory<>("email"));
+
+            table.setItems(clientsList);
+            state_ComboBox.setItems(stateList);
+
+            FilteredList<ConnTable> filteredData = new FilteredList<>(clientsList, b -> true );
+
+            search_db_fld.textProperty().addListener((observable, oldValue, newValue) -> {
+                filteredData.setPredicate(ConnTable ->{
+                     if(newValue.isEmpty() || newValue.isBlank() || newValue == null){
+                         return true;
+                     }
+
+                     String searchKeyword = newValue.toLowerCase();
+                     if(ConnTable.getLast_name().toLowerCase().indexOf(searchKeyword) >-1){
+                         return true;
+                     }
+                     else
+                         if(ConnTable.getFirst_name().toLowerCase().indexOf(searchKeyword) >-1) {
+                             return true;
+                         }
+                     else
+                         if ((ConnTable.getAccount_number().toString().indexOf(searchKeyword) >-1)) {
+                               return true;
+                         }else
+                             return false;
+                });
+            });
+
+            SortedList<ConnTable> sortedData = new SortedList<>(filteredData);
+
+            sortedData.comparatorProperty().bind(table.comparatorProperty());
+            table.setItems(sortedData);
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
-
-
-        col_accnum.setCellValueFactory(new PropertyValueFactory<>("Account_number"));
-        col_fname.setCellValueFactory(new PropertyValueFactory<>("First_name"));
-        col_lname.setCellValueFactory(new PropertyValueFactory<>("Last_name"));
-        col_mname.setCellValueFactory(new PropertyValueFactory<>("Middle_name"));
-        col_dob.setCellValueFactory(new PropertyValueFactory<>("date_of_birth"));
-        col_address.setCellValueFactory(new PropertyValueFactory<>("address"));
-        col_zip.setCellValueFactory(new PropertyValueFactory<>("zipp_code"));
-        col_state.setCellValueFactory(new PropertyValueFactory<>("state"));
-        col_country.setCellValueFactory(new PropertyValueFactory<>("Country"));
-        col_city.setCellValueFactory(new PropertyValueFactory<>("city"));
-        col_contactnum.setCellValueFactory(new PropertyValueFactory<>("contact_no"));
-        col_last4ssn.setCellValueFactory(new PropertyValueFactory<>("ssn"));
-        col_username.setCellValueFactory(new PropertyValueFactory<>("username"));
-        col_email.setCellValueFactory(new PropertyValueFactory<>("email"));
-
-        table.setItems(clientsList);
-        state_ComboBox.setItems(stateList);
-
+        
     }
 
 }
