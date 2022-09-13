@@ -67,7 +67,7 @@
                         <Insets left="15.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="logout_btn" alignment="CENTER" mnemonicParsing="false" onAction="#handleClicks" styleClass="alt_menu_btn" text="Logout">
+                  <Button fx:id="logout_btn" alignment="CENTER" mnemonicParsing="false" onKeyPressed="#handleClicks" styleClass="alt_menu_btn" text="Logout">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>

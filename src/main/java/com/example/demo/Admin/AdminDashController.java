@@ -292,7 +292,7 @@ public class AdminDashController implements Initializable {
         } else if (event.getSource() == deposit_btn) {
             pnDeposits.toFront();
         } else if (event.getSource() == logout_btn) {
-            Parent root =  FXMLLoader.load(getClass().getResource("AdminSignin.fxml"));
+            root =  FXMLLoader.load(getClass().getResource("AdminSignin.fxml"));
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
@@ -300,25 +300,9 @@ public class AdminDashController implements Initializable {
         }
     }
 
-    @FXML
-    private void handleSearch(ActionEvent event) throws IOException{
-    }
-
-   /* @FXML
-    private void SearchClients(ActionEvent event) {
-         if(search_db_fld.textProperty().addListener())
 
 
-    }*/
-   @FXML
-   protected void Logout(ActionEvent event) throws IOException {
-
-   }
-    @FXML
-    protected void ClientListActions(ActionEvent actionEvent) {
-    }
-
-  public boolean CheckDate(){
+  /*public boolean CheckDate(){
         if (DOB_fld.getValue()==null){
             return false;
         }
@@ -499,7 +483,7 @@ public class AdminDashController implements Initializable {
         if (resultSet.next()) {
 
         }
-    }
+    }*/
 
 
     @Override
