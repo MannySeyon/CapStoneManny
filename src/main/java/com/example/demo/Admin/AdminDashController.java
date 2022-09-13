@@ -28,6 +28,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
+@SuppressWarnings("ALL")
 public class AdminDashController implements Initializable {
     @FXML
     private Label maritalSetLabel;
