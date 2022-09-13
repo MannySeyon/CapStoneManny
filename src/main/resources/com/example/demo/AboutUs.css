@@ -124,7 +124,7 @@
 
 }
 .primaryColor{
-      -fx-background-color: #13123A;
+    -fx-background-color: #13123A;
 }
 .secondColor{
     -fx-background-image: "../Gold.jpeg";
@@ -144,7 +144,7 @@
     -fx-background-image: url("../../../white.jpeg");
     -fx-opacity: .6;
     -fx-font-family: "Apple LiSung";
-    -fx-font-size: 28px;
+    -fx-font-size: 15px;
 }
 
 .TextFont {

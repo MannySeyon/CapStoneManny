@@ -176,7 +176,7 @@
                </HBox>
                <HBox alignment="CENTER_LEFT">
                   <children>
-                     <Label fx:id="streetNameLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="378.0" text="Street Name" textFill="WHITE">
+                     <Label fx:id="streetNameLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="306.0" text="Street Name" textFill="WHITE">
                         <font>
                            <Font name="Calibri" size="36.0" />
                         </font>
@@ -184,7 +184,7 @@
                            <Insets right="40.0" />
                         </HBox.margin>
                      </Label>
-                     <Label fx:id="cityLabel" contentDisplay="CENTER" prefHeight="41.0" prefWidth="296.0" text="City" textFill="WHITE">
+                     <Label fx:id="cityLabel" contentDisplay="CENTER" prefHeight="41.0" prefWidth="230.0" text="City" textFill="WHITE">
                         <font>
                            <Font name="Calibri" size="36.0" />
                         </font>
@@ -192,15 +192,15 @@
                            <Insets right="30.0" />
                         </HBox.margin>
                      </Label>
-                     <Label fx:id="zipCodeLabel" contentDisplay="CENTER" prefHeight="41.0" prefWidth="163.0" text="Zip Code" textFill="WHITE">
+                     <Label fx:id="zipCodeLabel" contentDisplay="CENTER" prefHeight="41.0" prefWidth="199.0" text="Zip Code" textFill="WHITE">
                         <font>
                            <Font name="Calibri" size="36.0" />
                         </font>
                         <HBox.margin>
-                           <Insets right="20.0" />
+                           <Insets right="30.0" />
                         </HBox.margin>
                      </Label>
-                     <Label fx:id="aptLabel" contentDisplay="CENTER" prefHeight="41.0" prefWidth="88.0" text="State" textFill="WHITE">
+                     <Label fx:id="aptLabel" contentDisplay="CENTER" prefHeight="41.0" prefWidth="146.0" text="State" textFill="WHITE">
                         <font>
                            <Font name="Calibri" size="36.0" />
                         </font>
@@ -215,7 +215,7 @@
                </HBox>
                <HBox alignment="CENTER">
                   <children>
-                     <TextField fx:id="streetTF" minHeight="-Infinity" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: lightgrey; -fx-background-radius: 10; -fx-border-radius: 10;" stylesheets="@SignUpPage.css">
+                     <TextField fx:id="streetTF" minHeight="-Infinity" prefHeight="40.0" prefWidth="306.0" style="-fx-background-color: lightgrey; -fx-background-radius: 10; -fx-border-radius: 10;" stylesheets="@SignUpPage.css">
                         <HBox.margin>
                            <Insets right="30.0" />
                         </HBox.margin>
@@ -224,7 +224,7 @@
                            <String fx:value="text-field" />
                         </styleClass>
                      </TextField>
-                     <TextField fx:id="apartmentTF" minHeight="-Infinity" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: lightgrey; -fx-background-radius: 10; -fx-border-radius: 10;" stylesheets="@SignUpPage.css">
+                     <TextField fx:id="apartmentTF" minHeight="-Infinity" prefHeight="40.0" prefWidth="245.0" style="-fx-background-color: lightgrey; -fx-background-radius: 10; -fx-border-radius: 10;" stylesheets="@SignUpPage.css">
                         <HBox.margin>
                            <Insets right="30.0" />
                         </HBox.margin>
@@ -233,15 +233,16 @@
                            <String fx:value="text-field" />
                         </styleClass>
                      </TextField>
-                     <TextField fx:id="zipCodeTF" minHeight="-Infinity" prefHeight="40.0" prefWidth="243.0" style="-fx-background-color: lightgrey; -fx-background-radius: 10; -fx-border-radius: 10;" stylesheets="@SignUpPage.css">
+                     <TextField fx:id="zipCodeTF" minHeight="-Infinity" prefHeight="40.0" prefWidth="198.0" style="-fx-background-color: lightgrey; -fx-background-radius: 10; -fx-border-radius: 10;" stylesheets="@SignUpPage.css">
                         <HBox.margin>
-                           <Insets />
+                           <Insets right="30.0" />
                         </HBox.margin>
                         <styleClass>
                            <String fx:value="TextField" />
                            <String fx:value="text-field" />
                         </styleClass>
                      </TextField>
+                     <ComboBox fx:id="state_ComboBox" prefHeight="35.0" prefWidth="250.0" promptText="Select State" />
                   </children>
                   <padding>
                      <Insets top="10.0" />

@@ -7,25 +7,21 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
-            prefWidth="1210.0" styleClass="pane2" stylesheets="@Landing.css" xmlns="http://javafx.com/javafx/18">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1210.0" styleClass="pane2" stylesheets="@AboutUs.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.AboutUsController">
    <top>
-      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity"
-                  minWidth="-Infinity" prefHeight="600.0" prefWidth="950.0" stylesheets="@Landing.css"
-                  BorderPane.alignment="CENTER">
-         <Label alignment="CENTER" layoutX="477.0" layoutY="15.0" prefHeight="46.0" prefWidth="227.0" text="ABOUT US"
-                textFill="#e4d6d6">
+      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="950.0" BorderPane.alignment="CENTER">
+         <Label fx:id="aboutUsLabel" alignment="CENTER" layoutX="448.0" layoutY="14.0" prefHeight="46.0" prefWidth="259.0" text="ABOUT US" textFill="#e4d6d6" AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="450.0" AnchorPane.topAnchor="10.0">
             <font>
-               <Font name="Calibri Bold" size="36.0"/>
+               <Font name="Calibri Bold" size="36.0" />
             </font>
          </Label>
-         <Text fill="WHITE" layoutX="70.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TextFont"
-               text="Choua" wrappingWidth="70.8785171508789">
+         <Text fx:id="chouaLabel" fill="WHITE" layoutX="122.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TextFont" text="Choua" wrappingWidth="86.8785171508789">
             <font>
-               <Font size="20.0"/>
+               <Font name="Calibri" size="20.0" />
             </font>
          </Text>
-         <Pane layoutX="15.0" layoutY="202.0" prefHeight="272.0" prefWidth="182.0" styleClass="TextImage">
+         <Pane fx:id="chouaText" layoutX="14.0" layoutY="119.0" prefHeight="460.0" prefWidth="185.0"
+               styleClass="TextImage" AnchorPane.leftAnchor="15.0">
             <effect>
                <DropShadow blurType="GAUSSIAN" height="26.0" radius="12.5" spread="0.33" width="26.0">
                   <color>
@@ -33,25 +29,24 @@
                   </color>
                </DropShadow>
             </effect>
+            <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;" styleClass="TextImage"
+                  text="Email: &#10;Choualo@outlook.com&#10;LinkedIn: &#10;www.linkedin.com/in/choua-lo-1579a1228&#10;&#10;My name is Choua, and I am trying to make a career switch from Logistics to Software Engineering. My dream is to one day become an iOS developer and to be able to create an application that can help boost productivity at my company. "
+                  textAlignment="CENTER" wrappingWidth="185.0">
+               <font>
+                  <Font size="15.0"/>
+               </font>
+            </Text>
          </Pane>
-         <Text layoutX="20.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;"
-               text="Email: &#10;Choualo@outlook.com&#10;LinkedIn: &#10;www.linkedin.com/in/choua-lo-1579a1228&#10;&#10;My name is Choua, and I am trying to make a career switch from Logistics to Software Engineering. My dream is to one day become an iOS developer and to be able to create an application that can help boost productivity at my company. "
-               textAlignment="CENTER" wrappingWidth="174.0850067138672">
-            <font>
-               <Font name="Apple LiSung Light" size="15.0"/>
-            </font>
-         </Text>
-         <ImageView fitHeight="70.0" fitWidth="65.0" layoutX="74.0" layoutY="478.0" pickOnBounds="true"
-                    preserveRatio="true">
-            <Image url="@../../../Summit_Fin_Corp-removebg-preview.png"/>
+         <ImageView fx:id="chouaImage" fitHeight="70.0" fitWidth="70.0" layoutX="15.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../../Summit_Fin_Corp-removebg-preview.png" />
          </ImageView>
-         <Text fill="WHITE" layoutX="257.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TextFont"
-               text="Pandora">
+         <Text fx:id="pandoraLabel" fill="WHITE" layoutX="299.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TextFont" text="Pandora">
             <font>
-               <Font size="20.0"/>
+               <Font name="Calibri" size="20.0" />
             </font>
          </Text>
-         <Pane layoutX="205.0" layoutY="138.0" prefHeight="273.0" prefWidth="190.0" styleClass="TextImage">
+         <Pane fx:id="pandoraText" layoutX="217.0" layoutY="119.0" prefHeight="460.0" prefWidth="185.0"
+               styleClass="TextImage">
             <effect>
                <DropShadow blurType="GAUSSIAN" height="26.0" radius="12.5" spread="0.33" width="26.0">
                   <color>
@@ -59,19 +54,19 @@
                   </color>
                </DropShadow>
             </effect>
+            <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;" styleClass="TextImage"
+                  text="Email: &#10;Choualo@outlook.com&#10;LinkedIn: &#10;www.linkedin.com/in/choua-lo-1579a1228&#10;&#10;My name is Choua, and I am trying to make a career switch from Logistics to Software Engineering. My dream is to one day become an iOS developer and to be able to create an application that can help boost productivity at my company. "
+                  textAlignment="CENTER" wrappingWidth="185.0">
+               <font>
+                  <Font size="15.0"/>
+               </font>
+            </Text>
          </Pane>
-         <Text layoutX="213.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;"
-               text="Email: &#10;Choualo@outlook.com&#10;LinkedIn: &#10;www.linkedin.com/in/choua-lo-1579a1228&#10;&#10;My name is Choua, and I am trying to make a career switch from Logistics to Software Engineering. My dream is to one day become an iOS developer and to be able to create an application that can help boost productivity at my company. "
-               textAlignment="CENTER" wrappingWidth="174.0850067138672">
-            <font>
-               <Font name="Apple LiSung Light" size="15.0"/>
-            </font>
-         </Text>
-         <ImageView fitHeight="70.0" fitWidth="65.0" layoutX="266.0" layoutY="414.0" pickOnBounds="true"
-                    preserveRatio="true">
-            <Image url="@../../../Summit_Fin_Corp-removebg-preview.png"/>
+         <ImageView fx:id="panImage" fitHeight="70.0" fitWidth="70.0" layoutX="217.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../../Summit_Fin_Corp-removebg-preview.png" />
          </ImageView>
-         <Pane layoutX="407.0" layoutY="127.0" prefHeight="460.0" prefWidth="186.0" styleClass="TextImage">
+         <Pane fx:id="mannyText" layoutX="420.0" layoutY="119.0" prefHeight="460.0" prefWidth="185.0"
+               styleClass="TextImage" AnchorPane.leftAnchor="415.0">
             <effect>
                <DropShadow blurType="GAUSSIAN" height="26.0" radius="12.5" spread="0.33" width="26.0">
                   <color>
@@ -79,31 +74,29 @@
                   </color>
                </DropShadow>
             </effect>
+            <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;" styleClass="TextImage"
+                  text="Email&#10;noyysey@gmail.com&#10;GitHub&#10;·www.github.com/MannySeyon&#10;LinkedIn&#10;·www.linkedin.com/in/emmanuel-seyon-35368b181&#10;&#10;An Artist, Writer, Entrepreneur, Software Developer, avid Volunteer, and Activist. Manny graduated from Summit Academy OIC in 2022, and attended Guilford College from 2018-2021 for Peace and Conflict Studies. Aspires to publish a series, develop a related video game, and continue to serve the community.&#10;"
+                  textAlignment="CENTER" wrappingWidth="185.0">
+               <font>
+                  <Font size="15.0"/>
+               </font>
+            </Text>
          </Pane>
-         <Text fill="WHITE" layoutX="477.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TextFont"
-               text="Emmanuel">
+         <Text fx:id="mannyLabel" fill="WHITE" layoutX="470.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TextFont" text="Emmanuel" wrappingWidth="129.759765625">
             <font>
-               <Font size="20.0"/>
+               <Font name="Calibri" size="20.0" />
             </font>
          </Text>
-         <Text layoutX="413.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;"
-               text="Email&#10;noyysey@gmail.com&#10;GitHub&#10;·www.github.com/MannySeyon&#10;LinkedIn&#10;·www.linkedin.com/in/emmanuel-seyon-35368b181&#10;&#10;An Artist, Writer, Entrepreneur, Software Developer, avid Volunteer, and Activist. Manny graduated from Summit Academy OIC in 2022, and attended Guilford College from 2018-2021 for Peace and Conflict Studies. Aspires to publish a series, develop a related video game, and continue to serve the community.&#10;"
-               textAlignment="CENTER" wrappingWidth="174.0850067138672">
-            <font>
-               <Font size="15.0"/>
-            </font>
-         </Text>
-         <ImageView fitHeight="70.0" fitWidth="65.0" layoutX="402.0" layoutY="47.0" pickOnBounds="true"
-                    preserveRatio="true">
-            <Image url="@../../../Summit_Fin_Corp-removebg-preview.png"/>
+         <ImageView fx:id="mannyImage" fitHeight="70.0" fitWidth="70.0" layoutX="415.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../../Summit_Fin_Corp-removebg-preview.png" />
          </ImageView>
-         <Text fill="WHITE" layoutX="668.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TextFont"
-               text="David">
+         <Text fx:id="davidLabel" fill="WHITE" layoutX="730.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TextFont" text="David" wrappingWidth="79.560546875">
             <font>
-               <Font size="20.0"/>
+               <Font name="Calibri" size="20.0" />
             </font>
          </Text>
-         <Pane layoutX="605.0" layoutY="138.0" prefHeight="273.0" prefWidth="190.0" styleClass="TextImage">
+         <Pane fx:id="DavidText" layoutX="612.0" layoutY="119.0" prefHeight="460.0" prefWidth="185.0"
+               styleClass="TextImage" AnchorPane.leftAnchor="612.0">
             <effect>
                <DropShadow blurType="GAUSSIAN" height="26.0" radius="12.5" spread="0.33" width="26.0">
                   <color>
@@ -111,25 +104,24 @@
                   </color>
                </DropShadow>
             </effect>
+            <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;" styleClass="TextImage"
+                  text="Email: &#10;Officialtfv@gmail.com&#10;&#10;LinkedIn: &#10;https://www.linkedin.com/in/david-hall-82485920a/&#10;&#10;&#10;&#10;My name is David Hall I have a thrill for software engineering my &#10;passion for creative problem-solving led me to a great industry. My main goal is to help cultivated innovative ways to better the world around us."
+                  textAlignment="CENTER" wrappingWidth="185.0">
+               <font>
+                  <Font size="15.0"/>
+               </font>
+            </Text>
          </Pane>
-         <Text layoutX="613.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;"
-               text="Email: &#10;Officialtfv@gmail.com&#10;&#10;LinkedIn: &#10;https://www.linkedin.com/in/david-hall-82485920a/&#10;&#10;My name is David Hall I have a thrill for software engineering my &#10;passion for creative problem-solving led me to a great industry. My main goal is to help cultivated innovative ways to better the world around us."
-               textAlignment="CENTER" wrappingWidth="174.0850067138672">
-            <font>
-               <Font name="Apple LiSung Light" size="15.0"/>
-            </font>
-         </Text>
-         <ImageView fitHeight="70.0" fitWidth="65.0" layoutX="671.0" layoutY="414.0" pickOnBounds="true"
-                    preserveRatio="true">
-            <Image url="@../../../Summit_Fin_Corp-removebg-preview.png"/>
+         <ImageView fx:id="Image" fitHeight="70.0" fitWidth="70.0" layoutX="612.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../../Summit_Fin_Corp-removebg-preview.png" />
          </ImageView>
-         <Text fill="WHITE" layoutX="878.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TextFont"
-               text="Sam">
+         <Text fx:id="samLabel" fill="WHITE" layoutX="939.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TextFont" text="Sam" wrappingWidth="61.5341796875">
             <font>
-               <Font size="20.0"/>
+               <Font name="Calibri" size="20.0" />
             </font>
          </Text>
-         <Pane layoutX="805.0" layoutY="202.0" prefHeight="273.0" prefWidth="190.0" styleClass="TextImage">
+         <Pane fx:id="samText" layoutX="813.0" layoutY="119.0" prefHeight="460.0" prefWidth="185.0"
+               styleClass="TextImage" AnchorPane.leftAnchor="810.0">
             <effect>
                <DropShadow blurType="GAUSSIAN" height="26.0" radius="12.5" spread="0.33" width="26.0">
                   <color>
@@ -137,25 +129,24 @@
                   </color>
                </DropShadow>
             </effect>
+            <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;" styleClass="TextImage"
+                  text="Email: &#10;Choualo@outlook.com&#10;LinkedIn: &#10;www.linkedin.com/in/choua-lo-1579a1228&#10;&#10;My name is Choua, and I am trying to make a career switch from Logistics to Software Engineering. My dream is to one day become an iOS developer and to be able to create an application that can help boost productivity at my company. "
+                  textAlignment="CENTER" wrappingWidth="185.0">
+               <font>
+                  <Font size="15.0"/>
+               </font>
+            </Text>
          </Pane>
-         <Text layoutX="813.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;"
-               text="Email: &#10;Choualo@outlook.com&#10;LinkedIn: &#10;www.linkedin.com/in/choua-lo-1579a1228&#10;&#10;My name is Choua, and I am trying to make a career switch from Logistics to Software Engineering. My dream is to one day become an iOS developer and to be able to create an application that can help boost productivity at my company. "
-               textAlignment="CENTER" wrappingWidth="174.0850067138672">
-            <font>
-               <Font name="Apple LiSung Light" size="15.0"/>
-            </font>
-         </Text>
-         <ImageView fitHeight="70.0" fitWidth="65.0" layoutX="868.0" layoutY="480.0" pickOnBounds="true"
-                    preserveRatio="true">
-            <Image url="@../../../Summit_Fin_Corp-removebg-preview.png"/>
+         <ImageView fx:id="ruhImage" fitHeight="70.0" fitWidth="70.0" layoutX="810.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../../Summit_Fin_Corp-removebg-preview.png" />
          </ImageView>
-         <Text fill="WHITE" layoutX="1064.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0"
-               styleClass="TextFont" text="Ruhama">
+         <Text fx:id="ruhamaLabel" fill="WHITE" layoutX="1093.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TextFont" text="Ruhama">
             <font>
-               <Font size="20.0"/>
+               <Font name="Calibri" size="20.0" />
             </font>
          </Text>
-         <Pane layoutX="1005.0" layoutY="138.0" prefHeight="273.0" prefWidth="190.0" styleClass="TextImage">
+         <Pane fx:id="ruhamaText" layoutX="1016.0" layoutY="115.0" prefHeight="460.0" prefWidth="185.0"
+               styleClass="TextImage" AnchorPane.rightAnchor="15.0">
             <effect>
                <DropShadow blurType="GAUSSIAN" height="26.0" radius="12.5" spread="0.33" width="26.0">
                   <color>
@@ -163,17 +154,16 @@
                   </color>
                </DropShadow>
             </effect>
+            <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;" styleClass="TextImage"
+                  text="Email: &#10;Choualo@outlook.com&#10;LinkedIn: &#10;www.linkedin.com/in/choua-lo-1579a1228&#10;&#10;My name is Choua, and I am trying to make a career switch from Logistics to Software Engineering. My dream is to one day become an iOS developer and to be able to create an application that can help boost productivity at my company. "
+                  textAlignment="CENTER" wrappingWidth="185.0">
+               <font>
+                  <Font size="15.0"/>
+               </font>
+            </Text>
          </Pane>
-         <Text layoutX="1015.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;"
-               text="Email: &#10;Choualo@outlook.com&#10;LinkedIn: &#10;www.linkedin.com/in/choua-lo-1579a1228&#10;&#10;My name is Choua, and I am trying to make a career switch from Logistics to Software Engineering. My dream is to one day become an iOS developer and to be able to create an application that can help boost productivity at my company. "
-               textAlignment="CENTER" wrappingWidth="174.0850067138672">
-            <font>
-               <Font name="Apple LiSung Light" size="15.0"/>
-            </font>
-         </Text>
-         <ImageView fitHeight="70.0" fitWidth="65.0" layoutX="1069.0" layoutY="417.0" pickOnBounds="true"
-                    preserveRatio="true">
-            <Image url="@../../../Summit_Fin_Corp-removebg-preview.png"/>
+         <ImageView fx:id="Image2" fitHeight="70.0" fitWidth="70.0" layoutX="1010.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../../Summit_Fin_Corp-removebg-preview.png" />
          </ImageView>
       </AnchorPane>
    </top>
