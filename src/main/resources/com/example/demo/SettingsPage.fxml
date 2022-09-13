@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+
 <?import de.jensd.fx.glyphs.fontawesome.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
@@ -51,7 +52,7 @@
                         <children>
                            <ImageView fitHeight="74.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true" styleClass="profilePic">
                               <image>
-                                 <Image url="@../../../Bird.jpg" />
+                                 <Image url="@../../../Summit_Fin_Corp-removebg-preview.png" />
                               </image>
                               <VBox.margin>
                                  <Insets />

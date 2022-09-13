@@ -17,14 +17,9 @@
    <children>
       <Pane prefHeight="140.0" prefWidth="462.0">
          <children>
-            <ImageView fitHeight="85.0" fitWidth="83.0" layoutX="109.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="287.0" fitWidth="306.0" layoutX="87.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../Bird.jpg" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="204.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../Logo.jpg" />
+                  <Image url="@../../../fullbgremove.png" />
                </image>
             </ImageView>
             <Label fx:id="passwordShow" layoutX="69.0" layoutY="118.0" prefHeight="30.0" prefWidth="378.0" text="" textFill="#d9bb79">
@@ -47,7 +42,7 @@
       </Label>
       <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0">
          <children>
-            <TextField fx:id="nameTextField" promptText="User name"  styleClass="tf_box" HBox.hgrow="ALWAYS" />
+            <TextField fx:id="nameTextField" promptText="User name" styleClass="tf_box" HBox.hgrow="ALWAYS" />
 
          </children>
          <VBox.margin>
