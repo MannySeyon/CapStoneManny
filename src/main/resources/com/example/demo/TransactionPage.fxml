@@ -1,15 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import de.jensd.fx.glyphs.fontawesome.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.chart.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 
-<BorderPane fx:id="TransactionBorder" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" styleClass="pane2" stylesheets="@Transactions.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.TransactionPageController">
+<BorderPane fx:id="TransactionBorder" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" styleClass="pane2" stylesheets="@Transactions.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.TransactionPageController">
    <center>
       <AnchorPane fx:id="pane2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="951.0" styleClass="pane2" BorderPane.alignment="CENTER">
          <HBox layoutX="148.0" layoutY="7.0" prefHeight="36.0" prefWidth="876.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="10.0">
@@ -69,13 +80,16 @@
                </font>
             </Label>
          </VBox>
-         <TableView fx:id="TransactionTable" layoutX="47.0" layoutY="181.0" prefHeight="290.0" prefWidth="426.0" styleClass="table_view">
+         <TableView fx:id="TransactionTable" layoutX="53.0" layoutY="187.0" prefHeight="290.0" prefWidth="426.0" styleClass="table_view">
             <columns>
-               <TableColumn fx:id="dateColumn" text="Date &amp; Time" />
-               <TableColumn fx:id="transactionColumn" text="Transaction" />
-               <TableColumn fx:id="typeColumn" prefWidth="66.0" text="Type" />
-               <TableColumn fx:id="priceColumn" prefWidth="84.0" text="Price" />
-               <TableColumn fx:id="balanceColumn" prefWidth="90.0" text="Current Total" />
+               <TableColumn fx:id="transactionColumn" prefWidth="50.4000244140625" text="Transaction Number" />
+               <TableColumn fx:id="accountColumn" minWidth="0.0" prefWidth="67.19998168945312" text="Account Number" />
+               <TableColumn fx:id="dateColumn" minWidth="0.0" prefWidth="57.59999084472656" text="Date " />
+               <TableColumn fx:id="incomeDateColumn" minWidth="0.0" prefWidth="80.79998779296875" text="Income Date" />
+               <TableColumn fx:id="incomeAmountColumn" minWidth="0.0" prefWidth="77.60003662109375" text="Income Amount" />
+               <TableColumn fx:id="expensesDateColumn" minWidth="3.20001220703125" prefWidth="188.0" text="Expense Date" />
+               <TableColumn fx:id="balanceColumn11" minWidth="0.0" prefWidth="0.0" text="Status" />
+               <TableColumn fx:id="expensesAmountColumn" prefWidth="108.79998779296875" text="Expenses Amount" />
             </columns>
          </TableView>
          <Button fx:id="tableView" layoutX="221.0" layoutY="505.0" mnemonicParsing="false" text="Table View" />

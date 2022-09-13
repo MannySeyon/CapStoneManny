@@ -222,7 +222,9 @@ public class AdminDashController implements Initializable {
     @FXML
     private Parent root;
 
-
+    ObservableList<SavingsView>ViewSavings = FXCollections.observableArrayList();
+    ObservableList<CheckingView>ViewChecking = FXCollections.observableArrayList();
+    ObservableList<TransactionView>viewTransactions = FXCollections.observableArrayList();
     ObservableList<ConnTable>clientsList = FXCollections.observableArrayList();
     ObservableList<String> stateList = FXCollections.observableArrayList(
             "Alabama",
@@ -541,7 +543,6 @@ public class AdminDashController implements Initializable {
                              return false;
                 });
             });
-
             SortedList<ConnTable> sortedData = new SortedList<>(filteredData);
 
             sortedData.comparatorProperty().bind(table.comparatorProperty());
@@ -550,7 +551,30 @@ public class AdminDashController implements Initializable {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        
+
+        Connectivity connectivity = new Connectivity();
+        Connection conc= connectivity.getConnection();
+
+        try {
+            ResultSet  rs = conc.createStatement().executeQuery("pop");
+            while(rs.next()){
+                ViewChecking.add(new CheckingView(rs.getString("Checking_account_number"),rs.getString("Account_name"),rs.getString("Account_balance")));
+                ViewSavings.add(new SavingsView(rs.getString("Savings_account_number"),rs.getString("Account_name"),rs.getString("Account_balance")));
+            }
+            col_checking_acc_number.setCellValueFactory(new PropertyValueFactory<>("col_checking_acc_number"));
+
+
+
+
+
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+
+
+
     }
 
 }
