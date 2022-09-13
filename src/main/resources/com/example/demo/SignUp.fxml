@@ -19,14 +19,9 @@
    <children>
       <Pane prefHeight="140.0" prefWidth="462.0">
          <children>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="204.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="287.0" fitWidth="306.0" layoutX="87.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../Logo.jpg" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="85.0" fitWidth="83.0" layoutX="109.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../Bird.jpg" />
+                  <Image url="@../../../fullbgremove.png" />
                </image>
             </ImageView>
          </children>
