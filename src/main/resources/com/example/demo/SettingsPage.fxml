@@ -522,7 +522,7 @@
                               <Insets bottom="5.0" left="5.0" right="10.0" top="5.0" />
                            </padding>
                            <VBox.margin>
-                              <Insets bottom="5.0" left="5.0" right="19.0" top="5.0" />
+                              <Insets bottom="5.0" left="5.0" right="13.0" top="5.0" />
                            </VBox.margin>
                         </Button>
                         <Button fx:id="homeButton" maxWidth="-Infinity" minWidth="31.0" mnemonicParsing="false" onAction="#Home" prefHeight="22.0" prefWidth="31.0" styleClass="sidebar_opt" stylesheets="@settings.css" VBox.vgrow="ALWAYS">
@@ -530,7 +530,7 @@
                               <FontAwesomeIconView fx:id="HomeButton" fill="#d4b85d" glyphName="HOME" size="18" wrappingWidth="18.0" />
                            </graphic>
                            <VBox.margin>
-                              <Insets bottom="5.0" left="5.0" top="5.0" />
+                              <Insets bottom="5.0" left="5.0" right="10.0" top="5.0" />
                            </VBox.margin>
                            <padding>
                               <Insets bottom="5.0" right="10.0" top="5.0" />
@@ -541,7 +541,7 @@
                               <FontAwesomeIconView fill="#4c4c4e" glyphName="LIST_UL" size="18" styleClass="sidebar_opt" wrappingWidth="18.0" />
                            </graphic>
                            <VBox.margin>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                              <Insets bottom="5.0" left="5.0" right="10.0" top="5.0" />
                            </VBox.margin>
                            <padding>
                               <Insets bottom="5.0" left="5.0" right="10.0" top="5.0" />
@@ -552,7 +552,7 @@
                               <FontAwesomeIconView fill="#4c4c4e" glyphName="GEAR" size="18" styleClass="sidebar_opt" wrappingWidth="18.0" />
                            </graphic>
                            <VBox.margin>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                              <Insets bottom="5.0" left="5.0" right="10.0" top="5.0" />
                            </VBox.margin>
                            <padding>
                               <Insets bottom="5.0" left="5.0" right="10.0" top="5.0" />
