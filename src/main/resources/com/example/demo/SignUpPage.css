@@ -2,12 +2,9 @@
     -fx-background-radius: 5px;
     -fx-background-color: white;
     -fx-border-radius: 5px;
-    -fx-opacity: .7;
+    -fx-opacity: 1;
     -fx-text-inner-color: black;
-}
-.textF{
     -fx-border-style: none none dotted none;
-    -fx-background-color: transparent;
     -fx-border-color: #302b2b;
     -fx-border-width: 0px0px2px0px;
 }
@@ -24,7 +21,7 @@
 }
 
 .BackgroundImage {
-    -fx-background-image: url("../../../Gold.jpeg");
+    -fx-background-image: url("../../../img.png");
     -fx-background-repeat: no-repeat;
     -fx-background-size: cover;
 }
@@ -36,7 +33,7 @@
 
 .secondImage {
     -fx-background-image: url("../../../white.jpeg");
-    -fx-opacity: .25;
+    -fx-opacity: .6;
 
 }
 *{

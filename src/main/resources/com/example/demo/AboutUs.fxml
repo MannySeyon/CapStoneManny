@@ -7,159 +7,174 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1210.0" styleClass="pane2" stylesheets="@Landing.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
+            prefWidth="1210.0" styleClass="pane2" stylesheets="@Landing.css" xmlns="http://javafx.com/javafx/18">
    <top>
-      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="950.0" stylesheets="@Landing.css" BorderPane.alignment="CENTER">
-         <children>
-            <Label alignment="CENTER" layoutX="477.0" layoutY="15.0" prefHeight="46.0" prefWidth="227.0" text="ABOUT US" textFill="#e4d6d6">
-               <font>
-                  <Font name="Calibri Bold" size="36.0" />
-               </font>
-            </Label>
-            <Text fill="WHITE" layoutX="70.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TextFont" text="Choua" wrappingWidth="70.8785171508789">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Text>
-            <Pane layoutX="15.0" layoutY="202.0" prefHeight="272.0" prefWidth="182.0" styleClass="TextImage">
-               <effect>
-                  <DropShadow blurType="GAUSSIAN" height="26.0" radius="12.5" spread="0.33" width="26.0">
-                     <color>
-                        <Color red="1.0" green="1.0" blue="1.0" />
-                     </color>
-                  </DropShadow>
-               </effect>
-            </Pane>
-            <Text layoutX="20.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;" text="Email: &#10;Choualo@outlook.com&#10;LinkedIn: &#10;www.linkedin.com/in/choua-lo-1579a1228&#10;&#10;My name is Choua, and I am trying to make a career switch from Logistics to Software Engineering. My dream is to one day become an iOS developer and to be able to create an application that can help boost productivity at my company. " textAlignment="CENTER" wrappingWidth="174.0850067138672">
-               <font>
-                  <Font name="Apple LiSung Light" size="15.0" />
-               </font>
-            </Text>
-            <ImageView fitHeight="70.0" fitWidth="65.0" layoutX="74.0" layoutY="478.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../Summit_Fin_Corp-removebg-preview.png" />
-               </image>
-            </ImageView>
-            <Text fill="WHITE" layoutX="257.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TextFont" text="Pandora">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Text>
-            <Pane layoutX="205.0" layoutY="138.0" prefHeight="273.0" prefWidth="190.0" styleClass="TextImage">
-               <effect>
-                  <DropShadow blurType="GAUSSIAN" height="26.0" radius="12.5" spread="0.33" width="26.0">
-                     <color>
-                        <Color red="1.0" green="1.0" blue="1.0" />
-                     </color>
-                  </DropShadow>
-               </effect>
-            </Pane>
-            <Text layoutX="213.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;" text="Email: &#10;Choualo@outlook.com&#10;LinkedIn: &#10;www.linkedin.com/in/choua-lo-1579a1228&#10;&#10;My name is Choua, and I am trying to make a career switch from Logistics to Software Engineering. My dream is to one day become an iOS developer and to be able to create an application that can help boost productivity at my company. " textAlignment="CENTER" wrappingWidth="174.0850067138672">
-               <font>
-                  <Font name="Apple LiSung Light" size="15.0" />
-               </font>
-            </Text>
-            <ImageView fitHeight="70.0" fitWidth="65.0" layoutX="266.0" layoutY="414.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../Summit_Fin_Corp-removebg-preview.png" />
-               </image>
-            </ImageView>
-            <Pane layoutX="407.0" layoutY="127.0" prefHeight="460.0" prefWidth="186.0" styleClass="TextImage">
-               <effect>
-                  <DropShadow blurType="GAUSSIAN" height="26.0" radius="12.5" spread="0.33" width="26.0">
-                     <color>
-                        <Color red="1.0" green="1.0" blue="1.0" />
-                     </color>
-                  </DropShadow>
-               </effect>
-            </Pane>
-            <Text fill="WHITE" layoutX="477.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TextFont" text="Emmanuel">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Text>
-            <Text layoutX="413.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;" text="Email&#10;noyysey@gmail.com&#10;GitHub&#10;·www.github.com/MannySeyon&#10;LinkedIn&#10;·www.linkedin.com/in/emmanuel-seyon-35368b181&#10;&#10;An Artist, Writer, Entrepreneur, Software Developer, avid Volunteer, and Activist. Manny graduated from Summit Academy OIC in 2022, and attended Guilford College from 2018-2021 for Peace and Conflict Studies. Aspires to publish a series, develop a related video game, and continue to serve the community.&#10;" textAlignment="CENTER" wrappingWidth="174.0850067138672">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Text>
-            <ImageView fitHeight="70.0" fitWidth="65.0" layoutX="402.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../Summit_Fin_Corp-removebg-preview.png" />
-               </image>
-            </ImageView>
-            <Text fill="WHITE" layoutX="668.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TextFont" text="David">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Text>
-            <Pane layoutX="605.0" layoutY="138.0" prefHeight="273.0" prefWidth="190.0" styleClass="TextImage">
-               <effect>
-                  <DropShadow blurType="GAUSSIAN" height="26.0" radius="12.5" spread="0.33" width="26.0">
-                     <color>
-                        <Color red="1.0" green="1.0" blue="1.0" />
-                     </color>
-                  </DropShadow>
-               </effect>
-            </Pane>
-            <Text layoutX="613.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;" text="Email: &#10;Officialtfv@gmail.com&#10;&#10;LinkedIn: &#10;https://www.linkedin.com/in/david-hall-82485920a/&#10;&#10;My name is David Hall I have a thrill for software engineering my &#10;passion for creative problem-solving led me to a great industry. My main goal is to help cultivated innovative ways to better the world around us." textAlignment="CENTER" wrappingWidth="174.0850067138672">
-               <font>
-                  <Font name="Apple LiSung Light" size="15.0" />
-               </font>
-            </Text>
-            <ImageView fitHeight="70.0" fitWidth="65.0" layoutX="671.0" layoutY="414.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../Summit_Fin_Corp-removebg-preview.png" />
-               </image>
-            </ImageView>
-            <Text fill="WHITE" layoutX="878.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TextFont" text="Sam">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Text>
-            <Pane layoutX="805.0" layoutY="202.0" prefHeight="273.0" prefWidth="190.0" styleClass="TextImage">
-               <effect>
-                  <DropShadow blurType="GAUSSIAN" height="26.0" radius="12.5" spread="0.33" width="26.0">
-                     <color>
-                        <Color red="1.0" green="1.0" blue="1.0" />
-                     </color>
-                  </DropShadow>
-               </effect>
-            </Pane>
-            <Text layoutX="813.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;" text="Email: &#10;Choualo@outlook.com&#10;LinkedIn: &#10;www.linkedin.com/in/choua-lo-1579a1228&#10;&#10;My name is Choua, and I am trying to make a career switch from Logistics to Software Engineering. My dream is to one day become an iOS developer and to be able to create an application that can help boost productivity at my company. " textAlignment="CENTER" wrappingWidth="174.0850067138672">
-               <font>
-                  <Font name="Apple LiSung Light" size="15.0" />
-               </font>
-            </Text>
-            <ImageView fitHeight="70.0" fitWidth="65.0" layoutX="868.0" layoutY="480.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../Summit_Fin_Corp-removebg-preview.png" />
-               </image>
-            </ImageView>
-            <Text fill="WHITE" layoutX="1064.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TextFont" text="Ruhama">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Text>
-            <Pane layoutX="1005.0" layoutY="138.0" prefHeight="273.0" prefWidth="190.0" styleClass="TextImage">
-               <effect>
-                  <DropShadow blurType="GAUSSIAN" height="26.0" radius="12.5" spread="0.33" width="26.0">
-                     <color>
-                        <Color red="1.0" green="1.0" blue="1.0" />
-                     </color>
-                  </DropShadow>
-               </effect>
-            </Pane>
-            <Text layoutX="1015.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;" text="Email: &#10;Choualo@outlook.com&#10;LinkedIn: &#10;www.linkedin.com/in/choua-lo-1579a1228&#10;&#10;My name is Choua, and I am trying to make a career switch from Logistics to Software Engineering. My dream is to one day become an iOS developer and to be able to create an application that can help boost productivity at my company. " textAlignment="CENTER" wrappingWidth="174.0850067138672">
-               <font>
-                  <Font name="Apple LiSung Light" size="15.0" />
-               </font>
-            </Text>
-            <ImageView fitHeight="70.0" fitWidth="65.0" layoutX="1069.0" layoutY="417.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../Summit_Fin_Corp-removebg-preview.png" />
-               </image>
-            </ImageView>
-         </children></AnchorPane>
+      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity"
+                  minWidth="-Infinity" prefHeight="600.0" prefWidth="950.0" stylesheets="@Landing.css"
+                  BorderPane.alignment="CENTER">
+         <Label alignment="CENTER" layoutX="477.0" layoutY="15.0" prefHeight="46.0" prefWidth="227.0" text="ABOUT US"
+                textFill="#e4d6d6">
+            <font>
+               <Font name="Calibri Bold" size="36.0"/>
+            </font>
+         </Label>
+         <Text fill="WHITE" layoutX="70.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TextFont"
+               text="Choua" wrappingWidth="70.8785171508789">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Text>
+         <Pane layoutX="15.0" layoutY="202.0" prefHeight="272.0" prefWidth="182.0" styleClass="TextImage">
+            <effect>
+               <DropShadow blurType="GAUSSIAN" height="26.0" radius="12.5" spread="0.33" width="26.0">
+                  <color>
+                     <Color red="1.0" green="1.0" blue="1.0"/>
+                  </color>
+               </DropShadow>
+            </effect>
+         </Pane>
+         <Text layoutX="20.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;"
+               text="Email: &#10;Choualo@outlook.com&#10;LinkedIn: &#10;www.linkedin.com/in/choua-lo-1579a1228&#10;&#10;My name is Choua, and I am trying to make a career switch from Logistics to Software Engineering. My dream is to one day become an iOS developer and to be able to create an application that can help boost productivity at my company. "
+               textAlignment="CENTER" wrappingWidth="174.0850067138672">
+            <font>
+               <Font name="Apple LiSung Light" size="15.0"/>
+            </font>
+         </Text>
+         <ImageView fitHeight="70.0" fitWidth="65.0" layoutX="74.0" layoutY="478.0" pickOnBounds="true"
+                    preserveRatio="true">
+            <Image url="@../../../Summit_Fin_Corp-removebg-preview.png"/>
+         </ImageView>
+         <Text fill="WHITE" layoutX="257.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TextFont"
+               text="Pandora">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Text>
+         <Pane layoutX="205.0" layoutY="138.0" prefHeight="273.0" prefWidth="190.0" styleClass="TextImage">
+            <effect>
+               <DropShadow blurType="GAUSSIAN" height="26.0" radius="12.5" spread="0.33" width="26.0">
+                  <color>
+                     <Color red="1.0" green="1.0" blue="1.0"/>
+                  </color>
+               </DropShadow>
+            </effect>
+         </Pane>
+         <Text layoutX="213.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;"
+               text="Email: &#10;Choualo@outlook.com&#10;LinkedIn: &#10;www.linkedin.com/in/choua-lo-1579a1228&#10;&#10;My name is Choua, and I am trying to make a career switch from Logistics to Software Engineering. My dream is to one day become an iOS developer and to be able to create an application that can help boost productivity at my company. "
+               textAlignment="CENTER" wrappingWidth="174.0850067138672">
+            <font>
+               <Font name="Apple LiSung Light" size="15.0"/>
+            </font>
+         </Text>
+         <ImageView fitHeight="70.0" fitWidth="65.0" layoutX="266.0" layoutY="414.0" pickOnBounds="true"
+                    preserveRatio="true">
+            <Image url="@../../../Summit_Fin_Corp-removebg-preview.png"/>
+         </ImageView>
+         <Pane layoutX="407.0" layoutY="127.0" prefHeight="460.0" prefWidth="186.0" styleClass="TextImage">
+            <effect>
+               <DropShadow blurType="GAUSSIAN" height="26.0" radius="12.5" spread="0.33" width="26.0">
+                  <color>
+                     <Color red="1.0" green="1.0" blue="1.0"/>
+                  </color>
+               </DropShadow>
+            </effect>
+         </Pane>
+         <Text fill="WHITE" layoutX="477.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TextFont"
+               text="Emmanuel">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Text>
+         <Text layoutX="413.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;"
+               text="Email&#10;noyysey@gmail.com&#10;GitHub&#10;·www.github.com/MannySeyon&#10;LinkedIn&#10;·www.linkedin.com/in/emmanuel-seyon-35368b181&#10;&#10;An Artist, Writer, Entrepreneur, Software Developer, avid Volunteer, and Activist. Manny graduated from Summit Academy OIC in 2022, and attended Guilford College from 2018-2021 for Peace and Conflict Studies. Aspires to publish a series, develop a related video game, and continue to serve the community.&#10;"
+               textAlignment="CENTER" wrappingWidth="174.0850067138672">
+            <font>
+               <Font size="15.0"/>
+            </font>
+         </Text>
+         <ImageView fitHeight="70.0" fitWidth="65.0" layoutX="402.0" layoutY="47.0" pickOnBounds="true"
+                    preserveRatio="true">
+            <Image url="@../../../Summit_Fin_Corp-removebg-preview.png"/>
+         </ImageView>
+         <Text fill="WHITE" layoutX="668.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TextFont"
+               text="David">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Text>
+         <Pane layoutX="605.0" layoutY="138.0" prefHeight="273.0" prefWidth="190.0" styleClass="TextImage">
+            <effect>
+               <DropShadow blurType="GAUSSIAN" height="26.0" radius="12.5" spread="0.33" width="26.0">
+                  <color>
+                     <Color red="1.0" green="1.0" blue="1.0"/>
+                  </color>
+               </DropShadow>
+            </effect>
+         </Pane>
+         <Text layoutX="613.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;"
+               text="Email: &#10;Officialtfv@gmail.com&#10;&#10;LinkedIn: &#10;https://www.linkedin.com/in/david-hall-82485920a/&#10;&#10;My name is David Hall I have a thrill for software engineering my &#10;passion for creative problem-solving led me to a great industry. My main goal is to help cultivated innovative ways to better the world around us."
+               textAlignment="CENTER" wrappingWidth="174.0850067138672">
+            <font>
+               <Font name="Apple LiSung Light" size="15.0"/>
+            </font>
+         </Text>
+         <ImageView fitHeight="70.0" fitWidth="65.0" layoutX="671.0" layoutY="414.0" pickOnBounds="true"
+                    preserveRatio="true">
+            <Image url="@../../../Summit_Fin_Corp-removebg-preview.png"/>
+         </ImageView>
+         <Text fill="WHITE" layoutX="878.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="TextFont"
+               text="Sam">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Text>
+         <Pane layoutX="805.0" layoutY="202.0" prefHeight="273.0" prefWidth="190.0" styleClass="TextImage">
+            <effect>
+               <DropShadow blurType="GAUSSIAN" height="26.0" radius="12.5" spread="0.33" width="26.0">
+                  <color>
+                     <Color red="1.0" green="1.0" blue="1.0"/>
+                  </color>
+               </DropShadow>
+            </effect>
+         </Pane>
+         <Text layoutX="813.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;"
+               text="Email: &#10;Choualo@outlook.com&#10;LinkedIn: &#10;www.linkedin.com/in/choua-lo-1579a1228&#10;&#10;My name is Choua, and I am trying to make a career switch from Logistics to Software Engineering. My dream is to one day become an iOS developer and to be able to create an application that can help boost productivity at my company. "
+               textAlignment="CENTER" wrappingWidth="174.0850067138672">
+            <font>
+               <Font name="Apple LiSung Light" size="15.0"/>
+            </font>
+         </Text>
+         <ImageView fitHeight="70.0" fitWidth="65.0" layoutX="868.0" layoutY="480.0" pickOnBounds="true"
+                    preserveRatio="true">
+            <Image url="@../../../Summit_Fin_Corp-removebg-preview.png"/>
+         </ImageView>
+         <Text fill="WHITE" layoutX="1064.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0"
+               styleClass="TextFont" text="Ruhama">
+            <font>
+               <Font size="20.0"/>
+            </font>
+         </Text>
+         <Pane layoutX="1005.0" layoutY="138.0" prefHeight="273.0" prefWidth="190.0" styleClass="TextImage">
+            <effect>
+               <DropShadow blurType="GAUSSIAN" height="26.0" radius="12.5" spread="0.33" width="26.0">
+                  <color>
+                     <Color red="1.0" green="1.0" blue="1.0"/>
+                  </color>
+               </DropShadow>
+            </effect>
+         </Pane>
+         <Text layoutX="1015.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;"
+               text="Email: &#10;Choualo@outlook.com&#10;LinkedIn: &#10;www.linkedin.com/in/choua-lo-1579a1228&#10;&#10;My name is Choua, and I am trying to make a career switch from Logistics to Software Engineering. My dream is to one day become an iOS developer and to be able to create an application that can help boost productivity at my company. "
+               textAlignment="CENTER" wrappingWidth="174.0850067138672">
+            <font>
+               <Font name="Apple LiSung Light" size="15.0"/>
+            </font>
+         </Text>
+         <ImageView fitHeight="70.0" fitWidth="65.0" layoutX="1069.0" layoutY="417.0" pickOnBounds="true"
+                    preserveRatio="true">
+            <Image url="@../../../Summit_Fin_Corp-removebg-preview.png"/>
+         </ImageView>
+      </AnchorPane>
    </top>
 </BorderPane>

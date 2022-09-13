@@ -1,38 +1,30 @@
 
 package com.example.demo;
 
-        import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
-        import javafx.animation.TranslateTransition;
-        import javafx.beans.value.ObservableValue;
-        import javafx.collections.FXCollections;
-        import javafx.collections.ObservableList;
-        import javafx.event.ActionEvent;
-        import javafx.fxml.FXML;
-        import javafx.fxml.FXMLLoader;
-        import javafx.fxml.Initializable;
-        import javafx.scene.Node;
-        import javafx.scene.Parent;
-        import javafx.scene.Scene;
-        import javafx.scene.chart.BarChart;
-        import javafx.scene.control.*;
-        import javafx.scene.control.cell.PropertyValueFactory;
-        import javafx.scene.image.ImageView;
-        import javafx.scene.layout.AnchorPane;
-        import javafx.scene.layout.BorderPane;
-        import javafx.scene.layout.VBox;
-        import javafx.stage.Stage;
-        import javafx.util.Callback;
-        import javafx.util.Duration;
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.chart.BarChart;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
 
-        import java.io.IOException;
-        import java.net.URL;
-        import java.sql.*;
-        import java.time.LocalDateTime;
-        import java.util.Locale;
-        import java.util.ResourceBundle;
+import java.io.IOException;
+import java.net.URL;
+import java.sql.*;
+import java.util.ResourceBundle;
 
+@SuppressWarnings("FieldMayBeFinal")
 public class TransactionPageController {
 
+    public Button userProfileButton;
     @FXML
     private Button statementPageButton, graphView, tableView, homeButton, SettingButton, TransactionButton;
     @FXML

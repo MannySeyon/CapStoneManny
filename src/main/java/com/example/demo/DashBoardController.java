@@ -1,6 +1,5 @@
 package com.example.demo;
 
-import com.example.demo.customer.Customer;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -9,28 +8,34 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.chart.BarChart;
-import javafx.scene.chart.XYChart;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
+
 import java.io.IOException;
-import java.lang.reflect.Array;
-import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.ResourceBundle;
 
 
 @SuppressWarnings("ALL")
 public class DashBoardController  {
+    public Button transferButton;
+    public Button userProfileButton;
+    public Label checkingsCard1;
+    public Button settingsButton2;
+    public Button transactionButton2;
+    public Button statementsButton;
+    public Label checkingsBalance111;
+    public Label cardLabel11111;
+    public Label checkingsBalance12;
+    public Label cardLabel1112;
+    public Button cardPlusButton;
     @FXML
     private Circle circle;
 
@@ -55,6 +60,33 @@ public class DashBoardController  {
     private Scene scene;
     private Parent root;
 
+    @FXML
+    private  Button statementPageButton, graphView, tableView,  SettingButton, TransactionButton;
+    @FXML
+    private TableView TransactionTable;
+
+
+    @FXML
+    private BorderPane TransactionBorder;
+    @FXML
+    private Label  GenerateReportLabel, dateandTime2;
+
+    @FXML
+    protected void TransactionsTable(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("TransactionTable.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    @FXML
+    protected void TransactionsGraph(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("TransactionGraph.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
     @FXML
     protected void Home(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("LandingPage.fxml"));

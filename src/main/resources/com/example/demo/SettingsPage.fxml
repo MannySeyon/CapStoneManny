@@ -7,187 +7,155 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" styleClass="pane2" stylesheets="@settings.css" type="BorderPane" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SettingsPageController">
+<fx:root fx:id="SettingPageBorder" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" styleClass="pane2" stylesheets="@settings.css" type="BorderPane" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SettingsPageController">
    <center>
-      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="908.0" stylesheets="@Landing.css" BorderPane.alignment="CENTER">
+      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="908.0" BorderPane.alignment="CENTER">
          <VBox layoutX="35.0" layoutY="7.0" prefHeight="36.0" prefWidth="895.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="35.0">
-            <children>
-               <HBox prefHeight="43.0" prefWidth="895.0">
+            <HBox prefHeight="43.0" prefWidth="895.0">
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+               <Label fx:id="dashLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="25.0" style="-fx-font-style: Bold;" text="Settings" textFill="#d4b85d">
+                  <font>
+                     <Font name="Calibri Bold" size="18.0" />
+                  </font>
                   <padding>
-                     <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                   </padding>
-                  <Label fx:id="dashLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="25.0" style="-fx-font-style: Bold;" text="Settings" textFill="#d4b85d">
-                     <font>
-                        <Font name="Calibri Bold" size="18.0" />
-                     </font>
-                     <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </padding>
-                  </Label>
-                  <Separator orientation="VERTICAL">
-                     <HBox.margin>
-                        <Insets left="10.0" right="10.0" />
-                     </HBox.margin>
-                  </Separator>
-                  <Label fx:id="nameLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="128.0" layoutY="25.0" maxWidth="1.7976931348623157E308" prefWidth="86.0" style="-fx-font-style: Bold;" text=" Date and Tme" textFill="#747475" HBox.hgrow="ALWAYS">
-                     <font>
-                        <Font name="Calibri Bold" size="14.0" />
-                     </font>
-                     <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </padding>
-                  </Label>
-               </HBox>
-            </children>
+               </Label>
+               <Separator orientation="VERTICAL">
+                  <HBox.margin>
+                     <Insets left="10.0" right="10.0" />
+                  </HBox.margin>
+               </Separator>
+               <Label fx:id="nameLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="128.0" layoutY="25.0" maxWidth="1.7976931348623157E308" prefWidth="86.0" style="-fx-font-style: Bold;" text=" Date and Tme" textFill="#747475" HBox.hgrow="ALWAYS">
+                  <font>
+                     <Font name="Calibri Bold" size="14.0" />
+                  </font>
+                  <padding>
+                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  </padding>
+               </Label>
+            </HBox>
          </VBox>
          <AnchorPane layoutY="74.0" prefHeight="500.0">
-            <children>
-               <VBox prefHeight="500.0" prefWidth="215.0" style="-fx-opacity: .8;" styleClass="primaryColor">
-                  <children>
-                     <VBox alignment="CENTER" prefHeight="145.0" prefWidth="216.0" styleClass="secondColor">
-                        <VBox.margin>
-                           <Insets top="15.0" />
-                        </VBox.margin>
-                        <children>
-                           <ImageView fitHeight="74.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true" styleClass="profilePic">
-                              <image>
-                                 <Image url="@../../../Bird.jpg" />
-                              </image>
-                              <VBox.margin>
-                                 <Insets />
-                              </VBox.margin>
-                           </ImageView>
-                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="96.0" style="-fx-text-fill: white;" text="Jane Doe" textAlignment="CENTER" textFill="#fff4f4">
-                              <VBox.margin>
-                                 <Insets />
-                              </VBox.margin>
-                              <font>
-                                 <Font name="Calibri" size="18.0" />
-                              </font>
-                           </Label>
-                           <Button alignment="CENTER" mnemonicParsing="false" prefHeight="28.0" prefWidth="80.0" styleClass="thirdColor" text="Edit Profile">
-                              <VBox.margin>
-                                 <Insets bottom="10.0" />
-                              </VBox.margin>
-                           </Button>
-                        </children>
-                        <opaqueInsets>
-                           <Insets />
-                        </opaqueInsets>
-                     </VBox>
-                     <VBox prefHeight="200.0" prefWidth="100.0">
-                        <children>
-                           <HBox alignment="CENTER" prefHeight="45.0" prefWidth="200.0">
-                              <children>
-                                 <FontAwesomeIconView fill="#fff6f6" glyphName="USER" size="25" wrappingWidth="35.0" />
-                                 <Label alignment="CENTER" prefHeight="35.0" prefWidth="182.0" style="-fx-text-fill: white;" text="First Name" textFill="#f2ebeb">
-                                    <font>
-                                       <Font size="14.0" />
-                                    </font>
-                                 </Label>
-                              </children>
-                           </HBox>
-                           <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="45.0" prefWidth="200.0">
-                              <children>
-                                 <FontAwesomeIconView fill="#fff6f6" glyphName="USER" size="25" wrappingWidth="35.0" />
-                                 <Label alignment="CENTER" prefHeight="35.0" prefWidth="182.0" style="-fx-text-fill: white;" text="Last Name" textFill="#f2ebeb">
-                                    <font>
-                                       <Font size="14.0" />
-                                    </font>
-                                 </Label>
-                              </children>
-                           </HBox>
-                           <HBox alignment="CENTER" layoutX="10.0" layoutY="55.0" prefHeight="45.0" prefWidth="200.0">
-                              <children>
-                                 <FontAwesomeIconView fill="#fff6f6" glyphName="HASHTAG" size="25" wrappingWidth="35.0" />
-                                 <Label alignment="CENTER" prefHeight="35.0" prefWidth="182.0" style="-fx-text-fill: white;" text="Phone Number" textFill="#f2ebeb">
-                                    <font>
-                                       <Font size="14.0" />
-                                    </font>
-                                 </Label>
-                              </children>
-                           </HBox>
-                           <HBox alignment="CENTER" layoutX="10.0" layoutY="100.0" prefHeight="45.0" prefWidth="200.0">
-                              <children>
-                                 <FontAwesomeIconView fill="#fff6f6" glyphName="ENVELOPE" size="25" wrappingWidth="35.0" />
-                                 <Label alignment="CENTER" prefHeight="35.0" prefWidth="182.0" style="-fx-text-fill: white;" text="Email" textFill="#f2ebeb">
-                                    <font>
-                                       <Font size="14.0" />
-                                    </font>
-                                 </Label>
-                              </children>
-                           </HBox>
-                           <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" prefHeight="35.0" prefWidth="216.0">
-                              <children>
-                                 <FontAwesomeIconView fill="#fff6f6" glyphName="MAP" size="25" wrappingWidth="35.0" />
-                                 <Label alignment="CENTER" prefHeight="35.0" prefWidth="182.0" style="-fx-text-fill: white;" text="Street Name" textFill="#f2ebeb">
-                                    <font>
-                                       <Font size="14.0" />
-                                    </font>
-                                 </Label>
-                              </children>
-                           </HBox>
-                           <HBox alignment="CENTER" layoutX="10.0" layoutY="150.0" minHeight="-Infinity" prefHeight="35.0" prefWidth="216.0">
-                              <children>
-                                 <FontAwesomeIconView fill="#fff6f6" glyphName="MAP" size="25" wrappingWidth="35.0" />
-                                 <Label alignment="CENTER" prefHeight="35.0" prefWidth="182.0" style="-fx-text-fill: white;" text="City" textFill="#f2ebeb">
-                                    <font>
-                                       <Font size="14.0" />
-                                    </font>
-                                 </Label>
-                              </children>
-                           </HBox>
-                           <HBox alignment="CENTER" layoutX="10.0" layoutY="195.0" minHeight="-Infinity" prefHeight="35.0" prefWidth="216.0">
-                              <children>
-                                 <FontAwesomeIconView fill="#fff6f6" glyphName="MAP" size="25" wrappingWidth="35.0" />
-                                 <Label alignment="CENTER" prefHeight="35.0" prefWidth="182.0" style="-fx-text-fill: white;" text="State" textFill="#f2ebeb">
-                                    <font>
-                                       <Font size="14.0" />
-                                    </font>
-                                 </Label>
-                              </children>
-                           </HBox>
-                           <HBox alignment="CENTER" layoutX="10.0" layoutY="220.0" minHeight="-Infinity" prefHeight="35.0" prefWidth="216.0">
-                              <children>
-                                 <FontAwesomeIconView fill="#fff6f6" glyphName="USER" size="25" wrappingWidth="35.0" />
-                                 <Label alignment="CENTER" prefHeight="35.0" prefWidth="182.0" style="-fx-text-fill: white;" text="Username" textFill="#f2ebeb">
-                                    <font>
-                                       <Font size="14.0" />
-                                    </font>
-                                 </Label>
-                              </children>
-                           </HBox>
-                           <HBox alignment="CENTER" layoutX="10.0" layoutY="255.0" minHeight="-Infinity" prefHeight="35.0" prefWidth="216.0">
-                              <children>
-                                 <FontAwesomeIconView fill="#fff6f6" glyphName="KEY" size="25" wrappingWidth="35.0" />
-                                 <Label alignment="CENTER" prefHeight="35.0" prefWidth="182.0" style="-fx-text-fill: white;" text="Password" textFill="#f2ebeb">
-                                    <font>
-                                       <Font size="14.0" />
-                                    </font>
-                                 </Label>
-                              </children>
-                           </HBox>
-                        </children>
-                        <VBox.margin>
-                           <Insets />
-                        </VBox.margin>
-                        <padding>
-                           <Insets left="10.0" />
-                        </padding>
-                     </VBox>
-                     <HBox prefHeight="34.0" prefWidth="216.0">
-                        <children>
-                           <ButtonBar buttonMinWidth="50.0" prefHeight="34.0" prefWidth="201.0">
-                             <buttons>
-                               <Button mnemonicParsing="false" text="Save" />
-                                 <Button layoutX="135.0" layoutY="12.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="105.0" text="Clear" />
-                             </buttons>
-                           </ButtonBar>
-                        </children>
-                     </HBox>
-                  </children>
+            <VBox prefHeight="500.0" prefWidth="215.0" style="-fx-opacity: .8;" styleClass="primaryColor">
+               <VBox alignment="CENTER" prefHeight="145.0" prefWidth="216.0" styleClass="secondColor">
+                  <VBox.margin>
+                     <Insets top="15.0" />
+                  </VBox.margin>
+                  <opaqueInsets>
+                     <Insets />
+                  </opaqueInsets>
+                  <ImageView fitHeight="74.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true" styleClass="profilePic">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <Image url="@../../../Bird.jpg" />
+                  </ImageView>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="96.0" style="-fx-text-fill: white;" text="Jane Doe" textAlignment="CENTER" textFill="#fff4f4">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="28.0" prefWidth="80.0" styleClass="thirdColor" text="Edit Profile">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
                </VBox>
-            </children>
+               <VBox prefHeight="200.0" prefWidth="100.0">
+                  <VBox.margin>
+                     <Insets />
+                  </VBox.margin>
+                  <padding>
+                     <Insets left="10.0" />
+                  </padding>
+                  <HBox alignment="CENTER" prefHeight="45.0" prefWidth="200.0">
+                     <FontAwesomeIconView fill="#fff6f6" glyphName="USER" size="25" wrappingWidth="35.0" />
+                     <Label alignment="CENTER" prefHeight="35.0" prefWidth="182.0" style="-fx-text-fill: white;" text="First Name" textFill="#f2ebeb">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="45.0" prefWidth="200.0">
+                     <FontAwesomeIconView fill="#fff6f6" glyphName="USER" size="25" wrappingWidth="35.0" />
+                     <Label alignment="CENTER" prefHeight="35.0" prefWidth="182.0" style="-fx-text-fill: white;" text="Last Name" textFill="#f2ebeb">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="55.0" prefHeight="45.0" prefWidth="200.0">
+                     <FontAwesomeIconView fill="#fff6f6" glyphName="HASHTAG" size="25" wrappingWidth="35.0" />
+                     <Label alignment="CENTER" prefHeight="35.0" prefWidth="182.0" style="-fx-text-fill: white;" text="Phone Number" textFill="#f2ebeb">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="100.0" prefHeight="45.0" prefWidth="200.0">
+                     <FontAwesomeIconView fill="#fff6f6" glyphName="ENVELOPE" size="25" wrappingWidth="35.0" />
+                     <Label alignment="CENTER" prefHeight="35.0" prefWidth="182.0" style="-fx-text-fill: white;" text="Email" textFill="#f2ebeb">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" minHeight="-Infinity" prefHeight="35.0" prefWidth="216.0">
+                     <FontAwesomeIconView fill="#fff6f6" glyphName="MAP" size="25" wrappingWidth="35.0" />
+                     <Label alignment="CENTER" prefHeight="35.0" prefWidth="182.0" style="-fx-text-fill: white;" text="Street Name" textFill="#f2ebeb">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="150.0" minHeight="-Infinity" prefHeight="35.0" prefWidth="216.0">
+                     <FontAwesomeIconView fill="#fff6f6" glyphName="MAP" size="25" wrappingWidth="35.0" />
+                     <Label alignment="CENTER" prefHeight="35.0" prefWidth="182.0" style="-fx-text-fill: white;" text="City" textFill="#f2ebeb">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="195.0" minHeight="-Infinity" prefHeight="35.0" prefWidth="216.0">
+                     <FontAwesomeIconView fill="#fff6f6" glyphName="MAP" size="25" wrappingWidth="35.0" />
+                     <Label alignment="CENTER" prefHeight="35.0" prefWidth="182.0" style="-fx-text-fill: white;" text="State" textFill="#f2ebeb">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="220.0" minHeight="-Infinity" prefHeight="35.0" prefWidth="216.0">
+                     <FontAwesomeIconView fill="#fff6f6" glyphName="USER" size="25" wrappingWidth="35.0" />
+                     <Label alignment="CENTER" prefHeight="35.0" prefWidth="182.0" style="-fx-text-fill: white;" text="Username" textFill="#f2ebeb">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="255.0" minHeight="-Infinity" prefHeight="35.0" prefWidth="216.0">
+                     <FontAwesomeIconView fill="#fff6f6" glyphName="KEY" size="25" wrappingWidth="35.0" />
+                     <Label alignment="CENTER" prefHeight="35.0" prefWidth="182.0" style="-fx-text-fill: white;" text="Password" textFill="#f2ebeb">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                  </HBox>
+               </VBox>
+               <HBox prefHeight="34.0" prefWidth="216.0">
+                  <ButtonBar buttonMinWidth="50.0" prefHeight="34.0" prefWidth="201.0">
+                     <buttons>
+                        <Button mnemonicParsing="false" text="Save" />
+                        <Button layoutX="135.0" layoutY="12.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="105.0" text="Clear" />
+                     </buttons>
+                  </ButtonBar>
+               </HBox>
+            </VBox>
          </AnchorPane>
          <VBox layoutX="471.0" layoutY="343.0" minWidth="0.0" prefHeight="65.0" prefWidth="39.0">
             <padding>
@@ -195,306 +163,278 @@
             </padding>
          </VBox>
          <AnchorPane layoutX="220.0" layoutY="74.0" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: black; -fx-background-radius: 30; -fx-opacity: .6;" styleClass="secondColor" AnchorPane.rightAnchor="22.0">
-            <children>
-               <VBox alignment="CENTER" prefHeight="500.0" prefWidth="723.0">
-                  <children>
-                     <HBox alignment="CENTER_LEFT">
-                        <children>
-                           <Label fx:id="firstNameLabel" contentDisplay="CENTER" prefHeight="22.0" prefWidth="164.0" styleClass="Font" text="First Name" textFill="WHITE" HBox.hgrow="ALWAYS">
-                              <font>
-                                 <Font name="Calibri" size="18.0" />
-                              </font>
-                              <HBox.margin>
-                                 <Insets right="15.0" />
-                              </HBox.margin>
-                           </Label>
-                           <Label fx:id="middleNameLabel" contentDisplay="CENTER" prefHeight="23.0" prefWidth="160.0" styleClass="Font" text="Middle Name" textFill="WHITE" HBox.hgrow="ALWAYS">
-                              <font>
-                                 <Font name="Calibri" size="18.0" />
-                              </font>
-                              <HBox.margin>
-                                 <Insets right="20.0" />
-                              </HBox.margin>
-                           </Label>
-                           <Label fx:id="lastNameLabel" contentDisplay="CENTER" styleClass="Font" text="Last Name" textFill="WHITE">
-                              <font>
-                                 <Font name="Calibri" size="18.0" />
-                              </font>
-                              <HBox.margin>
-                                 <Insets />
-                              </HBox.margin>
-                           </Label>
-                        </children>
-                        <padding>
-                           <Insets top="10.0" />
-                        </padding>
-                     </HBox>
-                     <HBox alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="677.0" stylesheets="@SignUpPage.css">
-                        <children>
-                           <TextField fx:id="firstNameTF" minHeight="-Infinity" prefHeight="25.0" prefWidth="150.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" styleClass="TextField">
-                              <HBox.margin>
-                                 <Insets right="30.0" />
-                              </HBox.margin>
-                           </TextField>
-                           <TextField fx:id="middleNameTF" minHeight="-Infinity" prefHeight="25.0" prefWidth="150.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" styleClass="TextField">
-                              <HBox.margin>
-                                 <Insets right="30.0" />
-                              </HBox.margin>
-                           </TextField>
-                           <TextField fx:id="lastNameTF" minHeight="-Infinity" prefHeight="25.0" prefWidth="150.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" styleClass="TextField">
-                              <HBox.margin>
-                                 <Insets />
-                              </HBox.margin>
-                           </TextField>
-                        </children>
-                        <padding>
-                           <Insets top="10.0" />
-                        </padding>
-                     </HBox>
-                     <HBox alignment="CENTER_LEFT">
-                        <children>
-                           <Label fx:id="DOBLabel" contentDisplay="CENTER" prefHeight="22.0" prefWidth="167.0" styleClass="Font" text="Date Of Birth" textFill="WHITE">
-                              <font>
-                                 <Font name="Calibri" size="18.0" />
-                              </font>
-                              <HBox.margin>
-                                 <Insets right="5.0" />
-                              </HBox.margin>
-                           </Label>
-                           <Label fx:id="ssnLabel" contentDisplay="CENTER" layoutX="685.0" layoutY="55.0" styleClass="Font" text="SSN" textFill="WHITE">
-                              <font>
-                                 <Font name="Calibri" size="18.0" />
-                              </font>
-                              <HBox.margin>
-                                 <Insets left="10.0" />
-                              </HBox.margin>
-                           </Label>
-                        </children>
-                        <padding>
-                           <Insets top="10.0" />
-                        </padding>
-                     </HBox>
-                     <HBox alignment="CENTER_LEFT">
-                        <children>
-                           <DatePicker fx:id="datePicker" layoutX="224.0" layoutY="226.0" onAction="#getDate" prefHeight="20.0" prefWidth="150.0" promptText="Enter a Date" stylesheets="@SignUpPage.css">
-                              <HBox.margin>
-                                 <Insets right="30.0" />
-                              </HBox.margin>
-                           </DatePicker>
-                           <TextField fx:id="ssnTF" minHeight="-Infinity" prefHeight="25.0" prefWidth="150.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" styleClass="TextField" stylesheets="@SignUpPage.css" />
-                        </children>
-                        <padding>
-                           <Insets top="10.0" />
-                        </padding>
-                     </HBox>
-                     <HBox alignment="CENTER_LEFT">
-                        <children>
-                           <Label fx:id="phoneNumberLabel" contentDisplay="CENTER" prefHeight="23.0" prefWidth="165.0" styleClass="Font" text="Phone Number" textFill="WHITE">
-                              <font>
-                                 <Font name="Calibri" size="18.0" />
-                              </font>
-                              <HBox.margin>
-                                 <Insets right="15.0" />
-                              </HBox.margin>
-                           </Label>
-                           <Label fx:id="emailLabel" contentDisplay="CENTER" prefHeight="23.0" prefWidth="119.0" styleClass="Font" text="Email" textFill="WHITE">
-                              <font>
-                                 <Font name="Calibri" size="18.0" />
-                              </font>
-                              <HBox.margin>
-                                 <Insets />
-                              </HBox.margin>
-                           </Label>
-                        </children>
-                        <padding>
-                           <Insets top="10.0" />
-                        </padding>
-                     </HBox>
-                     <HBox alignment="CENTER_LEFT">
-                        <children>
-                           <TextField fx:id="phoneNumberTF" minHeight="-Infinity" prefHeight="25.0" prefWidth="150.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" styleClass="TextField" stylesheets="@SignUpPage.css">
-                              <HBox.margin>
-                                 <Insets right="30.0" />
-                              </HBox.margin>
-                           </TextField>
-                           <TextField fx:id="emailTF" minHeight="-Infinity" prefHeight="25.0" prefWidth="150.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" styleClass="TextField" stylesheets="@SignUpPage.css" />
-                        </children>
-                        <padding>
-                           <Insets top="10.0" />
-                        </padding>
-                     </HBox>
-                     <HBox alignment="CENTER_LEFT">
-                        <children>
-                           <Label fx:id="streetNameLabel" contentDisplay="CENTER" prefHeight="22.0" prefWidth="176.0" styleClass="Font" text="Street Name" textFill="WHITE">
-                              <font>
-                                 <Font name="Calibri" size="18.0" />
-                              </font>
-                              <HBox.margin>
-                                 <Insets right="10.0" />
-                              </HBox.margin>
-                           </Label>
-                           <Label fx:id="cityLabel" contentDisplay="CENTER" prefHeight="22.0" prefWidth="157.0" text="City" textFill="WHITE">
-                              <font>
-                                 <Font name="Calibri" size="18.0" />
-                              </font>
-                              <HBox.margin>
-                                 <Insets right="15.0" />
-                              </HBox.margin>
-                           </Label>
-                           <Label fx:id="aptLabel" contentDisplay="CENTER" prefHeight="22.0" prefWidth="167.0" text="State" textFill="WHITE">
-                              <font>
-                                 <Font name="Calibri" size="18.0" />
-                              </font>
-                              <HBox.margin>
-                                 <Insets right="15.0" />
-                              </HBox.margin>
-                           </Label>
-                           <Label fx:id="zipCodeLabel" contentDisplay="CENTER" prefHeight="24.0" prefWidth="107.0" styleClass="Font" text="Zip Code" textFill="WHITE">
-                              <font>
-                                 <Font name="Calibri" size="18.0" />
-                              </font>
-                           </Label>
-                        </children>
-                        <padding>
-                           <Insets top="10.0" />
-                        </padding>
-                     </HBox>
-                     <HBox alignment="CENTER_LEFT">
-                        <children>
-                           <TextField fx:id="streetTF" minHeight="-Infinity" prefHeight="25.0" prefWidth="150.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" styleClass="TextField" stylesheets="@SignUpPage.css">
-                              <HBox.margin>
-                                 <Insets right="30.0" />
-                              </HBox.margin>
-                           </TextField>
-                           <TextField fx:id="cityTF" minHeight="-Infinity" prefHeight="25.0" prefWidth="150.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" styleClass="TextField" stylesheets="@SignUpPage.css">
-                              <HBox.margin>
-                                 <Insets right="30.0" />
-                              </HBox.margin>
-                           </TextField>
-                           <TextField fx:id="apartmentTF" minHeight="-Infinity" prefHeight="25.0" prefWidth="150.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" styleClass="TextField" stylesheets="@SignUpPage.css">
-                              <HBox.margin>
-                                 <Insets right="30.0" />
-                              </HBox.margin>
-                           </TextField>
-                           <TextField fx:id="zipCodeTF" minHeight="-Infinity" prefHeight="25.0" prefWidth="150.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" styleClass="TextField" stylesheets="@SignUpPage.css">
-                              <HBox.margin>
-                                 <Insets />
-                              </HBox.margin>
-                           </TextField>
-                        </children>
-                        <padding>
-                           <Insets top="10.0" />
-                        </padding>
-                     </HBox>
-                     <HBox alignment="CENTER_LEFT">
-                        <children>
-                           <Label fx:id="maritalStatusLabel" prefHeight="23.0" prefWidth="222.0" text="Marital Status" textFill="WHITE">
-                              <font>
-                                 <Font size="18.0" />
-                              </font>
-                              <HBox.margin>
-                                 <Insets right="30.0" />
-                              </HBox.margin>
-                           </Label>
-                           <Label fx:id="genderLabel" contentDisplay="CENTER" prefHeight="23.0" prefWidth="141.0" styleClass="Font" text="Gender" textFill="WHITE">
-                              <font>
-                                 <Font name="Calibri" size="18.0" />
-                              </font>
-                           </Label>
-                        </children>
-                        <padding>
-                           <Insets top="10.0" />
-                        </padding>
-                     </HBox>
-                     <HBox alignment="CENTER_LEFT">
-                        <children>
-                           <RadioButton contentDisplay="CENTER" mnemonicParsing="false" prefHeight="30.0" prefWidth="92.0" style="-fx-background-color: grey; -fx-background-radius: 30;" styleClass="ButtonFonts" text="Single" textFill="WHITE">
-                              <toggleGroup>
-                                 <ToggleGroup fx:id="maritaltoggle" />
-                              </toggleGroup>
-                              <HBox.margin>
-                                 <Insets right="20.0" />
-                              </HBox.margin>
-                              <font>
-                                 <Font name="Calibri" size="18.0" />
-                              </font>
-                           </RadioButton>
-                           <RadioButton contentDisplay="CENTER" mnemonicParsing="false" prefHeight="30.0" prefWidth="111.0" style="-fx-background-color: grey; -fx-background-radius: 30;" text="Married" textFill="WHITE" toggleGroup="$maritaltoggle">
-                              <HBox.margin>
-                                 <Insets right="20.0" />
-                              </HBox.margin>
-                              <font>
-                                 <Font name="Calibri" size="18.0" />
-                              </font>
-                           </RadioButton>
-                           <RadioButton contentDisplay="CENTER" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: grey; -fx-background-radius: 30;" styleClass="ButtonFonts" text="Male" textFill="WHITE">
-                              <toggleGroup>
-                                 <ToggleGroup fx:id="gendertoggle" />
-                              </toggleGroup>
-                              <HBox.margin>
-                                 <Insets right="20.0" />
-                              </HBox.margin>
-                              <font>
-                                 <Font name="Calibri" size="18.0" />
-                              </font>
-                           </RadioButton>
-                           <RadioButton contentDisplay="CENTER" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: grey; -fx-background-radius: 30;" styleClass="ButtonFonts" text="Female" textFill="WHITE" toggleGroup="$gendertoggle">
-                              <HBox.margin>
-                                 <Insets right="20.0" />
-                              </HBox.margin>
-                              <font>
-                                 <Font name="Calibri" size="18.0" />
-                              </font>
-                           </RadioButton>
-                           <RadioButton contentDisplay="CENTER" mnemonicParsing="false" prefHeight="33.0" prefWidth="135.0" style="-fx-background-color: grey; -fx-background-radius: 30;" styleClass="ButtonFonts" text="Non-Binary" textFill="WHITE" toggleGroup="$gendertoggle">
-                              <font>
-                                 <Font name="Calibri" size="18.0" />
-                              </font>
-                           </RadioButton>
-                        </children>
-                        <padding>
-                           <Insets top="10.0" />
-                        </padding>
-                     </HBox>
-                     <HBox alignment="CENTER_LEFT">
-                        <children>
-                           <Label fx:id="usernameLabel" contentDisplay="CENTER" prefHeight="22.0" prefWidth="150.0" styleClass="Font" text="Username" textFill="WHITE">
-                              <font>
-                                 <Font name="Calibri" size="18.0" />
-                              </font>
-                              <HBox.margin>
-                                 <Insets right="30.0" />
-                              </HBox.margin>
-                           </Label>
-                           <Label fx:id="passwordLabel" contentDisplay="CENTER" prefHeight="22.0" prefWidth="80.0" styleClass="Font" text="Password" textFill="WHITE">
-                              <font>
-                                 <Font name="Calibri" size="18.0" />
-                              </font>
-                           </Label>
-                        </children>
-                        <padding>
-                           <Insets top="10.0" />
-                        </padding>
-                     </HBox>
-                     <HBox alignment="CENTER_LEFT">
-                        <children>
-                           <TextField fx:id="UsernameF" minHeight="-Infinity" prefHeight="25.0" prefWidth="150.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" styleClass="TextField" stylesheets="@SignUpPage.css">
-                              <HBox.margin>
-                                 <Insets right="30.0" />
-                              </HBox.margin>
-                           </TextField>
-                           <TextField fx:id="PasswordF" minHeight="-Infinity" prefHeight="25.0" prefWidth="150.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" styleClass="TextField" stylesheets="@SignUpPage.css" />
-                        </children>
-                        <padding>
-                           <Insets top="10.0" />
-                        </padding>
-                     </HBox>
-                  </children>
+            <VBox alignment="CENTER" prefHeight="500.0" prefWidth="723.0">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <HBox alignment="CENTER_LEFT">
                   <padding>
-                     <Insets left="10.0" />
+                     <Insets top="10.0" />
                   </padding>
-               </VBox>
-            </children>
+                  <Label fx:id="firstNameLabel" contentDisplay="CENTER" prefHeight="22.0" prefWidth="164.0" styleClass="Font" text="First Name" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="middleNameLabel" contentDisplay="CENTER" prefHeight="23.0" prefWidth="160.0" styleClass="Font" text="Middle Name" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="lastNameLabel" contentDisplay="CENTER" styleClass="Font" text="Last Name" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </HBox>
+               <HBox alignment="CENTER_LEFT" prefHeight="37.0" prefWidth="677.0" stylesheets="@SignUpPage.css">
+                  <padding>
+                     <Insets top="10.0" />
+                  </padding>
+                  <TextField fx:id="firstNameTF" minHeight="-Infinity" prefHeight="25.0" prefWidth="150.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" styleClass="TextField">
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="middleNameTF" minHeight="-Infinity" prefHeight="25.0" prefWidth="150.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" styleClass="TextField">
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="lastNameTF" minHeight="-Infinity" prefHeight="25.0" prefWidth="150.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" styleClass="TextField">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </TextField>
+               </HBox>
+               <HBox alignment="CENTER_LEFT">
+                  <padding>
+                     <Insets top="10.0" />
+                  </padding>
+                  <Label fx:id="DOBLabel" contentDisplay="CENTER" prefHeight="22.0" prefWidth="167.0" styleClass="Font" text="Date Of Birth" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="ssnLabel" contentDisplay="CENTER" layoutX="685.0" layoutY="55.0" styleClass="Font" text="SSN" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </HBox>
+               <HBox alignment="CENTER_LEFT">
+                  <padding>
+                     <Insets top="10.0" />
+                  </padding>
+                  <DatePicker fx:id="datePicker" layoutX="224.0" layoutY="226.0" onAction="#getDate" prefHeight="20.0" prefWidth="150.0" promptText="Enter a Date" stylesheets="@SignUpPage.css">
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </DatePicker>
+                  <TextField fx:id="ssnTF" minHeight="-Infinity" prefHeight="25.0" prefWidth="150.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" styleClass="TextField" stylesheets="@SignUpPage.css" />
+               </HBox>
+               <HBox alignment="CENTER_LEFT">
+                  <padding>
+                     <Insets top="10.0" />
+                  </padding>
+                  <Label fx:id="phoneNumberLabel" contentDisplay="CENTER" prefHeight="23.0" prefWidth="165.0" styleClass="Font" text="Phone Number" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="emailLabel" contentDisplay="CENTER" prefHeight="23.0" prefWidth="119.0" styleClass="Font" text="Email" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </HBox>
+               <HBox alignment="CENTER_LEFT">
+                  <padding>
+                     <Insets top="10.0" />
+                  </padding>
+                  <TextField fx:id="phoneNumberTF" minHeight="-Infinity" prefHeight="25.0" prefWidth="150.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" styleClass="TextField" stylesheets="@SignUpPage.css">
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="emailTF" minHeight="-Infinity" prefHeight="25.0" prefWidth="150.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" styleClass="TextField" stylesheets="@SignUpPage.css" />
+               </HBox>
+               <HBox alignment="CENTER_LEFT">
+                  <padding>
+                     <Insets top="10.0" />
+                  </padding>
+                  <Label fx:id="streetNameLabel" contentDisplay="CENTER" prefHeight="22.0" prefWidth="176.0" styleClass="Font" text="Street Name" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="cityLabel" contentDisplay="CENTER" prefHeight="22.0" prefWidth="157.0" text="City" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="aptLabel" contentDisplay="CENTER" prefHeight="22.0" prefWidth="167.0" text="State" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="zipCodeLabel" contentDisplay="CENTER" prefHeight="24.0" prefWidth="107.0" styleClass="Font" text="Zip Code" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                  </Label>
+               </HBox>
+               <HBox alignment="CENTER_LEFT">
+                  <padding>
+                     <Insets top="10.0" />
+                  </padding>
+                  <TextField fx:id="streetTF" minHeight="-Infinity" prefHeight="25.0" prefWidth="150.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" styleClass="TextField" stylesheets="@SignUpPage.css">
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="cityTF" minHeight="-Infinity" prefHeight="25.0" prefWidth="150.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" styleClass="TextField" stylesheets="@SignUpPage.css">
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="apartmentTF" minHeight="-Infinity" prefHeight="25.0" prefWidth="150.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" styleClass="TextField" stylesheets="@SignUpPage.css">
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="zipCodeTF" minHeight="-Infinity" prefHeight="25.0" prefWidth="150.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" styleClass="TextField" stylesheets="@SignUpPage.css">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </TextField>
+               </HBox>
+               <HBox alignment="CENTER_LEFT">
+                  <padding>
+                     <Insets top="10.0" />
+                  </padding>
+                  <Label fx:id="maritalStatusLabel" prefHeight="23.0" prefWidth="222.0" text="Marital Status" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="genderLabel" contentDisplay="CENTER" prefHeight="23.0" prefWidth="141.0" styleClass="Font" text="Gender" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                  </Label>
+               </HBox>
+               <HBox alignment="CENTER_LEFT">
+                  <padding>
+                     <Insets top="10.0" />
+                  </padding>
+                  <RadioButton contentDisplay="CENTER" mnemonicParsing="false" prefHeight="30.0" prefWidth="92.0" style="-fx-background-color: grey; -fx-background-radius: 30;" styleClass="ButtonFonts" text="Single" textFill="WHITE">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="maritaltoggle" />
+                     </toggleGroup>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton contentDisplay="CENTER" mnemonicParsing="false" prefHeight="30.0" prefWidth="111.0" style="-fx-background-color: grey; -fx-background-radius: 30;" text="Married" textFill="WHITE" toggleGroup="$maritaltoggle">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton contentDisplay="CENTER" mnemonicParsing="false" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: grey; -fx-background-radius: 30;" styleClass="ButtonFonts" text="Male" textFill="WHITE">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="gendertoggle" />
+                     </toggleGroup>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton contentDisplay="CENTER" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: grey; -fx-background-radius: 30;" styleClass="ButtonFonts" text="Female" textFill="WHITE" toggleGroup="$gendertoggle">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton contentDisplay="CENTER" mnemonicParsing="false" prefHeight="33.0" prefWidth="135.0" style="-fx-background-color: grey; -fx-background-radius: 30;" styleClass="ButtonFonts" text="Non-Binary" textFill="WHITE" toggleGroup="$gendertoggle">
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                  </RadioButton>
+               </HBox>
+               <HBox alignment="CENTER_LEFT">
+                  <padding>
+                     <Insets top="10.0" />
+                  </padding>
+                  <Label fx:id="usernameLabel" contentDisplay="CENTER" prefHeight="22.0" prefWidth="150.0" styleClass="Font" text="Username" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="passwordLabel" contentDisplay="CENTER" prefHeight="22.0" prefWidth="80.0" styleClass="Font" text="Password" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                  </Label>
+               </HBox>
+               <HBox alignment="CENTER_LEFT">
+                  <padding>
+                     <Insets top="10.0" />
+                  </padding>
+                  <TextField fx:id="UsernameF" minHeight="-Infinity" prefHeight="25.0" prefWidth="150.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" styleClass="TextField" stylesheets="@SignUpPage.css">
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="PasswordF" minHeight="-Infinity" prefHeight="25.0" prefWidth="150.0" style="-fx-font-family: Apple LiSungApple LiSung; -fx-font-size: 18;" styleClass="TextField" stylesheets="@SignUpPage.css" />
+               </HBox>
+            </VBox>
          </AnchorPane>
          <BorderPane.margin>
             <Insets left="5.0" />
@@ -502,83 +442,77 @@
       </AnchorPane>
    </center>
    <left>
-      <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="44.0" styleClass="pane" stylesheets="@settings.css" BorderPane.alignment="CENTER">
-         <children>
-            <ImageView fx:id="securityLogo" fitHeight="40.0" fitWidth="40.0" layoutX="2.0" layoutY="560.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0">
-               <image>
-                  <Image url="@../../../security.png" />
-               </image>
-            </ImageView>
-            <ButtonBar buttonMinWidth="25.0" layoutX="12.0" layoutY="242.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="25.0" styleClass="buttonbar" stylesheets="@settings.css" AnchorPane.bottomAnchor="242.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="242.0">
-               <buttons>
-                  <VBox alignment="CENTER" minWidth="5.0" prefHeight="156.0" prefWidth="39.0" stylesheets="@settings.css">
-                     <children>
-                        <Button fx:id="userProfileButton" alignment="CENTER" contentDisplay="CENTER" layoutX="12.0" layoutY="98.0" minHeight="18.0" minWidth="41.0" mnemonicParsing="false" onAction="#Settings" prefHeight="22.0" prefWidth="41.0" styleClass="sidebar_opt" stylesheets="@settings.css" VBox.vgrow="ALWAYS">
-                           <graphic>
-                              <FontAwesomeIconView fill="#4c4c4e" glyphName="USER" size="18" styleClass="sidebar_opt" wrappingWidth="18.0" />
-                           </graphic>
-                           <padding>
-                              <Insets bottom="5.0" left="5.0" right="10.0" top="5.0" />
-                           </padding>
-                           <VBox.margin>
-                              <Insets bottom="5.0" left="5.0" right="19.0" top="5.0" />
-                           </VBox.margin>
-                        </Button>
-                        <Button fx:id="homeButton" maxWidth="-Infinity" minWidth="31.0" mnemonicParsing="false" onAction="#Home" prefHeight="22.0" prefWidth="31.0" styleClass="sidebar_opt" stylesheets="@settings.css" VBox.vgrow="ALWAYS">
-                           <graphic>
-                              <FontAwesomeIconView fx:id="HomeButton" fill="#d4b85d" glyphName="HOME" size="18" wrappingWidth="18.0" />
-                           </graphic>
-                           <VBox.margin>
-                              <Insets bottom="5.0" left="5.0" top="5.0" />
-                           </VBox.margin>
-                           <padding>
-                              <Insets bottom="5.0" right="10.0" top="5.0" />
-                           </padding>
-                        </Button>
-                        <Button fx:id="TransactionButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#Transactions" prefHeight="25.0" prefWidth="25.0" styleClass="sidebar_opt" stylesheets="@settings.css">
-                           <graphic>
-                              <FontAwesomeIconView fill="#4c4c4e" glyphName="LIST_UL" size="18" styleClass="sidebar_opt" wrappingWidth="18.0" />
-                           </graphic>
-                           <VBox.margin>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                           </VBox.margin>
-                           <padding>
-                              <Insets bottom="5.0" left="5.0" right="10.0" top="5.0" />
-                           </padding>
-                        </Button>
-                        <Button fx:id="SettingButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#Settings" prefHeight="25.0" prefWidth="25.0" styleClass="sidebar_opt" stylesheets="@settings.css">
-                           <graphic>
-                              <FontAwesomeIconView fill="#4c4c4e" glyphName="GEAR" size="18" styleClass="sidebar_opt" wrappingWidth="18.0" />
-                           </graphic>
-                           <VBox.margin>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                           </VBox.margin>
-                           <padding>
-                              <Insets bottom="5.0" left="5.0" right="10.0" top="5.0" />
-                           </padding>
-                        </Button>
-                     </children>
-                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </padding>
-                  </VBox>
-               </buttons>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-            </ButtonBar>
-            <Button layoutX="6.0" layoutY="14.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="37.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="14.0">
-               <padding>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </padding>
-               <graphic>
-                  <FontAwesomeIconView fx:id="bars" fill="#d4b85d" glyphName="BARS" size="25" text="" />
-               </graphic>
-            </Button>
-         </children>
+      <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="44.0" styleClass="pane" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets right="10.0" />
          </BorderPane.margin>
+         <ImageView fx:id="securityLogo" fitHeight="40.0" fitWidth="40.0" layoutX="2.0" layoutY="560.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0">
+            <Image url="@../../../security.png" />
+         </ImageView>
+         <ButtonBar buttonMinWidth="25.0" layoutX="12.0" layoutY="242.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="25.0" styleClass="buttonbar" AnchorPane.bottomAnchor="242.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="242.0">
+            <buttons>
+               <VBox alignment="CENTER" minWidth="5.0" prefHeight="156.0" prefWidth="39.0">
+                  <padding>
+                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                  </padding>
+                  <Button fx:id="userProfileButton" alignment="CENTER" contentDisplay="CENTER" layoutX="12.0" layoutY="98.0" minHeight="18.0" minWidth="41.0" mnemonicParsing="false" onAction="#Settings" prefHeight="22.0" prefWidth="41.0" styleClass="sidebar_opt" VBox.vgrow="ALWAYS">
+                     <graphic>
+                        <FontAwesomeIconView fill="#4c4c4e" glyphName="USER" size="18" styleClass="sidebar_opt" wrappingWidth="18.0" />
+                     </graphic>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="10.0" top="5.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="19.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="homeButton" maxWidth="-Infinity" minWidth="31.0" mnemonicParsing="false" onAction="#Home" prefHeight="22.0" prefWidth="31.0" styleClass="sidebar_opt" VBox.vgrow="ALWAYS">
+                     <graphic>
+                        <FontAwesomeIconView fx:id="HomeButton" fill="#d4b85d" glyphName="HOME" size="18" wrappingWidth="18.0" />
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="19.0" top="5.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" right="10.0" top="5.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="TransactionButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#Transactions" prefHeight="25.0" prefWidth="25.0">
+                     <graphic>
+                        <FontAwesomeIconView fill="#4c4c4e" glyphName="LIST_UL" size="18" styleClass="sidebar_opt" wrappingWidth="18.0" />
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="19.0" top="5.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="10.0" top="5.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="SettingButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#Settings" prefHeight="25.0" prefWidth="25.0">
+                     <graphic>
+                        <FontAwesomeIconView fill="#4c4c4e" glyphName="GEAR" size="18" styleClass="sidebar_opt" wrappingWidth="18.0" />
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="19.0" top="5.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="10.0" top="5.0" />
+                     </padding>
+                  </Button>
+               </VBox>
+            </buttons>
+            <padding>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+         </ButtonBar>
+         <Button layoutX="6.0" layoutY="14.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="37.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="14.0">
+            <padding>
+               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+            <graphic>
+               <FontAwesomeIconView fx:id="bars" fill="#d4b85d" glyphName="BARS" size="25" text="" />
+            </graphic>
+         </Button>
       </AnchorPane>
    </left>
 </fx:root>

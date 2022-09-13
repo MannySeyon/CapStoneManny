@@ -13,70 +13,64 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER_LEFT" prefHeight="495.0" prefWidth="480.0" styleClass="blue-panel" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.ClientLoginController">
-   <children>
-      <Pane prefHeight="140.0" prefWidth="462.0">
-         <children>
-            <ImageView fitHeight="85.0" fitWidth="83.0" layoutX="109.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../Bird.jpg" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="204.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../Logo.jpg" />
-               </image>
-            </ImageView>
-            <Label fx:id="passwordShow" layoutX="69.0" layoutY="118.0" prefHeight="30.0" prefWidth="378.0" text="" textFill="#d9bb79">
-            <font>
-               <Font size="18.0" />
-            </font>
-            <VBox.margin>
-               <Insets left="20.0" />
-            </VBox.margin>
-            </Label>
-         </children>
-      </Pane>
-      <Label text="Login" textFill="#d9bb79">
-         <font>
-            <Font size="20.0" />
-         </font>
-         <VBox.margin>
-            <Insets left="20.0" />
-         </VBox.margin>
+<VBox alignment="CENTER_LEFT" prefHeight="495.0" prefWidth="480.0" styleClass="blue-panel" stylesheets="@styles.css"
+      xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.demo.ClientLoginController">
+   <Pane prefHeight="140.0" prefWidth="462.0">
+      <ImageView fitHeight="85.0" fitWidth="83.0" layoutX="109.0" layoutY="10.0" pickOnBounds="true"
+                 preserveRatio="true">
+         <Image url="@../../../Bird.jpg"/>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="204.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../../../Logo.jpg"/>
+      </ImageView>
+      <Label fx:id="passwordShow" layoutX="69.0" layoutY="118.0" prefHeight="30.0" prefWidth="378.0" textFill="#d9bb79">
+      <font>
+         <Font size="18.0"/>
+      </font>
+      <VBox.margin>
+         <Insets left="20.0"/>
+      </VBox.margin>
       </Label>
-      <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0">
-         <children>
-            <TextField fx:id="nameTextField" promptText="User name"  styleClass="tf_box" HBox.hgrow="ALWAYS" />
+   </Pane>
+   <Label text="Login" textFill="#d9bb79">
+      <font>
+         <Font size="20.0"/>
+      </font>
+      <VBox.margin>
+         <Insets left="20.0"/>
+      </VBox.margin>
+   </Label>
+   <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0">
+      <VBox.margin>
+         <Insets left="15.0" right="15.0" top="15.0"/>
+      </VBox.margin>
+      <TextField fx:id="nameTextField" promptText="User name" styleClass="tf_box" HBox.hgrow="ALWAYS"/>
 
-         </children>
-         <VBox.margin>
-            <Insets left="15.0" right="15.0" top="15.0" />
-         </VBox.margin>
-      </HBox>
-      <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0">
-         <children>
-            <PasswordField fx:id="passwordField" promptText="Password" styleClass="tf_box" HBox.hgrow="ALWAYS" />
+   </HBox>
+   <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0">
+      <VBox.margin>
+         <Insets left="15.0" right="15.0" top="20.0"/>
+      </VBox.margin>
+      <PasswordField fx:id="passwordField" promptText="Password" styleClass="tf_box" HBox.hgrow="ALWAYS"/>
 
-         </children>
-         <VBox.margin>
-            <Insets left="15.0" right="15.0" top="20.0" />
-         </VBox.margin>
-      </HBox>
-      <Button fx:id="loginButton" mnemonicParsing="false" onAction="#validateLogin" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #BEBEBE#BEBEBE;" styleClass="blue-btn" text="LOGIN">
+   </HBox>
+   <Button fx:id="loginButton" mnemonicParsing="false" onAction="#validateLogin" prefHeight="25.0" prefWidth="100.0"
+           style="-fx-background-color: #BEBEBE#BEBEBE;" styleClass="blue-btn" text="LOGIN">
 
-         <VBox.margin>
-            <Insets left="187.0" top="20.0" />
-         </VBox.margin></Button>
-      <Button mnemonicParsing="false" onAction="#AdminDash" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #BEBEBE#BEBEBE;" styleClass="blue-btn" text="ADMIN">
-         <VBox.margin>
-            <Insets left="187.0" top="20.0" />
-         </VBox.margin>
-      </Button>
-      <Hyperlink onAction="#passwordRecovery" text="Forgot Username Or Password">
-         <VBox.margin>
-            <Insets left="150.0" top="10.0" />
-         </VBox.margin>
-      </Hyperlink>
-   </children>
+      <VBox.margin>
+         <Insets left="187.0" top="20.0"/>
+      </VBox.margin>
+   </Button>
+   <Button mnemonicParsing="false" onAction="#AdminDash" prefHeight="25.0" prefWidth="100.0"
+           style="-fx-background-color: #BEBEBE#BEBEBE;" styleClass="blue-btn" text="ADMIN">
+      <VBox.margin>
+         <Insets left="187.0" top="20.0"/>
+      </VBox.margin>
+   </Button>
+   <Hyperlink onAction="#passwordRecovery" text="Forgot Username Or Password">
+      <VBox.margin>
+         <Insets left="150.0" top="10.0"/>
+      </VBox.margin>
+   </Hyperlink>
 </VBox>
