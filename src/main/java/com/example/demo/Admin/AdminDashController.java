@@ -1,8 +1,6 @@
 package com.example.demo.Admin;
 
 
-import com.example.demo.Connectivity;
-import com.example.demo.customer.Customer;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -23,7 +21,6 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
-import java.time.LocalDate;
 import java.util.ResourceBundle;
 
 public class AdminDashController implements Initializable {

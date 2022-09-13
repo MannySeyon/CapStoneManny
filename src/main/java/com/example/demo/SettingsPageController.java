@@ -15,18 +15,17 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 
 public class SettingsPageController   {
 
-    public Button userProfileButton;
-    public TableView TransactionTable;
     public BarChart chart;
-    public Label dateandTime2;
-    public Label GenerateReportLabel;
+    public TableView TransactionTable;
+    @FXML
+    private Button userProfileButton;
+    @FXML
+    private  Label dateandTime2;
+    @FXML
+    private  Label GenerateReportLabel;
     @FXML
    private Label firstNameLabel, middleNameLabel, lastNameLabel, ssnLabel, DOBLabel,
            phoneNumberLabel, emailLabel, streetNameLabel, cityLabel, zipCodeLabel, aptLabel,
@@ -34,9 +33,12 @@ public class SettingsPageController   {
     @FXML
     private TextField firstNameTF,middleNameTF, lastNameTF, ssnTF, phoneNumberTF, emailTF,
             cityTF, streetTF, zipCodeTF,apartmentTF,UsernameF, PasswordF;
-    public DatePicker datePicker;
-    public ToggleGroup maritaltoggle;
-    public ToggleGroup gendertoggle;
+    @FXML
+    private  DatePicker datePicker;
+    @FXML
+    private ToggleGroup maritaltoggle;
+    @FXML
+    private  ToggleGroup gendertoggle;
     @FXML
    private BorderPane SettingPageBorder;
     @FXML
@@ -116,23 +118,4 @@ public class SettingsPageController   {
             stage.close();
         }
     }
-
-
-    public void displayName(String nameUser,String password) throws SQLException {
-        Connectivity connectivity = new Connectivity();
-        Connection connection = connectivity.getConnection();
-        String query = "select First_name,Last_name from  customer_personal_info where username = ?   and password= ?";
-        PreparedStatement statement = connection.prepareStatement(query);
-        statement.setString(1,nameUser);
-        statement.setString(2,password);
-        ResultSet resultSet = statement.executeQuery();
-        System.out.println(password);
-        while(resultSet.next()){
-            nameLabel.setText("Hello, " + resultSet.getString(1) +" "+ resultSet.getString(2)  + ". Welcome to your Summit Dashboard!" );
-
-        }
-
-    }
-
-
 }

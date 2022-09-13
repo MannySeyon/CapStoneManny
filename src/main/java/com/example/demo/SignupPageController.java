@@ -10,8 +10,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+
 import java.io.IOException;
-import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -21,6 +21,11 @@ import java.time.LocalDate;
 
 @SuppressWarnings("ALL")
 public class SignupPageController {
+    public Label ssnLabel1;
+    public Label emailLabel1;
+    public ToggleGroup maritaltoggle;
+    public TextField UsernameF;
+    public TextField PasswordF;
     //Declaring labels for signup
     @FXML
     private Label firstNameLabel, lastNameLabel, middleNameLabel,

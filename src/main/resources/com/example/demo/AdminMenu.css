@@ -14,7 +14,7 @@
     -fx-alignment: center;
     -fx-padding: 10;
 }
-
+.search_box{}
 .title_container FontAwesomeIconView {
     -fx-fill: #132A13;
 }
@@ -28,7 +28,9 @@
     -fx-padding: 10 10 10 20;
     -fx-spacing: 20;
 }
+menu_container{
 
+}
 .menu_container Button{
     -fx-pref-width: 115;
     -fx-pref-height: 40;
