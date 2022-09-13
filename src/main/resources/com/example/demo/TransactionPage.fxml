@@ -10,7 +10,7 @@
 
 <!--suppress ALL -->
 
-<BorderPane fx:id="TransactionBorder" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" styleClass="pane2" stylesheets="@Transactions.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.TransactionPageController">
+<BorderPane fx:id="TransactionBorder" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" styleClass="pane2" stylesheets="@Transactions.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.TransactionPageController">
    <center>
       <AnchorPane fx:id="pane2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="951.0" styleClass="pane2" BorderPane.alignment="CENTER">
          <HBox layoutX="148.0" layoutY="7.0" prefHeight="36.0" prefWidth="876.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="10.0">
@@ -72,11 +72,11 @@
          </VBox>
          <TableView fx:id="TransactionTable" layoutX="47.0" layoutY="181.0" prefHeight="290.0" prefWidth="426.0" styleClass="table_view">
             <columns>
-               <TableColumn text="Date &amp; Time" />
-               <TableColumn text="Transaction" />
-               <TableColumn prefWidth="66.0" text="Type" />
-               <TableColumn prefWidth="84.0" text="Price" />
-               <TableColumn prefWidth="90.0" text="Current Total" />
+               <TableColumn fx:id="dateColumn" text="Date &amp; Time" />
+               <TableColumn fx:id="transactionColumn" text="Transaction" />
+               <TableColumn fx:id="typeColumn" prefWidth="66.0" text="Type" />
+               <TableColumn fx:id="priceColumn" prefWidth="84.0" text="Price" />
+               <TableColumn fx:id="balanceColumn" prefWidth="90.0" text="Current Total" />
             </columns>
          </TableView>
          <Button fx:id="tableView" layoutX="221.0" layoutY="505.0" mnemonicParsing="false" text="Table View" />
