@@ -34,10 +34,21 @@ public class ChatbotController {
     @FXML
     private  FontAwesomeIconView minIcon;
     public void SendMessage(ActionEvent event) {
-        if (userInput.getText().contains("hi")) {
-            Console.setText("HI this is summit robot what can i do for you ");
+        if (userInput.getText().contains("hi") || userInput.getText().contains("hello") || userInput.getText().contains("hey") || userInput.getText().contains("howdy")) {
+            Console.setText("Hello, this is Summit Financial Corp. ChatBot. How may I assist you?");
         }
-
+        if (userInput.getText().contains("transfer funds")){
+            Console.setText("You can transfer funds by clicking on the Transaction button on your dashboard page.");
+        }
+        if(userInput.getText().contains("mobile deposit")){
+            Console.setText("Summit Financial Corp. does not support mobile deposit.");
+        }
+        if (userInput.getText().contains("closing account")){
+            Console.setText("You will have to go to the nearest Summit Financial Corp. branch and speak with a bank teller for more information.");
+        }
+        else{
+        Console.setText("");
+        }
     }
 }
 
