@@ -4,12 +4,12 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 
 public class ConnTable {
-    private final SimpleIntegerProperty account_number;
+    private final SimpleStringProperty Account_number;
     private final SimpleStringProperty First_name, Last_name, Middle_name, date_of_birth, address, zipp_code, state, Country, city, contact_no, ssn, username, email;
 
-    public ConnTable(Integer Account_number,String  First_name,String  Last_name,String  Middle_name,String  date_of_birth,
+    public ConnTable(String Account_number,String  First_name,String  Last_name,String  Middle_name,String  date_of_birth,
                      String address,String  zipp_code,String  state,String  Country,String  city,String  contact_no,String  ssn,String  username,String  email){
-        this.account_number =new SimpleIntegerProperty(Account_number);
+        this.Account_number =new SimpleStringProperty(Account_number);
         this.First_name =new SimpleStringProperty(First_name);
         this.Last_name =new SimpleStringProperty(Last_name);
         this.Middle_name =new SimpleStringProperty(Middle_name);
@@ -25,12 +25,12 @@ public class ConnTable {
         this.email =new SimpleStringProperty(email);
     }
 
-    public int getAccount_number() {
-        return account_number.get();
+    public String getAccount_number() {
+        return Account_number.get();
     }
 
-    public void setAccount_number(int account_number) {
-        this.account_number.set(account_number);
+    public void setAccount_number(String account_number) {
+        this.Account_number.set(account_number);
     }
 
     public String getFirst_name()  {
