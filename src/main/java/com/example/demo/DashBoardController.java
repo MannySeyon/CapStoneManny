@@ -73,6 +73,7 @@ public class DashBoardController  {
 
     @FXML
     protected void TransactionsTable(ActionEvent event) throws IOException {
+        TimeDateLabel.setText(String.valueOf(LocalDateTime.now()));
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("TransactionTable.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -80,9 +81,11 @@ public class DashBoardController  {
         stage.setResizable(false);
         stage.centerOnScreen();
         stage.show();
+
     }
     @FXML
     protected void TransactionsGraph(ActionEvent event) throws IOException {
+        TimeDateLabel.setText(String.valueOf(LocalDateTime.now()));
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("TransactionGraph.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -93,6 +96,7 @@ public class DashBoardController  {
     }
     @FXML
     protected void Home(ActionEvent event) throws IOException {
+        TimeDateLabel.setText(String.valueOf(LocalDateTime.now()));
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("LandingPage.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -103,6 +107,7 @@ public class DashBoardController  {
     }
     @FXML
     protected void chatBot(ActionEvent event) throws IOException {
+        TimeDateLabel.setText(String.valueOf(LocalDateTime.now()));
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Chatbot.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -113,6 +118,7 @@ public class DashBoardController  {
     }
     @FXML
     protected void Settings(ActionEvent event) throws IOException {
+        this.TimeDateLabel.setText(String.valueOf(LocalDateTime.now()));
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("SettingsPage.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -123,6 +129,7 @@ public class DashBoardController  {
     }
     @FXML
     protected void Transactions(ActionEvent event) throws IOException {
+        TimeDateLabel.setText(String.valueOf(LocalDateTime.now()));
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("TransactionPage.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -133,6 +140,7 @@ public class DashBoardController  {
     }
     @FXML
     protected void Transfer(ActionEvent event) throws IOException {
+        TimeDateLabel.setText(String.valueOf(LocalDateTime.now()));
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Transfer.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
