@@ -16,7 +16,7 @@
                 <Font name="Forte" size="28.0" />
             </font>
         </Label>
-        <Button fx:id="minButton" layoutX="346.0" layoutY="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="18.0" minWidth="38.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="38.0" style="-fx-opacity: .8;" styleClass="sendButton">
+        <Button fx:id="minButton" layoutX="346.0" layoutY="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="18.0" minWidth="38.0" mnemonicParsing="false" onAction="#Home" prefHeight="18.0" prefWidth="38.0" style="-fx-opacity: .8;" styleClass="sendButton">
             <graphic>
                 <FontAwesomeIconView fx:id="minIcon" glyphName="CHEVRON_DOWN" size="15" />
             </graphic>
