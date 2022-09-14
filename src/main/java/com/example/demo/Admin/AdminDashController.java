@@ -561,10 +561,10 @@ public class AdminDashController implements Initializable {
         Connection conc= connectivity.getConnection();
 
         try {
-            ResultSet  rs = conc.createStatement().executeQuery("pop");
+            ResultSet  rs = conc.createStatement().executeQuery(" call pop(1000)");
             while(rs.next()){
-                ViewChecking.add(new CheckingView(rs.getString("Checking_account_number"),rs.getString("Account_name"),rs.getString("Account_balance")));
-                ViewSavings.add(new SavingsView(rs.getString("Savings_account_number"),rs.getString("Account_name"),rs.getString("Account_balance")));
+                ViewChecking.add(new CheckingView(rs.getString("Checking_account_number"),rs.getString("Account_number"),rs.getString("Account_balance")));
+                ViewSavings.add(new SavingsView(rs.getString("Saving_account_number"),rs.getString("Account_number"),rs.getString("Account_balance")));
             }
             col_checking_acc_number.setCellValueFactory(new PropertyValueFactory<>("col_checking_acc_number"));
 
