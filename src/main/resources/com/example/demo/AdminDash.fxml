@@ -1,81 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.RadioButton?>
-<?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.ToggleGroup?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1282.0" stylesheets="@AdminMenu.css" xmlns="http://javafx.com/javafx/18"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.Admin.AdminDashController">
-   <BorderPane fx:id="mainPane" layoutY="-10.0" prefHeight="613.0" prefWidth="1327.0" AnchorPane.leftAnchor="0.0">
+<AnchorPane minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" stylesheets="@AdminMenu.css"
+            xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.demo.Admin.AdminDashController">
+   <BorderPane fx:id="mainPane" layoutY="-10.0" prefHeight="613.0" prefWidth="1200.0" AnchorPane.leftAnchor="0.0">
       <left>
-         <VBox prefHeight="614.0" prefWidth="212.0" style="-fx-background-color: #d9bb79;"
+         <VBox prefHeight="613.0" prefWidth="200.0" style="-fx-background-color: #d9bb79;"
                styleClass="menu_container" BorderPane.alignment="CENTER">
             <BorderPane.margin>
-               <Insets/>
+               <Insets right="10.0"/>
             </BorderPane.margin>
-            <HBox fillHeight="false" prefHeight="150.0" prefWidth="146.0">
+            <HBox alignment="CENTER" fillHeight="false" minWidth="-Infinity" prefHeight="207.0" prefWidth="199.0">
                <VBox.margin>
-                  <Insets right="10.0"/>
+                  <Insets/>
                </VBox.margin>
-               <ImageView fitHeight="169.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+               <ImageView fitHeight="200.0" fitWidth="220.0" pickOnBounds="true" preserveRatio="true">
                   <HBox.margin>
                      <Insets/>
                   </HBox.margin>
                   <Image url="@../../../Summit Fin Corp.png"/>
                </ImageView>
             </HBox>
-            <Button fx:id="create_c_btn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false"
-                    onAction="#handleClicks" styleClass="alt_menu_btn" text="Create Client">
+            <Button fx:id="create_c_btn" alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity"
+                    minWidth="-Infinity" mnemonicParsing="false" onAction="#handleClicks" prefHeight="50.0"
+                    prefWidth="80.0" styleClass="alt_menu_btn" text="Create Client">
                <opaqueInsets>
                   <Insets/>
                </opaqueInsets>
                <VBox.margin>
-                  <Insets left="15.0"/>
+                  <Insets left="45.0"/>
                </VBox.margin>
             </Button>
-            <Button fx:id="Clients_btn" alignment="CENTER" mnemonicParsing="false" onAction="#handleClicks"
+            <Button fx:id="Clients_btn" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity"
+                    mnemonicParsing="false" onAction="#handleClicks" prefHeight="50.0" prefWidth="80.0"
                     styleClass="alt_menu_btn" text="Clients">
                <opaqueInsets>
                   <Insets/>
                </opaqueInsets>
                <VBox.margin>
-                  <Insets left="15.0"/>
+                  <Insets left="45.0"/>
                </VBox.margin>
             </Button>
-            <Button fx:id="deposit_btn" alignment="CENTER" mnemonicParsing="false" onAction="#handleClicks"
+            <Button fx:id="deposit_btn" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity"
+                    mnemonicParsing="false" onAction="#handleClicks" prefHeight="50.0" prefWidth="80.0"
                     styleClass="alt_menu_btn" text="Deposit">
                <opaqueInsets>
                   <Insets/>
                </opaqueInsets>
                <VBox.margin>
-                  <Insets left="15.0"/>
+                  <Insets left="45.0"/>
                </VBox.margin>
             </Button>
-            <Button fx:id="logout_btn" alignment="CENTER" mnemonicParsing="false" onAction="#handleClicks"
-                    styleClass="alt_menu_btn" text="Logout">
+            <Button fx:id="logout_btn" alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity"
+                    minWidth="-Infinity" mnemonicParsing="false" onAction="#handleClicks" prefHeight="50.0"
+                    prefWidth="80.0" styleClass="alt_menu_btn" text="Logout">
                <opaqueInsets>
                   <Insets/>
                </opaqueInsets>
                <VBox.margin>
-                  <Insets left="15.0"/>
+                  <Insets left="45.0"/>
                </VBox.margin>
             </Button>
          </VBox>
@@ -232,50 +221,97 @@
                        style="-fx-background-color: white;">
                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="298.0" prefWidth="1132.0"
                            style="-fx-background-color: white;">
-                  <Label layoutX="70.0" layoutY="51.0" text="First Name"/>
+                  <Label layoutX="70.0" layoutY="51.0" text="First Name">
+                     <font>
+                        <Font name="Calibri" size="22.0"/>
+                     </font>
+                  </Label>
                   <TextField fx:id="FName_fld" layoutX="69.0" layoutY="72.0"/>
-                  <Label layoutX="70.0" layoutY="135.0" text="Date of Birth"/>
-                  <Label layoutX="385.0" layoutY="51.0" text="Middle Name"/>
+                  <Label layoutX="69.0" layoutY="126.0" text="Date of Birth">
+                     <font>
+                        <Font name="Calibri" size="22.0"/>
+                     </font>
+                  </Label>
+                  <Label layoutX="385.0" layoutY="51.0" text="Middle Name">
+                     <font>
+                        <Font name="Calibri" size="22.0"/>
+                     </font>
+                  </Label>
                   <TextField fx:id="MName_fld" layoutX="385.0" layoutY="72.0"/>
                   <TextField fx:id="Ssn_fld" layoutX="385.0" layoutY="156.0"/>
                   <TextField fx:id="LName_fld" layoutX="752.0" layoutY="72.0"/>
                   <TextField fx:id="Phone_no_fld" layoutX="752.0" layoutY="146.0"/>
-                  <Label layoutX="385.0" layoutY="135.0" text="Social Security Number"/>
-                  <Label layoutX="752.0" layoutY="51.0" text="Last Name"/>
-                  <Label layoutX="752.0" layoutY="126.0" text="Phone Number"/>
-                  <DatePicker fx:id="DOB_fld" layoutX="67.0" layoutY="155.0" prefHeight="26.0"
+                  <Label layoutX="385.0" layoutY="126.0" text="Social Security Number">
+                     <font>
+                        <Font name="Calibri" size="22.0"/>
+                     </font>
+                  </Label>
+                  <Label layoutX="752.0" layoutY="51.0" text="Last Name">
+                     <font>
+                        <Font name="Calibri" size="22.0"/>
+                     </font>
+                  </Label>
+                  <Label layoutX="752.0" layoutY="126.0" text="Phone Number">
+                     <font>
+                        <Font name="Calibri" size="22.0"/>
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="DOB_fld" layoutX="70.0" layoutY="156.0" prefHeight="26.0"
                               prefWidth="154.0"/>
-                  <Label fx:id="maritalSetLabel" layoutX="271.0" layoutY="195.0" text="Marital Status"/>
-                  <RadioButton fx:id="Single_radio_btn" layoutX="271.0" layoutY="231.0" mnemonicParsing="false"
-                               text="Single">
+                  <Label fx:id="maritalSetLabel" layoutX="70.0" layoutY="208.0" text="Marital Status">
+                     <font>
+                        <Font name="Calibri" size="22.0"/>
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="Single_radio_btn" layoutX="64.0" layoutY="234.0" mnemonicParsing="false"
+                               prefHeight="30.0" prefWidth="81.0" text="Single">
                      <toggleGroup>
                         <ToggleGroup fx:id="maritalStatus"/>
                      </toggleGroup>
+                     <font>
+                        <Font name="Calibri" size="14.0"/>
+                     </font>
                   </RadioButton>
-                  <RadioButton fx:id="Married_radio_btn" layoutX="362.0" layoutY="231.0" mnemonicParsing="false"
+                  <RadioButton fx:id="Married_radio_btn" layoutX="147.0" layoutY="234.0" mnemonicParsing="false"
                                text="Married">
                      <toggleGroup>
                         <ToggleGroup/>
                      </toggleGroup>
+                     <font>
+                        <Font name="Calibri" size="14.0"/>
+                     </font>
                   </RadioButton>
-                  <Label fx:id="genderLabel" layoutX="562.0" layoutY="195.0" text="Gender"/>
-                  <RadioButton fx:id="Male_radio_btn" layoutX="562.0" layoutY="231.0" mnemonicParsing="false"
+                  <Label fx:id="genderLabel" layoutX="394.0" layoutY="208.0" text="Gender">
+                     <font>
+                        <Font name="Calibri" size="22.0"/>
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="Male_radio_btn" layoutX="385.0" layoutY="234.0" mnemonicParsing="false"
                                text="Male">
                      <toggleGroup>
                         <ToggleGroup fx:id="genderStatus"/>
                      </toggleGroup>
+                     <font>
+                        <Font name="Calibri" size="14.0"/>
+                     </font>
                   </RadioButton>
-                  <RadioButton fx:id="Female_radio_btn" layoutX="636.0" layoutY="231.0" mnemonicParsing="false"
-                               text="Female">
+                  <RadioButton fx:id="Female_radio_btn" layoutX="451.0" layoutY="234.0" mnemonicParsing="false"
+                               prefHeight="30.0" prefWidth="86.0" text="Female">
                      <toggleGroup>
                         <ToggleGroup/>
                      </toggleGroup>
+                     <font>
+                        <Font name="Calibri" size="14.0"/>
+                     </font>
                   </RadioButton>
-                  <RadioButton fx:id="Non_binary_radio_btn" layoutX="719.0" layoutY="231.0"
-                               mnemonicParsing="false" text="non-Binary">
+                  <RadioButton fx:id="Non_binary_radio_btn" layoutX="537.0" layoutY="234.0"
+                               mnemonicParsing="false" text="Non-Binary">
                      <toggleGroup>
                         <ToggleGroup/>
                      </toggleGroup>
+                     <font>
+                        <Font name="Calibri" size="14.0"/>
+                     </font>
                   </RadioButton>
                   <Label fx:id="verifyAgeLabel" layoutX="70.0" layoutY="112.0" prefHeight="23.0"
                          prefWidth="186.0"/>
@@ -286,35 +322,94 @@
                </AnchorPane>
                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="297.0" prefWidth="1084.0"
                            style="-fx-background-color: white;">
-                  <Label layoutX="68.0" layoutY="102.0" text="State"/>
-                  <Label layoutX="531.0" layoutY="102.0" text="Zip Code"/>
-                  <Label layoutX="68.0" layoutY="24.0" text="Email"/>
-                  <TextField fx:id="email_fld" layoutX="66.0" layoutY="44.0"/>
+                  <Label layoutX="68.0" layoutY="102.0" text="State">
+                     <font>
+                        <Font name="Calibri" size="22.0"/>
+                     </font>
+                  </Label>
+                  <Label layoutX="535.0" layoutY="103.0" text="Zip Code">
+                     <font>
+                        <Font name="Calibri" size="22.0"/>
+                     </font>
+                  </Label>
+                  <Label layoutX="67.0" layoutY="33.0" text="Email">
+                     <font>
+                        <Font name="Calibri" size="22.0"/>
+                     </font>
+                  </Label>
+                  <TextField fx:id="email_fld" layoutX="64.0" layoutY="53.0"/>
                   <TextField fx:id="Address_fld" layoutX="301.0" layoutY="53.0"/>
-                  <Label layoutX="306.0" layoutY="33.0" text="Street Address"/>
-                  <TextField fx:id="city_fld" layoutX="301.0" layoutY="123.0"/>
-                  <Label layoutX="301.0" layoutY="103.0" text="City"/>
-                  <TextField fx:id="zipcode_fld" layoutX="531.0" layoutY="124.0"/>
-                  <TextField fx:id="username_fld" layoutX="753.0" layoutY="126.0"/>
-                  <Label layoutX="753.0" layoutY="108.0" text="Username"/>
-                  <TextField fx:id="password_fld" layoutX="753.0" layoutY="49.0"/>
-                  <Label layoutX="754.0" layoutY="33.0" text="Password"/>
-                  <Label layoutX="325.0" layoutY="162.0" text="Accounts:"/>
-                  <CheckBox fx:id="ck_acc_cb" layoutX="325.0" layoutY="183.0" mnemonicParsing="false"
-                            text="Checking"/>
-                  <CheckBox fx:id="sv_acc_cb" layoutX="594.0" layoutY="183.0" mnemonicParsing="false"
-                            text="Savings "/>
-                  <TextField fx:id="ck_acc_bal_fld" layoutX="321.0" layoutY="233.0"/>
-                  <TextField fx:id="sv_acc_bal_fld" layoutX="594.0" layoutY="233.0"/>
-                  <Label layoutX="324.0" layoutY="214.0" text="Checking Account Balance:"/>
-                  <Label layoutX="597.0" layoutY="214.0" text="Savings Account Balance:"/>
-                  <Button fx:id="Create_new_btn" layoutX="780.0" layoutY="232.0" mnemonicParsing="false"
-                          prefHeight="26.0" prefWidth="122.0" style="-fx-background-color: #d9bb79;"
-                          text="Create Client" textFill="WHITE"/>
+                  <Label layoutX="306.0" layoutY="33.0" text="Street Address">
+                     <font>
+                        <Font name="Calibri" size="22.0"/>
+                     </font>
+                  </Label>
+                  <TextField fx:id="city_fld" layoutX="301.0" layoutY="127.0"/>
+                  <Label layoutX="301.0" layoutY="103.0" text="City">
+                     <font>
+                        <Font name="Calibri" size="22.0"/>
+                     </font>
+                  </Label>
+                  <TextField fx:id="zipcode_fld" layoutX="531.0" layoutY="127.0"/>
+                  <TextField fx:id="username_fld" layoutX="753.0" layoutY="127.0"/>
+                  <Label layoutX="754.0" layoutY="102.0" text="Username">
+                     <font>
+                        <Font name="Calibri" size="22.0"/>
+                     </font>
+                  </Label>
+                  <TextField fx:id="password_fld" layoutX="753.0" layoutY="53.0"/>
+                  <Label layoutX="754.0" layoutY="33.0" text="Password">
+                     <font>
+                        <Font name="Calibri" size="22.0"/>
+                     </font>
+                  </Label>
+                  <Label layoutX="301.0" layoutY="164.0" text="Accounts:">
+                     <font>
+                        <Font name="Calibri" size="22.0"/>
+                     </font>
+                  </Label>
+                  <CheckBox fx:id="ck_acc_cb" layoutX="295.0" layoutY="194.0" mnemonicParsing="false"
+                            text="Checking">
+                     <font>
+                        <Font name="Calibri" size="18.0"/>
+                     </font>
+                  </CheckBox>
+                  <CheckBox fx:id="sv_acc_cb" layoutX="531.0" layoutY="194.0" mnemonicParsing="false"
+                            text="Savings ">
+                     <font>
+                        <Font name="Calibri" size="18.0"/>
+                     </font>
+                  </CheckBox>
+                  <TextField fx:id="ck_acc_bal_fld" layoutX="296.0" layoutY="246.0" prefHeight="26.0"
+                             prefWidth="190.0"/>
+                  <TextField fx:id="sv_acc_bal_fld" layoutX="536.0" layoutY="246.0" prefHeight="26.0"
+                             prefWidth="184.0"/>
+                  <Label layoutX="297.0" layoutY="227.0" text="Checking Account Balance:">
+                     <font>
+                        <Font name="Calibri" size="18.0"/>
+                     </font>
+                  </Label>
+                  <Label layoutX="535.0" layoutY="227.0" text="Savings Account Balance:">
+                     <font>
+                        <Font name="Calibri" size="18.0"/>
+                     </font>
+                  </Label>
+                  <Button fx:id="Create_new_btn" layoutX="773.0" layoutY="221.0" mnemonicParsing="false"
+                          prefHeight="34.0" prefWidth="113.0"
+                          style="-fx-background-color: #d9bb79; -fx-background-radius: 10; -fx-font-size: 16;"
+                          text="Create Client" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri" size="18.0"/>
+                     </font>
+                  </Button>
                   <ComboBox fx:id="state_ComboBox" layoutX="65.0" layoutY="126.0" prefWidth="150.0"
                             promptText="Select State"/>
                   <TextField fx:id="Apartment_fld" layoutX="531.0" layoutY="53.0"/>
-                  <Label layoutX="531.0" layoutY="33.0" text="Apartment Number"/>
+                  <Label layoutX="531.0" layoutY="33.0" text="Apartment Number">
+                     <font>
+                        <Font name="Calibri" size="22.0"/>
+                     </font>
+                  </Label>
                </AnchorPane>
             </SplitPane>
          </Pane>
