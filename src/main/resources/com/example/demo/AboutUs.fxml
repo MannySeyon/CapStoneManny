@@ -116,7 +116,7 @@
                   </color>
                </DropShadow>
             </effect>
-            <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;" styleClass="TextImage" text="&#10;My name is Choua, and I am trying to make a career switch from Logistics to Software Engineering. My dream is to one day become an iOS developer and to be able to create an application that can help boost productivity at my company. &#10;&#10;Email: &#10;sameul.dinka@summitoic.edu&#10;LinkedIn: &#10;www.linkedin.com/in/choua-lo-1579a1228" textAlignment="CENTER" wrappingWidth="185.0">
+            <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;" styleClass="TextImage" text="&#10;Dedicated student and professional with history of meeting company goals utilizing consistent and&#10;organized practices. Skilled in working under pressure and adapting to new situations and challenges.&#10;&#10;Email: &#10;sameul.dinka@summitoic.edu&#10;LinkedIn: &#10;https://www.linkedin.com/in/samuel-dinka-748a30212/" textAlignment="CENTER" wrappingWidth="185.0">
                <font>
                   <Font size="15.0" />
                </font>
@@ -138,7 +138,7 @@
                   </color>
                </DropShadow>
             </effect>
-            <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;" styleClass="TextImage" text="My name is Choua, and I am trying to make a career switch from Logistics to Software Engineering. My dream is to one day become an iOS developer and to be able to create an application that can help boost productivity at my company.&#10;&#10;Email: &#10;ruhama.kebede@summitoic.edu&#10;LinkedIn: &#10;www.linkedin.com/in/choua-lo-1579a1228 " textAlignment="CENTER" wrappingWidth="185.0">
+            <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;" styleClass="TextImage" text="Seeking to leverage my knowledge and skills in a challenging position where I can utilize my experiences as technical assistant by doing research and facilitating.&#10;&#10;Email: &#10;ruhama.kebede@summitoic.edu&#10;LinkedIn: &#10;https://www.linkedin.com/in/ruhama-kebede-1b9232b6/" textAlignment="CENTER" wrappingWidth="185.0">
                <font>
                   <Font size="15.0" />
                </font>
