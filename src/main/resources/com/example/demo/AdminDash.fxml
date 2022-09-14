@@ -6,408 +6,329 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" stylesheets="@AdminMenu.css"
-            xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.demo.Admin.AdminDashController">
+<AnchorPane minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" stylesheets="@AdminMenu.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.Admin.AdminDashController">
    <BorderPane fx:id="mainPane" layoutY="-10.0" prefHeight="613.0" prefWidth="1200.0" AnchorPane.leftAnchor="0.0">
       <left>
-         <VBox prefHeight="613.0" prefWidth="200.0" style="-fx-background-color: #d9bb79;"
-               styleClass="menu_container" BorderPane.alignment="CENTER">
+         <VBox prefHeight="613.0" prefWidth="200.0" style="-fx-background-color: #d9bb79;" styleClass="menu_container" BorderPane.alignment="CENTER">
             <BorderPane.margin>
-               <Insets right="10.0"/>
+               <Insets right="10.0" />
             </BorderPane.margin>
             <HBox alignment="CENTER" fillHeight="false" minWidth="-Infinity" prefHeight="207.0" prefWidth="199.0">
                <VBox.margin>
-                  <Insets/>
+                  <Insets />
                </VBox.margin>
                <ImageView fitHeight="200.0" fitWidth="220.0" pickOnBounds="true" preserveRatio="true">
                   <HBox.margin>
-                     <Insets/>
+                     <Insets />
                   </HBox.margin>
-                  <Image url="@../../../Summit Fin Corp.png"/>
+                  <Image url="@../../../Summit Fin Corp.png" />
                </ImageView>
             </HBox>
-            <Button fx:id="create_c_btn" alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity"
-                    minWidth="-Infinity" mnemonicParsing="false" onAction="#handleClicks" prefHeight="50.0"
-                    prefWidth="80.0" styleClass="alt_menu_btn" text="Create Client">
+            <Button fx:id="create_c_btn" alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleClicks" prefHeight="50.0" prefWidth="80.0" styleClass="alt_menu_btn" text="Create Client">
                <opaqueInsets>
-                  <Insets/>
+                  <Insets />
                </opaqueInsets>
                <VBox.margin>
-                  <Insets left="45.0"/>
+                  <Insets left="45.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="Clients_btn" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity"
-                    mnemonicParsing="false" onAction="#handleClicks" prefHeight="50.0" prefWidth="80.0"
-                    styleClass="alt_menu_btn" text="Clients">
+            <Button fx:id="Clients_btn" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleClicks" prefHeight="50.0" prefWidth="80.0" styleClass="alt_menu_btn" text="Clients">
                <opaqueInsets>
-                  <Insets/>
+                  <Insets />
                </opaqueInsets>
                <VBox.margin>
-                  <Insets left="45.0"/>
+                  <Insets left="45.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="deposit_btn" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity"
-                    mnemonicParsing="false" onAction="#handleClicks" prefHeight="50.0" prefWidth="80.0"
-                    styleClass="alt_menu_btn" text="Deposit">
+            <Button fx:id="deposit_btn" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleClicks" prefHeight="50.0" prefWidth="80.0" styleClass="alt_menu_btn" text="Deposit">
                <opaqueInsets>
-                  <Insets/>
+                  <Insets />
                </opaqueInsets>
                <VBox.margin>
-                  <Insets left="45.0"/>
+                  <Insets left="45.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="logout_btn" alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity"
-                    minWidth="-Infinity" mnemonicParsing="false" onAction="#handleClicks" prefHeight="50.0"
-                    prefWidth="80.0" styleClass="alt_menu_btn" text="Logout">
+            <Button fx:id="logout_btn" alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleClicks" prefHeight="50.0" prefWidth="80.0" styleClass="alt_menu_btn" text="Logout">
                <opaqueInsets>
-                  <Insets/>
+                  <Insets />
                </opaqueInsets>
                <VBox.margin>
-                  <Insets left="45.0"/>
+                  <Insets left="45.0" />
                </VBox.margin>
             </Button>
          </VBox>
       </left>
       <center>
          <Pane prefHeight="614.0" prefWidth="1125.0" BorderPane.alignment="CENTER">
-            <Pane fx:id="pnClientsListview" layoutY="-4.0" prefHeight="614.0" prefWidth="1116.0"
-                  style="-fx-background-color: white;">
-               <HBox layoutX="-6.0" layoutY="9.0" prefHeight="124.0" prefWidth="1125.0"
-                     style="-fx-background-color: #d9bb79;">
+            <Pane fx:id="pnClientsListview" layoutY="-4.0" prefHeight="614.0" prefWidth="1116.0" style="-fx-background-color: white;">
+               <HBox layoutX="-6.0" layoutY="9.0" prefHeight="124.0" prefWidth="1125.0" style="-fx-background-color: #d9bb79;">
                   <Label alignment="CENTER" contentDisplay="CENTER" text="Clients" textFill="WHITE">
                      <font>
-                        <Font size="36.0"/>
+                        <Font size="36.0" />
                      </font>
                   </Label>
                </HBox>
                <TableView fx:id="table" layoutX="13.0" layoutY="180.0" prefHeight="409.0" prefWidth="1081.0">
                   <columns>
-                     <TableColumn fx:id="col_accnum" prefWidth="75.0" style="-fx-background-color: #d9bb79;"
-                                  text="Account #"/>
-                     <TableColumn fx:id="col_fname" prefWidth="75.0" style="-fx-background-color: #d9bb79;"
-                                  text="First Name"/>
-                     <TableColumn fx:id="col_lname" prefWidth="75.0" style="-fx-background-color: #d9bb79;"
-                                  text="Last Name"/>
-                     <TableColumn fx:id="col_mname" prefWidth="75.0" style="-fx-background-color: #d9bb79;"
-                                  text="Middle Name"/>
-                     <TableColumn fx:id="col_dob" prefWidth="75.0" style="-fx-background-color: #d9bb79;"
-                                  text="Date of Birth"/>
-                     <TableColumn fx:id="col_address" prefWidth="75.0" style="-fx-background-color: #d9bb79;"
-                                  text="Address"/>
-                     <TableColumn fx:id="col_zip" prefWidth="75.0" style="-fx-background-color: #d9bb79;"
-                                  text="Zip Code"/>
-                     <TableColumn fx:id="col_state" prefWidth="75.0" style="-fx-background-color: #d9bb79;"
-                                  text="State"/>
-                     <TableColumn fx:id="col_country" prefWidth="75.0" style="-fx-background-color: #d9bb79;"
-                                  text="Country"/>
-                     <TableColumn fx:id="col_city" prefWidth="75.0" style="-fx-background-color: #d9bb79;"
-                                  text="City"/>
-                     <TableColumn fx:id="col_contactnum" prefWidth="75.0" style="-fx-background-color: #d9bb79;"
-                                  text="Contact #"/>
-                     <TableColumn fx:id="col_last4ssn" prefWidth="75.0" style="-fx-background-color: #d9bb79;"
-                                  text="SSN"/>
-                     <TableColumn fx:id="col_username" prefWidth="75.0" style="-fx-background-color: #d9bb79;"
-                                  text="Username"/>
-                     <TableColumn fx:id="col_email" prefWidth="75.0" style="-fx-background-color: #d9bb79;"
-                                  text="Email"/>
+                     <TableColumn fx:id="col_accnum" prefWidth="75.0" style="-fx-background-color: #d9bb79;" text="Account #" />
+                     <TableColumn fx:id="col_fname" prefWidth="75.0" style="-fx-background-color: #d9bb79;" text="First Name" />
+                     <TableColumn fx:id="col_lname" prefWidth="75.0" style="-fx-background-color: #d9bb79;" text="Last Name" />
+                     <TableColumn fx:id="col_mname" prefWidth="75.0" style="-fx-background-color: #d9bb79;" text="Middle Name" />
+                     <TableColumn fx:id="col_dob" prefWidth="75.0" style="-fx-background-color: #d9bb79;" text="Date of Birth" />
+                     <TableColumn fx:id="col_address" prefWidth="75.0" style="-fx-background-color: #d9bb79;" text="Address" />
+                     <TableColumn fx:id="col_zip" prefWidth="75.0" style="-fx-background-color: #d9bb79;" text="Zip Code" />
+                     <TableColumn fx:id="col_state" prefWidth="75.0" style="-fx-background-color: #d9bb79;" text="State" />
+                     <TableColumn fx:id="col_country" prefWidth="75.0" style="-fx-background-color: #d9bb79;" text="Country" />
+                     <TableColumn fx:id="col_city" prefWidth="75.0" style="-fx-background-color: #d9bb79;" text="City" />
+                     <TableColumn fx:id="col_contactnum" prefWidth="75.0" style="-fx-background-color: #d9bb79;" text="Contact #" />
+                     <TableColumn fx:id="col_last4ssn" prefWidth="75.0" style="-fx-background-color: #d9bb79;" text="SSN" />
+                     <TableColumn fx:id="col_username" prefWidth="75.0" style="-fx-background-color: #d9bb79;" text="Username" />
+                     <TableColumn fx:id="col_email" prefWidth="75.0" style="-fx-background-color: #d9bb79;" text="Email" />
                   </columns>
                   <columnResizePolicy>
-                     <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                     <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                   </columnResizePolicy>
                </TableView>
                <HBox alignment="CENTER" layoutX="14.0" layoutY="131.0" prefHeight="49.0" prefWidth="476.0">
-                  <TextField fx:id="search_db_fld" alignment="CENTER" prefHeight="26.0" prefWidth="299.0"
-                             promptText="Enter Client"/>
-                  <Button fx:id="Search_Client_btn" alignment="CENTER" mnemonicParsing="false"
-                          prefHeight="26.0" prefWidth="158.0" style="-fx-background-color: #d9bb79;"
-                          text="Search Client" textFill="WHITE"/>
+                  <TextField fx:id="search_db_fld" alignment="CENTER" prefHeight="26.0" prefWidth="299.0" promptText="Enter Client" />
+                  <Button fx:id="Search_Client_btn" alignment="CENTER" mnemonicParsing="false" prefHeight="26.0" prefWidth="158.0" style="-fx-background-color: #d9bb79;" text="Search Client" textFill="WHITE" />
                </HBox>
-               <Button fx:id="Update_btn" layoutX="519.0" layoutY="141.0" mnemonicParsing="false"
-                       prefHeight="30.0" prefWidth="98.0" style="-fx-background-color: #d9bb79;" text="Update"
-                       textFill="WHITE"/>
-               <Button fx:id="Delete_btn" layoutX="634.0" layoutY="141.0" mnemonicParsing="false"
-                       prefHeight="30.0" prefWidth="98.0" style="-fx-background-color: #d9bb79;" text="Delete"
-                       textFill="WHITE"/>
+               <Button fx:id="Update_btn" layoutX="519.0" layoutY="141.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="98.0" style="-fx-background-color: #d9bb79;" text="Update" textFill="WHITE" />
+               <Button fx:id="Delete_btn" layoutX="634.0" layoutY="141.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="98.0" style="-fx-background-color: #d9bb79;" text="Delete" textFill="WHITE" />
             </Pane>
             <AnchorPane fx:id="pnDeposits" layoutX="59.0" layoutY="9.0" prefHeight="613.0" prefWidth="1052.0">
                <VBox fillWidth="false" layoutX="-65.0" layoutY="1.0" prefHeight="604.0" prefWidth="1124.0">
-                  <HBox alignment="CENTER" prefHeight="84.0" prefWidth="1179.0"
-                        style="-fx-background-color: #d9bb79;" styleClass="search_box">
-                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Search By Recipient Address: "/>
-                     <TextField fx:id="raddress_fld" styleClass="search_box"/>
-                     <Button fx:id="search_btn" mnemonicParsing="false" prefHeight="27.0" prefWidth="94.0"
-                             style="-fx-background-color: #d9bb79; -fx-border-color: white;" text="Search"/>
+                  <HBox alignment="CENTER" prefHeight="84.0" prefWidth="1179.0" style="-fx-background-color: #d9bb79;" styleClass="search_box">
+                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Search By Recipient Address: " />
+                     <TextField fx:id="raddress_fld" styleClass="search_box" />
+                     <Button fx:id="search_btn" mnemonicParsing="false" prefHeight="27.0" prefWidth="94.0" style="-fx-background-color: #d9bb79; -fx-border-color: white;" text="Search" />
                   </HBox>
-                  <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="1124.0"
-                        style="-fx-background-color: white;">
+                  <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="1124.0" style="-fx-background-color: white;">
                      <Label alignment="CENTER" contentDisplay="CENTER" text="Transactions">
                         <font>
-                           <Font size="14.0"/>
+                           <Font size="14.0" />
                         </font>
                         <opaqueInsets>
-                           <Insets/>
+                           <Insets />
                         </opaqueInsets>
                      </Label>
                   </HBox>
                   <HBox prefHeight="202.0" prefWidth="1124.0">
                      <TableView fx:id="Transaction_table" prefHeight="200.0" prefWidth="1124.0">
                         <columns>
-                           <TableColumn fx:id="col_Transaction_Number" prefWidth="122.39997863769531"
-                                        text="Transaction number"/>
-                           <TableColumn fx:id="col_Account_Number" prefWidth="123.20004272460938"
-                                        text="Account Number"/>
-                           <TableColumn fx:id="col_Date_created" minWidth="0.0"
-                                        prefWidth="88.80001831054688" text="Date Created"/>
-                           <TableColumn fx:id="col_income_date" minWidth="0.0" prefWidth="96.79998779296875"
-                                        text="Income Date"/>
-                           <TableColumn fx:id="col_income_deposit" prefWidth="171.20001220703125"
-                                        text="Income Deposit Amount"/>
-                           <TableColumn fx:id="col_income_amount" prefWidth="107.20001220703125"
-                                        text="Income Amount"/>
-                           <TableColumn fx:id="col_expense_date" minWidth="0.0"
-                                        prefWidth="118.4000244140625" text="Expense Date"/>
-                           <TableColumn fx:id="col_expense_supplier" prefWidth="138.39990234375"
-                                        text="Expense Supplier"/>
-                           <TableColumn fx:id="col_expense_amount" prefWidth="160.7999267578125"
-                                        text="Expense Amount"/>
+                           <TableColumn fx:id="col_Transaction_Number" prefWidth="122.39997863769531" text="Transaction number" />
+                           <TableColumn fx:id="col_Account_Number" prefWidth="123.20004272460938" text="Account Number" />
+                           <TableColumn fx:id="col_Date_created" minWidth="0.0" prefWidth="88.80001831054688" text="Date Created" />
+                           <TableColumn fx:id="col_income_date" minWidth="0.0" prefWidth="96.79998779296875" text="Income Date" />
+                           <TableColumn fx:id="col_income_deposit" prefWidth="171.20001220703125" text="Income Deposit Amount" />
+                           <TableColumn fx:id="col_income_amount" prefWidth="107.20001220703125" text="Income Amount" />
+                           <TableColumn fx:id="col_expense_date" minWidth="0.0" prefWidth="118.4000244140625" text="Expense Date" />
+                           <TableColumn fx:id="col_expense_supplier" prefWidth="138.39990234375" text="Expense Supplier" />
+                           <TableColumn fx:id="col_expense_amount" prefWidth="160.7999267578125" text="Expense Amount" />
                         </columns>
                      </TableView>
                   </HBox>
                   <SplitPane dividerPositions="0.5" prefHeight="288.0" prefWidth="1124.0">
                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-                        <Label layoutX="14.0" layoutY="14.0" text="Checking Account"/>
-                        <TableView fx:id="Checking_table" layoutX="28.0" layoutY="43.0" prefHeight="174.0"
-                                   prefWidth="499.0">
+                        <Label layoutX="14.0" layoutY="14.0" text="Checking Account" />
+                        <TableView fx:id="Checking_table" layoutX="28.0" layoutY="43.0" prefHeight="174.0" prefWidth="499.0">
                            <columns>
-                              <TableColumn fx:id="col_checking_acc_number" prefWidth="178.3999900817871"
-                                           text="Checking Account Number"/>
-                              <TableColumn fx:id="col_account_number" prefWidth="126.40000915527344"
-                                           text="Account Number"/>
-                              <TableColumn fx:id="col_account_balance" prefWidth="192.80003662109374"
-                                           text="Account Balance"/>
+                              <TableColumn fx:id="col_checking_acc_number" prefWidth="178.3999900817871" text="Checking Account Number" />
+                              <TableColumn fx:id="col_account_number" prefWidth="126.40000915527344" text="Account Number" />
+                              <TableColumn fx:id="col_account_balance" prefWidth="192.80003662109374" text="Account Balance" />
                            </columns>
                         </TableView>
-                        <Label layoutX="36.0" layoutY="226.0" text="Deposit Amount to Checking Account:"/>
-                        <TextField fx:id="ck_amount_deposit_fld" layoutX="36.0" layoutY="244.0"/>
-                        <Button fx:id="ck_amount_deposit_btn" layoutX="196.0" layoutY="244.0"
-                                mnemonicParsing="false" prefHeight="26.0" prefWidth="82.0"
-                                style="-fx-background-color: #d9bb79;" text="Deposit"/>
+                        <Label layoutX="36.0" layoutY="226.0" text="Deposit Amount to Checking Account:" />
+                        <TextField fx:id="ck_amount_deposit_fld" layoutX="36.0" layoutY="244.0" />
+                        <Button fx:id="ck_amount_deposit_btn" layoutX="196.0" layoutY="244.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="82.0" style="-fx-background-color: #d9bb79;" text="Deposit" />
                      </AnchorPane>
                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-                        <Label layoutX="14.0" layoutY="14.0" text="Savings Account"/>
-                        <TableView fx:id="Savings_table" layoutX="29.0" layoutY="40.0" prefHeight="174.0"
-                                   prefWidth="499.0">
+                        <Label layoutX="14.0" layoutY="14.0" text="Savings Account" />
+                        <TableView fx:id="Savings_table" layoutX="29.0" layoutY="40.0" prefHeight="174.0" prefWidth="499.0">
                            <columns>
-                              <TableColumn fx:id="col_saving_acc_number" prefWidth="179.99999618530273"
-                                           text="Savings Account Number"/>
-                              <TableColumn fx:id="col_acc_number" prefWidth="138.40003967285156"
-                                           text="Account Number"/>
-                              <TableColumn fx:id="col_acc_bal" prefWidth="179.99993896484375"
-                                           text="Account Balance"/>
+                              <TableColumn fx:id="col_saving_acc_number" prefWidth="179.99999618530273" text="Savings Account Number" />
+                              <TableColumn fx:id="col_acc_number" prefWidth="138.40003967285156" text="Account Number" />
+                              <TableColumn fx:id="col_acc_bal" prefWidth="179.99993896484375" text="Account Balance" />
                            </columns>
                         </TableView>
-                        <Label layoutX="43.0" layoutY="222.0" text="Deposit Amount to Savings Account:"/>
-                        <TextField fx:id="sv_amount_deposit_fld" layoutX="43.0" layoutY="240.0"/>
-                        <Button fx:id="sv_amount_deposit_btn" layoutX="205.0" layoutY="240.0"
-                                mnemonicParsing="false" prefHeight="26.0" prefWidth="82.0"
-                                style="-fx-background-color: #d9bb79;" text="Deposit"/>
+                        <Label layoutX="43.0" layoutY="222.0" text="Deposit Amount to Savings Account:" />
+                        <TextField fx:id="sv_amount_deposit_fld" layoutX="43.0" layoutY="240.0" />
+                        <Button fx:id="sv_amount_deposit_btn" layoutX="205.0" layoutY="240.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="82.0" style="-fx-background-color: #d9bb79;" text="Deposit" />
                      </AnchorPane>
                   </SplitPane>
                </VBox>
             </AnchorPane>
-            <SplitPane fx:id="pnCreateClient" dividerPositions="0.5" layoutX="-5.0" layoutY="8.0"
-                       orientation="VERTICAL" prefHeight="604.0" prefWidth="1124.0"
-                       style="-fx-background-color: white;">
-               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="298.0" prefWidth="1132.0"
-                           style="-fx-background-color: white;">
+            <SplitPane fx:id="pnCreateClient" dividerPositions="0.5" layoutX="-5.0" layoutY="8.0" orientation="VERTICAL" prefHeight="604.0" prefWidth="1124.0" style="-fx-background-color: white;">
+               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="298.0" prefWidth="1132.0" style="-fx-background-color: white;">
                   <Label layoutX="70.0" layoutY="51.0" text="First Name">
                      <font>
-                        <Font name="Calibri" size="22.0"/>
+                        <Font name="Calibri" size="22.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="FName_fld" layoutX="69.0" layoutY="72.0"/>
+                  <TextField fx:id="FName_fld" layoutX="69.0" layoutY="72.0" />
                   <Label layoutX="69.0" layoutY="126.0" text="Date of Birth">
                      <font>
-                        <Font name="Calibri" size="22.0"/>
+                        <Font name="Calibri" size="22.0" />
                      </font>
                   </Label>
                   <Label layoutX="385.0" layoutY="51.0" text="Middle Name">
                      <font>
-                        <Font name="Calibri" size="22.0"/>
+                        <Font name="Calibri" size="22.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="MName_fld" layoutX="385.0" layoutY="72.0"/>
-                  <TextField fx:id="Ssn_fld" layoutX="385.0" layoutY="156.0"/>
-                  <TextField fx:id="LName_fld" layoutX="752.0" layoutY="72.0"/>
-                  <TextField fx:id="Phone_no_fld" layoutX="752.0" layoutY="146.0"/>
+                  <TextField fx:id="MName_fld" layoutX="385.0" layoutY="72.0" />
+                  <TextField fx:id="Ssn_fld" layoutX="385.0" layoutY="156.0" />
+                  <TextField fx:id="LName_fld" layoutX="752.0" layoutY="72.0" />
+                  <TextField fx:id="Phone_no_fld" layoutX="752.0" layoutY="146.0" />
                   <Label layoutX="385.0" layoutY="126.0" text="Social Security Number">
                      <font>
-                        <Font name="Calibri" size="22.0"/>
+                        <Font name="Calibri" size="22.0" />
                      </font>
                   </Label>
                   <Label layoutX="752.0" layoutY="51.0" text="Last Name">
                      <font>
-                        <Font name="Calibri" size="22.0"/>
+                        <Font name="Calibri" size="22.0" />
                      </font>
                   </Label>
                   <Label layoutX="752.0" layoutY="126.0" text="Phone Number">
                      <font>
-                        <Font name="Calibri" size="22.0"/>
+                        <Font name="Calibri" size="22.0" />
                      </font>
                   </Label>
-                  <DatePicker fx:id="DOB_fld" layoutX="70.0" layoutY="156.0" prefHeight="26.0"
-                              prefWidth="154.0"/>
+                  <DatePicker fx:id="DOB_fld" layoutX="70.0" layoutY="156.0" prefHeight="26.0" prefWidth="154.0" />
                   <Label fx:id="maritalSetLabel" layoutX="70.0" layoutY="208.0" text="Marital Status">
                      <font>
-                        <Font name="Calibri" size="22.0"/>
+                        <Font name="Calibri" size="22.0" />
                      </font>
                   </Label>
-                  <RadioButton fx:id="Single_radio_btn" layoutX="64.0" layoutY="234.0" mnemonicParsing="false"
-                               prefHeight="30.0" prefWidth="81.0" text="Single">
+                  <RadioButton fx:id="Single_radio_btn" layoutX="64.0" layoutY="234.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="81.0" text="Single">
                      <toggleGroup>
-                        <ToggleGroup fx:id="maritalStatus"/>
+                        <ToggleGroup fx:id="maritalStatus" />
                      </toggleGroup>
                      <font>
-                        <Font name="Calibri" size="14.0"/>
+                        <Font name="Calibri" size="14.0" />
                      </font>
                   </RadioButton>
-                  <RadioButton fx:id="Married_radio_btn" layoutX="147.0" layoutY="234.0" mnemonicParsing="false"
-                               text="Married">
+                  <RadioButton fx:id="Married_radio_btn" layoutX="147.0" layoutY="234.0" mnemonicParsing="false" text="Married">
                      <toggleGroup>
-                        <ToggleGroup/>
+                        <ToggleGroup />
                      </toggleGroup>
                      <font>
-                        <Font name="Calibri" size="14.0"/>
+                        <Font name="Calibri" size="14.0" />
                      </font>
                   </RadioButton>
                   <Label fx:id="genderLabel" layoutX="394.0" layoutY="208.0" text="Gender">
                      <font>
-                        <Font name="Calibri" size="22.0"/>
+                        <Font name="Calibri" size="22.0" />
                      </font>
                   </Label>
-                  <RadioButton fx:id="Male_radio_btn" layoutX="385.0" layoutY="234.0" mnemonicParsing="false"
-                               text="Male">
+                  <RadioButton fx:id="Male_radio_btn" layoutX="385.0" layoutY="234.0" mnemonicParsing="false" text="Male">
                      <toggleGroup>
-                        <ToggleGroup fx:id="genderStatus"/>
+                        <ToggleGroup fx:id="genderStatus" />
                      </toggleGroup>
                      <font>
-                        <Font name="Calibri" size="14.0"/>
+                        <Font name="Calibri" size="14.0" />
                      </font>
                   </RadioButton>
-                  <RadioButton fx:id="Female_radio_btn" layoutX="451.0" layoutY="234.0" mnemonicParsing="false"
-                               prefHeight="30.0" prefWidth="86.0" text="Female">
+                  <RadioButton fx:id="Female_radio_btn" layoutX="451.0" layoutY="234.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="86.0" text="Female">
                      <toggleGroup>
-                        <ToggleGroup/>
+                        <ToggleGroup />
                      </toggleGroup>
                      <font>
-                        <Font name="Calibri" size="14.0"/>
+                        <Font name="Calibri" size="14.0" />
                      </font>
                   </RadioButton>
-                  <RadioButton fx:id="Non_binary_radio_btn" layoutX="537.0" layoutY="234.0"
-                               mnemonicParsing="false" text="Non-Binary">
+                  <RadioButton fx:id="Non_binary_radio_btn" layoutX="537.0" layoutY="234.0" mnemonicParsing="false" text="Non-Binary">
                      <toggleGroup>
-                        <ToggleGroup/>
+                        <ToggleGroup />
                      </toggleGroup>
                      <font>
-                        <Font name="Calibri" size="14.0"/>
+                        <Font name="Calibri" size="14.0" />
                      </font>
                   </RadioButton>
-                  <Label fx:id="verifyAgeLabel" layoutX="70.0" layoutY="112.0" prefHeight="23.0"
-                         prefWidth="186.0"/>
-                  <Label fx:id="verifySSNLabel" layoutX="385.0" layoutY="114.0" prefHeight="23.0"
-                         prefWidth="186.0"/>
-                  <Label fx:id="verifyPhoneLabel" layoutX="759.0" layoutY="102.0" prefHeight="23.0"
-                         prefWidth="186.0"/>
+                  <Label fx:id="verifyAgeLabel" layoutX="70.0" layoutY="112.0" prefHeight="23.0" prefWidth="186.0" />
+                  <Label fx:id="verifySSNLabel" layoutX="385.0" layoutY="114.0" prefHeight="23.0" prefWidth="186.0" />
+                  <Label fx:id="verifyPhoneLabel" layoutX="759.0" layoutY="102.0" prefHeight="23.0" prefWidth="186.0" />
                </AnchorPane>
-               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="297.0" prefWidth="1084.0"
-                           style="-fx-background-color: white;">
+               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="297.0" prefWidth="1084.0" style="-fx-background-color: white;">
                   <Label layoutX="68.0" layoutY="102.0" text="State">
                      <font>
-                        <Font name="Calibri" size="22.0"/>
+                        <Font name="Calibri" size="22.0" />
                      </font>
                   </Label>
                   <Label layoutX="535.0" layoutY="103.0" text="Zip Code">
                      <font>
-                        <Font name="Calibri" size="22.0"/>
+                        <Font name="Calibri" size="22.0" />
                      </font>
                   </Label>
                   <Label layoutX="67.0" layoutY="33.0" text="Email">
                      <font>
-                        <Font name="Calibri" size="22.0"/>
+                        <Font name="Calibri" size="22.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="email_fld" layoutX="64.0" layoutY="53.0"/>
-                  <TextField fx:id="Address_fld" layoutX="301.0" layoutY="53.0"/>
+                  <TextField fx:id="email_fld" layoutX="64.0" layoutY="53.0" />
+                  <TextField fx:id="Address_fld" layoutX="301.0" layoutY="53.0" />
                   <Label layoutX="306.0" layoutY="33.0" text="Street Address">
                      <font>
-                        <Font name="Calibri" size="22.0"/>
+                        <Font name="Calibri" size="22.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="city_fld" layoutX="301.0" layoutY="127.0"/>
+                  <TextField fx:id="city_fld" layoutX="301.0" layoutY="127.0" />
                   <Label layoutX="301.0" layoutY="103.0" text="City">
                      <font>
-                        <Font name="Calibri" size="22.0"/>
+                        <Font name="Calibri" size="22.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="zipcode_fld" layoutX="531.0" layoutY="127.0"/>
-                  <TextField fx:id="username_fld" layoutX="753.0" layoutY="127.0"/>
+                  <TextField fx:id="zipcode_fld" layoutX="531.0" layoutY="127.0" />
+                  <TextField fx:id="username_fld" layoutX="753.0" layoutY="127.0" />
                   <Label layoutX="754.0" layoutY="102.0" text="Username">
                      <font>
-                        <Font name="Calibri" size="22.0"/>
+                        <Font name="Calibri" size="22.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="password_fld" layoutX="753.0" layoutY="53.0"/>
+                  <TextField fx:id="password_fld" layoutX="753.0" layoutY="53.0" />
                   <Label layoutX="754.0" layoutY="33.0" text="Password">
                      <font>
-                        <Font name="Calibri" size="22.0"/>
+                        <Font name="Calibri" size="22.0" />
                      </font>
                   </Label>
                   <Label layoutX="301.0" layoutY="164.0" text="Accounts:">
                      <font>
-                        <Font name="Calibri" size="22.0"/>
+                        <Font name="Calibri" size="22.0" />
                      </font>
                   </Label>
-                  <CheckBox fx:id="ck_acc_cb" layoutX="295.0" layoutY="194.0" mnemonicParsing="false"
-                            text="Checking">
+                  <CheckBox fx:id="ck_acc_cb" layoutX="295.0" layoutY="194.0" mnemonicParsing="false" text="Checking">
                      <font>
-                        <Font name="Calibri" size="18.0"/>
+                        <Font name="Calibri" size="18.0" />
                      </font>
                   </CheckBox>
-                  <CheckBox fx:id="sv_acc_cb" layoutX="531.0" layoutY="194.0" mnemonicParsing="false"
-                            text="Savings ">
+                  <CheckBox fx:id="sv_acc_cb" layoutX="531.0" layoutY="194.0" mnemonicParsing="false" text="Savings ">
                      <font>
-                        <Font name="Calibri" size="18.0"/>
+                        <Font name="Calibri" size="18.0" />
                      </font>
                   </CheckBox>
-                  <TextField fx:id="ck_acc_bal_fld" layoutX="296.0" layoutY="246.0" prefHeight="26.0"
-                             prefWidth="190.0"/>
-                  <TextField fx:id="sv_acc_bal_fld" layoutX="536.0" layoutY="246.0" prefHeight="26.0"
-                             prefWidth="184.0"/>
+                  <TextField fx:id="ck_acc_bal_fld" layoutX="296.0" layoutY="246.0" prefHeight="26.0" prefWidth="190.0" />
+                  <TextField fx:id="sv_acc_bal_fld" layoutX="536.0" layoutY="246.0" prefHeight="26.0" prefWidth="184.0" />
                   <Label layoutX="297.0" layoutY="227.0" text="Checking Account Balance:">
                      <font>
-                        <Font name="Calibri" size="18.0"/>
+                        <Font name="Calibri" size="18.0" />
                      </font>
                   </Label>
                   <Label layoutX="535.0" layoutY="227.0" text="Savings Account Balance:">
                      <font>
-                        <Font name="Calibri" size="18.0"/>
+                        <Font name="Calibri" size="18.0" />
                      </font>
                   </Label>
-                  <Button fx:id="Create_new_btn" layoutX="773.0" layoutY="221.0" mnemonicParsing="false"
-                          prefHeight="34.0" prefWidth="113.0"
-                          style="-fx-background-color: #d9bb79; -fx-background-radius: 10; -fx-font-size: 16;"
-                          text="Create Client" textFill="WHITE">
+                  <Button fx:id="Create_new_btn" layoutX="773.0" layoutY="221.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="113.0" style="-fx-background-color: #d9bb79; -fx-background-radius: 10; -fx-font-size: 16;" text="Create Client" textFill="WHITE">
                      <font>
-                        <Font name="Calibri" size="18.0"/>
+                        <Font name="Calibri" size="18.0" />
                      </font>
                   </Button>
-                  <ComboBox fx:id="state_ComboBox" layoutX="65.0" layoutY="126.0" prefWidth="150.0"
-                            promptText="Select State"/>
-                  <TextField fx:id="Apartment_fld" layoutX="531.0" layoutY="53.0"/>
+                  <ComboBox fx:id="state_ComboBox" layoutX="65.0" layoutY="126.0" prefWidth="150.0" promptText="Select State" />
+                  <TextField fx:id="Apartment_fld" layoutX="531.0" layoutY="53.0" />
                   <Label layoutX="531.0" layoutY="33.0" text="Apartment Number">
                      <font>
-                        <Font name="Calibri" size="22.0"/>
+                        <Font name="Calibri" size="22.0" />
                      </font>
                   </Label>
                </AnchorPane>

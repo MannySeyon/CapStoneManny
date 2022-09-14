@@ -9,13 +9,14 @@
 }
 .chart_bar{
 
-    -fx-text-fill: white;
+    -fx-text-fill: black;
     -fx-font-family: Calibri;
+    -fx-font-size: 20;
     -fx-background-radius: 10;
-    -fx-background-color:linear-gradient(to right, #d4b85d,#2B49B3);
     -fx-opacity: .8;
-
+    -fx-background-color: transparent;
 }
+
 .sidebar_opt{
     -fx-fill:grey;
     -fx-background-radius: 30px 30px 0px 0px ;
@@ -58,26 +59,13 @@
     -fx-background-color: clear;
     -fx-font-family: Calibri;
 }
-.linklabel{
-    -fx-text-fill:#ffffff;
-    -fx-font-size: 12;
-    -fx-alignment: center-left;
-    -fx-background-color: clear;
-    -fx-font-family: Calibri;
-    -fx-wrap-text: yes;
-}
+
 .buttonbar{
     -fx-background-repeat: no-repeat;
     -fx-background-size: cover;
 
 }
-.DescLabel{
-    -fx-text-fill:#ffffff;
-    -fx-font-size: 12;
-    -fx-alignment: center-left;
-    -fx-background-color: #FFFFFF;
-    -fx-font-family: Calibri;
-}
+
 .card1PlusButton{
     -fx-background-color: transparent;
     -fx-border-color: #C1C1C1;

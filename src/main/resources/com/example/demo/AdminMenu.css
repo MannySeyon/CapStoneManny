@@ -1,22 +1,4 @@
-.main_menu_container {
-    --fxbackground-color: #EEEEEE;
-    -fx-alignment:center;
-    -fx-font-family: Calibri;
-}
-.Left_container{
-    -fx-background-color: #FFFFFF;
-    -fx-background-radius: 10;
-    -fx-effect: dropshadow(two-pass-box, #AAAAAA, 5, 0, 0, 4);
-    -fx-font-family: Calibri;
-}
 /*Title/Logo section*/
-.title_container{
-    -fx-background-color: #FFFFFF;
-    -fx-background-radius: 20 20 0 0;
-    -fx-alignment: center;
-    -fx-padding: 10;
-    -fx-font-family: Calibri;
-}
 .search_box{}
 .title_container FontAwesomeIconView {
     -fx-fill: #132A13;
@@ -60,23 +42,11 @@ menu_container{
     -fx-alignment: center;
     -fx-font-family: Calibri;
     -fx-background-radius: 10;
-    -fx-font-style: bold;
+
 }
 
-.alt_menu_btn FontAwesomeIconView{
-    -fx-fill: #d9bb79;
-    -fx-font-family: Calibri;
-}
 
 /*Report bug/suggestion */
-.report_container {
-    -fx-background-color:#d9bb79;
-    -fx-background-radius: 20 20 0 0;
-    -fx-alignment: center;
-    -fx-space: 10;
-    -fx-padding: 10;
-    -fx-font-family: Calibri;
-}
 
 .report_container Text {
     -fx-font-weight: bold;
@@ -103,12 +73,6 @@ menu_container{
 
 .report_container Button FontAwesomeIconView{
     -fx-fill: #d9bb79;
-    -fx-font-family: Calibri;
-}
-
-.table-view .column-header-background .filler {
-    -fx-cell-size: 20;
-    -fx-background-color: #d9bb79;
     -fx-font-family: Calibri;
 }
 

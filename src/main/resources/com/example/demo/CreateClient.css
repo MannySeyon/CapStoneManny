@@ -1,3 +1,4 @@
+/*noinspection ALL*/
 .create_client_container{
     --fxbackground-color: #EEEEEE;
 }
@@ -22,6 +23,7 @@
     -fx-effect: dropshadow(three-pass-box, #AAAAAA, 3, 0, 0, 3);
 }
 
+/*noinspection ALL*/
 .recipient_address_lbl {
     -fx-pref-width: 250;
     -fx-pref-hieght: 30;
@@ -46,6 +48,7 @@
     -fx-cursur: hand;
 }
 
+/*noinspection ALL*/
 .error_lbl {
     -fx-text-fill: #FF0000;
 }
