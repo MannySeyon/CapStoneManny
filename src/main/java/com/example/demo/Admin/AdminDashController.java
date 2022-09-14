@@ -28,7 +28,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-@SuppressWarnings("ALL")
 public class AdminDashController implements Initializable {
     @FXML
     private Label maritalSetLabel;
@@ -307,7 +306,7 @@ public class AdminDashController implements Initializable {
 
 
 
-  /*public boolean CheckDate(){
+  /* public boolean CheckDate(){
         if (DOB_fld.getValue()==null){
             return false;
         }

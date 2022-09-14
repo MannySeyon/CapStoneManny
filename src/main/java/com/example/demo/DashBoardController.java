@@ -21,35 +21,39 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
+import java.util.Objects;
 
 
-@SuppressWarnings("ALL")
 public class DashBoardController  {
-    public Button transferButton;
-    public Button userProfileButton;
-    public Label checkingsCard1;
-    public Button settingsButton2;
-    public Button transactionButton2;
-    public Button statementsButton;
-    public Label checkingsBalance111;
-    public Label cardLabel11111;
-    public Label checkingsBalance12;
-    public Label cardLabel1112;
-    public Button cardPlusButton;
+    public TableColumn transactionColumn;
+    public TableColumn accountColumn;
+    public TableColumn dateColumn;
+    public TableColumn incomeDateColumn;
+    public TableColumn incomeAmountColumn;
+    public TableColumn expensesDateColumn;
+    public TableColumn balanceColumn11;
+    public TableColumn expensesAmountColumn;
+    @FXML
+    private Button transferButton, userProfileButton, settingsButton2, transactionButton2, statementsButton, cardPlusButton,
+            card1PlusButton, exit, Home, Logout, homeButton, SettingButton, TransactionButton,
+    statementPageButton, graphView, tableView;
     @FXML
     private Circle circle;
-
     @FXML
     private BarChart<String, Double> chart;
     @FXML
-    private BorderPane LandingPageBorder;
+    private BorderPane LandingPageBorder, SettingPageBorder, TransactionBorder;
     @FXML
-    private Label userNameCard2, card2Number, balanceLabelCard2, VisaLabelCard2m, card1Number,
+    private Label checkingsCard1, checkingsBalance111, cardLabel11111 , checkingsBalance12,cardLabel1112,
+            userNameCard2, card2Number, balanceLabelCard2, VisaLabelCard2m, card1Number,
             balanceLabelCard1, userNameCard1, VisaLabelCard1, TimeDateLabel, cardLabel1, dashLabel, nameLabel
-            , VisaLabelCard2, savingsBalance, Savingslabel, checkingsBalance,savingsBalance1;
+            ,VisaLabelCard2, savingsBalance, Savingslabel, checkingsBalance,savingsBalance1, firstNameLabel, middleNameLabel,
+            lastNameLabel, ssnLabel, DOBLabel,
+            phoneNumberLabel, emailLabel, streetNameLabel, cityLabel, zipCodeLabel, aptLabel,
+            maritalStatusLabel, genderLabel, usernameLabel, passwordLabel, dateandTime2, GenerateReportLabel;
     String nameUser, password;
-    public AnchorPane goldColoredCard, blueColoredCard, anchorPane, pane2;
-    public Button card1PlusButton, exit, Home, Logout, homeButton;
+    @FXML
+    private  AnchorPane goldColoredCard, blueColoredCard, anchorPane, pane2;
     @FXML
     private  FontAwesomeIconView bars, HomeButton, list, image, gear,plus;
     @FXML
@@ -59,21 +63,20 @@ public class DashBoardController  {
     private Stage stage;
     private Scene scene;
     private Parent root;
+    @FXML
+    private  TableView TransactionTable;
+    @FXML
+    private TextField firstNameTF,middleNameTF, lastNameTF, ssnTF, phoneNumberTF, emailTF,
+            cityTF, streetTF, zipCodeTF,apartmentTF,UsernameF, PasswordF;
+    @FXML
+    private  DatePicker datePicker;
+    @FXML
+    private ToggleGroup maritaltoggle, gendertoggle;
 
-    @FXML
-    private  Button statementPageButton, graphView, tableView,  SettingButton, TransactionButton;
-    @FXML
-    private TableView TransactionTable;
-
-
-    @FXML
-    private BorderPane TransactionBorder;
-    @FXML
-    private Label  GenerateReportLabel, dateandTime2;
 
     @FXML
     protected void TransactionsTable(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("TransactionTable.fxml"));
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("TransactionTable.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -81,7 +84,7 @@ public class DashBoardController  {
     }
     @FXML
     protected void TransactionsGraph(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("TransactionGraph.fxml"));
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("TransactionGraph.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -89,7 +92,15 @@ public class DashBoardController  {
     }
     @FXML
     protected void Home(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("LandingPage.fxml"));
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("LandingPage.fxml")));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    @FXML
+    protected void chatBot(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Chatbot.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -97,7 +108,7 @@ public class DashBoardController  {
     }
     @FXML
     protected void Settings(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("SettingsPage.fxml"));
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("SettingsPage.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -105,7 +116,7 @@ public class DashBoardController  {
     }
     @FXML
     protected void Transactions(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("TransactionPage.fxml"));
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("TransactionPage.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -128,7 +139,7 @@ public class DashBoardController  {
 
         //If they click ok-logout-return to the login screen
         if(alert.showAndWait().get() == ButtonType.OK) {
-            root = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
+            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("LoginPage.fxml")));
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);

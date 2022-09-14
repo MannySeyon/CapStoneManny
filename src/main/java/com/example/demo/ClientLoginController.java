@@ -13,11 +13,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import javafx.util.converter.LocalDateTimeStringConverter;
 
 import java.io.IOException;
 import java.sql.*;
-import java.time.LocalDateTime;
 
 @SuppressWarnings("ALL")
 public class ClientLoginController {

@@ -1,42 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.LinearGradient?>
-<?import javafx.scene.paint.Stop?>
-<?import javafx.scene.text.Font?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-      prefHeight="644.0" prefWidth="689.0" styleClass="parent2" stylesheets="@styles.css"
-      xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="com.example.demo.AdminSiginin">
-   <Label prefHeight="86.0" prefWidth="561.0"
-          style="-fx-background-color: transparent; -fx-font-family: Trocchi;"
-          text="Please Use your Summit financial id and password ,in order to Sign In" textFill="#fafafa">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" styleClass="parent2" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.AdminSiginin">
+   <Label alignment="CENTER" prefHeight="86.0" prefWidth="828.0" style="-fx-background-color: transparent; -fx-font-family: Trocchi; -fx-font-size: 20;" text="Please Use your Summit Financial ID and Password, in order to Sign In" textFill="#fafafa">
       <VBox.margin>
-         <Insets left="20.0"/>
+         <Insets left="20.0" right="20.0" />
       </VBox.margin>
       <font>
-         <Font size="18.0"/>
+         <Font name="Calibri" size="36.0" />
       </font>
    </Label>
-   <Label fx:id="passwordShow" prefHeight="35.0" prefWidth="136.0" style="-fx-font-weight: bold;" >
+   <Label fx:id="passwordShow" prefHeight="35.0" prefWidth="246.0" style="-fx-font-weight: bold;">
       <textFill>
-         <LinearGradient >
+         <LinearGradient>
             <stops>
                <Stop>
                   <color>
-                     <Color red="0.7052631378173828" green="0.5668225884437561" blue="0.5668225884437561"/>
+                     <Color red="0.7052631378173828" green="0.5668225884437561" blue="0.5668225884437561" />
                   </color>
                </Stop>
                <Stop offset="1.0">
                   <color>
-                     <Color red="1.0" green="1.0" blue="1.0"/>
+                     <Color red="1.0" green="1.0" blue="1.0" />
                   </color>
                </Stop>
             </stops>
@@ -45,59 +35,54 @@
    </Label>
    <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="486.0">
       <VBox.margin>
-         <Insets left="15.0" right="15.0" top="15.0"/>
+         <Insets left="15.0" right="15.0" top="15.0" />
       </VBox.margin>
-      <TextField fx:id="employee_id" mouseTransparent="true" prefHeight="26.0" prefWidth="402.0"
-                 promptText="Employee Id" styleClass="tf_box" HBox.hgrow="ALWAYS">
+      <TextField fx:id="employee_id" mouseTransparent="true" prefHeight="26.0" prefWidth="402.0" promptText="Employee ID" styleClass="tf_box" HBox.hgrow="ALWAYS">
          <HBox.margin>
-            <Insets left="100.0" right="100.0"/>
+            <Insets left="100.0" right="100.0" />
          </HBox.margin>
       </TextField>
 
    </HBox>
    <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0">
       <VBox.margin>
-         <Insets left="15.0" right="15.0" top="20.0"/>
+         <Insets left="15.0" right="15.0" top="20.0" />
       </VBox.margin>
       <TextField fx:id="password" promptText="Password" styleClass="tf_box" HBox.hgrow="ALWAYS">
          <opaqueInsets>
-            <Insets top="52.0"/>
+            <Insets top="52.0" />
          </opaqueInsets>
          <HBox.margin>
-            <Insets left="100.0" right="100.0"/>
+            <Insets left="100.0" right="100.0" />
          </HBox.margin>
       </TextField>
    </HBox>
-   <Button fx:id="loginButton" mnemonicParsing="false" onAction="#Login" prefHeight="43.0" prefWidth="114.0"
-           style="-fx-background-color: #2f2f2fa3; -fx-text-fill: white; -fx-font-weight: bolder; -fx-font-family: serif;"
-           text="Login" textFill="WHITE" VBox.vgrow="ALWAYS">
+   <Button fx:id="loginButton" mnemonicParsing="false" onAction="#Login" prefHeight="43.0" prefWidth="114.0" style="-fx-background-color: #2f2f2fa3; -fx-text-fill: white; -fx-font-weight: bolder; -fx-font-family: serif;" text="Login" textFill="WHITE" VBox.vgrow="ALWAYS">
       <VBox.margin>
-         <Insets left="15.0" right="15.0" top="20.0"/>
+         <Insets left="15.0" right="15.0" top="20.0" />
       </VBox.margin>
       <font>
-         <Font size="17.0"/>
+         <Font size="17.0" />
       </font>
    </Button>
-   <Label prefHeight="59.0" prefWidth="677.0"
-          style="-fx-font-family: Trocchi; -fx-font-weight: bold;"
-          text="Note : If you don't have a Summit financial Id and password, please contact provideracess@summitfinancial.com">
+   <Label alignment="CENTER" prefHeight="59.0" prefWidth="768.0" style="-fx-font-family: Trocchi; -fx-font-weight: bold;" text="Note : If you don't have a Summit Financial ID and Password, please contact provideracess@summitfinancial.com">
       <VBox.margin>
-         <Insets top="60.0"/>
+         <Insets top="60.0" />
       </VBox.margin>
       <font>
-         <Font size="14.0"/>
+         <Font size="14.0" />
       </font>
       <textFill>
          <LinearGradient>
             <stops>
                <Stop>
                   <color>
-                     <Color red="1.0" green="1.0" blue="1.0"/>
+                     <Color red="1.0" green="1.0" blue="1.0" />
                   </color>
                </Stop>
                <Stop offset="1.0">
                   <color>
-                     <Color red="1.0" green="1.0" blue="1.0"/>
+                     <Color red="1.0" green="1.0" blue="1.0" />
                   </color>
                </Stop>
             </stops>
