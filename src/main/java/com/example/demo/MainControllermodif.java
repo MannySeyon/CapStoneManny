@@ -65,6 +65,8 @@ public class MainControllermodif implements Initializable {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(fxml);
             stage.setScene(scene);
+            stage.setResizable(false);
+            stage.centerOnScreen();
             stage.show();
         }
     @FXML
@@ -73,6 +75,8 @@ public class MainControllermodif implements Initializable {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(fxml);
         stage.setScene(scene);
+        stage.setResizable(false);
+        stage.centerOnScreen();
         stage.show();
     }
 

@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
@@ -13,9 +14,11 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class AboutUsController {
-   @FXML
+    @FXML private Button Home;
+    @FXML
            private Label aboutUsLabel;
     @FXML
     private  Text chouaLabel,ruhamaLabel,samLabel,davidLabel,mannyLabel,pandoraLabel;
@@ -28,10 +31,12 @@ public class AboutUsController {
     private Parent root;
     @FXML
     protected void Home(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("MainModified.fxml"));
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("MainModified.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
+        stage.setResizable(false);
+        stage.centerOnScreen();
         stage.show();
     }
 }

@@ -18,7 +18,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class AdminSiginin {
-    public Button loginButton;
+    @FXML
+    private Button loginButton;
+    @FXML
+    private Button Home;
     @FXML
     private TextField employee_id;
     @FXML
@@ -35,6 +38,8 @@ public class AdminSiginin {
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
+        stage.setResizable(false);
+        stage.centerOnScreen();
         stage.show();
     }
 
@@ -55,8 +60,10 @@ public class AdminSiginin {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("AdminDash.fxml"));
                 Parent root = loader.load();
                 Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                Scene scene = new Scene(root);
+                scene = new Scene(root);
                 stage.setScene(scene);
+                stage.setResizable(false);
+                stage.centerOnScreen();
                 stage.show();
             } else {
                 passwordShow.setText("Wrong Employee id and password combination!");

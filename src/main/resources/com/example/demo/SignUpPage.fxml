@@ -96,7 +96,7 @@
                   <Insets left="10.0" />
                </HBox.margin>
             </Label>
-            <Label fx:id="ssnLabel1" contentDisplay="CENTER" layoutX="325.0" layoutY="20.0" prefHeight="41.0" prefWidth="86.0" text="C" textFill="WHITE">
+            <Label fx:id="ssnLabel1" contentDisplay="CENTER" layoutX="325.0" layoutY="20.0" prefHeight="41.0" prefWidth="86.0" textFill="WHITE">
                <font>
                   <Font name="Calibri" size="36.0" />
                </font>
@@ -138,7 +138,7 @@
                   <Insets />
                </HBox.margin>
             </Label>
-            <Label fx:id="emailLabel1" contentDisplay="CENTER" layoutX="325.0" layoutY="20.0" prefHeight="41.0" prefWidth="45.0" text="C" textFill="WHITE">
+            <Label fx:id="emailLabel1" contentDisplay="CENTER" layoutX="325.0" layoutY="20.0" prefHeight="41.0" prefWidth="45.0" textFill="WHITE">
                <font>
                   <Font name="Calibri" size="36.0" />
                </font>

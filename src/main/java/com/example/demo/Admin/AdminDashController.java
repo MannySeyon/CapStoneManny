@@ -300,6 +300,8 @@ public class AdminDashController implements Initializable {
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
+            stage.setResizable(false);
+            stage.centerOnScreen();
             stage.show();
         }
     }
@@ -350,7 +352,7 @@ public class AdminDashController implements Initializable {
             }
             if (ageVerify() == false) {
                 DOB_fld.setStyle("-fx-text-box-border: #ff0000; -fx-focus-color: #ff0000;");
-                verifyAgeLabel.setText("You are not eligable to create an account");
+                verifyAgeLabel.setText("You are not eligible to create an account");
             } else {
                 verifyAgeLabel.setText("");
             }
