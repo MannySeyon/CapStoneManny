@@ -72,9 +72,6 @@
     -fx-background-color: #13123A;
     -fx-background-radius: 30;
 }
-.secondColor{
-    -fx-background-image: "../../../Gold.jpeg";
-}
 .thirdColor{
     -fx-background-color:#242551;
     -fx-text-fill: white;
@@ -84,4 +81,8 @@
     -fx-background-radius: 5;
     -fx-arch-Width: 180;
     -fx-arch-hieght: 180;
+}
+
+
+.secondColor {
 }

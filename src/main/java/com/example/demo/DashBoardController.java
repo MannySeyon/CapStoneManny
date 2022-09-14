@@ -20,6 +20,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
@@ -56,9 +57,9 @@ public class DashBoardController  {
     private ImageView securityLogo, bankLogo;
     @FXML
     private  Separator separator;
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
+    public Stage stage;
+    public Scene scene;
+    public Parent root;
     @FXML
     private  TableView TransactionTable;
     @FXML
@@ -213,6 +214,16 @@ public class DashBoardController  {
         }
     }
 
+    @FXML
+    public void getDate(ActionEvent event) {
+        LocalDate date = datePicker.getValue();
+    }
+    public boolean CheckDate(){
+        if (datePicker.getValue()==null){
+            return false;
+        }
+        return true;
+    }
     public void displayName(String nameUser,String password) throws SQLException {
         Connectivity connectivity = new Connectivity();
         Connection connection = connectivity.getConnection();

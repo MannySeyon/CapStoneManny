@@ -1,5 +1,4 @@
 .sidebar {
--fx-border-style: ShadowBorder;
     -fx-background-color:linear-gradient(to left, #d4b85d,#2B49B3);
     -fx-text-fill: #eaecff;
 }
