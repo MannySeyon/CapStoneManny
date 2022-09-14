@@ -74,9 +74,6 @@
 .primaryColor{
       -fx-background-color: #13123A;
 }
-.secondColor{
-    -fx-background-image: "../../../Gold.jpeg";
-}
 .thirdColor{
     -fx-background-color:#242551;
     -fx-text-fill: white;

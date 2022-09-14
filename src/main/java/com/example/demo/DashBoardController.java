@@ -25,17 +25,13 @@ import java.util.Objects;
 
 
 public class DashBoardController  {
-    public TableColumn transactionColumn;
-    public TableColumn accountColumn;
-    public TableColumn dateColumn;
-    public TableColumn incomeDateColumn;
-    public TableColumn incomeAmountColumn;
-    public TableColumn expensesDateColumn;
-    public TableColumn balanceColumn11;
-    public TableColumn expensesAmountColumn;
+
+    @FXML
+   private TableColumn transactionColumn, expensesAmountColumn, accountColumn,
+            dateColumn ,incomeDateColumn , incomeAmountColumn  , expensesDateColumn, balanceColumn11;
     @FXML
     private Button transferButton, userProfileButton, settingsButton2, transactionButton2, statementsButton, cardPlusButton,
-            card1PlusButton, exit, Home, Logout, homeButton, SettingButton, TransactionButton,
+            card1PlusButton, exit, Home, Logout, homeButton, SettingButton, TransactionButton, chatBot,
     statementPageButton, graphView, tableView;
     @FXML
     private Circle circle;
@@ -45,10 +41,10 @@ public class DashBoardController  {
     private BorderPane LandingPageBorder, SettingPageBorder, TransactionBorder;
     @FXML
     private Label checkingsCard1, checkingsBalance111, cardLabel11111 , checkingsBalance12,cardLabel1112,
-            userNameCard2, card2Number, balanceLabelCard2, VisaLabelCard2m, card1Number,
+            userNameCard2, card2Number, balanceLabelCard2, VisaLabelCard2m, card1Number,expensesBalance,
             balanceLabelCard1, userNameCard1, VisaLabelCard1, TimeDateLabel, cardLabel1, dashLabel, nameLabel
             ,VisaLabelCard2, savingsBalance, Savingslabel, checkingsBalance,savingsBalance1, firstNameLabel, middleNameLabel,
-            lastNameLabel, ssnLabel, DOBLabel,
+            lastNameLabel, ssnLabel, DOBLabel,checkingsTag,myCards,incomeBalance, expensesLabel, incomeLable,
             phoneNumberLabel, emailLabel, streetNameLabel, cityLabel, zipCodeLabel, aptLabel,
             maritalStatusLabel, genderLabel, usernameLabel, passwordLabel, dateandTime2, GenerateReportLabel;
     String nameUser, password;

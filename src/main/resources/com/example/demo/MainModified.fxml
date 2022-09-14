@@ -36,7 +36,7 @@
       <VBox id="vbox" fx:id="vbox" layoutX="21.0" layoutY="-49.0" prefHeight="486.0" prefWidth="474.0" styleClass="white-pane" />
    </Pane>
    <Label layoutX="774.0" layoutY="622.0" prefHeight="46.0" prefWidth="294.0" />
-   <HBox alignment="CENTER" layoutX="82.0" layoutY="610.0" prefHeight="70.0" prefWidth="1338.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+   <HBox alignment="CENTER" layoutX="82.0" layoutY="610.0" prefHeight="70.0" prefWidth="1338.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="620.0">
       <Label alignment="CENTER" contentDisplay="CENTER" opacity="0.71" prefHeight="42.0" prefWidth="200.0" style="-fx-background-color: #2f2f2fa3; -fx-font-weight: BOLD; -fx-font-family: serif;" styleClass="windows7" text="|     Online Access Agreement     |" textFill="#e1dbdb">
          <opaqueInsets>
             <Insets top="50.0" />
@@ -108,13 +108,16 @@
       </Label>
    </HBox>
    <HBox alignment="CENTER" layoutX="196.0" layoutY="680.0" prefHeight="46.0" prefWidth="1157.0">
-      <Label alignment="CENTER" contentDisplay="CENTER" opacity="0.71" prefHeight="42.0" prefWidth="1030.0" style="-fx-background-color: #2f2f2fa3; -fx-font-weight: bold;" styleClass="windows7" text="© 2020 - 2022 Summit Financial Corporation. All rights reserved.  ID 399801CDMRSP" textFill="#e1dbdb">
+      <Label alignment="CENTER" contentDisplay="CENTER" opacity="0.71" prefHeight="44.0" prefWidth="1030.0" style="-fx-background-color: #2f2f2fa3; -fx-font-weight: bold;" styleClass="windows7" text="© 2020 - 2022 Summit Financial Corporation. All rights reserved.  ID 399801CDMRSP" textFill="#e1dbdb">
          <opaqueInsets>
             <Insets top="50.0" />
          </opaqueInsets>
          <padding>
-            <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
          </padding>
+         <HBox.margin>
+            <Insets top="15.0" />
+         </HBox.margin>
       </Label>
    </HBox>
 

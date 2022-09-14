@@ -100,7 +100,7 @@
    </left>
    <center>
       <AnchorPane fx:id="pane2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="951.0" BorderPane.alignment="CENTER">
-         <VBox alignment="CENTER" layoutX="39.0" layoutY="82.0" prefHeight="416.0" prefWidth="902.0" style="-fx-background-color: black; -fx-opacity: .7;" styleClass="pane" />
+         <VBox alignment="CENTER" layoutX="39.0" layoutY="82.0" prefHeight="433.0" prefWidth="902.0" style="-fx-background-color: black; -fx-opacity: .7;" styleClass="pane" />
          <VBox alignment="CENTER" layoutX="39.0" layoutY="83.0" prefHeight="334.0" prefWidth="896.0" style="-fx-background-color: transparent;" styleClass="pane" AnchorPane.leftAnchor="39.0" AnchorPane.rightAnchor="40.0">
             <HBox prefHeight="0.0" prefWidth="898.0">
                <padding>
@@ -108,7 +108,7 @@
                </padding>
                <Label fx:id="dashLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="25.0" prefHeight="38.0" prefWidth="158.0" text="Dashboard" textFill="#d4b85d">
                   <font>
-                     <Font name="Calibri Bold" size="22.0" />
+                     <Font name="Calibri Bold" size="20.0" />
                   </font>
                   <padding>
                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -119,17 +119,17 @@
                      <Insets left="10.0" right="10.0" />
                   </HBox.margin>
                </Separator>
-               <Label fx:id="nameLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="128.0" layoutY="25.0" maxWidth="1.7976931348623157E308" prefHeight="38.0" prefWidth="551.0" style="-fx-background-size: cover;" textFill="#747475">
+               <Label fx:id="nameLabel" layoutX="128.0" layoutY="25.0" maxWidth="1.7976931348623157E308" prefHeight="33.0" prefWidth="459.0" style="-fx-background-size: cover;" textFill="#747475">
                   <font>
-                     <Font name="Calibri Bold" size="24.0" />
+                     <Font name="Calibri Bold" size="16.0" />
                   </font>
                   <padding>
                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                   </padding>
                </Label>
-               <Label fx:id="TimeDateLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="125.0" layoutY="25.0" maxWidth="1.7976931348623157E308" prefHeight="38.0" prefWidth="192.0" style="-fx-background-size: cover;" textFill="#747475">
+               <Label fx:id="TimeDateLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="125.0" layoutY="25.0" maxWidth="1.7976931348623157E308" prefHeight="33.0" prefWidth="239.0" style="-fx-background-size: cover;" textFill="#747475">
                   <font>
-                     <Font name="Calibri Bold" size="24.0" />
+                     <Font name="Calibri Bold" size="16.0" />
                   </font>
                   <padding>
                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -144,7 +144,7 @@
                   <padding>
                      <Insets left="15.0" top="15.0" />
                   </padding>
-                  <Label fx:id="cardLabel1" alignment="CENTER" prefHeight="28.0" prefWidth="83.0" text="My Cards" textFill="#f0f0f2">
+                  <Label fx:id="myCards" alignment="CENTER" prefHeight="28.0" prefWidth="83.0" text="My Cards" textFill="#f0f0f2">
                      <font>
                         <Font name="Calibri Bold" size="16.0" />
                      </font>
@@ -171,7 +171,7 @@
                         <HBox.margin>
                            <Insets left="10.0" />
                         </HBox.margin>
-                        <Label fx:id="VisaLabelCard1" alignment="CENTER" layoutX="189.0" layoutY="116.0" prefHeight="24.0" prefWidth="61.0" text="VISA" textFill="#e5e5f2" AnchorPane.leftAnchor="189.0" AnchorPane.topAnchor="116.0">
+                        <Label alignment="CENTER" layoutX="189.0" layoutY="116.0" prefHeight="24.0" prefWidth="61.0" text="VISA" textFill="#e5e5f2" AnchorPane.leftAnchor="189.0" AnchorPane.topAnchor="116.0">
                            <font>
                               <Font name="Calibri Bold" size="18.0" />
                            </font>
@@ -179,7 +179,7 @@
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
                         </Label>
-                        <Label fx:id="checkingsCard1" layoutX="14.0" layoutY="119.0" prefHeight="27.0" prefWidth="63.0" text="Checking" textFill="#e5e5f2" AnchorPane.leftAnchor="14.0">
+                        <Label fx:id="checkingsTag" layoutX="14.0" layoutY="119.0" prefHeight="27.0" prefWidth="63.0" text="Checking" textFill="#e5e5f2" AnchorPane.leftAnchor="14.0">
                            <font>
                               <Font name="Calibri Bold" size="14.0" />
                            </font>
@@ -219,7 +219,7 @@
                         <HBox.margin>
                            <Insets left="10.0" />
                         </HBox.margin>
-                        <Label fx:id="VisaLabelCard2" alignment="CENTER" layoutX="189.0" layoutY="116.0" prefHeight="24.0" prefWidth="61.0" text="VISA" textFill="#e5e5f2" AnchorPane.leftAnchor="189.0" AnchorPane.topAnchor="116.0">
+                        <Label alignment="CENTER" layoutX="189.0" layoutY="116.0" prefHeight="24.0" prefWidth="61.0" text="VISA" textFill="#e5e5f2" AnchorPane.leftAnchor="189.0" AnchorPane.topAnchor="116.0">
                            <font>
                               <Font name="Calibri Bold" size="18.0" />
                            </font>
@@ -298,7 +298,7 @@
                      </FontAwesomeIconView>
                   </HBox>
                   <AnchorPane prefHeight="25.0" prefWidth="260.0">
-                     <Label fx:id="savingsBalance1" alignment="CENTER" contentDisplay="CENTER" layoutX="5.0" layoutY="6.0" minHeight="-Infinity" prefHeight="38.0" prefWidth="212.0" style="-fx-font-style: Bold;" textFill="#f8f8f8" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+                     <Label fx:id="savingsBalance1" alignment="CENTER" contentDisplay="CENTER" layoutX="5.0" layoutY="6.0" minHeight="-Infinity" prefHeight="61.0" prefWidth="212.0" textFill="#f8f8f8" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
                         <font>
                            <Font name="Calibri Bold" size="36.0" />
                         </font>
@@ -312,7 +312,7 @@
                         <padding>
                            <Insets bottom="5.0" />
                         </padding>
-                        <Label fx:id="cardLabel1112" alignment="CENTER" contentDisplay="CENTER" layoutX="71.0" layoutY="83.0" prefHeight="18.0" prefWidth="59.0" text="Income" textFill="#1bda14">
+                        <Label fx:id="incomeLable" alignment="CENTER" contentDisplay="CENTER" layoutX="71.0" layoutY="83.0" prefHeight="18.0" prefWidth="59.0" text="Income" textFill="#1bda14">
                            <font>
                               <Font name="Calibri Bold" size="16.0" />
                            </font>
@@ -325,13 +325,13 @@
                               <FontAwesomeIconView fill="#1bda14" glyphName="ARROW_UP" layoutX="-11.0" layoutY="37.0" selectionFill="#e1270a" size="18" textAlignment="CENTER" />
                            </graphic>
                         </Label>
-                        <Label fx:id="checkingsBalance12" alignment="CENTER" contentDisplay="CENTER" layoutX="52.0" layoutY="56.0" prefHeight="27.0" prefWidth="97.0" style="-fx-font-style: Bold;" textFill="#1bda14">
+                        <Label fx:id="incomeBalance" alignment="CENTER" contentDisplay="CENTER" layoutX="52.0" layoutY="56.0" prefHeight="27.0" prefWidth="97.0" textFill="#1bda14">
                            <font>
                               <Font name="Calibri Bold" size="20.0" />
                            </font>
                         </Label>
                         <Separator layoutX="10.0" layoutY="100.0" prefHeight="5.0" prefWidth="183.0" />
-                        <Label fx:id="cardLabel11111" alignment="CENTER" contentDisplay="CENTER" layoutX="66.0" layoutY="103.0" prefHeight="18.0" prefWidth="69.0" text="Expenses" textFill="#d71d10">
+                        <Label fx:id="expensesLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="66.0" layoutY="103.0" prefHeight="18.0" prefWidth="69.0" text="Expenses" textFill="#d71d10">
                            <font>
                               <Font name="Calibri Bold" size="16.0" />
                            </font>
@@ -341,7 +341,7 @@
                               <FontAwesomeIconView fill="#d71d10" glyphName="ARROW_DOWN" selectionFill="#e1270a" size="18" textAlignment="CENTER" />
                            </graphic>
                         </Label>
-                        <Label fx:id="checkingsBalance111" alignment="CENTER" contentDisplay="CENTER" layoutX="57.0" layoutY="121.0" prefHeight="10.0" prefWidth="86.0" style="-fx-font-style: Bold;" textFill="#d71d10">
+                        <Label fx:id="expensesBalance" alignment="CENTER" contentDisplay="CENTER" layoutX="57.0" layoutY="121.0" prefHeight="10.0" prefWidth="86.0" textFill="#d71d10">
                            <font>
                               <Font name="Calibri Bold" size="20.0" />
                            </font>

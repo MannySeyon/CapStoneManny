@@ -75,9 +75,9 @@
                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
             </padding>
             <children>
-               <Label fx:id="dashLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" prefHeight="38.0" prefWidth="237.0" style="-fx-font-style: Bold;" text="Transaction Dashboard" textFill="#d4b85d">
+               <Label fx:id="dashLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" prefHeight="32.0" prefWidth="194.0" style="-fx-font-style: Bold;" text="Transaction Dashboard" textFill="#d4b85d">
                   <font>
-                     <Font name="Calibri Bold" size="22.0" />
+                     <Font name="Calibri Bold" size="18.0" />
                   </font>
                   <padding>
                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -90,7 +90,7 @@
                </Separator>
                <Label fx:id="nameLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="317.0" maxWidth="1.7976931348623157E308" prefHeight="38.0" prefWidth="451.0" style="-fx-background-size: cover; -fx-text-fill: #ffffff;" textFill="#747475">
                   <font>
-                     <Font name="Calibri Bold" size="24.0" />
+                     <Font name="Calibri Bold" size="16.0" />
                   </font>
                   <padding>
                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -98,7 +98,7 @@
                </Label>
                <Label fx:id="TimeDateLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="729.0" maxWidth="1.7976931348623157E308" prefHeight="38.0" prefWidth="192.0" style="-fx-background-size: cover; -fx-text-fill: #ffffff;" textFill="#747475">
                   <font>
-                     <Font name="Calibri Bold" size="24.0" />
+                     <Font name="Calibri Bold" size="16.0" />
                   </font>
                   <padding>
                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
