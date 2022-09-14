@@ -10,6 +10,7 @@
 <fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" styleClass="pane2" stylesheets="@Transactions.css" type="BorderPane" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.DashBoardController">
    <center>
       <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="908.0" stylesheets="@Landing.css" BorderPane.alignment="CENTER">
+         <VBox alignment="CENTER" layoutX="14.0" layoutY="74.0" prefHeight="514.0" prefWidth="946.0" style="-fx-background-color: black; -fx-opacity: .7;" styleClass="pane" />
          <VBox layoutX="35.0" layoutY="7.0" prefHeight="36.0" prefWidth="895.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="35.0">
             <children>
                <HBox prefHeight="0.0" prefWidth="898.0">
@@ -55,13 +56,13 @@
                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
             </padding>
          </VBox>
-         <TableView fx:id="TransactionTable" layoutX="49.0" layoutY="107.0" prefHeight="460.0" prefWidth="883.0" styleClass="table_view">
+         <TableView fx:id="TransactionTable" layoutX="25.0" layoutY="99.0" prefHeight="468.0" prefWidth="924.0" styleClass="table_view">
             <columns>
-               <TableColumn prefWidth="175.0" style="-fx-font-family: Calibri;" styleClass="table_view" text="Date &amp; Time" />
-               <TableColumn prefWidth="175.0" style="-fx-font-family: Calibri;" text="Transaction" />
-               <TableColumn prefWidth="175.0" style="-fx-font-family: Calibri;" text="Type" />
-               <TableColumn prefWidth="175.0" style="-fx-font-family: Calibri;" text="Price" />
-               <TableColumn prefWidth="175.0" style="-fx-font-family: Calibri;" text="Current Total" />
+               <TableColumn prefWidth="174.99996185302734" style="-fx-font-family: Calibri;" styleClass="table_view" text="Date &amp; Time" />
+               <TableColumn prefWidth="252.0" style="-fx-font-family: Calibri;" text="Transaction" />
+               <TableColumn prefWidth="157.00003051757812" style="-fx-font-family: Calibri;" text="Type" />
+               <TableColumn prefWidth="164.0" style="-fx-font-family: Calibri;" text="Price" />
+               <TableColumn prefWidth="176.0" style="-fx-font-family: Calibri;" text="Current Total" />
             </columns>
          </TableView>
          <BorderPane.margin>

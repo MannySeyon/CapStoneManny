@@ -113,7 +113,7 @@
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
                         </Button>
-                        <Button fx:id="transferButton" layoutX="18.0" layoutY="22.0" mnemonicParsing="false" onAction="#Settings" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: transparent;">
+                        <Button fx:id="transferButton" layoutX="18.0" layoutY="22.0" mnemonicParsing="false" onAction="#Transfer" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: transparent;">
                            <graphic>
                               <FontAwesomeIconView fill="#4c4c4e" glyphName="ARROW_RIGHT" size="18" styleClass="sidebar_opt" wrappingWidth="18.0" />
                            </graphic>

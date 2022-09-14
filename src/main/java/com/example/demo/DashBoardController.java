@@ -122,6 +122,14 @@ public class DashBoardController  {
         stage.setScene(scene);
         stage.show();
     }
+    @FXML
+    protected void Transfer(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Transfer.fxml")));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
     public void getInfo (String password,String nameUser){
         this.password=password;
         this.nameUser =nameUser;
