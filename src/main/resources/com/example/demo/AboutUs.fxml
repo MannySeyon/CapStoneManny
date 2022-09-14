@@ -7,7 +7,7 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" styleClass="pane2" stylesheets="@AboutUs.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.AboutUsController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" styleClass="pane2" stylesheets="@AboutUs.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.AboutUsController">
    <top>
       <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" BorderPane.alignment="CENTER">
          <Label fx:id="aboutUsLabel" alignment="CENTER" layoutX="448.0" layoutY="14.0" prefHeight="46.0" prefWidth="259.0" text="ABOUT US" textFill="#e4d6d6" AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="450.0" AnchorPane.topAnchor="10.0">
@@ -28,7 +28,7 @@
                   </color>
                </DropShadow>
             </effect>
-            <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;" styleClass="TextImage" text="Email: &#10;Choualo@outlook.com&#10;LinkedIn: &#10;www.linkedin.com/in/choua-lo-1579a1228&#10;&#10;My name is Choua, and I am trying to make a career switch from Logistics to Software Engineering. My dream is to one day become an iOS developer and to be able to create an application that can help boost productivity at my company. " textAlignment="CENTER" wrappingWidth="185.0">
+            <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;" styleClass="TextImage" text="My name is Choua, and I am trying to make a career switch from Logistics to Software Engineering. My dream is to one day become an iOS developer and to be able to create an application that can help boost productivity at my company. &#10;&#10;Email: &#10;Choualo@outlook.com&#10;LinkedIn: &#10;www.linkedin.com/in/choua-lo-1579a1228" textAlignment="CENTER" wrappingWidth="185.0">
                <font>
                   <Font size="15.0" />
                </font>
@@ -50,7 +50,7 @@
                   </color>
                </DropShadow>
             </effect>
-            <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;" styleClass="TextImage" text="Email: &#10;Choualo@outlook.com&#10;LinkedIn: &#10;www.linkedin.com/in/choua-lo-1579a1228&#10;&#10;My name is Choua, and I am trying to make a career switch from Logistics to Software Engineering. My dream is to one day become an iOS developer and to be able to create an application that can help boost productivity at my company. " textAlignment="CENTER" wrappingWidth="185.0">
+            <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;" styleClass="TextImage" text="Aspiring software engineer with fundamental knowledge in full-stack development and agile methodologies. Highly&#10;motivated for self-development, learning new languages and technologies. Seeking to build and create projects that solve problems for the future of society.&#10;&#10;Email: &#10;pandoraqvang@gmail.com&#10;LinkedIn: &#10;https://www.linkedin.com/in/pandora-vang-4849441a7/&#10;GitHub: https://github.com/pandoravang&#10;&#10;" textAlignment="CENTER" wrappingWidth="185.0">
                <font>
                   <Font size="15.0" />
                </font>
@@ -67,7 +67,7 @@
                   </color>
                </DropShadow>
             </effect>
-            <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;" styleClass="TextImage" text="Email&#10;noyysey@gmail.com&#10;GitHub&#10;·www.github.com/MannySeyon&#10;LinkedIn&#10;·www.linkedin.com/in/emmanuel-seyon-35368b181&#10;&#10;An Artist, Writer, Entrepreneur, Software Developer, avid Volunteer, and Activist. Manny graduated from Summit Academy OIC in 2022, and attended Guilford College from 2018-2021 for Peace and Conflict Studies. Aspires to publish a series, develop a related video game, and continue to serve the community.&#10;" textAlignment="CENTER" wrappingWidth="185.0">
+            <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;" styleClass="TextImage" text="An Artist, Writer, Entrepreneur, Software Developer, avid Volunteer, and Activist. Manny graduated from Summit Academy OIC in 2022, and attended Guilford College from 2018-2021 for Peace and Conflict Studies. Aspires to publish a series, develop a related video game, and continue to serve the community.&#10;&#10;Email&#10;noyysey@gmail.com&#10;GitHub&#10;·www.github.com/MannySeyon&#10;LinkedIn&#10;·www.linkedin.com/in/emmanuel-seyon-35368b181&#10;" textAlignment="CENTER" wrappingWidth="185.0">
                <font>
                   <Font size="15.0" />
                </font>
@@ -94,7 +94,7 @@
                   </color>
                </DropShadow>
             </effect>
-            <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;" styleClass="TextImage" text="Email: &#10;Officialtfv@gmail.com&#10;&#10;LinkedIn: &#10;https://www.linkedin.com/in/david-hall-82485920a/&#10;&#10;&#10;&#10;My name is David Hall I have a thrill for software engineering my &#10;passion for creative problem-solving led me to a great industry. My main goal is to help cultivated innovative ways to better the world around us." textAlignment="CENTER" wrappingWidth="185.0">
+            <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;" styleClass="TextImage" text="My name is David Hall I have a thrill for software engineering my &#10;passion for creative problem-solving led me to a great industry. My main goal is to help cultivated innovative ways to better the world around us.&#10;&#10;Email: &#10;Officialtfv@gmail.com&#10;&#10;LinkedIn: &#10;https://www.linkedin.com/in/david-hall-82485920a/" textAlignment="CENTER" wrappingWidth="185.0">
                <font>
                   <Font size="15.0" />
                </font>
@@ -116,7 +116,7 @@
                   </color>
                </DropShadow>
             </effect>
-            <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;" styleClass="TextImage" text="Email: &#10;Choualo@outlook.com&#10;LinkedIn: &#10;www.linkedin.com/in/choua-lo-1579a1228&#10;&#10;My name is Choua, and I am trying to make a career switch from Logistics to Software Engineering. My dream is to one day become an iOS developer and to be able to create an application that can help boost productivity at my company. " textAlignment="CENTER" wrappingWidth="185.0">
+            <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;" styleClass="TextImage" text="&#10;My name is Choua, and I am trying to make a career switch from Logistics to Software Engineering. My dream is to one day become an iOS developer and to be able to create an application that can help boost productivity at my company. &#10;&#10;Email: &#10;sameul.dinka@summitoic.edu&#10;LinkedIn: &#10;www.linkedin.com/in/choua-lo-1579a1228" textAlignment="CENTER" wrappingWidth="185.0">
                <font>
                   <Font size="15.0" />
                </font>
@@ -138,7 +138,7 @@
                   </color>
                </DropShadow>
             </effect>
-            <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;" styleClass="TextImage" text="Email: &#10;Choualo@outlook.com&#10;LinkedIn: &#10;www.linkedin.com/in/choua-lo-1579a1228&#10;&#10;My name is Choua, and I am trying to make a career switch from Logistics to Software Engineering. My dream is to one day become an iOS developer and to be able to create an application that can help boost productivity at my company. " textAlignment="CENTER" wrappingWidth="185.0">
+            <Text layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-opacity: .9;" styleClass="TextImage" text="My name is Choua, and I am trying to make a career switch from Logistics to Software Engineering. My dream is to one day become an iOS developer and to be able to create an application that can help boost productivity at my company.&#10;&#10;Email: &#10;ruhama.kebede@summitoic.edu&#10;LinkedIn: &#10;www.linkedin.com/in/choua-lo-1579a1228 " textAlignment="CENTER" wrappingWidth="185.0">
                <font>
                   <Font size="15.0" />
                </font>
@@ -147,6 +147,7 @@
          <ImageView fx:id="Image2" fitHeight="70.0" fitWidth="70.0" layoutX="1240.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
             <Image url="@../../../Summit_Fin_Corp-removebg-preview.png" />
          </ImageView>
+         <Button fx:id="Home" layoutX="35.0" layoutY="21.0" mnemonicParsing="false" onAction="#Home" prefHeight="21.0" prefWidth="62.0" text="home" />
       </AnchorPane>
    </top>
 </BorderPane>
