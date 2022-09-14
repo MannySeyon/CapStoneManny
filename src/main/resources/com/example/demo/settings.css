@@ -41,26 +41,13 @@
     -fx-background-color: clear;
     -fx-font-family: Calibri;
 }
-.linklabel{
-    -fx-text-fill:#ffffff;
-    -fx-font-size: 12;
-    -fx-alignment: center-left;
-    -fx-background-color: clear;
-    -fx-font-family: Calibri;
-    -fx-wrap-text: yes;
-}
+
 .buttonbar{
     -fx-background-repeat: no-repeat;
     -fx-background-size: cover;
 
 }
-.DescLabel{
-    -fx-text-fill:#ffffff;
-    -fx-font-size: 12;
-    -fx-alignment: center-left;
-    -fx-background-color: #FFFFFF;
-    -fx-font-family: Calibri;
-}
+
 .card1PlusButton{
     -fx-background-color: transparent;
     -fx-border-color: #C1C1C1;
@@ -85,9 +72,6 @@
     -fx-background-color: #13123A;
     -fx-background-radius: 30;
 }
-.secondColor{
-    -fx-background-image: "../../../Gold.jpeg";
-}
 .thirdColor{
     -fx-background-color:#242551;
     -fx-text-fill: white;
@@ -97,4 +81,8 @@
     -fx-background-radius: 5;
     -fx-arch-Width: 180;
     -fx-arch-hieght: 180;
+}
+
+
+.secondColor {
 }

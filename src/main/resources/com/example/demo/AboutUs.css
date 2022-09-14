@@ -19,6 +19,7 @@
     -fx-alignment: center;
 }
 
+/*noinspection ALL,CssUnusedSymbol*/
 .button{
     -fx-background-color: #FFFFFF;
     -fx-background-radius: 5px;
@@ -72,7 +73,7 @@
 }
 
 .primaryColor{
-      -fx-background-color: #13123A;
+    -fx-background-color: #13123A;
 }
 .thirdColor{
     -fx-background-color:#242551;
@@ -89,7 +90,7 @@
     -fx-background-image: url("../../../white.jpeg");
     -fx-opacity: .6;
     -fx-font-family: "Apple LiSung";
-    -fx-font-size: 28px;
+    -fx-font-size: 15px;
 }
 
 .TextFont {

@@ -31,11 +31,6 @@
     -fx-font-size: 18px;
 }
 
-.secondImage {
-    -fx-background-image: url("../../../white.jpeg");
-    -fx-opacity: .6;
-
-}
 *{
     -fx-primary-color: #007acc;
     -fx-secondary-color: #4B6EAF;

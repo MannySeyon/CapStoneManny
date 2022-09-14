@@ -26,6 +26,18 @@ public class AdminSiginin {
     @FXML
     private Label passwordShow;
 
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
+    @FXML
+    protected void Home(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("MainModified.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
 
     public void Login(ActionEvent event) throws SQLException, IOException {
         Connectivity connectivity = new Connectivity();

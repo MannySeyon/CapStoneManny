@@ -1,6 +1,7 @@
 package com.example.demo.Admin;
 
 
+import com.example.demo.Connectivity;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -18,9 +19,13 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+
 import java.io.IOException;
 import java.net.URL;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class AdminDashController implements Initializable {
@@ -301,7 +306,7 @@ public class AdminDashController implements Initializable {
 
 
 
-  /*public boolean CheckDate(){
+  /* public boolean CheckDate(){
         if (DOB_fld.getValue()==null){
             return false;
         }
@@ -556,10 +561,10 @@ public class AdminDashController implements Initializable {
         Connection conc= connectivity.getConnection();
 
         try {
-            ResultSet  rs = conc.createStatement().executeQuery("pop");
+            ResultSet  rs = conc.createStatement().executeQuery(" call pop(1000)");
             while(rs.next()){
-                ViewChecking.add(new CheckingView(rs.getString("Checking_account_number"),rs.getString("Account_name"),rs.getString("Account_balance")));
-                ViewSavings.add(new SavingsView(rs.getString("Savings_account_number"),rs.getString("Account_name"),rs.getString("Account_balance")));
+                ViewChecking.add(new CheckingView(rs.getString("Checking_account_number"),rs.getString("Account_number"),rs.getString("Account_balance")));
+                ViewSavings.add(new SavingsView(rs.getString("Saving_account_number"),rs.getString("Account_number"),rs.getString("Account_balance")));
             }
             col_checking_acc_number.setCellValueFactory(new PropertyValueFactory<>("col_checking_acc_number"));
 

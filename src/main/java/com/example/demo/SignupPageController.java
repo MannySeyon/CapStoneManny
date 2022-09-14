@@ -26,6 +26,7 @@ public class SignupPageController {
     public ToggleGroup maritaltoggle;
     public TextField UsernameF;
     public TextField PasswordF;
+    public ComboBox state_ComboBox;
     //Declaring labels for signup
     @FXML
     private Label firstNameLabel, lastNameLabel, middleNameLabel,
