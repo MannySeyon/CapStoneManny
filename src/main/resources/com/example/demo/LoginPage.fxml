@@ -4,14 +4,15 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
 <VBox alignment="CENTER_LEFT" prefHeight="495.0" prefWidth="480.0" styleClass="blue-panel" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.ClientLoginController">
-   <Pane prefHeight="140.0" prefWidth="462.0">
-      <ImageView fitHeight="287.0" fitWidth="306.0" layoutX="87.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+   <Pane prefHeight="113.0" prefWidth="480.0">
+      <ImageView fitHeight="88.0" fitWidth="310.0" layoutX="105.0" pickOnBounds="true" preserveRatio="true">
          <Image url="@../../../fullbgremove.png" />
       </ImageView>
-      <Label fx:id="passwordShow" layoutX="69.0" layoutY="118.0" prefHeight="30.0" prefWidth="378.0" textFill="#d9bb79">
+      <Label fx:id="passwordShow" layoutX="51.0" layoutY="84.0" prefHeight="30.0" prefWidth="378.0" textFill="#d9bb79">
       <font>
          <Font size="18.0" />
       </font>
@@ -20,19 +21,40 @@
       </VBox.margin>
       </Label>
    </Pane>
-   <Label text="Login" textFill="#d9bb79">
+   <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="443.0" style="-fx-font-family: Calibri; -fx-font-size: 25;" text="LOGIN">
       <font>
-         <Font size="20.0" />
+         <Font name="Calibri" size="24.0" />
       </font>
       <VBox.margin>
-         <Insets left="20.0" />
+         <Insets left="20.0" right="20.0" />
       </VBox.margin>
+      <textFill>
+         <LinearGradient endX="1.0" endY="1.0">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="0.8509804010391235" green="0.7333333492279053" blue="0.4745098054409027" />
+                  </color>
+               </Stop>
+               <Stop offset="0.600609756097561">
+                  <color>
+                     <Color red="1.0" green="1.0" blue="1.0" />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="1.0" green="1.0" blue="1.0" />
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </textFill>
    </Label>
    <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0">
       <VBox.margin>
          <Insets left="15.0" right="15.0" top="15.0" />
       </VBox.margin>
-      <TextField fx:id="nameTextField" promptText="User name" styleClass="tf_box" HBox.hgrow="ALWAYS" />
+      <TextField fx:id="nameTextField" promptText="Username" styleClass="tf_box" HBox.hgrow="ALWAYS" />
 
    </HBox>
    <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0">
@@ -45,17 +67,20 @@
    <Button fx:id="loginButton" mnemonicParsing="false" onAction="#validateLogin" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #BEBEBE#BEBEBE;" styleClass="blue-btn" text="LOGIN">
 
       <VBox.margin>
-         <Insets left="187.0" top="20.0" />
+         <Insets left="187.0" right="187.0" top="20.0" />
       </VBox.margin>
    </Button>
    <Button mnemonicParsing="false" onAction="#AdminDash" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #BEBEBE#BEBEBE;" styleClass="blue-btn" text="ADMIN">
       <VBox.margin>
-         <Insets left="187.0" top="20.0" />
+         <Insets left="187.0" right="190.0" top="20.0" />
       </VBox.margin>
    </Button>
-   <Hyperlink onAction="#passwordRecovery" text="Forgot Username Or Password">
+   <Hyperlink alignment="CENTER" contentDisplay="CENTER" onAction="#passwordRecovery" prefHeight="26.0" prefWidth="250.0" style="-fx-font-family: Calibri; -fx-font-size: 16;" text="Forgot Username Or Password">
       <VBox.margin>
-         <Insets left="150.0" top="10.0" />
+         <Insets left="120.0" right="120.0" top="20.0" />
       </VBox.margin>
+      <font>
+         <Font size="15.0" />
+      </font>
    </Hyperlink>
 </VBox>
